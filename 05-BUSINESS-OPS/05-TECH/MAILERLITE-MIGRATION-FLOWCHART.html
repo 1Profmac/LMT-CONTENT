@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MailerLite Migration — Visual Flowchart</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #F5F5F0; color: #0E1C2F; padding: 40px 20px; }
+  h1 { text-align: center; color: #0E1C2F; font-size: 28px; margin-bottom: 10px; }
+  .subtitle { text-align: center; color: #C8942E; font-size: 16px; margin-bottom: 40px; font-weight: 600; }
+
+  .flow-container { max-width: 700px; margin: 0 auto; }
+
+  /* Phase Headers */
+  .phase {
+    background: #0E1C2F; color: #fff; padding: 16px 24px; border-radius: 12px;
+    margin-bottom: 0; font-size: 20px; font-weight: 700; text-align: center;
+    position: relative;
+  }
+  .phase .time { color: #C8942E; font-size: 14px; display: block; margin-top: 4px; }
+
+  /* Connector arrows */
+  .arrow {
+    text-align: center; font-size: 32px; color: #C8942E;
+    line-height: 1; padding: 8px 0;
+  }
+
+  /* Step boxes */
+  .step {
+    background: #fff; border: 2px solid #0E1C2F; border-radius: 10px;
+    padding: 16px 20px; margin: 0; position: relative;
+  }
+  .step .number {
+    background: #C8942E; color: #fff; font-weight: 700; font-size: 14px;
+    width: 28px; height: 28px; border-radius: 50%; display: inline-flex;
+    align-items: center; justify-content: center; margin-right: 10px;
+    flex-shrink: 0;
+  }
+  .step .text { display: inline; font-size: 16px; line-height: 1.4; }
+  .step .detail { color: #666; font-size: 13px; margin-top: 4px; padding-left: 38px; }
+
+  /* Decision diamond */
+  .decision {
+    background: #C8942E; color: #fff; padding: 16px 24px; border-radius: 10px;
+    text-align: center; font-weight: 700; font-size: 16px;
+    border: 3px solid #0E1C2F;
+  }
+  .decision .sub { font-weight: 400; font-size: 13px; display: block; margin-top: 4px; }
+
+  /* Who does it badge */
+  .badge-brian {
+    display: inline-block; background: #0E1C2F; color: #C8942E;
+    padding: 2px 10px; border-radius: 20px; font-size: 11px;
+    font-weight: 700; margin-left: 8px; vertical-align: middle;
+  }
+  .badge-claude {
+    display: inline-block; background: #C8942E; color: #fff;
+    padding: 2px 10px; border-radius: 20px; font-size: 11px;
+    font-weight: 700; margin-left: 8px; vertical-align: middle;
+  }
+
+  /* Done box */
+  .done {
+    background: #0E1C2F; color: #C8942E; padding: 20px; border-radius: 12px;
+    text-align: center; font-size: 22px; font-weight: 700;
+  }
+  .done .sub { color: #fff; font-size: 14px; font-weight: 400; display: block; margin-top: 6px; }
+
+  /* Legend */
+  .legend {
+    max-width: 700px; margin: 40px auto 0; display: flex; gap: 20px;
+    justify-content: center; flex-wrap: wrap;
+  }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+  .legend-dot { width: 16px; height: 16px; border-radius: 50%; flex-shrink: 0; }
+
+  /* Summary box */
+  .summary {
+    max-width: 700px; margin: 30px auto 0; background: #fff; border: 2px solid #C8942E;
+    border-radius: 12px; padding: 20px 24px;
+  }
+  .summary h3 { color: #0E1C2F; margin-bottom: 10px; }
+  .summary table { width: 100%; border-collapse: collapse; }
+  .summary td { padding: 6px 10px; font-size: 15px; border-bottom: 1px solid #eee; }
+  .summary td:last-child { text-align: right; font-weight: 600; }
+
+  @media print { body { padding: 20px; } }
+</style>
+</head>
+<body>
+
+<h1>Mailchimp to MailerLite Migration</h1>
+<div class="subtitle">4 Hours Across 3 Days — Visual Flowchart</div>
+
+<div class="flow-container">
+
+  <!-- PHASE 1 -->
+  <div class="phase">PHASE 1 — ACCOUNT SETUP<span class="time">Day 1 — 30 minutes</span></div>
+  <div class="arrow">|</div>
+  <div class="step">
+    <span class="number">1</span>
+    <span class="text">Sign up at mailerlite.com/signup</span>
+    <span class="badge-brian">BRIAN</span>
+    <div class="detail">Use brian@learnmo.com — verify email</div>
+  </div>
+  <div class="arrow">|</div>
+  <div class="step">
+    <span class="number">2</span>
+    <span class="text">Choose Advanced Plan — Annual Billing</span>
+    <span class="badge-brian">BRIAN</span>
+    <div class="detail">Try coupon codes at checkout for extra 10-20% off</div>
+  </div>
+  <div class="arrow">|</div>
+  <div class="step">
+    <span class="number">3</span>
+    <span class="text">Set sender info</span>
+    <span class="badge-brian">BRIAN</span>
+    <div class="detail">From: hello@learnmoretechnologies.com / "Prof. McKinney"</div>
+  </div>
+  <div class="arrow">|</div>
+  <div class="step">
+    <span class="number">4</span>
+    <span class="text">Verify sending domain at Bluehost</span>
+    <span class="badge-brian">BRIAN</span>
+    <div class="detail">Add DNS records MailerLite gives you — paste into Bluehost DNS settings</div>
+  </div>
+
+  <div class="arrow">&#9660;</div>
+
+  <!-- PHASE 2 -->
+  <div class="phase">PHASE 2 — IMPORT & CONFIGURE<span class="time">Day 1 — 1 hour</span></div>
+  <div class="arrow">|</div>
+  <div class="step">
+    <span class="number">5</span>
+    <span class="text">Import Mailchimp contacts</span>
+    <span class="badge-brian">BRIAN</span>
+    <div class="detail">One-click import — contacts, tags, segments all come over</div>
+  </div>
+  <div class="arrow">|</div>
+  <div class="step">
+    <span class="number">6</span>
+    <span class="text">Create 4 subscriber groups</span>
+    <span class="badge-brian">BRIAN</span>
+    <div class="detail">Workforce | Existing Entrepreneurs | Startup Entrepreneurs | Everyday Pioneers</div>
+  </div>
+  <div class="arrow">|</div>
+  <div class="step">
+    <span class="number">7</span>
+    <span class="text">Save Agentic50 newsletter template</span>
+    <span class="badge-brian">BRIAN</span>
+    <div class="detail">Paste your -ready.html into HTML editor — save as reusable template</div>
+  </div>
+  <div class="arrow">|</div>
+  <div class="decision">
+    TURN ON PROTECTION
+    <span class="sub">reCAPTCHA + Honeypot + Double Opt-In — all 3 enabled on every form</span>
+  </div>
+  <div class="arrow">|</div>
+  <div class="step">
+    <span class="number">8</span>
+    <span class="text">Build signup form — /start-free-lesson/</span>
+    <span class="badge-brian">BRIAN</span>
+    <div class="detail">Embedded form with all 3 protections active</div>
+  </div>
+  <div class="arrow">|</div>
+  <div class="step">
+    <span class="number">9</span>
+    <span class="text">Build signup form — /join-now/</span>
+    <span class="badge-brian">BRIAN</span>
+    <div class="detail">Embedded form with all 3 protections active</div>
+  </div>
+
+  <div class="arrow">&#9660;</div>
+
+  <!-- PHASE 3 -->
+  <div class="phase">PHASE 3 — BUILD AUTOMATIONS<span class="time">Day 2 — 1.5 hours</span></div>
+  <div class="arrow">|</div>
+  <div class="step">
+    <span class="number">10</span>
+    <span class="text">Welcome Sequence</span>
+    <span class="badge-brian">BRIAN</span>
+    <div class="detail">Trigger: new signup — 1 strong welcome email with free lesson link</div>
+  </div>
+  <div class="arrow">|</div>
+  <div class="step">
+    <span class="number">11</span>
+    <span class="text">Speaker Request Sequence</span>
+    <span class="badge-brian">BRIAN</span>
+    <div class="detail">Trigger: form submit — 5 emails + Brian gets notified</div>
+  </div>
+  <div class="arrow">|</div>
+  <div class="step">
+    <span class="number">12</span>
+    <span class="text">Lunch & Learn Sequence</span>
+    <span class="badge-brian">BRIAN</span>
+    <div class="detail">Confirmation — Logistics — Thank You — Course Link — 7-Day Check-In</div>
+  </div>
+  <div class="arrow">|</div>
+  <div class="step">
+    <span class="number">13</span>
+    <span class="text">Re-engagement Automation</span>
+    <span class="badge-brian">BRIAN</span>
+    <div class="detail">Auto-resend to unopens after 30 days — win back or clean list</div>
+  </div>
+  <div class="arrow">|</div>
+  <div class="decision">
+    TEST ALL 4 SEQUENCES
+    <span class="sub">Sign up with a test email — verify every email arrives correctly</span>
+  </div>
+
+  <div class="arrow">&#9660;</div>
+
+  <!-- PHASE 4 -->
+  <div class="phase">PHASE 4 — CODE UPDATES<span class="time">Day 2 — 2 hours (Claude does this)</span></div>
+  <div class="arrow">|</div>
+  <div class="step">
+    <span class="number">14</span>
+    <span class="text">Update lmt-join-now-form.php</span>
+    <span class="badge-claude">CLAUDE</span>
+    <div class="detail">Swap Mailchimp API calls for MailerLite API — keeps WP account + LearnDash enrollment</div>
+  </div>
+  <div class="arrow">|</div>
+  <div class="step">
+    <span class="number">15</span>
+    <span class="text">Update lmt-watchdog.php</span>
+    <span class="badge-claude">CLAUDE</span>
+    <div class="detail">Point daily monitoring at MailerLite API — automation status + bot detection</div>
+  </div>
+  <div class="arrow">|</div>
+  <div class="step">
+    <span class="number">16</span>
+    <span class="text">Update Zapier trigger</span>
+    <span class="badge-claude">CLAUDE</span>
+    <div class="detail">New subscriber — Gmail notification to LMT Hello label</div>
+  </div>
+
+  <div class="arrow">&#9660;</div>
+
+  <!-- PHASE 5 -->
+  <div class="phase">PHASE 5 — GO LIVE<span class="time">Day 3 — 30 minutes</span></div>
+  <div class="arrow">|</div>
+  <div class="step">
+    <span class="number">17</span>
+    <span class="text">Replace Mailchimp embed on /start-free-lesson/</span>
+    <span class="badge-brian">BRIAN</span>
+    <div class="detail">Swap old embed code with MailerLite form code in WordPress</div>
+  </div>
+  <div class="arrow">|</div>
+  <div class="step">
+    <span class="number">18</span>
+    <span class="text">Replace Mailchimp embed on /join-now/</span>
+    <span class="badge-brian">BRIAN</span>
+    <div class="detail">Same swap — paste new MailerLite embed code</div>
+  </div>
+  <div class="arrow">|</div>
+  <div class="step">
+    <span class="number">19</span>
+    <span class="text">Send test newsletter</span>
+    <span class="badge-brian">BRIAN</span>
+    <div class="detail">Use saved Agentic50 template — send to yourself first</div>
+  </div>
+  <div class="arrow">|</div>
+  <div class="decision">
+    VERIFY WATCHDOG REPORT
+    <span class="sub">Next morning at 7 AM — confirm daily report arrives with MailerLite data</span>
+  </div>
+  <div class="arrow">|</div>
+  <div class="step">
+    <span class="number">20</span>
+    <span class="text">Cancel Mailchimp</span>
+    <span class="badge-brian">BRIAN</span>
+    <div class="detail">You're done. Delete the account.</div>
+  </div>
+
+  <div class="arrow">&#9660;</div>
+
+  <div class="done">
+    MIGRATION COMPLETE
+    <span class="sub">MailerLite Advanced — $216/yr — Bot Protected — All Automations Running</span>
+  </div>
+
+</div>
+
+<!-- Legend -->
+<div class="legend">
+  <div class="legend-item">
+    <div class="legend-dot" style="background: #0E1C2F;"></div>
+    <span><strong>BRIAN</strong> — You do this</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-dot" style="background: #C8942E;"></div>
+    <span><strong>CLAUDE</strong> — I do this</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-dot" style="background: #C8942E; border-radius: 4px;"></div>
+    <span><strong>Gold Box</strong> — Critical checkpoint</span>
+  </div>
+</div>
+
+<!-- Summary -->
+<div class="summary">
+  <h3>Migration Summary</h3>
+  <table>
+    <tr><td>Total Steps</td><td>20</td></tr>
+    <tr><td>Brian's Steps</td><td>17 (click, paste, toggle)</td></tr>
+    <tr><td>Claude's Steps</td><td>3 (code updates)</td></tr>
+    <tr><td>Day 1</td><td>Account + Import — 1.5 hrs</td></tr>
+    <tr><td>Day 2</td><td>Automations + Code — 3.5 hrs</td></tr>
+    <tr><td>Day 3</td><td>Go Live — 30 min</td></tr>
+    <tr><td>Total Time</td><td>~4 hours across 3 days</td></tr>
+    <tr><td>Annual Cost</td><td>$216/yr ($173 with coupon)</td></tr>
+    <tr><td>Signup URL</td><td>accounts.mailerlite.com/signup</td></tr>
+  </table>
+</div>
+
+</body>
+</html>

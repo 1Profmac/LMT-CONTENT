@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Business Website Readiness Survey</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 11pt;
+      color: #1a1a2e;
+      background: #fff;
+      padding: 0;
+    }
+
+    .page {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 52px;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 36px 52px 28px;
+      max-width: 100%;
+    }
+    .header-inner { max-width: 780px; margin: 0 auto; }
+    .header .org {
+      font-size: 9pt;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #a0aec0;
+      margin-bottom: 8px;
+    }
+    .header h1 {
+      font-size: 24pt;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+    .header .tagline {
+      font-size: 11pt;
+      color: #90cdf4;
+      font-weight: 400;
+    }
+
+    /* ── PUPPY CALLOUT ── */
+    .puppy-box {
+      background: #ebf8ff;
+      border-left: 5px solid #3182ce;
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin: 28px 0 20px;
+    }
+    .puppy-box h2 {
+      font-size: 13pt;
+      font-weight: 700;
+      color: #2b6cb0;
+      margin-bottom: 8px;
+    }
+    .puppy-box p {
+      font-size: 10.5pt;
+      line-height: 1.65;
+      color: #2d3748;
+    }
+    .puppy-box .note {
+      margin-top: 12px;
+      font-size: 10pt;
+      color: #4a5568;
+      font-style: italic;
+    }
+
+    /* ── SECTION HEADERS ── */
+    .section-header {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 9px 16px;
+      border-radius: 6px;
+      margin: 28px 0 12px;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+    .section-header .sec-num {
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #90cdf4;
+      white-space: nowrap;
+    }
+    .section-header h2 {
+      font-size: 11.5pt;
+      font-weight: 700;
+    }
+
+    /* ── CHECKBOX LIST (Section 1) ── */
+    .check-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 6px 0;
+      font-size: 10.5pt;
+      border-bottom: 1px solid #edf2f7;
+    }
+    .check-list li:last-child { border-bottom: none; }
+    .check-box {
+      width: 14px;
+      height: 14px;
+      border: 2px solid #3182ce;
+      border-radius: 3px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      display: inline-block;
+    }
+
+    /* ── RATING TABLES ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0;
+      font-size: 10pt;
+    }
+    thead tr {
+      background: #edf2f7;
+    }
+    thead th {
+      padding: 7px 10px;
+      text-align: left;
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #4a5568;
+      text-transform: uppercase;
+    }
+    thead th.center { text-align: center; }
+    tbody tr:nth-child(even) { background: #f7fafc; }
+    tbody tr:hover { background: #ebf8ff; }
+    td {
+      padding: 7px 10px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: middle;
+      line-height: 1.4;
+    }
+    td.rating {
+      text-align: center;
+      width: 38px;
+    }
+    .bubble {
+      width: 20px;
+      height: 20px;
+      border: 2px solid #3182ce;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .scale-note {
+      font-size: 8.5pt;
+      color: #718096;
+      margin-bottom: 8px;
+      font-style: italic;
+    }
+
+    /* ── SCORING BOX ── */
+    .score-section { margin-top: 28px; }
+    .score-table { }
+    .score-table thead tr { background: #1a1a2e; }
+    .score-table thead th { color: #fff; letter-spacing: 1px; }
+    .score-table tbody tr:nth-child(1) td { background: #c6f6d5; }
+    .score-table tbody tr:nth-child(2) td { background: #fefcbf; }
+    .score-table tbody tr:nth-child(3) td { background: #fed7aa; }
+    .score-table tbody tr:nth-child(4) td { background: #fed7d7; }
+    .score-table td { font-size: 10pt; }
+    .score-table td strong { font-weight: 700; }
+
+    /* ── DIGITAL ADDRESS SECTION ── */
+    .alt-header {
+      background: #744210;
+      color: #fff;
+      padding: 9px 16px;
+      border-radius: 6px;
+      margin: 32px 0 12px;
+    }
+    .alt-header h2 {
+      font-size: 12pt;
+      font-weight: 800;
+    }
+    .alt-header p {
+      font-size: 9.5pt;
+      color: #fbd38d;
+      margin-top: 4px;
+    }
+
+    .option-card {
+      border: 1.5px solid #e2e8f0;
+      border-radius: 8px;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+    .option-card .card-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 11px 16px;
+      background: #f7fafc;
+      border-bottom: 1.5px solid #e2e8f0;
+    }
+    .rank-badge {
+      background: #1a1a2e;
+      color: #fff;
+      font-size: 9pt;
+      font-weight: 800;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .option-card .card-title {
+      font-size: 11.5pt;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+    .option-card .card-subtitle {
+      font-size: 9pt;
+      color: #718096;
+      margin-top: 1px;
+    }
+    .importance-tag {
+      margin-left: auto;
+      font-size: 8.5pt;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .tag-high { background: #c6f6d5; color: #276749; }
+    .tag-med  { background: #fefcbf; color: #744210; }
+    .tag-mod  { background: #fed7aa; color: #7b341e; }
+
+    .option-card .card-body {
+      padding: 12px 16px;
+    }
+    .option-card .card-body p {
+      font-size: 10pt;
+      color: #4a5568;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    .bullet-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .bullet-list li {
+      font-size: 9.5pt;
+      color: #2d3748;
+      padding: 3px 0 3px 18px;
+      position: relative;
+    }
+    .bullet-list li::before {
+      content: "•";
+      color: #3182ce;
+      font-weight: 700;
+      position: absolute;
+      left: 5px;
+    }
+
+    /* ── FOOTER CALLOUT ── */
+    .final-box {
+      background: #1a1a2e;
+      color: #fff;
+      border-radius: 8px;
+      padding: 22px 24px;
+      margin: 32px 0 8px;
+    }
+    .final-box h3 {
+      font-size: 12pt;
+      font-weight: 700;
+      color: #90cdf4;
+      margin-bottom: 10px;
+    }
+    .final-box p {
+      font-size: 10pt;
+      line-height: 1.7;
+      color: #e2e8f0;
+    }
+    .final-box .big-line {
+      font-size: 12pt;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 12px;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 8.5pt;
+      color: #a0aec0;
+      padding: 16px 0 8px;
+      border-top: 1px solid #e2e8f0;
+      margin-top: 24px;
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      body { font-size: 10pt; }
+      .page { padding: 32px 40px; }
+      .header { padding: 28px 40px 22px; }
+      .option-card, .puppy-box, .final-box { break-inside: avoid; }
+      .section-header { break-after: avoid; }
+      table { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-inner">
+    <div class="org">50+TechBridge &mdash; Digital Skills for the Modern Business Owner</div>
+    <h1>Business Website Readiness Survey</h1>
+    <div class="tagline">Before you build — find out if you're truly ready.</div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- PUPPY CALLOUT -->
+  <div class="puppy-box">
+    <h2>A Website Is Like a New Puppy</h2>
+    <p>
+      Everyone wants one. It's exciting at first. But puppies need feeding, training, vet visits,
+      walks, and daily attention — or they make a mess of your house. A website is no different.
+      Without regular care, it becomes outdated, unsecured, and invisible to the people you're
+      trying to reach.
+    </p>
+    <p class="note">
+      Answer honestly. There are no wrong answers — only expensive surprises.
+    </p>
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="section-header">
+    <span class="sec-num">Section 1</span>
+    <h2>Why Do You Want a Website?</h2>
+  </div>
+  <p style="font-size:9.5pt;color:#718096;margin-bottom:10px;">Check all that apply.</p>
+  <ul class="check-list">
+    <li><span class="check-box"></span> I want people to find my business online</li>
+    <li><span class="check-box"></span> I need a professional place to send potential clients</li>
+    <li><span class="check-box"></span> I want to sell products or services online</li>
+    <li><span class="check-box"></span> My competitors have one and I feel left behind</li>
+    <li><span class="check-box"></span> I want to build credibility and trust</li>
+    <li><span class="check-box"></span> I want to grow my email list or audience</li>
+    <li><span class="check-box"></span> I was told I need one</li>
+    <li><span class="check-box"></span> I'm not sure — I just know I should have one</li>
+  </ul>
+
+  <!-- SECTION 2 -->
+  <div class="section-header">
+    <span class="sec-num">Section 2</span>
+    <h2>Business Web Strategy</h2>
+  </div>
+  <p class="scale-note">Rate your current ability &mdash; 1 = No experience &nbsp;|&nbsp; 5 = Fully capable</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th class="center">1</th><th class="center">2</th><th class="center">3</th><th class="center">4</th><th class="center">5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Do you have a clear goal for what your website should accomplish?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Can you define what success looks like for your site in 90 days?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Do you have time set aside weekly to review and update your website?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Do you have someone (yourself or staff) responsible for website ownership?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Do you understand the difference between a site that looks good and one that performs?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 3 -->
+  <div class="section-header">
+    <span class="sec-num">Section 3</span>
+    <h2>Email Protection &amp; Technical Maintenance</h2>
+  </div>
+  <p class="scale-note">Rate your current ability &mdash; 1 = No experience &nbsp;|&nbsp; 5 = Fully capable</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th class="center">1</th><th class="center">2</th><th class="center">3</th><th class="center">4</th><th class="center">5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Do you have a business email address (you@yourbusiness.com, not Gmail)?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Do you know how to renew your domain name before it expires?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Do you have an SSL certificate (the padlock in the browser bar)?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Do you have a system for backing up your website regularly?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Are you prepared to update plugins, themes, or platform software monthly?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Do you have spam and malware protection in place?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Do you know what to do if your website goes down or gets hacked?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 4 -->
+  <div class="section-header">
+    <span class="sec-num">Section 4</span>
+    <h2>Promotion &amp; Marketing</h2>
+  </div>
+  <p class="scale-note">Rate your current ability &mdash; 1 = No experience &nbsp;|&nbsp; 5 = Fully capable</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th class="center">1</th><th class="center">2</th><th class="center">3</th><th class="center">4</th><th class="center">5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Do you have a plan to drive traffic to your website after it launches?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Are you able to write or commission new content for your site regularly?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Do you understand basic SEO (how Google finds and ranks your pages)?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Can you run or manage a digital ad campaign (Google Ads, Facebook Ads)?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Do you have a way to capture visitor emails and follow up with them?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 5 -->
+  <div class="section-header">
+    <span class="sec-num">Section 5</span>
+    <h2>Social Posting &amp; Content Creation</h2>
+  </div>
+  <p class="scale-note">Rate your current ability &mdash; 1 = No experience &nbsp;|&nbsp; 5 = Fully capable</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th class="center">1</th><th class="center">2</th><th class="center">3</th><th class="center">4</th><th class="center">5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Do you currently post consistently on at least one social platform?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Can you create graphics, short videos, or written posts on a weekly schedule?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Do you have tools or templates for content creation (Canva, Buffer, etc.)?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Can you connect your social accounts to your website and keep them active?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Do you have a content calendar or posting plan for the next 30 days?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 6 -->
+  <div class="section-header">
+    <span class="sec-num">Section 6</span>
+    <h2>Target Customer &amp; Continual Outreach</h2>
+  </div>
+  <p class="scale-note">Rate your current ability &mdash; 1 = No experience &nbsp;|&nbsp; 5 = Fully capable</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th class="center">1</th><th class="center">2</th><th class="center">3</th><th class="center">4</th><th class="center">5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Can you describe your ideal customer in one paragraph?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Do you have a method for reaching out to new potential customers each week?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Do you have a follow-up system for leads who visit your site but don't buy?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Are you building an email list and marketing to it consistently?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Do you have a referral or repeat-customer strategy in place?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 7 -->
+  <div class="section-header">
+    <span class="sec-num">Section 7</span>
+    <h2>Google Status &amp; Ranking</h2>
+  </div>
+  <p class="scale-note">Rate your current ability &mdash; 1 = No experience &nbsp;|&nbsp; 5 = Fully capable</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th class="center">1</th><th class="center">2</th><th class="center">3</th><th class="center">4</th><th class="center">5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Is your business listed and verified on Google Search?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Do you monitor your Google rankings for keywords your customers search?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Do you respond to Google Reviews — both positive and negative?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Do you track website traffic using Google Analytics or Search Console?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Do you know your Google page speed score and how it affects ranking?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 8 -->
+  <div class="section-header">
+    <span class="sec-num">Section 8</span>
+    <h2>Google Drive &amp; Google Business Services</h2>
+  </div>
+  <p class="scale-note">Rate your current ability &mdash; 1 = No experience &nbsp;|&nbsp; 5 = Fully capable</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th class="center">1</th><th class="center">2</th><th class="center">3</th><th class="center">4</th><th class="center">5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Do you have a Google Business Profile set up and fully completed?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Are your business hours, photos, and services current on Google?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Do you use Google Drive or Google Workspace to manage business files?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Are your team members or contractors organized in a shared Google Drive?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+      <tr><td>Do you use Google Forms, Sheets, or Docs as part of your business workflow?</td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td><td class="rating"><span class="bubble"></span></td></tr>
+    </tbody>
+  </table>
+
+  <!-- SCORING -->
+  <div class="score-section">
+    <div class="section-header">
+      <span class="sec-num">Results</span>
+      <h2>Scoring Your Survey</h2>
+    </div>
+    <p style="font-size:10pt;color:#4a5568;margin-bottom:12px;">Add up your scores from all rating sections (Sections 2–8).</p>
+    <table class="score-table">
+      <thead>
+        <tr>
+          <th>Total Score</th>
+          <th>What It Means</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>160 – 200</strong></td>
+          <td>You are fully ready. A robust, content-driven website will pay off immediately.</td>
+        </tr>
+        <tr>
+          <td><strong>110 – 159</strong></td>
+          <td>Mostly ready with a few gaps. A full site with a support plan is the right move.</td>
+        </tr>
+        <tr>
+          <td><strong>60 – 109</strong></td>
+          <td>Proceed with caution. You need a simpler solution and a clear growth plan first.</td>
+        </tr>
+        <tr>
+          <td><strong>Below 60</strong></td>
+          <td>Stop. A full website right now is a puppy you cannot care for. Start with a digital address.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- NOT READY SECTION -->
+  <div class="alt-header">
+    <h2>Not Ready? Here Are Your Three Low-Maintenance Options</h2>
+    <p>If your score is below 110 &mdash; a full website will cost you money without results. Start here.</p>
+  </div>
+
+  <p style="font-size:10pt;color:#4a5568;margin-bottom:16px;">
+    These are <strong>digital address</strong> strategies — Home, About, and Contact only. No plugins to update.
+    No content strategy required. Just show up, look professional, and be findable.
+    <br/><em>Ordered by level of importance.</em>
+  </p>
+
+  <!-- Option 1 -->
+  <div class="option-card">
+    <div class="card-head">
+      <div class="rank-badge">1</div>
+      <div>
+        <div class="card-title">Google Business Profile</div>
+        <div class="card-subtitle">Free &mdash; runs on Google's own infrastructure</div>
+      </div>
+      <span class="importance-tag tag-high">Most Important</span>
+    </div>
+    <div class="card-body">
+      <p>
+        Shows up in Maps and Search immediately. Includes your hours, photos, phone number,
+        reviews, and a booking link. For most local businesses, this IS your website —
+        and it outperforms many paid sites.
+      </p>
+      <ul class="bullet-list">
+        <li>Completely free</li>
+        <li>Managed from your phone</li>
+        <li>Appears instantly in local Google search results</li>
+        <li>Customers can call, message, or book directly</li>
+        <li>No hosting, no maintenance, no monthly cost</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Option 2 -->
+  <div class="option-card">
+    <div class="card-head">
+      <div class="rank-badge">2</div>
+      <div>
+        <div class="card-title">Linktree or Carrd &mdash; Single-Page Link Hub</div>
+        <div class="card-subtitle">$0 – $9/month &mdash; 30 minutes to set up</div>
+      </div>
+      <span class="importance-tag tag-med">High Importance</span>
+    </div>
+    <div class="card-body">
+      <p>
+        A single page with your name, what you do, and links to everything — phone, email,
+        social profiles, booking link, and your Google Business Profile.
+      </p>
+      <ul class="bullet-list">
+        <li><strong>Linktree</strong> — social-first, built for Instagram and Facebook bios</li>
+        <li><strong>Carrd</strong> — clean single-page site with a custom domain option</li>
+        <li>Both are mobile-friendly out of the box</li>
+        <li>Zero maintenance after initial setup</li>
+        <li>Works as a professional landing page until you're ready to grow</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Option 3 -->
+  <div class="option-card">
+    <div class="card-head">
+      <div class="rank-badge">3</div>
+      <div>
+        <div class="card-title">Squarespace or Wix &mdash; 3-Page Template Site</div>
+        <div class="card-subtitle">$16 – $23/month &mdash; only if you need a branded domain address</div>
+      </div>
+      <span class="importance-tag tag-mod">Moderate Importance</span>
+    </div>
+    <div class="card-body">
+      <p>
+        Pick a pre-built template. Launch it as-is with your name, logo, phone, and a photo.
+        Do not customize beyond that. Resist the urge to add more until you're ready.
+      </p>
+      <ul class="bullet-list">
+        <li><strong>Squarespace</strong> — cleaner design, $16–$23/month, all-in-one hosting</li>
+        <li><strong>Wix</strong> — more flexible templates, free tier available, $17+/month for custom domain</li>
+        <li>Built-in hosting, SSL, and mobile optimization included</li>
+        <li>Minimal maintenance if you skip the blog and store</li>
+        <li>Best for service businesses that just need to look credible online</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FINAL CALLOUT -->
+  <div class="final-box">
+    <h3>The Bottom Line</h3>
+    <p>
+      A website is not a finish line — it's a starting gun. The businesses that win online
+      are not the ones with the most expensive sites. They are the ones that show up
+      consistently, update regularly, and treat their online presence like a living part
+      of their business.
+    </p>
+    <p class="big-line">Start where you are. Grow into the rest.</p>
+  </div>
+
+  <div class="footer">
+    50+TechBridge &mdash; Digital Skills for the Modern Business Owner &nbsp;|&nbsp;
+    Survey Version 1.0 &nbsp;|&nbsp; June 2026
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    height: 1920px;
+    background: #0E1C2F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  .phone {
+    width: 500px;
+    height: 1000px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    border: 6px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 80px 40px 40px;
+    position: relative;
+  }
+  .phone::before {
+    content: '';
+    width: 150px;
+    height: 25px;
+    background: #333;
+    border-radius: 15px;
+    position: absolute;
+    top: 20px;
+  }
+  .option-badge {
+    background: #C8942E;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+  }
+  .instruction {
+    font-size: 38px;
+    font-weight: 700;
+    color: #0E1C2F;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .helper {
+    font-size: 22px;
+    color: #888;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .steps-list {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  .step-num {
+    width: 40px;
+    height: 40px;
+    background: #C8942E;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #FFF;
+    flex-shrink: 0;
+  }
+  .step-desc {
+    font-size: 24px;
+    color: #333;
+    line-height: 1.4;
+    padding-top: 5px;
+  }
+  .step-bold {
+    font-weight: 700;
+    color: #0E1C2F;
+  }
+  .cart-preview {
+    width: 100%;
+    background: #F5F5F5;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .cart-title {
+    font-size: 18px;
+    color: #999;
+    margin-bottom: 10px;
+  }
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #E0E0E0;
+    font-size: 22px;
+    color: #333;
+  }
+  .result-box {
+    background: #109F35;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .result-text {
+    font-size: 22px;
+    color: #FFF;
+    font-weight: 600;
+  }
+  .step-box {
+    margin-top: 40px;
+    background: #0E1C2F;
+    border: 3px solid #C8942E;
+    border-radius: 12px;
+    padding: 18px 50px;
+  }
+  .step-text {
+    font-size: 36px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+</style>
+</head>
+<body>
+  <div class="phone">
+    <div class="option-badge">OPTION B</div>
+    <div class="instruction">Order Groceries<br>From Your Couch</div>
+    <div class="helper">No driving. No parking. Delivered.</div>
+    <div class="steps-list">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-desc">Open <span class="step-bold">App Store</span></div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-desc">Search <span class="step-bold">Instacart</span> or <span class="step-bold">HEB</span></div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-desc">Download and <span class="step-bold">browse</span></div>
+      </div>
+    </div>
+    <div class="cart-preview">
+      <div class="cart-title">Your cart:</div>
+      <div class="cart-item"><span>Milk</span><span>&#128722;</span></div>
+      <div class="cart-item"><span>Bread</span><span>&#128722;</span></div>
+      <div class="cart-item"><span>Bananas</span><span>&#128722;</span></div>
+    </div>
+    <div class="result-box">
+      <div class="result-text">&#10003; Delivered to your door</div>
+    </div>
+  </div>
+  <div class="step-box">
+    <div class="step-text">Option B</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+================================================================================
+  SIZE: 8.5 x 11 (Letter) | IMPRESIÓN: Color completo | CANTIDAD: Por sucursal
+  FILE: LMT-Flyer-Library-Spanish-2026.txt
+  IDIOMA: Español | AUDIENCE: Adultos 50+ hispanohablantes
+================================================================================
+
+
+        ╔══════════════════════════════════════════════════════════════╗
+        ║                                                              ║
+        ║       CAPACITACIÓN GRATUITA DE IA PARA ADULTOS 50+          ║
+        ║                                                              ║
+        ║  Sin programación. Sin tecnicismos. Sin costo. Solo IA real. ║
+        ║                                                              ║
+        ╚══════════════════════════════════════════════════════════════╝
+
+
+                    Presentado por 50+TechBridge
+               Un programa de Learn More Technologies (LMT)
+               ─────────────────────────────────────────
+
+
+================================================================================
+  TITULAR (grande, en negrita — tercio superior del volante)
+================================================================================
+
+  Usted No Es Malo Para la Tecnología.
+  Simplemente Nunca Ha Tenido el Maestro Correcto.
+
+
+================================================================================
+  SUBTÍTULO (mediano — debajo del titular)
+================================================================================
+
+  50+TechBridge enseña a adultos de 50 años en adelante a usar la
+  inteligencia artificial — las mismas herramientas que están
+  transformando el trabajo, la salud y la vida diaria.
+  Gratis. Aquí mismo en su biblioteca.
+
+
+================================================================================
+  QUÉ APRENDERÁ (3 puntos — sección central)
+================================================================================
+
+  ✓  Cómo usar ChatGPT y herramientas de IA en la vida real
+  ✓  IA para buscar trabajo, escribir y realizar tareas del diario
+  ✓  Cómo mantenerse seguro e inteligente en línea con IA
+
+
+================================================================================
+  PARA QUIÉN ES (cuadro de calificación)
+================================================================================
+
+  Este programa es para usted si:
+
+  → Tiene 50 años o más
+  → Quiere entender qué es realmente la IA
+  → Tiene curiosidad pero no sabe por dónde empezar
+  → Se ha sentido excluido de la conversación tecnológica — hasta ahora
+
+
+================================================================================
+  BARRA DE ESTADÍSTICAS (números en negrita — genera credibilidad)
+================================================================================
+
+     9 Ubicaciones  |  3X Tasa de Finalización  |  100% Gratis
+
+
+================================================================================
+  INFORMACIÓN DE LA SESIÓN (personalizar por sucursal — dejar en blanco)
+================================================================================
+
+  CUÁNDO:   ________________________________
+
+  DÓNDE:    ________________________________
+            ________________________________
+
+  COSTO:    GRATIS — No se requiere registro
+
+
+================================================================================
+  LLAMADA A LA ACCIÓN (tercio inferior, grande y en negrita)
+================================================================================
+
+  ¿Listo para comenzar?
+
+  Visítenos:   learnmoretechnologies.com/start-free-lesson/
+
+  ¿Preguntas? Escríbanos:   hello@learnmoretechnologies.com
+
+  Reserve una sesión para su grupo:
+               calendly.com/brianmckinney/new-meeting
+
+
+================================================================================
+  PIE DE PÁGINA / BARRA DE LOGO (parte inferior)
+================================================================================
+
+  50+TechBridge | Learn More Technologies
+  Austin, Texas | learnmoretechnologies.com
+  Certificado MBE  |  Elegible para WIOA
+
+  #agentic50  |  #AgeTech  |  #DigitalInclusion
+
+
+================================================================================
+  NOTAS DE DISEÑO PARA CANVA
+================================================================================
+
+  Diseño recomendado:
+  - 35% superior: Titular en negrita + subtítulo sobre fondo oscuro o de color
+  - 40% central: 3 puntos + cuadro "para quién es" + barra de estadísticas
+  - 25% inferior: Bloque de llamada a la acción + info de sesión + pie de página
+
+  Colores: Usar colores de marca LMT (fondo negro oscuro o azul marino,
+           texto blanco, acento naranja o índigo para titular e íconos)
+
+  Imagen: Agregar una foto de adultos 50+ hispanos comprometidos con la
+          tecnología (sonriendo, en una biblioteca o salón de clases).
+
+  Código QR: Generar un código QR apuntando a
+             learnmoretechnologies.com/start-free-lesson/
+             y colocarlo junto o debajo de la llamada a la acción.
+
+================================================================================

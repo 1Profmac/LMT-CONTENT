@@ -1,0 +1,37 @@
+GALAXY ANIMATION BUILD — LESSON 1
+How to generate all 10 scenes with consistent style.
+
+SETUP
+1. Open Galaxy (galaxy.ai or your Galaxy app)
+2. Select Nano Banana 2 as AI Model
+3. Set Number of Designs to 2 (pick the best one)
+
+FOR EACH SCENE
+1. Upload your Scene 1 title image as a Reference Image (the navy/gold phone image you already generated)
+2. Also upload 1-2 phone mockups from Desktop/phone-mockups/ as reference
+3. Copy the scene prompt from lesson1-galaxy-scene-prompts.txt
+4. Paste into the prompt box
+5. Generate
+6. Pick the best result and download it
+7. Name it: scene-01.png, scene-02.png, etc.
+8. Repeat for all 10 scenes
+
+AFTER ALL 10 SCENES ARE GENERATED
+1. Open Canva
+2. Create new design: 1080 x 1920 (vertical video)
+3. Import all 10 scene images in order
+4. Set each slide to its timing (see lesson1-canva-voiceover.txt for seconds per slide)
+5. Add Barb intro MP4 as first page
+6. Add Barb outro MP4 as last page
+7. Add voiceover using Canva Present and Record
+8. Set all transitions to Fade
+9. Export as MP4
+10. Upload to YouTube and LearnDash
+
+FILES ON YOUR DESKTOP
+- lesson1-galaxy-scene-prompts.txt — all 10 scene prompts
+- lesson1-canva-voiceover.txt — voiceover script with slide timing
+- lesson1-barb-intro.txt — HeyGen intro script
+- lesson1-barb-outro.txt — HeyGen outro script
+- lesson1-image-prompts.txt — original image prompts
+- phone-mockups/ — 6 phone mockup PNGs for reference

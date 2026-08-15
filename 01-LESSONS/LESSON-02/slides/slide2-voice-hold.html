@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    height: 1920px;
+    background: #0E1C2F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  .phone {
+    width: 500px;
+    height: 1000px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    border: 6px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 80px 40px 40px;
+    position: relative;
+  }
+  .phone::before {
+    content: '';
+    width: 150px;
+    height: 25px;
+    background: #333;
+    border-radius: 15px;
+    position: absolute;
+    top: 20px;
+  }
+  .instruction {
+    font-size: 40px;
+    font-weight: 700;
+    color: #0E1C2F;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .helper {
+    font-size: 22px;
+    color: #888;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .button-area {
+    width: 120px;
+    height: 120px;
+    border: 5px solid #C8942E;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  .button-inner {
+    width: 80px;
+    height: 80px;
+    background: #E0E0E0;
+    border-radius: 50%;
+  }
+  .or-text {
+    font-size: 24px;
+    color: #888;
+    margin: 20px 0;
+  }
+  .say-box {
+    background: #F5F5F5;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .say-label {
+    font-size: 20px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  .say-text {
+    font-size: 28px;
+    font-weight: 600;
+    color: #0E1C2F;
+  }
+  .step-box {
+    margin-top: 40px;
+    background: #0E1C2F;
+    border: 3px solid #C8942E;
+    border-radius: 12px;
+    padding: 18px 50px;
+  }
+  .step-text {
+    font-size: 36px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+</style>
+</head>
+<body>
+  <div class="phone">
+    <div class="instruction">Hold Your<br>Home Button</div>
+    <div class="helper">This wakes up your voice assistant</div>
+    <div class="button-area">
+      <div class="button-inner"></div>
+    </div>
+    <div class="or-text">or say</div>
+    <div class="say-box">
+      <div class="say-label">Just say out loud:</div>
+      <div class="say-text">"Hey Siri"<br>or "Hey Google"</div>
+    </div>
+  </div>
+  <div class="step-box">
+    <div class="step-text">Step 1 of 3</div>
+  </div>
+</body>
+</html>

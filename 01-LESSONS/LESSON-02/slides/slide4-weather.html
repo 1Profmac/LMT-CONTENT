@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    height: 1920px;
+    background: #0E1C2F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  .phone {
+    width: 500px;
+    height: 1000px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    border: 6px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 80px 40px 40px;
+    position: relative;
+  }
+  .phone::before {
+    content: '';
+    width: 150px;
+    height: 25px;
+    background: #333;
+    border-radius: 15px;
+    position: absolute;
+    top: 20px;
+  }
+  .instruction {
+    font-size: 40px;
+    font-weight: 700;
+    color: #0E1C2F;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .helper {
+    font-size: 22px;
+    color: #888;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .weather-card {
+    background: linear-gradient(135deg, #4A90D9, #87CEEB);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .weather-icon {
+    font-size: 80px;
+    margin-bottom: 10px;
+  }
+  .weather-temp {
+    font-size: 60px;
+    font-weight: 700;
+    color: #FFFFFF;
+  }
+  .weather-desc {
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-top: 5px;
+  }
+  .weather-tomorrow {
+    background: rgba(255,255,255,0.3);
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 15px;
+  }
+  .tomorrow-label {
+    font-size: 18px;
+    color: #FFF;
+  }
+  .tomorrow-temp {
+    font-size: 28px;
+    font-weight: 700;
+    color: #FFF;
+  }
+  .no-tv {
+    background: #F5F5F5;
+    border-radius: 12px;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+  }
+  .no-tv-text {
+    font-size: 24px;
+    color: #333;
+    font-weight: 600;
+  }
+  .step-box {
+    margin-top: 40px;
+    background: #0E1C2F;
+    border: 3px solid #C8942E;
+    border-radius: 12px;
+    padding: 18px 50px;
+  }
+  .step-text {
+    font-size: 36px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+</style>
+</head>
+<body>
+  <div class="phone">
+    <div class="instruction">Open Your<br>Weather App</div>
+    <div class="helper">It's already on your phone</div>
+    <div class="weather-card">
+      <div class="weather-icon">&#9728;&#65039;</div>
+      <div class="weather-temp">72&#176;</div>
+      <div class="weather-desc">Sunny</div>
+      <div class="weather-tomorrow">
+        <div class="tomorrow-label">Tomorrow</div>
+        <div class="tomorrow-temp">68&#176; Partly Cloudy</div>
+      </div>
+    </div>
+    <div class="no-tv">
+      <div class="no-tv-text">No TV needed. It's right here.</div>
+    </div>
+  </div>
+  <div class="step-box">
+    <div class="step-text">Step 2 of 3</div>
+  </div>
+</body>
+</html>

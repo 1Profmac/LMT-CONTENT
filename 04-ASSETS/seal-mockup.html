@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agentic50 — Government Seal Mockup</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Playfair+Display:wght@700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h1 {
+    font-size: 16px;
+    color: #333;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 40px;
+  }
+
+  .seals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    justify-content: center;
+  }
+
+  .seal-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .seal-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #555;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  /* ===================== */
+  /* SEAL CONTAINER        */
+  /* ===================== */
+  .seal {
+    width: 350px;
+    height: 350px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Scalloped edge using SVG */
+  .scalloped-edge {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+  }
+
+  /* Outer ring */
+  .outer-ring {
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    border-radius: 50%;
+    border: 3px solid;
+  }
+
+  /* Inner ring */
+  .inner-ring {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    border: 3px solid;
+  }
+
+  /* Center fill */
+  .center-fill {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Microphone line art */
+  .mic-icon {
+    width: 50px;
+    height: 70px;
+    margin-bottom: 5px;
+  }
+
+  /* Center text */
+  .center-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  /* Curved text via SVG */
+  .curved-text-container {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+  }
+  .curved-text-container text {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+
+  /* ===================== */
+  /* OPTION A — NAVY       */
+  /* ===================== */
+  .seal-a .outer-ring { border-color: #1a1a2e; }
+  .seal-a .inner-ring { border-color: #1a1a2e; }
+  .seal-a .center-fill { background: #f5f5f0; }
+  .seal-a .center-text { color: #1a1a2e; }
+  .seal-a .curved-text-container text { fill: #1a1a2e; }
+
+  /* ===================== */
+  /* OPTION B — GOLD       */
+  /* ===================== */
+  .seal-b .outer-ring { border-color: #b8960c; }
+  .seal-b .inner-ring { border-color: #b8960c; }
+  .seal-b .center-fill { background: #1a1a2e; }
+  .seal-b .center-text { color: #d4a017; }
+  .seal-b .curved-text-container text { fill: #b8960c; }
+
+  /* ===================== */
+  /* OPTION C — SINGLE NAVY ON WHITE */
+  /* ===================== */
+  .seal-c .outer-ring { border-color: #1a1a2e; }
+  .seal-c .inner-ring { border-color: #1a1a2e; }
+  .seal-c .center-fill { background: #ffffff; }
+  .seal-c .center-text { color: #1a1a2e; }
+  .seal-c .curved-text-container text { fill: #1a1a2e; }
+
+</style>
+</head>
+<body>
+
+<h1>Official Seal Mockup</h1>
+<p class="subtitle">#Agentic50 — The Pioneers Podcast — 3 Color Options</p>
+
+<div class="seals">
+
+  <!-- OPTION A — NAVY ON CREAM -->
+  <div class="seal-group">
+    <div class="seal-label">A — Navy on Cream</div>
+    <div class="seal seal-a">
+      <!-- Scalloped edge -->
+      <svg class="scalloped-edge" viewBox="0 0 350 350">
+        <defs>
+          <clipPath id="scallopA">
+            <path id="scallopPathA"/>
+          </clipPath>
+        </defs>
+        <path d="" fill="none" stroke="#1a1a2e" stroke-width="2.5" id="scallopShapeA"/>
+        <script>
+          (function(){
+            const cx=175,cy=175,r=170,n=48,d=8;
+            let p='';
+            for(let i=0;i<n;i++){
+              const a1=(i/n)*Math.PI*2, a2=((i+0.5)/n)*Math.PI*2, a3=((i+1)/n)*Math.PI*2;
+              const x1=cx+r*Math.cos(a1), y1=cy+r*Math.sin(a1);
+              const x2=cx+(r+d)*Math.cos(a2), y2=cy+(r+d)*Math.sin(a2);
+              const x3=cx+r*Math.cos(a3), y3=cy+r*Math.sin(a3);
+              p+=(i===0?'M':'L')+x1+','+y1+' Q'+x2+','+y2+' '+x3+','+y3+' ';
+            }
+            p+='Z';
+            document.getElementById('scallopShapeA').setAttribute('d',p);
+          })();
+        </script>
+      </svg>
+
+      <!-- Outer ring -->
+      <div class="outer-ring"></div>
+
+      <!-- Curved text -->
+      <svg class="curved-text-container" viewBox="0 0 350 350">
+        <defs>
+          <path id="topArcA" d="M 55,175 A 135,135 0 0,1 295,175"/>
+          <path id="bottomArcA" d="M 75,205 A 110,110 0 0,0 275,205"/>
+        </defs>
+        <text><textPath href="#topArcA" startOffset="50%" text-anchor="middle">THE PIONEERS PODCAST</textPath></text>
+        <text><textPath href="#bottomArcA" startOffset="50%" text-anchor="middle">50+TECHBRIDGE.COM</textPath></text>
+        <!-- Stars -->
+        <text x="30" y="182" font-size="14" fill="#1a1a2e" font-family="serif">&#9733;</text>
+        <text x="304" y="182" font-size="14" fill="#1a1a2e" font-family="serif">&#9733;</text>
+      </svg>
+
+      <!-- Inner ring -->
+      <div class="inner-ring"></div>
+
+      <!-- Center -->
+      <div class="center-fill">
+        <svg class="mic-icon" viewBox="0 0 50 70">
+          <rect x="15" y="5" width="20" height="35" rx="10" fill="none" stroke="#1a1a2e" stroke-width="2.5"/>
+          <line x1="25" y1="40" x2="25" y2="55" stroke="#1a1a2e" stroke-width="2.5"/>
+          <line x1="15" y1="55" x2="35" y2="55" stroke="#1a1a2e" stroke-width="2.5"/>
+          <path d="M 10,25 A 15,15 0 0,0 40,25" fill="none" stroke="#1a1a2e" stroke-width="2.5" transform="translate(0,10)"/>
+          <line x1="17" y1="15" x2="33" y2="15" stroke="#1a1a2e" stroke-width="1.5"/>
+          <line x1="17" y1="20" x2="33" y2="20" stroke="#1a1a2e" stroke-width="1.5"/>
+          <line x1="17" y1="25" x2="33" y2="25" stroke="#1a1a2e" stroke-width="1.5"/>
+        </svg>
+        <div class="center-text">#AGENTIC50</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTION B — GOLD ON NAVY -->
+  <div class="seal-group">
+    <div class="seal-label">B — Gold on Navy</div>
+    <div class="seal seal-b">
+      <svg class="scalloped-edge" viewBox="0 0 350 350">
+        <path d="" fill="none" stroke="#b8960c" stroke-width="2.5" id="scallopShapeB"/>
+        <script>
+          (function(){
+            const cx=175,cy=175,r=170,n=48,d=8;
+            let p='';
+            for(let i=0;i<n;i++){
+              const a1=(i/n)*Math.PI*2, a2=((i+0.5)/n)*Math.PI*2, a3=((i+1)/n)*Math.PI*2;
+              const x1=cx+r*Math.cos(a1), y1=cy+r*Math.sin(a1);
+              const x2=cx+(r+d)*Math.cos(a2), y2=cy+(r+d)*Math.sin(a2);
+              const x3=cx+r*Math.cos(a3), y3=cy+r*Math.sin(a3);
+              p+=(i===0?'M':'L')+x1+','+y1+' Q'+x2+','+y2+' '+x3+','+y3+' ';
+            }
+            p+='Z';
+            document.getElementById('scallopShapeB').setAttribute('d',p);
+          })();
+        </script>
+      </svg>
+      <div class="outer-ring"></div>
+      <svg class="curved-text-container" viewBox="0 0 350 350">
+        <defs>
+          <path id="topArcB" d="M 55,175 A 135,135 0 0,1 295,175"/>
+          <path id="bottomArcB" d="M 75,205 A 110,110 0 0,0 275,205"/>
+        </defs>
+        <text><textPath href="#topArcB" startOffset="50%" text-anchor="middle">THE PIONEERS PODCAST</textPath></text>
+        <text><textPath href="#bottomArcB" startOffset="50%" text-anchor="middle">50+TECHBRIDGE.COM</textPath></text>
+        <text x="30" y="182" font-size="14" fill="#b8960c" font-family="serif">&#9733;</text>
+        <text x="304" y="182" font-size="14" fill="#b8960c" font-family="serif">&#9733;</text>
+      </svg>
+      <div class="inner-ring"></div>
+      <div class="center-fill">
+        <svg class="mic-icon" viewBox="0 0 50 70">
+          <rect x="15" y="5" width="20" height="35" rx="10" fill="none" stroke="#d4a017" stroke-width="2.5"/>
+          <line x1="25" y1="40" x2="25" y2="55" stroke="#d4a017" stroke-width="2.5"/>
+          <line x1="15" y1="55" x2="35" y2="55" stroke="#d4a017" stroke-width="2.5"/>
+          <path d="M 10,25 A 15,15 0 0,0 40,25" fill="none" stroke="#d4a017" stroke-width="2.5" transform="translate(0,10)"/>
+          <line x1="17" y1="15" x2="33" y2="15" stroke="#d4a017" stroke-width="1.5"/>
+          <line x1="17" y1="20" x2="33" y2="20" stroke="#d4a017" stroke-width="1.5"/>
+          <line x1="17" y1="25" x2="33" y2="25" stroke="#d4a017" stroke-width="1.5"/>
+        </svg>
+        <div class="center-text">#AGENTIC50</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTION C — NAVY ON WHITE (stamp look) -->
+  <div class="seal-group">
+    <div class="seal-label">C — Navy on White (Stamp)</div>
+    <div class="seal seal-c">
+      <svg class="scalloped-edge" viewBox="0 0 350 350">
+        <path d="" fill="none" stroke="#1a1a2e" stroke-width="2.5" id="scallopShapeC"/>
+        <script>
+          (function(){
+            const cx=175,cy=175,r=170,n=48,d=8;
+            let p='';
+            for(let i=0;i<n;i++){
+              const a1=(i/n)*Math.PI*2, a2=((i+0.5)/n)*Math.PI*2, a3=((i+1)/n)*Math.PI*2;
+              const x1=cx+r*Math.cos(a1), y1=cy+r*Math.sin(a1);
+              const x2=cx+(r+d)*Math.cos(a2), y2=cy+(r+d)*Math.sin(a2);
+              const x3=cx+r*Math.cos(a3), y3=cy+r*Math.sin(a3);
+              p+=(i===0?'M':'L')+x1+','+y1+' Q'+x2+','+y2+' '+x3+','+y3+' ';
+            }
+            p+='Z';
+            document.getElementById('scallopShapeC').setAttribute('d',p);
+          })();
+        </script>
+      </svg>
+      <div class="outer-ring"></div>
+      <svg class="curved-text-container" viewBox="0 0 350 350">
+        <defs>
+          <path id="topArcC" d="M 55,175 A 135,135 0 0,1 295,175"/>
+          <path id="bottomArcC" d="M 75,205 A 110,110 0 0,0 275,205"/>
+        </defs>
+        <text><textPath href="#topArcC" startOffset="50%" text-anchor="middle">THE PIONEERS PODCAST</textPath></text>
+        <text><textPath href="#bottomArcC" startOffset="50%" text-anchor="middle">50+TECHBRIDGE.COM</textPath></text>
+        <text x="30" y="182" font-size="14" fill="#1a1a2e" font-family="serif">&#9733;</text>
+        <text x="304" y="182" font-size="14" fill="#1a1a2e" font-family="serif">&#9733;</text>
+      </svg>
+      <div class="inner-ring"></div>
+      <div class="center-fill">
+        <svg class="mic-icon" viewBox="0 0 50 70">
+          <rect x="15" y="5" width="20" height="35" rx="10" fill="none" stroke="#1a1a2e" stroke-width="2.5"/>
+          <line x1="25" y1="40" x2="25" y2="55" stroke="#1a1a2e" stroke-width="2.5"/>
+          <line x1="15" y1="55" x2="35" y2="55" stroke="#1a1a2e" stroke-width="2.5"/>
+          <path d="M 10,25 A 15,15 0 0,0 40,25" fill="none" stroke="#1a1a2e" stroke-width="2.5" transform="translate(0,10)"/>
+          <line x1="17" y1="15" x2="33" y2="15" stroke="#1a1a2e" stroke-width="1.5"/>
+          <line x1="17" y1="20" x2="33" y2="20" stroke="#1a1a2e" stroke-width="1.5"/>
+          <line x1="17" y1="25" x2="33" y2="25" stroke="#1a1a2e" stroke-width="1.5"/>
+        </svg>
+        <div class="center-text">#AGENTIC50</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

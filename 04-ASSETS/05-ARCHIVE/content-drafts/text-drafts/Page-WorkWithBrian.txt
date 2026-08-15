@@ -1,0 +1,155 @@
+WORDPRESS PAGE: WORK WITH BRIAN
+Replace current Contact Us page
+URL: learnmoretechnologies.com/work-with-brian (or update /contact/ slug)
+Generated: May 3, 2026
+
+============================
+PAGE CONTENT (paste into WordPress editor)
+============================
+
+[Status badge — green circle or bold text at top]
+Currently taking on new partners.
+
+
+HEADLINE:
+I help organizations close the digital skills gap for adults 50+.
+I know what works because I've been in the room doing it.
+
+
+THE PROBLEM:
+You serve adults 50+. You know they need digital skills. But the training options out there weren't built for them — wrong pace, wrong language, wrong instructor. Your members show up once and don't come back.
+
+Meanwhile, the digital divide keeps growing. And the adults you serve keep falling further behind — not because they can't learn, but because no one's teaching them the right way.
+
+
+WHAT I DO:
+I bring 50+TechBridge directly to your organization. A hands-on digital skills program customized to your members.
+
+- Covers smartphones, AI tools, online safety, and independent living tech
+- Project-based — your members DO something on their phones before they leave
+- I bring the curriculum, the enrollment system, and the follow-up
+- Delivered in-person, hybrid, or online
+- Customized to what YOUR members actually need
+
+
+WHO I WORK WITH:
+- Libraries and library systems
+- Churches and faith communities
+- Senior centers and aging organizations
+- Workforce development boards (WIOA-eligible)
+- YMCAs and community centers
+- HBCUs and continuing education programs
+- Any organization that serves adults 50+
+
+
+RESULTS:
+- targeted 3x completion rate vs. traditional digital skills programs
+- increased confidence of participants report increased confidence with technology
+- adults 50+ trained across 13 locations across 13 locations and online
+- MBE Certified
+
+All numbers verified by participant surveys.
+
+
+[CTA BUTTON]
+Book a Free 30-Minute Call
+[Link to Calendly or SavvyCal]
+
+
+============================
+THREE WAYS TO WORK WITH ME
+============================
+
+1. PARTNER TRAINING
+
+I bring 50+TechBridge to your organization. Customized curriculum. On-site delivery. Ongoing enrollment. You provide the room — I provide everything else.
+
+Best for: libraries, churches, senior centers, workforce boards
+
+
+2. SPEAKING & WORKSHOPS
+
+A 60-minute Lunch & Learn or keynote. Your members leave with new tools on their phones and a path to keep learning. Topics include:
+
+- What Is Tech, AI & How It Helps You Live Independently
+- The Digital Divide: Why Adults 50+ Are Being Left Behind
+- AI Won't Replace You — But It Will Replace the Person Who Doesn't Learn It
+
+Best for: conferences, community events, partner kickoffs
+
+
+3. PRIVATE COACHING
+
+One-on-one digital skills coaching for individuals 50+ who want personal attention. We work on YOUR goals, at YOUR pace, on YOUR phone.
+
+Best for: professionals, retirees, family members helping parents
+
+
+[CTA BUTTON]
+Book a Free 30-Minute Call
+[Link to Calendly or SavvyCal]
+
+
+============================
+HOW IT WORKS
+============================
+
+1. BOOK A CALL
+30 minutes. No pitch. No pressure. We figure out if it's a fit.
+
+2. GET A PLAN
+I send you a customized proposal within 48 hours.
+
+3. WE START
+First session or workshop scheduled within 2 weeks.
+
+
+============================
+ABOUT BRIAN
+============================
+
+I'm Brian McKinney, founder of 50+TechBridge and Learn More Technologies. I've trained adults 50+ across 13 locations at libraries, senior centers, a veterans workshop, and online.
+
+I didn't start as a tech expert. I started as someone who understood what it feels like to be left behind — and decided to do something about it.
+
+Every organization I work with gets a program built for THEIR members. Not a one-size-fits-all slide deck. Not a 24-year-old instructor who's never struggled with technology. A real program, built by someone who's been in the room.
+
+University of Santa Monica | MBE Certified | Austin, Texas
+
+
+[CTA BUTTON]
+Book a Free 30-Minute Call
+[Link to Calendly or SavvyCal]
+
+
+============================
+CLOSING LINE
+============================
+
+I take on a limited number of partners at a time so every organization gets my full attention. If you're reading this, there's likely a spot open. That won't always be the case.
+
+The organizations that serve adults 50+ best are the ones investing in digital skills now. The question is whether your members get left behind.
+
+
+============================
+YOAST SEO
+============================
+
+Focus Keyphrase: digital skills training adults 50+
+SEO Title: Work With Brian McKinney | 50+TechBridge Digital Skills Training
+Meta Description: Brian McKinney brings hands-on digital skills training to libraries, churches, senior centers, and workforce boards. adults 50+ trained across 13 locations. Book a free call.
+Slug: work-with-brian
+
+
+============================
+WORDPRESS SETUP NOTES
+============================
+
+1. Go to Pages → find "Contact" page
+2. Change the page title from "Contact Us" to "Work With Brian"
+3. Change the slug from /contact/ to /work-with-brian/
+4. Set up a 301 redirect from /contact/ to /work-with-brian/ (use Redirection plugin or Yoast)
+5. Replace all page content with the copy above
+6. Add 3 CTA buttons linking to your Calendly/SavvyCal
+7. Update the main nav menu: change "Contact" to "Work With Brian"
+8. Update footer links if "Contact" appears there

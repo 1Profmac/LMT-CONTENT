@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    height: 1920px;
+    background: #0E1C2F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  .phone {
+    width: 500px;
+    height: 1000px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    border: 6px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 80px 40px 40px;
+    position: relative;
+  }
+  .phone::before {
+    content: '';
+    width: 150px;
+    height: 25px;
+    background: #333;
+    border-radius: 15px;
+    position: absolute;
+    top: 20px;
+  }
+  .instruction {
+    font-size: 40px;
+    font-weight: 700;
+    color: #0E1C2F;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .helper {
+    font-size: 22px;
+    color: #888;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .toggle-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+  }
+  .toggle-label {
+    font-size: 34px;
+    font-weight: 600;
+    color: #0E1C2F;
+  }
+  .toggle {
+    width: 80px;
+    height: 44px;
+    background: #34C759;
+    border-radius: 22px;
+    position: relative;
+  }
+  .toggle-knob {
+    width: 38px;
+    height: 38px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  .arrow-section {
+    margin-top: 20px;
+  }
+  .gold-arrow {
+    font-size: 60px;
+    color: #C8942E;
+  }
+  .before-after {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  .ba-box {
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 45%;
+  }
+  .ba-before {
+    background: #F5F5F5;
+  }
+  .ba-after {
+    background: #C8942E;
+  }
+  .ba-label {
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  .ba-after .ba-label {
+    color: #FFF;
+  }
+  .ba-text-thin {
+    font-size: 20px;
+    font-weight: 300;
+    color: #999;
+  }
+  .ba-text-bold {
+    font-size: 26px;
+    font-weight: 900;
+    color: #FFF;
+  }
+  .step-box {
+    margin-top: 40px;
+    background: #0E1C2F;
+    border: 3px solid #C8942E;
+    border-radius: 12px;
+    padding: 18px 50px;
+  }
+  .step-text {
+    font-size: 36px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+</style>
+</head>
+<body>
+  <div class="phone">
+    <div class="instruction">Turn on Bold Text</div>
+    <div class="helper">Find it in Display & Text Size</div>
+    <div class="toggle-section">
+      <span class="toggle-label">Bold Text</span>
+      <div class="toggle">
+        <div class="toggle-knob"></div>
+      </div>
+    </div>
+    <div class="arrow-section">
+      <span class="gold-arrow">&#9650;</span>
+    </div>
+    <div class="before-after">
+      <div class="ba-box ba-before">
+        <div class="ba-label">Before</div>
+        <div class="ba-text-thin">Thin text</div>
+      </div>
+      <div class="ba-box ba-after">
+        <div class="ba-label">After</div>
+        <div class="ba-text-bold">Bold text</div>
+      </div>
+    </div>
+  </div>
+  <div class="step-box">
+    <div class="step-text">Step 5 of 5</div>
+  </div>
+</body>
+</html>

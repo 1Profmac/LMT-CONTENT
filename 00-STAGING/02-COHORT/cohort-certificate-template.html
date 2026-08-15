@@ -1,0 +1,239 @@
+<!--
+=================================================
+  DIGITAL PIONEER CERTIFICATE — Cohort Template
+  Use in: Canva (paste as design guide) or print directly
+  Size: 11x8.5" landscape (standard letter)
+  Font: Space Grotesk + Inter (match website)
+  Colors: Navy #0f172a, Orange #f97316, Gold #C8942E, White
+  Owner: Brian McKinney
+  Date: June 11, 2026
+=================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Pioneer Certificate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+  <style>
+    @media print {
+      body { margin: 0; }
+      .certificate { box-shadow: none; }
+    }
+
+    body {
+      margin: 0;
+      padding: 40px;
+      background: #f1f5f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .certificate {
+      width: 10in;
+      height: 7.5in;
+      background: #0f172a;
+      border: 3px solid #C8942E;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 80px;
+      box-sizing: border-box;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    /* Corner accents */
+    .certificate::before,
+    .certificate::after {
+      content: '';
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border: 2px solid rgba(200,148,46,0.2);
+    }
+    .certificate::before {
+      top: 20px; left: 20px;
+      border-right: none; border-bottom: none;
+    }
+    .certificate::after {
+      bottom: 20px; right: 20px;
+      border-left: none; border-top: none;
+    }
+
+    .cert-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #C8942E;
+      margin-bottom: 16px;
+    }
+
+    .cert-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 8px;
+      line-height: 1.1;
+    }
+
+    .cert-title em {
+      color: #f97316;
+      font-style: italic;
+    }
+
+    .cert-subtitle {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #94a3b8;
+      margin: 0 0 40px;
+      letter-spacing: 0.05em;
+    }
+
+    .cert-presented {
+      font-size: 0.8rem;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+
+    .cert-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #C8942E;
+      margin: 0 0 12px;
+      font-style: italic;
+      border-bottom: 2px solid rgba(200,148,46,0.3);
+      padding-bottom: 8px;
+      min-width: 400px;
+      display: inline-block;
+    }
+
+    .cert-desc {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      line-height: 1.6;
+      max-width: 500px;
+      margin: 16px auto 40px;
+    }
+
+    .cert-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .cert-footer-item {
+      text-align: center;
+    }
+
+    .cert-footer-line {
+      width: 180px;
+      border: none;
+      border-top: 1px solid #475569;
+      margin-bottom: 8px;
+    }
+
+    .cert-footer-label {
+      font-size: 0.7rem;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .cert-footer-value {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .cert-logo {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cert-logo-box {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, #1e3a5f, #f97316);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 800;
+    }
+
+    .cert-logo-text {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="certificate">
+
+  <!-- Logo -->
+  <div class="cert-logo">
+    <div class="cert-logo-box">50+</div>
+    <span class="cert-logo-text">TechBridge</span>
+  </div>
+
+  <!-- Content -->
+  <div class="cert-label">Certificate of Completion</div>
+  <h1 class="cert-title">Digital <em>Pioneer</em></h1>
+  <p class="cert-subtitle">COHORT 1</p>
+
+  <p class="cert-presented">This certifies that</p>
+  <div class="cert-name">[FULL NAME]</div>
+
+  <p class="cert-desc">
+    has successfully completed the 50+TechBridge Digital Pioneer program —
+    3 weeks of hands-on AI and digital skills training with their cohort.
+  </p>
+
+  <!-- Footer -->
+  <div class="cert-footer">
+    <div class="cert-footer-item">
+      <hr class="cert-footer-line" />
+      <p class="cert-footer-value">Brian McKinney</p>
+      <p class="cert-footer-label">Founder, 50+TechBridge</p>
+    </div>
+    <div class="cert-footer-item">
+      <hr class="cert-footer-line" />
+      <p class="cert-footer-value">[DATE]</p>
+      <p class="cert-footer-label">Date of Completion</p>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

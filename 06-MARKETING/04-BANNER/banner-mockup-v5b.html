@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banner Mockup V5b - 50+TechBridge (Refined)</title>
+<style>
+  body {
+    background: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+  }
+  .wrapper { display: flex; flex-direction: column; align-items: center; }
+  .label { text-align: center; font-size: 14px; color: #555; margin-bottom: 10px; font-weight: bold; letter-spacing: 1px; }
+  .banner {
+    width: 280px; height: 720px; border-radius: 8px 8px 0 0; overflow: hidden;
+    position: relative; box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    background: #0E1C2F; display: flex; flex-direction: column; align-items: center; color: #FFFFFF;
+  }
+
+  /* Gold top block — brand anchor */
+  .top-block {
+    width: 100%;
+    background: #C8942E;
+    padding: 22px 20px 18px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .top-block .brand-name {
+    font-size: 24px;
+    font-weight: 900;
+    color: #0E1C2F;
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
+  .top-block .tagline {
+    font-size: 10px;
+    color: #0E1C2F;
+    margin-top: 5px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.75;
+  }
+
+  /* Mission headline */
+  .headline-section {
+    margin: 28px 20px 0;
+    text-align: center;
+  }
+  .headline-section .main {
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .headline-section .main span {
+    color: #C8942E;
+  }
+  .headline-section .sub {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #F5F5F0;
+    font-style: italic;
+    opacity: 0.85;
+  }
+
+  /* Stats bar */
+  .stats-bar {
+    margin: 24px 16px 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    width: calc(100% - 32px);
+  }
+  .stat {
+    flex: 1;
+    text-align: center;
+    padding: 10px 4px;
+    border: 1px solid rgba(200,148,46,0.3);
+    border-radius: 4px;
+    background: rgba(200,148,46,0.08);
+  }
+  .stat .num {
+    font-size: 22px;
+    font-weight: 900;
+    color: #C8942E;
+    line-height: 1;
+  }
+  .stat .desc {
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #F5F5F0;
+    margin-top: 4px;
+    opacity: 0.8;
+  }
+
+  .divider { margin: 22px 0; width: 60px; height: 2px; background: #C8942E; opacity: 0.4; }
+
+  /* Photo — larger with more breathing room */
+  .photo-area {
+    width: 120px; height: 120px; border-radius: 50%; border: 3px solid #C8942E;
+    background: #1a2a40; display: flex; align-items: center; justify-content: center;
+    overflow: hidden; position: relative;
+  }
+  .photo-area .silhouette { font-size: 55px; color: #3a4a5a; }
+  .photo-area .photo-label { position: absolute; bottom: 16px; font-size: 8px; color: #7a8a9a; letter-spacing: 1px; text-transform: uppercase; }
+  .name { margin-top: 10px; font-size: 16px; font-weight: 700; letter-spacing: 1px; }
+  .title-role { font-size: 10px; color: #C8942E; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 3px; }
+
+  /* QR — more breathing room */
+  .qr-section { margin-top: 22px; display: flex; flex-direction: column; align-items: center; }
+  .qr-box {
+    width: 90px; height: 90px; background: #FFFFFF; border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .qr-grid {
+    width: 68px; height: 68px; display: grid;
+    grid-template-columns: repeat(7,1fr); grid-template-rows: repeat(7,1fr); gap: 1px;
+  }
+  .qr-grid div { background: #0E1C2F; border-radius: 1px; }
+  .qr-grid div:nth-child(even) { background: #FFFFFF; }
+  .qr-cta { margin-top: 6px; font-size: 10px; font-weight: 700; color: #C8942E; letter-spacing: 1px; text-transform: uppercase; }
+
+  /* Bottom wave */
+  .bottom-section { margin-top: auto; width: 100%; position: relative; height: 60px; }
+  .gold-wave { position: absolute; bottom: 0; left: 0; width: 100%; height: 60px; }
+  .bottom-text { position: absolute; bottom: 12px; width: 100%; text-align: center; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: #0E1C2F; z-index: 2; text-transform: uppercase; }
+
+  .stand { width: 300px; height: 16px; background: linear-gradient(to bottom,#888,#aaa); border-radius: 0 0 6px 6px; margin: 0 auto; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+  .stand-pole { width: 20px; height: 30px; background: linear-gradient(to right,#999,#bbb,#999); margin: 0 auto; }
+  .stand-foot { width: 160px; height: 10px; background: linear-gradient(to bottom,#888,#aaa); border-radius: 0 0 50% 50%; margin: 0 auto; }
+  .annotations { margin-top: 30px; max-width: 340px; background: #fff; border-radius: 8px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+  .annotations h3 { margin: 0 0 12px; font-size: 14px; color: #0E1C2F; }
+  .annotations ul { margin: 0; padding: 0 0 0 18px; font-size: 12px; line-height: 1.8; color: #333; }
+  .annotations li strong { color: #C8942E; }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="label">V5b — REFINED (PILLS REMOVED, MORE BREATHING ROOM)</div>
+  <div class="banner">
+
+    <!-- Gold header block — brand anchor -->
+    <div class="top-block">
+      <div class="brand-name">50+TechBridge.com</div>
+      <div class="tagline">AI Training . Advocacy . Speaking</div>
+    </div>
+
+    <!-- Mission headline -->
+    <div class="headline-section">
+      <div class="main">Closing<br>the <span>Digital</span><br><span>Divide</span></div>
+      <div class="sub">AI Education for Independent Living</div>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="stats-bar">
+      <div class="stat">
+        <div class="num">200+</div>
+        <div class="desc">Adults<br>Trained</div>
+      </div>
+      <div class="stat">
+        <div class="num">12</div>
+        <div class="desc">Training<br>Locations</div>
+      </div>
+      <div class="stat">
+        <div class="num">9</div>
+        <div class="desc">Library<br>Partners</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Photo — bigger, more prominent -->
+    <div class="photo-area">
+      <div class="silhouette">&#128100;</div>
+      <div class="photo-label">Your Photo</div>
+    </div>
+    <div class="name">Brian McKinney</div>
+    <div class="title-role">Founder &amp; CEO</div>
+
+    <!-- QR — larger, cleaner -->
+    <div class="qr-section">
+      <div class="qr-box">
+        <div class="qr-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      </div>
+      <div class="qr-cta">Book a Free Consultation</div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="bottom-section">
+      <svg class="gold-wave" viewBox="0 0 280 60" preserveAspectRatio="none">
+        <path d="M0,28 Q70,0 140,20 T280,12 L280,60 L0,60 Z" fill="#C8942E"/>
+      </svg>
+      <div class="bottom-text">Learn More Technologies</div>
+    </div>
+  </div>
+  <div class="stand"></div>
+  <div class="stand-pole"></div>
+  <div class="stand-foot"></div>
+
+  <div class="annotations">
+    <h3>V5b — What changed from V5:</h3>
+    <ul>
+      <li><strong>Service pills removed</strong> — "AI Training . Advocacy . Speaking" moved into the gold header bar so it's not repeated</li>
+      <li><strong>Tagline swapped</strong> — "Your Bridge to the Digital World" replaced with the services line, doing double duty</li>
+      <li><strong>Photo enlarged</strong> — 120px vs 105px, more presence</li>
+      <li><strong>QR code enlarged</strong> — 90px vs 80px, easier to scan</li>
+      <li><strong>More white space</strong> — every element breathes, nothing feels cramped</li>
+      <li><strong>Bigger headline</strong> — 32px vs 30px, readable from further away</li>
+      <li><strong>Brand name bumped up</strong> — 24px vs 22px in gold header</li>
+    </ul>
+    <h3 style="margin-top:16px;">Reads top to bottom:</h3>
+    <ul>
+      <li>1. <strong>50+TechBridge.com</strong> — who you are</li>
+      <li>2. <strong>Closing the Digital Divide</strong> — what you do</li>
+      <li>3. <strong>200+ | 12 | 9</strong> — proof you do it</li>
+      <li>4. <strong>Brian McKinney</strong> — the person behind it</li>
+      <li>5. <strong>QR → Book a Free Consultation</strong> — what to do next</li>
+      <li>6. <strong>Learn More Technologies</strong> — the company, understated</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Business Card Proof — Print to PDF</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page {
+    size: letter;
+    margin: 0.5in;
+  }
+
+  body {
+    background: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  h1 {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 5px;
+  }
+
+  .info {
+    font-size: 10px;
+    color: #888;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 3.5in;
+    height: 2in;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.125in;
+    border: 0.5px solid #ccc;
+  }
+
+  /* ==================== FRONT ==================== */
+  .card-front {
+    background: #0E1C2F;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card-front::before {
+    content: '';
+    position: absolute;
+    inset: 3.5px;
+    border: 1px solid rgba(200, 148, 46, 0.35);
+    border-radius: 7px;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .front-left {
+    width: 1.3in;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .front-left::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 25px;
+    bottom: 25px;
+    width: 0.5px;
+    background: linear-gradient(180deg, transparent, rgba(200,148,46,0.15), transparent);
+  }
+
+  .front-stamp svg {
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(0 2px 8px rgba(200,148,46,0.15));
+  }
+
+  .front-right {
+    flex: 1;
+    padding: 18px 20px 16px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+  }
+
+  .brand-name {
+    font-size: 7pt;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #C8942E;
+    text-transform: uppercase;
+  }
+
+  .header-rule {
+    width: 25px;
+    height: 1px;
+    background: #C8942E;
+    margin-top: 4px;
+    opacity: 0.6;
+  }
+
+  .front-person { margin-top: auto; }
+
+  .person-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14pt;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 1px;
+    line-height: 1;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  }
+
+  .person-title {
+    font-size: 6pt;
+    font-weight: 500;
+    color: #C8942E;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .person-credential {
+    font-size: 6pt;
+    font-weight: 500;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.75px;
+    margin-top: 2px;
+  }
+
+  .front-contact {
+    font-size: 5.5pt;
+    font-weight: 500;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.25px;
+    margin-top: 3px;
+  }
+
+  /* ==================== BACK ==================== */
+  .card-back {
+    background: #0E1C2F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+  }
+
+  .card-back::before {
+    content: '';
+    position: absolute;
+    inset: 3.5px;
+    border: 1px solid rgba(200,148,46,0.35);
+    border-radius: 7px;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .corner { position: absolute; width: 12px; height: 12px; z-index: 3; }
+  .corner::before, .corner::after { content: ''; position: absolute; background: rgba(200,148,46,0.5); }
+  .corner-tl { top: 3.5px; left: 3.5px; }
+  .corner-tl::before { top: 0; left: 0; width: 12px; height: 0.5px; }
+  .corner-tl::after { top: 0; left: 0; width: 0.5px; height: 12px; }
+  .corner-tr { top: 3.5px; right: 3.5px; }
+  .corner-tr::before { top: 0; right: 0; width: 12px; height: 0.5px; }
+  .corner-tr::after { top: 0; right: 0; width: 0.5px; height: 12px; }
+  .corner-bl { bottom: 3.5px; left: 3.5px; }
+  .corner-bl::before { bottom: 0; left: 0; width: 12px; height: 0.5px; }
+  .corner-bl::after { bottom: 0; left: 0; width: 0.5px; height: 12px; }
+  .corner-br { bottom: 3.5px; right: 3.5px; }
+  .corner-br::before { bottom: 0; right: 0; width: 12px; height: 0.5px; }
+  .corner-br::after { bottom: 0; right: 0; width: 0.5px; height: 12px; }
+
+  .back-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+    padding: 0 30px;
+    width: 100%;
+  }
+
+  .back-mic { margin-bottom: 3px; align-self: center; }
+  .back-mic svg { width: 18px; height: 27px; filter: drop-shadow(0 1px 6px rgba(200,148,46,0.25)); }
+
+  .back-brand {
+    font-size: 6.5pt; font-weight: 700; letter-spacing: 0.5px;
+    color: #C8942E; margin-bottom: 2px; align-self: center; text-align: center;
+  }
+  .back-brand-sub {
+    font-size: 6.5pt; font-weight: 600; letter-spacing: 0.5px;
+    color: #C8942E; opacity: 0.7; margin-bottom: 6px; align-self: center; text-align: center;
+  }
+  .back-tagline {
+    font-size: 6pt; font-weight: 500; font-style: italic;
+    color: rgba(255,255,255,0.6); letter-spacing: 0.25px;
+    margin-bottom: 4px; align-self: center; text-align: center;
+  }
+  .back-tagline-rule {
+    width: 60px; height: 0.5px; background: rgba(255,255,255,0.2);
+    margin-bottom: 6px; align-self: center;
+  }
+  .back-rule {
+    width: 40px; height: 0.5px;
+    background: linear-gradient(90deg, transparent, rgba(200,148,46,0.4), transparent);
+    margin-bottom: 6px;
+  }
+
+  .back-bottom {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    width: 100%; gap: 10px;
+  }
+
+  .back-socials {
+    display: grid; grid-template-columns: auto 1fr;
+    gap: 2px 6px; align-items: baseline;
+  }
+  .back-social { display: contents; }
+  .back-social .platform { font-size: 5.5pt; font-weight: 700; color: #C8942E; letter-spacing: 0.25px; }
+  .back-social .handle { font-size: 5.5pt; font-weight: 500; color: #FFFFFF; letter-spacing: 0.15px; }
+
+  .back-qr { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+  .back-qr img { width: 55px; height: 55px; border-radius: 3px; }
+  .qr-label { font-size: 5pt; font-weight: 600; color: rgba(200,148,46,0.5); letter-spacing: 0.75px; text-transform: uppercase; margin-top: 2px; }
+
+  /* Print styles */
+  @media print {
+    body { padding: 0; }
+    .card { border: none; }
+    .info { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Business Card Proof — Learn More Technologies</h1>
+<div class="info">
+  Order #015298010 | 4over.com | 500 qty<br>
+  16pt C2S | Silk (Soft Touch Matte) | Spot UV Both Sides | 1/8" Rounded Corners<br>
+  Actual print size: 3.5" x 2" | April 15, 2026
+</div>
+
+<!-- Shared SVG defs -->
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0">
+  <defs>
+    <linearGradient id="micBody" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#A07020"/>
+      <stop offset="20%" stop-color="#E8C55A"/>
+      <stop offset="45%" stop-color="#C8942E"/>
+      <stop offset="70%" stop-color="#E0B84E"/>
+      <stop offset="100%" stop-color="#9A6A1C"/>
+    </linearGradient>
+    <linearGradient id="micYoke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8A6018"/>
+      <stop offset="50%" stop-color="#C8942E"/>
+      <stop offset="100%" stop-color="#8A6018"/>
+    </linearGradient>
+    <linearGradient id="micStand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C8942E"/>
+      <stop offset="100%" stop-color="#7A5515"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<!-- FRONT -->
+<div class="card-wrapper">
+  <div class="label">Front</div>
+  <div class="card card-front">
+    <div class="front-left">
+      <div class="front-stamp">
+        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="sG" x1="250" y1="30" x2="250" y2="470" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#E8C55A"/>
+              <stop offset="50%" stop-color="#C8942E"/>
+              <stop offset="100%" stop-color="#A07020"/>
+            </linearGradient>
+            <filter id="gl"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <circle cx="250" cy="250" r="230" fill="none" stroke="url(#sG)" stroke-width="2.5"/>
+          <circle cx="250" cy="250" r="210" fill="none" stroke="url(#sG)" stroke-width="0.5" opacity="0.2"/>
+          <circle cx="250" cy="250" r="190" fill="none" stroke="url(#sG)" stroke-width="1.5" opacity="0.6"/>
+          <polygon points="250,14 256,22 250,30 244,22" fill="#C8942E" filter="url(#gl)"/>
+          <polygon points="250,470 256,478 250,486 244,478" fill="#C8942E" filter="url(#gl)"/>
+          <polygon points="14,250 22,244 30,250 22,256" fill="#C8942E" filter="url(#gl)"/>
+          <polygon points="470,250 478,244 486,250 478,256" fill="#C8942E" filter="url(#gl)"/>
+          <circle cx="413" cy="87" r="2.5" fill="#C8942E" opacity="0.5"/>
+          <circle cx="87" cy="87" r="2.5" fill="#C8942E" opacity="0.5"/>
+          <circle cx="413" cy="413" r="2.5" fill="#C8942E" opacity="0.5"/>
+          <circle cx="87" cy="413" r="2.5" fill="#C8942E" opacity="0.5"/>
+          <path id="cTP" d="M 55,250 A 195,195 0 0,1 445,250" fill="none"/>
+          <text font-family="Montserrat, sans-serif" fill="#C8942E" font-size="13" font-weight="600" letter-spacing="8" opacity="0.7">
+            <textPath href="#cTP" startOffset="50%" text-anchor="middle">THE PIONEERS PODCAST</textPath>
+          </text>
+          <path id="cBP" d="M 445,250 A 195,195 0 0,1 55,250" fill="none"/>
+          <text font-family="Montserrat, sans-serif" fill="#C8942E" font-size="13" font-weight="600" letter-spacing="8" opacity="0.7">
+            <textPath href="#cBP" startOffset="50%" text-anchor="middle">50+TECHBRIDGE  ·  LMT</textPath>
+          </text>
+          <g transform="translate(250, 185) scale(0.65)">
+            <rect x="-32" y="-75" width="64" height="110" rx="20" fill="url(#micBody)"/>
+            <rect x="-26" y="-67" width="52" height="94" rx="14" fill="#0E1C2F" opacity="0.5"/>
+            <line x1="-16" y1="-57" x2="-16" y2="17" stroke="#C8942E" stroke-width="1.2" opacity="0.5"/>
+            <line x1="-10" y1="-60" x2="-10" y2="20" stroke="#C8942E" stroke-width="1.2" opacity="0.5"/>
+            <line x1="-4" y1="-61" x2="-4" y2="21" stroke="#C8942E" stroke-width="1.2" opacity="0.6"/>
+            <line x1="0" y1="-62" x2="0" y2="22" stroke="#E0B84E" stroke-width="1.5" opacity="0.7"/>
+            <line x1="4" y1="-61" x2="4" y2="21" stroke="#C8942E" stroke-width="1.2" opacity="0.6"/>
+            <line x1="10" y1="-60" x2="10" y2="20" stroke="#C8942E" stroke-width="1.2" opacity="0.5"/>
+            <line x1="16" y1="-57" x2="16" y2="17" stroke="#C8942E" stroke-width="1.2" opacity="0.5"/>
+            <line x1="-26" y1="-45" x2="26" y2="-45" stroke="#E0B84E" stroke-width="0.6" opacity="0.3"/>
+            <line x1="-26" y1="-20" x2="26" y2="-20" stroke="#E0B84E" stroke-width="0.6" opacity="0.3"/>
+            <line x1="-26" y1="5" x2="26" y2="5" stroke="#E0B84E" stroke-width="0.6" opacity="0.3"/>
+            <path d="M-12,-73 Q0,-79 12,-73" fill="none" stroke="#E8C55A" stroke-width="1" opacity="0.5"/>
+            <rect x="-30" y="27" width="60" height="6" rx="2" fill="url(#micBody)" opacity="0.9"/>
+            <path d="M-36,-35 L-36,40 Q-36,47 -30,47" fill="none" stroke="url(#micYoke)" stroke-width="4" stroke-linecap="round"/>
+            <path d="M36,-35 L36,40 Q36,47 30,47" fill="none" stroke="url(#micYoke)" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="-36" cy="-35" r="3.5" fill="#C8942E" stroke="#8A6018" stroke-width="1"/>
+            <circle cx="36" cy="-35" r="3.5" fill="#C8942E" stroke="#8A6018" stroke-width="1"/>
+            <circle cx="-36" cy="-35" r="1.2" fill="#0E1C2F"/>
+            <circle cx="36" cy="-35" r="1.2" fill="#0E1C2F"/>
+            <rect x="-5" y="45" width="10" height="22" rx="5" fill="url(#micStand)"/>
+            <rect x="-8" y="45" width="16" height="5" rx="2.5" fill="url(#micBody)"/>
+          </g>
+          <text x="250" y="295" text-anchor="middle" font-family="Montserrat, sans-serif" fill="#ffffff" font-size="44" font-weight="900" letter-spacing="5"><tspan fill="#C8942E">#</tspan>AGENTIC</text>
+          <line x1="165" y1="310" x2="215" y2="310" stroke="#C8942E" stroke-width="0.8" opacity="0.4"/>
+          <line x1="285" y1="310" x2="335" y2="310" stroke="#C8942E" stroke-width="0.8" opacity="0.4"/>
+          <text x="250" y="358" text-anchor="middle" font-family="Montserrat, sans-serif" fill="#C8942E" font-size="58" font-weight="900" letter-spacing="12" filter="url(#gl)">50</text>
+        </svg>
+      </div>
+    </div>
+    <div class="front-right">
+      <div>
+        <span class="brand-name">Learn More Technologies</span>
+        <div class="header-rule"></div>
+      </div>
+      <div class="front-person">
+        <div class="person-name">Professor Brian McKinney</div>
+        <div class="person-title">CEO &amp; Founder</div>
+        <div class="person-credential">MBE Certified &mdash; Austin, Texas</div>
+        <div class="front-contact">brian@learnmoretechnologies.com&ensp;|&ensp;(512) 200-4241</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BACK -->
+<div class="card-wrapper">
+  <div class="label">Back</div>
+  <div class="card card-back">
+    <div class="corner corner-tl"></div>
+    <div class="corner corner-tr"></div>
+    <div class="corner corner-bl"></div>
+    <div class="corner corner-br"></div>
+    <div class="back-inner">
+      <div class="back-mic">
+        <svg viewBox="0 0 120 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="28" y="10" width="64" height="110" rx="20" fill="url(#micBody)"/>
+          <rect x="34" y="18" width="52" height="94" rx="14" fill="#0E1C2F" opacity="0.5"/>
+          <rect x="36" y="20" width="48" height="90" rx="12" fill="none" stroke="#C8942E" stroke-width="1" opacity="0.6"/>
+          <line x1="44" y1="28" x2="44" y2="102" stroke="#C8942E" stroke-width="1.2" opacity="0.5"/>
+          <line x1="50" y1="25" x2="50" y2="105" stroke="#C8942E" stroke-width="1.2" opacity="0.5"/>
+          <line x1="56" y1="24" x2="56" y2="106" stroke="#C8942E" stroke-width="1.2" opacity="0.6"/>
+          <line x1="60" y1="23" x2="60" y2="107" stroke="#E0B84E" stroke-width="1.5" opacity="0.7"/>
+          <line x1="64" y1="24" x2="64" y2="106" stroke="#C8942E" stroke-width="1.2" opacity="0.6"/>
+          <line x1="70" y1="25" x2="70" y2="105" stroke="#C8942E" stroke-width="1.2" opacity="0.5"/>
+          <line x1="76" y1="28" x2="76" y2="102" stroke="#C8942E" stroke-width="1.2" opacity="0.5"/>
+          <line x1="34" y1="40" x2="86" y2="40" stroke="#E0B84E" stroke-width="0.6" opacity="0.3"/>
+          <line x1="34" y1="65" x2="86" y2="65" stroke="#E0B84E" stroke-width="0.6" opacity="0.3"/>
+          <line x1="34" y1="90" x2="86" y2="90" stroke="#E0B84E" stroke-width="0.6" opacity="0.3"/>
+          <path d="M48,12 Q60,6 72,12" fill="none" stroke="#E8C55A" stroke-width="1" opacity="0.5"/>
+          <rect x="30" y="112" width="60" height="6" rx="2" fill="url(#micBody)" opacity="0.9"/>
+          <path d="M24,50 L24,125 Q24,132 30,132" fill="none" stroke="url(#micYoke)" stroke-width="4" stroke-linecap="round"/>
+          <path d="M96,50 L96,125 Q96,132 90,132" fill="none" stroke="url(#micYoke)" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="24" cy="50" r="3.5" fill="#C8942E" stroke="#8A6018" stroke-width="1"/>
+          <circle cx="96" cy="50" r="3.5" fill="#C8942E" stroke="#8A6018" stroke-width="1"/>
+          <circle cx="24" cy="50" r="1.2" fill="#0E1C2F"/>
+          <circle cx="96" cy="50" r="1.2" fill="#0E1C2F"/>
+          <rect x="55" y="130" width="10" height="30" rx="5" fill="url(#micStand)"/>
+          <rect x="52" y="130" width="16" height="5" rx="2.5" fill="url(#micBody)"/>
+          <rect x="53" y="150" width="14" height="3" rx="1.5" fill="#C8942E" opacity="0.5"/>
+          <ellipse cx="60" cy="168" rx="30" ry="8" fill="url(#micBody)" opacity="0.8"/>
+          <ellipse cx="60" cy="166" rx="24" ry="5" fill="#E0B84E" opacity="0.2"/>
+        </svg>
+      </div>
+      <div class="back-brand">learnmoretechnologies.com/speak</div>
+      <div class="back-brand-sub">50+techbridge.com</div>
+      <div class="back-tagline">AI Training for the 50+ Workforce</div>
+      <div class="back-tagline-rule"></div>
+      <div class="back-rule"></div>
+      <div class="back-bottom">
+        <div class="back-socials">
+          <div class="back-social"><span class="platform">LinkedIn</span><span class="handle">/brianmckinneylmt</span></div>
+          <div class="back-social"><span class="platform">YouTube</span><span class="handle">@LearnMoreTechnologies</span></div>
+          <div class="back-social"><span class="platform">Facebook</span><span class="handle">/learnmoretechnologies</span></div>
+          <div class="back-social"><span class="platform">Instagram</span><span class="handle">@50plustechbridge</span></div>
+          <div class="back-social"><span class="platform">Podcast</span><span class="handle">#AGENTIC50</span></div>
+        </div>
+        <div class="back-qr">
+          <img src="qr-code-speak.png" alt="QR Code" />
+          <span class="qr-label">Scan to book</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="info" style="margin-top: 20px; border-top: 1px solid #ddd; padding-top: 15px;">
+  <strong>SPOT UV ELEMENTS (glossy raised finish):</strong><br>
+  Front: Gold border, logo stamp, brand name, "CEO & Founder" text, gold rules<br>
+  Back: Gold border, corner accents, microphone, URLs, gold rule, social platforms + handles, QR label<br>
+  <strong>NO UV:</strong> Navy background, white text (name, credential, contact, tagline), QR code image
+</div>
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banner FINAL V8</title>
+<style>
+  body {
+    background: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+  }
+  .wrapper { display: flex; flex-direction: column; align-items: center; }
+  .label { text-align: center; font-size: 14px; color: #555; margin-bottom: 10px; font-weight: bold; letter-spacing: 1px; }
+
+  .banner {
+    width: 330px; height: 800px; border-radius: 8px 8px 0 0; overflow: hidden;
+    position: relative; box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    background: #0E1C2F; display: flex; flex-direction: column; align-items: center; color: #FFFFFF;
+  }
+
+  /* === ZONE 1: COMPANY NAME === */
+  .logo-zone {
+    width: 100%;
+    padding: 24px 20px 14px;
+    box-sizing: border-box;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .lmt-text { text-align: center; }
+  .lmt-line1 {
+    font-size: 22px; font-weight: 900; color: #FFFFFF;
+    letter-spacing: 3px; line-height: 1.15;
+  }
+  .lmt-line2 {
+    font-size: 22px; font-weight: 900; color: #FFFFFF;
+    letter-spacing: 3px; line-height: 1.15;
+  }
+  .lmt-rule {
+    width: 240px; height: 2px; background: #C8942E; margin: 8px auto 0;
+  }
+  .lmt-sub {
+    font-size: 14px; font-weight: 700; color: #C8942E;
+    letter-spacing: 2px; text-transform: uppercase;
+    margin-top: 8px;
+  }
+
+  /* === ZONE 2: BRIAN SPEAKING === */
+  .brian-zone {
+    margin-top: 18px; width: calc(100% - 40px);
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .brian-photo {
+    width: 100%; height: 170px; border-radius: 8px;
+    border: 2px solid rgba(200,148,46,0.4); overflow: hidden;
+    background: #1a2a40; box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  }
+  .brian-photo img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center 20%;
+  }
+
+  /* === ZONE 3: COMBINED MISSION BLOCK === */
+  .mission-block {
+    margin: 24px 20px 0;
+    text-align: center;
+  }
+  .mission-url {
+    font-size: 22px; font-weight: 900; color: #C8942E;
+    letter-spacing: 1.5px; margin-bottom: 12px;
+  }
+  .mission-services {
+    font-size: 12px; font-weight: 700; color: #F5F5F0;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    opacity: 0.8; margin-bottom: 12px;
+  }
+  .mission-aspiration {
+    font-size: 16px; font-weight: 700; color: #F5F5F0;
+    line-height: 1.5; letter-spacing: 0.5px;
+  }
+  .mission-aspiration span {
+    font-size: 26px; font-weight: 900; color: #C8942E;
+  }
+
+  /* === ZONE 4: QR CODE === */
+  .stamp-zone {
+    margin: 18px 24px 0;
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+  }
+  .qr-actual {
+    width: 120px; height: 120px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  }
+  .qr-actual img {
+    width: 100%; height: 100%; object-fit: contain;
+  }
+  .scan-label {
+    margin-top: 10px;
+    font-size: 16px; font-weight: 900; color: #C8942E;
+    letter-spacing: 3px; text-transform: uppercase;
+  }
+
+  /* === ZONE 5: BOTTOM === */
+  .bottom-zone {
+    margin-top: auto; width: 100%; position: relative; height: 150px;
+  }
+  .gold-wave {
+    position: absolute; bottom: 0; left: 0; width: 100%; height: 150px;
+  }
+
+  /* Stand */
+  .stand { width: 350px; height: 16px; background: linear-gradient(to bottom,#888,#aaa); border-radius: 0 0 6px 6px; margin: 0 auto; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+  .stand-pole { width: 20px; height: 30px; background: linear-gradient(to right,#999,#bbb,#999); margin: 0 auto; }
+  .stand-foot { width: 180px; height: 10px; background: linear-gradient(to bottom,#888,#aaa); border-radius: 0 0 50% 50%; margin: 0 auto; }
+
+  /* Annotations */
+  .annotations { margin-top: 30px; max-width: 420px; background: #fff; border-radius: 8px; padding: 24px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+  .annotations h3 { margin: 0 0 12px; font-size: 14px; color: #0E1C2F; }
+  .annotations p { font-size: 12px; color: #333; line-height: 1.6; margin: 0 0 12px; }
+  .annotations ul { margin: 0; padding: 0 0 0 18px; font-size: 12px; line-height: 1.8; color: #333; }
+  .annotations li strong { color: #C8942E; }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="label">V8 FINAL</div>
+  <div class="banner">
+
+    <!-- ZONE 1: Company + Mission -->
+    <div class="logo-zone">
+      <div class="lmt-text">
+        <div class="lmt-line1">LEARN MORE</div>
+        <div class="lmt-line2">TECHNOLOGIES</div>
+        <div class="lmt-rule"></div>
+        <div class="lmt-sub">Closing the Digital Divide</div>
+      </div>
+    </div>
+
+    <!-- ZONE 2: Brian Speaking -->
+    <div class="brian-zone">
+      <div class="brian-photo">
+        <img src="file:///C:/Users/Jordyn/Desktop/LMT-CONTENT/04-ASSETS/01-IMAGES/NanoBanna/brianSpeaking20260615 V2.png" alt="Brian McKinney Speaking" onerror="this.style.display='none'; this.parentNode.style.background='#1a2a40'; this.parentNode.innerHTML+='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:#3a4a5a;font-size:12px;letter-spacing:1px&quot;>[ BRIAN SPEAKING PHOTO ]</div>'">
+      </div>
+    </div>
+
+    <!-- ZONE 3: Mission block -->
+    <div class="mission-block">
+      <div class="mission-url">50plustechbridge.com</div>
+      <div class="mission-services">Community Development . Digital Skills Training . AI Literacy</div>
+      <div class="mission-aspiration">Empowering <span>50,000</span> Adults to Thrive in the Digital Age</div>
+    </div>
+
+    <!-- ZONE 4: QR Code + CTA -->
+    <div class="stamp-zone">
+      <div class="qr-actual">
+        <img src="file:///C:/Users/Jordyn/Desktop/qr-code-logo.png" alt="QR Code - Scan to Connect">
+      </div>
+      <div class="scan-label">Let's Connect</div>
+    </div>
+
+    <!-- ZONE 5: Bottom -->
+    <div class="bottom-zone">
+      <svg class="gold-wave" viewBox="0 0 330 150" preserveAspectRatio="none">
+        <path d="M0,48 Q80,10 165,36 T330,20 L330,150 L0,150 Z" fill="#C8942E"/>
+      </svg>
+    </div>
+  </div>
+  <div class="stand"></div>
+  <div class="stand-pole"></div>
+  <div class="stand-foot"></div>
+
+  <div class="annotations">
+    <h3>V8 FINAL</h3>
+    <p><strong>STOP → INTRIGUE → SCAN.</strong> Five zones, zero waste.</p>
+
+    <h3 style="margin-top:16px;">The flow:</h3>
+    <ul>
+      <li>1. <strong>LearnMoreTechnologies.com</strong> — who you are + "Closing the Digital Divide"</li>
+      <li>2. <strong>Speaking photo</strong> — proof (audience visible, brand on screen)</li>
+      <li>3. <strong>50plustechbridge.com</strong> — mission URL + services + "Empowering 50,000 Adults"</li>
+      <li>4. <strong>QR code</strong> with Agentic50 logo + "Let's Connect"</li>
+      <li>5. <strong>Gold wave</strong> — sponsor space when earned</li>
+    </ul>
+
+    <h3 style="margin-top:16px;">What was removed:</h3>
+    <ul>
+      <li><strong>Brand promise zone cut</strong> — "Digital literacy & workforce readiness" overlapped with the services line. Services line covers it</li>
+      <li><strong>Gold wave trimmed</strong> — 140px → 90px. No wasted space</li>
+      <li><strong>Photo enlarged</strong> — 155px → 170px. More impact</li>
+    </ul>
+
+    <h3 style="margin-top:16px;">Print specs:</h3>
+    <ul>
+      <li>Standard retractable: <strong>33.5" x 79"</strong></li>
+      <li>Resolution: <strong>150-180 PPI minimum</strong></li>
+      <li>File format: PDF or high-res PNG</li>
+      <li>Bleed: 0.25" on all sides</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

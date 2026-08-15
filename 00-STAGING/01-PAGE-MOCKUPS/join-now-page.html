@@ -1,0 +1,188 @@
+<!--
+=================================================
+  JOIN NOW PAGE — v2.0 May 12, 2026
+  Template: Full Width Content — REQUIRED
+  Slug: /join-now/
+  Owner: Brian McKinney
+  Stats Lock: Adults 50+ across 13 locations · Targeted 3X Completion
+  Replaces old join-now page with newsletter signup
+=================================================
+-->
+
+<style>
+body,.site,#page,#content,.bb-grid,.container,
+#primary,#main,.site-content,.entry-content,
+.site-inner,.content-sidebar-wrap{background-color:#0E1C2F!important}
+.entry-title,.page-title,.page-template-blank .entry-title,
+body.page .entry-header,.buddypress-page .entry-header,
+#primary .entry-header,.site-content .entry-header{display:none!important}
+.entry-content{padding:0!important;margin:0!important;max-width:none!important}
+.bb-grid,.container,#content,#primary,#main,.site-main{padding:0!important;margin:0!important;max-width:none!important;width:100%!important}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+</style>
+
+<div class="lmt-join">
+<style>
+.lmt-join{font-family:'DM Sans',sans-serif;background:#0E1C2F;color:#D6DCE4;padding:0;margin:0;line-height:1.6}
+.lmt-join *:focus{outline:3px solid #E8B84B;outline-offset:3px}
+
+/* HERO */
+.lmt-join .hero{text-align:center;padding:80px 20px 40px}
+.lmt-join .hero .badge{display:inline-block;background:rgba(200,148,46,.12);border:1px solid rgba(200,148,46,.3);color:#E8B84B;font-size:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:10px 24px;border-radius:100px;margin-bottom:24px}
+.lmt-join .hero h1{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,54px);font-weight:900;color:#fff;margin:0 0 20px;line-height:1.2}
+.lmt-join .hero h1 em{color:#E8B84B;font-style:italic}
+.lmt-join .hero p{font-size:22px;color:#D6DCE4;max-width:700px;margin:0 auto;line-height:1.7}
+
+/* TWO COLUMNS */
+.lmt-join .two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1000px;margin:0 auto;padding:60px 20px}
+.lmt-join .col{background:rgba(255,255,255,.04);border:2px solid rgba(200,148,46,.15);border-radius:16px;padding:40px 32px;text-align:center}
+.lmt-join .col:hover{border-color:#C8942E;background:rgba(200,148,46,.06)}
+.lmt-join .col .col-icon{font-size:3rem;margin-bottom:16px}
+.lmt-join .col h2{font-family:'Playfair Display',serif;font-size:28px;color:#fff;margin:0 0 12px}
+.lmt-join .col h2 em{color:#E8B84B;font-style:italic}
+.lmt-join .col p{font-size:18px;color:#D6DCE4;line-height:1.7;margin:0 0 20px}
+.lmt-join .col ul{list-style:none;padding:0;margin:0 0 24px;text-align:left}
+.lmt-join .col ul li{font-size:17px;color:#D6DCE4;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06);line-height:1.5}
+.lmt-join .col ul li::before{content:'✓ ';color:#C8942E;font-weight:700}
+.lmt-join .col .btn{display:inline-block;background:#C8942E;color:#0E1C2F;font-family:'DM Sans',sans-serif;font-weight:700;font-size:20px;padding:16px 36px;border-radius:8px;text-decoration:none;transition:all .2s}
+.lmt-join .col .btn:hover{background:#E8B84B;transform:translateY(-2px)}
+
+/* TRUST */
+.lmt-join .trust{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;padding:40px 20px;border-top:1px solid rgba(200,148,46,.15);border-bottom:1px solid rgba(200,148,46,.15)}
+.lmt-join .trust-item{text-align:center}
+.lmt-join .trust-item .num{font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,40px);font-weight:900;color:#E8B84B;display:block}
+.lmt-join .trust-item .label{font-size:14px;color:#A0AEC0;text-transform:uppercase;letter-spacing:.08em;margin-top:4px}
+
+/* WHAT YOU GET */
+.lmt-join .what-you-get{padding:60px 20px;max-width:800px;margin:0 auto;text-align:center}
+.lmt-join .what-you-get h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,38px);color:#fff;margin:0 0 32px}
+.lmt-join .what-you-get h2 em{color:#E8B84B;font-style:italic}
+.lmt-join .features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+.lmt-join .feature{background:rgba(255,255,255,.04);border:1px solid rgba(200,148,46,.12);border-radius:12px;padding:24px 20px}
+.lmt-join .feature .feat-icon{font-size:2rem;margin-bottom:8px}
+.lmt-join .feature h3{font-size:18px;color:#E8B84B;margin:0 0 8px;font-weight:700}
+.lmt-join .feature p{font-size:16px;color:#D6DCE4;margin:0;line-height:1.5}
+
+/* BOTTOM CTA */
+.lmt-join .bottom{text-align:center;padding:60px 20px}
+.lmt-join .bottom p{font-size:20px;color:#D6DCE4;max-width:600px;margin:0 auto 20px;line-height:1.7}
+.lmt-join .bottom .tagline{font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,32px);color:#fff;margin:0 0 8px}
+.lmt-join .bottom .tagline em{color:#E8B84B;font-style:italic}
+
+@media(max-width:768px){
+  .lmt-join .two-col{grid-template-columns:1fr}
+  .lmt-join .features{grid-template-columns:1fr}
+  .lmt-join .trust{gap:24px}
+}
+</style>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="badge">Join the Movement</div>
+  <h1>Start Learning. <em>Stay Connected.</em></h1>
+  <p>Free AI and digital skills training built for adults 50+. Plus Agentic50 Weekly — the Pioneer Bridge Report with AI news, tools, and opportunities delivered to your inbox.</p>
+</section>
+
+<!-- TWO OPTIONS -->
+<section class="two-col">
+
+  <!-- START FREE COURSE -->
+  <div class="col">
+    <div class="col-icon">🎓</div>
+    <h2>Start Your <em>Free Course</em></h2>
+    <p>Self-paced AI and digital skills lessons. Three instructors. Three learning styles. Your choice.</p>
+    <ul>
+      <li>Watch it with Barb (visual walkthrough)</li>
+      <li>Hear it with DR. Maya (podcast style)</li>
+      <li>Learn it with Professor McKinney (step by step)</li>
+      <li>English and Spanish available</li>
+      <li>No coding. No jargon. No judgment.</li>
+    </ul>
+    <a href="/start-free-lesson/" class="btn">Get Started →</a>
+  </div>
+
+  <!-- SUBSCRIBE TO NEWSLETTER -->
+  <div class="col">
+    <div class="col-icon">📬</div>
+    <h2>Subscribe to <em>Agentic50 Weekly</em></h2>
+    <p>The Pioneer Bridge Report — AI news translated for adults 50+. Every two weeks, straight to your inbox.</p>
+    <ul>
+      <li>The Headline — AI news that matters to you</li>
+      <li>The Tool — one AI tool to try right now</li>
+      <li>The Opportunity — how AI creates opportunity</li>
+      <li>The Pioneer Bridge Report — curated news links</li>
+      <li>Brian's Pick — one article I personally recommend</li>
+    </ul>
+    <a href="https://learnmoretechnologies.us20.list-manage.com/subscribe/post?u=864533a4fa581c8a9caedaea9&amp;id=5ed5071656&amp;f_id=00d7c4f1f0" class="btn" target="_blank">Subscribe Free →</a>
+  </div>
+
+</section>
+
+<!-- TRUST BAR -->
+<section class="trust">
+  <div class="trust-item">
+    <span class="num">13</span>
+    <span class="label">Locations Deployed</span>
+  </div>
+  <div class="trust-item">
+    <span class="num">50,000</span>
+    <span class="label">Pioneer Target</span>
+  </div>
+  <div class="trust-item">
+    <span class="num">Free</span>
+    <span class="label">Always</span>
+  </div>
+  <div class="trust-item">
+    <span class="num">MBE</span>
+    <span class="label">Certified</span>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section class="what-you-get">
+  <h2>Why <em>Pioneers</em> Keep Coming Back</h2>
+
+  <div class="features">
+    <div class="feature">
+      <div class="feat-icon">📱</div>
+      <h3>Real Skills</h3>
+      <p>Build something you can use Monday morning — not a quiz score, a real tool on your phone.</p>
+    </div>
+    <div class="feature">
+      <div class="feat-icon">🤝</div>
+      <h3>Peer Instructors</h3>
+      <p>Taught by people your age who remember what it felt like to not know what a browser was.</p>
+    </div>
+    <div class="feature">
+      <div class="feat-icon">🌍</div>
+      <h3>Multiple Languages</h3>
+      <p>English and Spanish now. Vietnamese, Chinese, and French coming soon.</p>
+    </div>
+    <div class="feature">
+      <div class="feat-icon">🎧</div>
+      <h3>Your Learning Style</h3>
+      <p>Watch it. Hear it. Do it yourself. Three instructors, three ways to learn. Pick the one that fits you.</p>
+    </div>
+    <div class="feature">
+      <div class="feat-icon">📰</div>
+      <h3>Pioneer Bridge Report</h3>
+      <p>Curated AI news, ageism updates, and tools — translated for adults 50+. Every two weeks.</p>
+    </div>
+    <div class="feature">
+      <div class="feat-icon">🆓</div>
+      <h3>Always Free</h3>
+      <p>The course is free. The newsletter is free. No credit card. No catch. Just start.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="bottom">
+  <div class="tagline">Ageism is the problem. AgeTech is the solution. <em>We're the bridge.</em></div>
+  <p>Join Digital Pioneers across 13 locations in Central Texas — and growing globally. The course is free. The newsletter is free. Your future is worth the click.</p>
+  <a href="/start-free-lesson/" class="btn" style="display:inline-block;background:#C8942E;color:#0E1C2F;font-weight:700;font-size:22px;padding:20px 48px;border-radius:8px;text-decoration:none;margin:0 12px 12px 0;">Get Started →</a>
+  <a href="https://learnmoretechnologies.us20.list-manage.com/subscribe/post?u=864533a4fa581c8a9caedaea9&amp;id=5ed5071656&amp;f_id=00d7c4f1f0" class="btn" style="display:inline-block;background:transparent;color:#C8942E;border:2px solid #C8942E;font-weight:700;font-size:22px;padding:18px 48px;border-radius:8px;text-decoration:none;margin:0 12px 12px 0;" target="_blank">Subscribe to Newsletter →</a>
+  <p style="margin-top:20px;font-size:16px;color:#A0AEC0">For organizations: <a href="https://cal.com/brian-mckinney-mrtu8q" style="color:#E8B84B">Partner with us →</a></p>
+</section>
+
+</div><!-- .lmt-join -->

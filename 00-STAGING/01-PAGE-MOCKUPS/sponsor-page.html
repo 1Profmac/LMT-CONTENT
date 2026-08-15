@@ -1,0 +1,241 @@
+<!-- wp:html -->
+<!--
+=================================================
+  BECOME A SPONSOR PAGE — v1.0 May 12, 2026
+  Template: Full Width Content — REQUIRED
+  Slug: /sponsor/
+  Owner: Brian McKinney
+  Stats Lock: 200+ adults across 12 locations · 3X Completion Rate
+=================================================
+-->
+
+<style>
+/* BUDDYBOSS RESET */
+body,.site,#page,#content,.bb-grid,.container,
+#primary,#main,.site-content,.entry-content,
+.site-inner,.content-sidebar-wrap{background-color:#0E1C2F!important}
+.entry-title,.page-title,.page-template-blank .entry-title,
+body.page .entry-header,.buddypress-page .entry-header,
+#primary .entry-header,.site-content .entry-header{display:none!important}
+.entry-content{padding:0!important;margin:0!important;max-width:none!important}
+.bb-grid,.container,#content,#primary,#main,.site-main{padding:0!important;margin:0!important;max-width:none!important;width:100%!important}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+</style>
+
+<div class="lmt-sponsor">
+<style>
+.lmt-sponsor{font-family:'DM Sans',sans-serif;background:#0E1C2F;color:#D6DCE4;padding:0;margin:0;line-height:1.6}
+.lmt-sponsor *:focus{outline:3px solid #E8B84B;outline-offset:3px}
+
+/* HERO */
+.lmt-sponsor .hero{text-align:center;padding:80px 20px 40px}
+.lmt-sponsor .hero .badge{display:inline-block;background:rgba(200,148,46,.12);border:1px solid rgba(200,148,46,.3);color:#E8B84B;font-size:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:10px 24px;border-radius:100px;margin-bottom:24px}
+.lmt-sponsor .hero h1{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,54px);font-weight:900;color:#fff;margin:0 0 20px;line-height:1.2}
+.lmt-sponsor .hero h1 em{color:#E8B84B;font-style:italic}
+.lmt-sponsor .hero p{font-size:22px;color:#D6DCE4;max-width:700px;margin:0 auto;line-height:1.7}
+
+/* STATS BAR */
+.lmt-sponsor .stats-bar{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;padding:40px 20px;border-top:1px solid rgba(200,148,46,.15);border-bottom:1px solid rgba(200,148,46,.15)}
+.lmt-sponsor .stat{text-align:center}
+.lmt-sponsor .stat .num{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,48px);font-weight:900;color:#E8B84B;display:block}
+.lmt-sponsor .stat .label{font-size:16px;color:#A0AEC0;text-transform:uppercase;letter-spacing:.08em;margin-top:4px}
+
+/* SECTION */
+.lmt-sponsor .section{padding:60px 20px;max-width:900px;margin:0 auto}
+.lmt-sponsor .section h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,38px);color:#fff;text-align:center;margin:0 0 16px;line-height:1.3}
+.lmt-sponsor .section h2 em{color:#E8B84B;font-style:italic}
+.lmt-sponsor .section .sub{font-size:20px;color:#D6DCE4;text-align:center;margin:0 0 40px;line-height:1.7;max-width:700px;margin-left:auto;margin-right:auto}
+.lmt-sponsor .section p{font-size:20px;color:#D6DCE4;line-height:1.7;margin:0 0 16px}
+
+/* TIER CARDS */
+.lmt-sponsor .tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:1100px;margin:0 auto;padding:0 20px}
+.lmt-sponsor .tier{background:rgba(255,255,255,.04);border:2px solid rgba(200,148,46,.15);border-radius:16px;padding:36px 28px;text-align:center;transition:all .2s}
+.lmt-sponsor .tier:hover{border-color:#C8942E;background:rgba(200,148,46,.06);transform:translateY(-3px)}
+.lmt-sponsor .tier.featured{border-color:#C8942E;background:rgba(200,148,46,.08);box-shadow:0 0 30px rgba(200,148,46,.15);position:relative}
+.lmt-sponsor .tier.featured::before{content:'MOST POPULAR';position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#C8942E;color:#0E1C2F;font-size:13px;font-weight:700;letter-spacing:.1em;padding:6px 18px;border-radius:100px}
+.lmt-sponsor .tier .tier-name{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#fff;margin-bottom:8px}
+.lmt-sponsor .tier .tier-price{font-size:42px;font-weight:900;color:#E8B84B;margin-bottom:4px}
+.lmt-sponsor .tier .tier-impact{font-size:18px;color:#C8942E;font-weight:700;margin-bottom:20px}
+.lmt-sponsor .tier ul{list-style:none;padding:0;margin:0 0 24px;text-align:left}
+.lmt-sponsor .tier ul li{font-size:17px;color:#D6DCE4;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06);line-height:1.5}
+.lmt-sponsor .tier ul li::before{content:'✓ ';color:#C8942E;font-weight:700}
+.lmt-sponsor .tier .btn{display:inline-block;background:#C8942E;color:#0E1C2F;font-family:'DM Sans',sans-serif;font-weight:700;font-size:18px;padding:14px 32px;border-radius:8px;text-decoration:none;transition:all .2s}
+.lmt-sponsor .tier .btn:hover{background:#E8B84B;transform:translateY(-2px)}
+
+/* IMPACT */
+.lmt-sponsor .impact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:32px}
+.lmt-sponsor .impact-card{background:rgba(255,255,255,.04);border:1px solid rgba(200,148,46,.15);border-radius:12px;padding:28px 24px}
+.lmt-sponsor .impact-card h3{font-size:20px;color:#E8B84B;margin:0 0 8px;font-weight:700}
+.lmt-sponsor .impact-card p{font-size:18px;color:#D6DCE4;margin:0;line-height:1.6}
+
+/* CTA */
+.lmt-sponsor .cta-section{text-align:center;padding:60px 20px;border-top:1px solid rgba(200,148,46,.15)}
+.lmt-sponsor .cta-section h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,42px);color:#fff;margin:0 0 16px}
+.lmt-sponsor .cta-section h2 em{color:#E8B84B;font-style:italic}
+.lmt-sponsor .cta-section p{font-size:22px;color:#D6DCE4;max-width:600px;margin:0 auto 28px;line-height:1.7}
+.lmt-sponsor .cta-section .btn-big{display:inline-block;background:#C8942E;color:#0E1C2F;font-family:'DM Sans',sans-serif;font-weight:700;font-size:22px;padding:20px 48px;border-radius:8px;text-decoration:none;transition:all .2s}
+.lmt-sponsor .cta-section .btn-big:hover{background:#E8B84B;transform:translateY(-2px)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .lmt-sponsor .tiers{grid-template-columns:1fr 1fr}
+  .lmt-sponsor .impact-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .lmt-sponsor .tiers{grid-template-columns:1fr}
+  .lmt-sponsor .stats-bar{gap:24px}
+}
+</style>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="badge">Become a Sponsor</div>
+  <h1>Help Us Reach <em>50,000 Digital Pioneers</em></h1>
+  <p>Adults 50+ are being left behind by the technology revolution. Your sponsorship funds the training that closes the gap — one Pioneer at a time.</p>
+</section>
+
+<!-- STATS BAR -->
+<section class="stats-bar">
+  <div class="stat">
+    <span class="num">$850B</span>
+    <span class="label">Lost annually to age discrimination</span>
+  </div>
+  <div class="stat">
+    <span class="num">12</span>
+    <span class="label">Locations deployed</span>
+  </div>
+  <div class="stat">
+    <span class="num">50,000</span>
+    <span class="label">Pioneer target</span>
+  </div>
+  <div class="stat">
+    <span class="num">$98</span>
+    <span class="label">Cost per Pioneer</span>
+  </div>
+</section>
+
+<!-- THE PROBLEM -->
+<section class="section">
+  <h2>The $850 Billion Problem <em>Your Money Can Fix</em></h2>
+  <p class="sub">Adults 50+ control $76 trillion in spending power. But 34% of adults 65+ don't use the internet. The tools exist. The training doesn't. Until now.</p>
+  <p>50+TechBridge has trained 200+ adults across 12 locations in Central Texas — 9 libraries, 3 senior centers. Our model uses peer instruction, cohort-based learning, and AI avatar guides to deliver 3X industry completion rates where traditional programs fail.</p>
+  <p>We're MBE Certified, WIOA-eligible, and building toward 50,000 Digital Pioneers globally. Your sponsorship makes that possible.</p>
+</section>
+
+<!-- SPONSORSHIP TIERS -->
+<section class="section" style="max-width:1100px">
+  <h2>Sponsorship <em>Tiers</em></h2>
+  <p class="sub">Every dollar trains a real person. Every tier gets your brand attached to measurable impact.</p>
+
+  <div class="tiers">
+
+    <!-- $5K -->
+    <div class="tier">
+      <div class="tier-name">Community Investor</div>
+      <div class="tier-price">$5,000</div>
+      <div class="tier-impact">Trains ~51 Digital Pioneers</div>
+      <ul>
+        <li>Logo on all Lunch & Learn materials</li>
+        <li>Named acknowledgment at each event</li>
+        <li>Impact report with your brand</li>
+        <li>Certificate of community investment</li>
+        <li>4 social media recognition posts</li>
+      </ul>
+      <a href="https://cal.com/brian-mckinney-mrtu8q" class="btn">Become an Investor →</a>
+    </div>
+
+    <!-- $10K -->
+    <div class="tier featured">
+      <div class="tier-name">Pioneer Sponsor</div>
+      <div class="tier-price">$10,000</div>
+      <div class="tier-impact">Trains ~102 Digital Pioneers</div>
+      <ul>
+        <li>Everything in Community Investor</li>
+        <li>"Presented in partnership with [You]" on course platform</li>
+        <li>Quarterly impact briefing with Brian McKinney</li>
+        <li>Feature story in media pitches</li>
+        <li>Enroll 10 employees' family members 50+ free</li>
+        <li>CRA qualifying documentation for banks</li>
+      </ul>
+      <a href="https://cal.com/brian-mckinney-mrtu8q" class="btn">Become a Sponsor →</a>
+    </div>
+
+    <!-- $25K -->
+    <div class="tier">
+      <div class="tier-name">Bridge Builder</div>
+      <div class="tier-price">$25,000</div>
+      <div class="tier-impact">Trains ~255 Digital Pioneers</div>
+      <ul>
+        <li>Everything in Pioneer Sponsor</li>
+        <li>Named cohort: "The [Your Company] Pioneers"</li>
+        <li>Speaking opportunity at graduation event</li>
+        <li>Priority workforce training for 50+ employees</li>
+        <li>Annual impact report with your brand</li>
+      </ul>
+      <a href="https://cal.com/brian-mckinney-mrtu8q" class="btn">Build the Bridge →</a>
+    </div>
+
+    <!-- $50K -->
+    <div class="tier">
+      <div class="tier-name">Founding Partner</div>
+      <div class="tier-price">$50,000</div>
+      <div class="tier-impact">Trains ~510 Digital Pioneers</div>
+      <ul>
+        <li>Everything in Bridge Builder</li>
+        <li>Founding Partner status — permanent recognition</li>
+        <li>Co-branded program launch in your market</li>
+        <li>Direct line to Brian McKinney</li>
+        <li>Board advisory opportunity</li>
+        <li>First access to national expansion</li>
+      </ul>
+      <a href="https://cal.com/brian-mckinney-mrtu8q" class="btn">Become a Founding Partner →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- YOUR IMPACT -->
+<section class="section">
+  <h2>What Your <em>Sponsorship Funds</em></h2>
+
+  <div class="impact-grid">
+    <div class="impact-card">
+      <h3>$98 = One Digital Pioneer</h3>
+      <p>One adult 50+ trained in AI and digital skills. Self-paced. Peer-instructed. Project-based. Real results they use the Monday after they finish.</p>
+    </div>
+    <div class="impact-card">
+      <h3>Peer Instructors, Not Lecturers</h3>
+      <p>Your funding supports instructors their own age — people who remember what it felt like to not know what a browser was. That removes the shame and drives completion.</p>
+    </div>
+    <div class="impact-card">
+      <h3>Three Learning Styles</h3>
+      <p>Every Pioneer chooses how they learn: visual walkthrough with Barb, podcast with DR. Maya, or hands-on with Professor McKinney. In English or Spanish.</p>
+    </div>
+    <div class="impact-card">
+      <h3>Measurable Outcomes</h3>
+      <p>You get real data: completion rates, confidence metrics, participant stories, and a full impact report with your brand attached. Every dollar is accountable.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO SPONSORS -->
+<section class="section">
+  <h2>Who <em>Sponsors</em> 50+TechBridge?</h2>
+  <p class="sub">Organizations that understand the $850 billion problem — and want to be part of the solution.</p>
+  <p><strong>Community Banks</strong> — CRA-qualifying digital equity investment. Train adults 50+ in LMI communities. Documentation provided.</p>
+  <p><strong>Corporations</strong> — CSR and ESG reporting. Digital equity is a measurable, brandable investment with real impact data.</p>
+  <p><strong>Foundations</strong> — Digital inclusion is a health intervention. Adults 50+ who can't use technology can't access healthcare, banking, or government services.</p>
+  <p><strong>Government Programs</strong> — WIOA-eligible. MBE Certified. Ready to deploy through workforce boards and public libraries.</p>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>The Bridge Is Built. <em>Help Us Scale It.</em></h2>
+  <p>200+ adults trained. 12 locations. 3X completion rate. Now building to 50,000 Digital Pioneers. Your sponsorship makes the next thousand possible.</p>
+  <a href="https://cal.com/brian-mckinney-mrtu8q" class="btn-big">Schedule a Sponsor Call →</a>
+  <p style="margin-top:20px;font-size:18px;color:#A0AEC0">Or email: <a href="mailto:hello@learnmoretechnologies.com" style="color:#E8B84B">hello@learnmoretechnologies.com</a></p>
+</section>
+
+</div><!-- .lmt-sponsor -->
+<\!-- /wp:html -->

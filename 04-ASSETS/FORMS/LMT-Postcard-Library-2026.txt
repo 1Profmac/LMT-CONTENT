@@ -1,0 +1,91 @@
+================================================================================
+  SIZE: 4 x 6 inches | PRINT: Full color, both sides | STOCK: 14pt gloss
+  FILE: LMT-Postcard-Library-2026.txt
+================================================================================
+
+════════════════════════════════════════
+  FRONT SIDE
+════════════════════════════════════════
+
+  [TOP — large bold headline, 60-70% of front]
+
+  Free AI Training
+  for Adults 50+
+
+  No coding. No jargon. No cost.
+
+  [BOTTOM STRIP — dark bar]
+
+  50+TechBridge | learnmoretechnologies.com
+
+  [IMAGE: Photo of smiling adult 50+ using a tablet or laptop
+   at a library — warm, approachable, real people preferred]
+
+════════════════════════════════════════
+  BACK SIDE
+════════════════════════════════════════
+
+  LEFT HALF (content)
+  ───────────────────
+
+  You're Not Bad at Technology.
+  You've Just Never Had the Right Teacher.
+
+  ✓ Learn AI tools for everyday life
+  ✓ No experience needed
+  ✓ 100% Free — at your local library
+
+  9 locations | 3X completion rate | Always free
+
+  WHEN:  ____________________________
+  WHERE: ____________________________
+
+  Ready to start?
+  learnmoretechnologies.com/start-free-lesson/
+  hello@learnmoretechnologies.com
+
+  [QR CODE — bottom left, links to start-free-lesson page]
+
+  50+TechBridge | Learn More Technologies
+  MBE-Certified | WIOA-Eligible | Austin, TX
+
+
+  RIGHT HALF (standard postcard mailing area)
+  ────────────────────────────────────────────
+
+  [POSTAGE AREA — top right]
+  ┌─────────────┐
+  │   POSTAGE   │
+  │    HERE     │
+  └─────────────┘
+
+  TO:
+  ________________________
+  ________________________
+  ________________________
+  ________________________
+
+
+================================================================================
+  DESIGN NOTES FOR CANVA (4x6 Postcard)
+================================================================================
+
+  Front:
+  - Dark background (navy or black), white bold headline
+  - Orange accent on "Free" or key words
+  - Real photo takes up 50-60% of front (top or full bleed)
+  - Bottom strip: org name + URL in clean white text
+
+  Back:
+  - Left 60%: all content
+  - Right 40%: standard mailing format (postage box top right, address lines)
+  - QR code bottom left corner of content area
+  - Keep font size minimum 9pt for readability at postcard scale
+  - Export: PDF Print, 300 DPI, with 0.125" bleed
+
+  Print vendor tips:
+  - GotPrint.com or 4over.com — affordable postcard printing
+  - Order 500-1000 per library branch for 6-month supply
+  - Matte finish back (easier to write on), gloss front
+
+================================================================================

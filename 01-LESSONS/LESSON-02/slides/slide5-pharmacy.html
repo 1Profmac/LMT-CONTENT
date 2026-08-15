@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    height: 1920px;
+    background: #0E1C2F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  .phone {
+    width: 500px;
+    height: 1000px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    border: 6px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 80px 40px 40px;
+    position: relative;
+  }
+  .phone::before {
+    content: '';
+    width: 150px;
+    height: 25px;
+    background: #333;
+    border-radius: 15px;
+    position: absolute;
+    top: 20px;
+  }
+  .instruction {
+    font-size: 38px;
+    font-weight: 700;
+    color: #0E1C2F;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .helper {
+    font-size: 22px;
+    color: #888;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .search-bar {
+    width: 100%;
+    background: #F5F5F5;
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+  .search-icon {
+    font-size: 24px;
+    color: #999;
+  }
+  .search-text {
+    font-size: 24px;
+    color: #333;
+  }
+  .app-result {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid #E0E0E0;
+    border-radius: 16px;
+    margin-bottom: 15px;
+  }
+  .app-icon {
+    width: 70px;
+    height: 70px;
+    background: #E8733A;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    color: #FFF;
+  }
+  .app-info {
+    flex: 1;
+  }
+  .app-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0E1C2F;
+  }
+  .app-desc {
+    font-size: 16px;
+    color: #888;
+  }
+  .get-button {
+    background: #C8942E;
+    color: #FFF;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 10px 25px;
+    border-radius: 20px;
+  }
+  .arrow-get {
+    text-align: right;
+    width: 100%;
+    padding-right: 15px;
+    margin-bottom: 20px;
+  }
+  .arrow-get span {
+    font-size: 30px;
+    color: #C8942E;
+  }
+  .couch-box {
+    background: #F5F5F5;
+    border-radius: 12px;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+  }
+  .couch-text {
+    font-size: 22px;
+    color: #333;
+    font-weight: 600;
+  }
+  .step-box {
+    margin-top: 40px;
+    background: #0E1C2F;
+    border: 3px solid #C8942E;
+    border-radius: 12px;
+    padding: 18px 50px;
+  }
+  .step-text {
+    font-size: 36px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+</style>
+</head>
+<body>
+  <div class="phone">
+    <div class="instruction">Download<br>ONE App You Need</div>
+    <div class="helper">Your pharmacy, bank, or grocery store</div>
+    <div class="search-bar">
+      <span class="search-icon">&#128269;</span>
+      <span class="search-text">Walgreens</span>
+    </div>
+    <div class="app-result">
+      <div class="app-icon">&#128138;</div>
+      <div class="app-info">
+        <div class="app-name">Walgreens</div>
+        <div class="app-desc">Pharmacy, Health & Wellness</div>
+      </div>
+      <div class="get-button">GET</div>
+    </div>
+    <div class="arrow-get"><span>&#8593; Tap GET</span></div>
+    <div class="couch-box">
+      <div class="couch-text">Now you can refill prescriptions<br>from your couch.</div>
+    </div>
+  </div>
+  <div class="step-box">
+    <div class="step-text">Step 3 of 3</div>
+  </div>
+</body>
+</html>

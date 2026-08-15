@@ -1,0 +1,311 @@
+<!-- wp:html -->
+
+<!--
+=================================================
+  LMT BLOG PAGE — Two Column Layout
+  Template: Full Width Content — REQUIRED
+  Slug: /blog/
+  Owner: Brian McKinney
+  Updated: August 11, 2026
+  Colors: Navy #0E1C2F | Gold #C8942E
+  Fonts: Playfair Display (headings) | DM Sans (body)
+=================================================
+-->
+
+<style>
+
+/* BUDDYBOSS RESET — DO NOT REMOVE */
+body,.site,#page,#content,.bb-grid,.container,
+#primary,#main,.site-content,.entry-content,
+.site-inner,.content-sidebar-wrap{background-color:#0E1C2F!important}
+.entry-title,.page-title,.page-template-blank .entry-title,
+body.page .entry-header,.buddypress-page .entry-header,
+#primary .entry-header,.site-content .entry-header{display:none!important}
+.entry-content{padding:0!important;margin:0!important;max-width:none!important}
+.bb-grid,.container,#content,#primary,#main,.site-main{padding:0!important;margin:0!important;max-width:none!important;width:100%!important}
+.site-footer,.footer-widgets,#colophon{margin-top:0!important;padding-top:0!important}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap');
+
+</style>
+
+<div class="lmt-blog">
+<style>
+
+/* ── BASE ── */
+.lmt-blog { font-family:'DM Sans',sans-serif; background:#0E1C2F; color:#C4CDD9; }
+.lmt-blog * { box-sizing:border-box; }
+
+/* ── HERO ── */
+.lmt-blog .blog-hero {
+  background:#0E1C2F;
+  padding:80px 40px 64px;
+  position:relative;
+  overflow:hidden;
+  text-align:center;
+}
+.lmt-blog .blog-hero-bg {
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse at 30% 50%,rgba(200,148,46,.08) 0%,transparent 60%),
+             radial-gradient(ellipse at 70% 20%,rgba(200,148,46,.05) 0%,transparent 50%);
+  pointer-events:none;
+}
+.lmt-blog .blog-hero-inner {
+  max-width:860px;
+  margin:0 auto;
+  position:relative;
+  z-index:1;
+}
+.lmt-blog .hero-badge {
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(200,148,46,.12);border:1px solid rgba(200,148,46,.3);
+  color:#C8942E;font-size:0.72rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;padding:8px 16px;border-radius:100px;
+  margin-bottom:28px;
+}
+.lmt-blog .hero-badge span { width:6px;height:6px;background:#C8942E;border-radius:50%;display:inline-block; }
+.lmt-blog .blog-hero h1 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(36px,4.5vw,56px);
+  font-weight:900;line-height:1.08;
+  color:#FFFFFF;margin:0 0 20px;
+}
+.lmt-blog .blog-hero h1 em { color:#C8942E;font-style:italic; }
+.lmt-blog .blog-hero-sub {
+  font-size:1.15rem;line-height:1.7;
+  color:#A8B8CC;margin:0 auto 36px;
+  max-width:640px;
+}
+.lmt-blog .hero-btns {
+  display:flex;gap:16px;justify-content:center;flex-wrap:wrap;
+}
+.lmt-blog .btn-gold {
+  background:#C8942E;color:#0E1C2F;
+  font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:700;
+  padding:14px 28px;border-radius:8px;text-decoration:none;
+  transition:background .2s;
+  display:inline-block;
+}
+.lmt-blog .btn-gold:hover { background:#E8B84B; }
+.lmt-blog .btn-outline {
+  background:transparent;color:#FFFFFF;
+  font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:600;
+  padding:14px 28px;border-radius:8px;text-decoration:none;
+  border:1px solid rgba(255,255,255,.25);
+  transition:border-color .2s;
+  display:inline-block;
+}
+.lmt-blog .btn-outline:hover { border-color:#C8942E;color:#C8942E; }
+
+/* ── DIVIDER ── */
+.lmt-blog .section-divider {
+  border:none;
+  border-top:1px solid rgba(200,148,46,.2);
+  margin:0;
+}
+
+/* ── ARTICLES SECTION ── */
+.lmt-blog .articles-section {
+  background:#0E1C2F;
+  padding:64px 40px 80px;
+}
+.lmt-blog .articles-inner {
+  max-width:1100px;
+  margin:0 auto;
+}
+.lmt-blog .section-label {
+  font-size:0.72rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:#C8942E;
+  margin:0 0 12px;
+}
+.lmt-blog .section-heading {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(28px,3vw,40px);
+  font-weight:700;color:#FFFFFF;
+  margin:0 0 48px;
+  line-height:1.2;
+}
+
+/* ── TWO COLUMN GRID ── */
+.lmt-blog .articles-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:32px;
+}
+@media(max-width:768px){
+  .lmt-blog .articles-grid { grid-template-columns:1fr; }
+  .lmt-blog .blog-hero { padding:60px 24px 48px; }
+  .lmt-blog .articles-section { padding:48px 24px 64px; }
+}
+
+/* ── ARTICLE CARD ── */
+.lmt-blog .article-card {
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(200,148,46,.15);
+  border-radius:12px;
+  overflow:hidden;
+  transition:border-color .2s, transform .2s;
+  display:flex;
+  flex-direction:column;
+}
+.lmt-blog .article-card:hover {
+  border-color:rgba(200,148,46,.4);
+  transform:translateY(-4px);
+}
+.lmt-blog .card-img {
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  background:rgba(200,148,46,.08);
+  display:block;
+}
+.lmt-blog .card-img-placeholder {
+  width:100%;height:200px;
+  background:linear-gradient(135deg,rgba(200,148,46,.1) 0%,rgba(14,28,47,.8) 100%);
+  display:flex;align-items:center;justify-content:center;
+}
+.lmt-blog .card-img-placeholder span {
+  font-size:2.5rem;opacity:.4;
+}
+.lmt-blog .card-body {
+  padding:28px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+.lmt-blog .card-tag {
+  font-size:0.7rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:#C8942E;
+  margin:0 0 12px;
+}
+.lmt-blog .card-title {
+  font-family:'Playfair Display',serif;
+  font-size:1.3rem;font-weight:700;
+  color:#FFFFFF;line-height:1.3;
+  margin:0 0 14px;
+}
+.lmt-blog .card-excerpt {
+  font-size:0.95rem;line-height:1.65;
+  color:#A8B8CC;margin:0 0 24px;
+  flex:1;
+}
+.lmt-blog .card-link {
+  color:#C8942E;font-weight:700;font-size:0.9rem;
+  text-decoration:none;
+  display:inline-flex;align-items:center;gap:6px;
+  align-self:flex-start;
+  transition:gap .2s;
+}
+.lmt-blog .card-link:hover { gap:10px; }
+.lmt-blog .card-meta {
+  font-size:0.8rem;color:#6B7F94;
+  margin-bottom:10px;
+}
+
+/* ── CTA STRIP ── */
+.lmt-blog .cta-strip {
+  background:rgba(200,148,46,.08);
+  border-top:1px solid rgba(200,148,46,.2);
+  border-bottom:1px solid rgba(200,148,46,.2);
+  padding:56px 40px;
+  text-align:center;
+}
+.lmt-blog .cta-strip h2 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(24px,3vw,36px);
+  font-weight:700;color:#FFFFFF;
+  margin:0 0 12px;
+}
+.lmt-blog .cta-strip p {
+  color:#A8B8CC;font-size:1rem;
+  margin:0 auto 28px;max-width:520px;
+}
+
+</style>
+
+<!-- HERO -->
+<div class="blog-hero">
+  <div class="blog-hero-bg"></div>
+  <div class="blog-hero-inner">
+    <div class="hero-badge"><span></span> The Workforce AI Training Playbook</div>
+    <h1>Research, Strategy &amp; Proof That<br><em>Experienced Workers</em> Are Your Best Investment</h1>
+    <p class="blog-hero-sub">Data-driven articles for workforce managers, HR leaders, and workforce development boards ready to close the 50+ training gap.</p>
+    <div class="hero-btns">
+      <a href="/partner-with-us/" class="btn-gold">Deploy Training at Your Org &rarr;</a>
+      <a href="/workforce/" class="btn-outline">See Training Programs</a>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ARTICLES -->
+<div class="articles-section">
+  <div class="articles-inner">
+    <p class="section-label">Latest Articles</p>
+    <h2 class="section-heading">The 50+ Workforce AI Training Library</h2>
+
+    <div class="articles-grid">
+
+      <!-- CARD 1 -->
+      <div class="article-card">
+        <div class="card-img-placeholder"><span>&#128161;</span></div>
+        <div class="card-body">
+          <p class="card-tag">Workforce Development</p>
+          <p class="card-meta">August 11, 2026</p>
+          <h3 class="card-title">What to Do When Your Team Refuses AI Training</h3>
+          <p class="card-excerpt">Your most experienced people aren't refusing AI training because they can't learn. They're refusing because they've been failed before. Here's what's actually happening — and how to fix it.</p>
+          <a href="/what-to-do-when-your-team-refuses-ai-training/" class="card-link">Read Article &rarr;</a>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="article-card">
+        <div class="card-img-placeholder"><span>&#9989;</span></div>
+        <div class="card-body">
+          <p class="card-tag">Pilot Programs</p>
+          <p class="card-meta">Coming August 18, 2026</p>
+          <h3 class="card-title">5 Signs Your Organization Is Ready for a 50+ AI Pilot</h3>
+          <p class="card-excerpt">Not sure if your organization is ready to launch AI training for adults 50+? Here are 5 clear signs — and what to do if you're already there.</p>
+          <a href="/5-signs-your-organization-is-ready-for-a-50-ai-pilot/" class="card-link">Read Article &rarr;</a>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="article-card">
+        <div class="card-img-placeholder"><span>&#128200;</span></div>
+        <div class="card-body">
+          <p class="card-tag">ROI &amp; Budget</p>
+          <p class="card-meta">Coming August 25, 2026</p>
+          <h3 class="card-title">The Hidden Cost of Skipping 50+ Workers in Your AI Rollout</h3>
+          <p class="card-excerpt">When organizations roll out AI training and skip their 50+ workers, the costs are real and measurable. Here's what you're actually paying for.</p>
+          <a href="/the-hidden-cost-of-skipping-50-workers-in-your-ai-rollout/" class="card-link">Read Article &rarr;</a>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="article-card">
+        <div class="card-img-placeholder"><span>&#128203;</span></div>
+        <div class="card-body">
+          <p class="card-tag">Readiness Assessment</p>
+          <p class="card-meta">Coming September 1, 2026</p>
+          <h3 class="card-title">Is Your Team Ready for AI Training? Here's How to Know</h3>
+          <p class="card-excerpt">Before you spend money on AI training, answer these 7 questions. They'll tell you exactly where your team stands — and what to do next.</p>
+          <a href="/is-your-team-ready-for-ai-training/" class="card-link">Read Article &rarr;</a>
+        </div>
+      </div>
+
+    </div><!-- end grid -->
+  </div>
+</div>
+
+<!-- CTA STRIP -->
+<div class="cta-strip">
+  <h2>Ready to Deploy AI Training at Your Organization?</h2>
+  <p>30-minute workforce diagnostic. No pitch. No pressure. A straight answer about whether 50+TechBridge is the right fit.</p>
+  <a href="https://cal.com/brian-mckinney-mrtu8q/speaking-inquiry" class="btn-gold">Book Your Free Consult &rarr;</a>
+</div>
+
+</div><!-- end .lmt-blog -->
+
+<!-- /wp:html -->

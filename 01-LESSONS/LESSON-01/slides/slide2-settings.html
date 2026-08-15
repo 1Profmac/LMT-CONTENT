@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    height: 1920px;
+    background: #0E1C2F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  .phone {
+    width: 500px;
+    height: 1000px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    border: 6px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 80px 40px 40px;
+    position: relative;
+  }
+  .phone::before {
+    content: '';
+    width: 150px;
+    height: 25px;
+    background: #333;
+    border-radius: 15px;
+    position: absolute;
+    top: 20px;
+  }
+  .instruction {
+    font-size: 48px;
+    font-weight: 700;
+    color: #0E1C2F;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .helper {
+    font-size: 22px;
+    color: #888;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .arrow-down {
+    font-size: 60px;
+    color: #C8942E;
+    margin-bottom: 20px;
+  }
+  .gear-circle {
+    width: 160px;
+    height: 160px;
+    border: 5px solid #C8942E;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  .gear {
+    font-size: 90px;
+    color: #C8942E;
+  }
+  .label {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0E1C2F;
+  }
+  .step-box {
+    margin-top: 40px;
+    background: #0E1C2F;
+    border: 3px solid #C8942E;
+    border-radius: 12px;
+    padding: 18px 50px;
+  }
+  .step-text {
+    font-size: 36px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+</style>
+</head>
+<body>
+  <div class="phone">
+    <div class="instruction">Tap Settings</div>
+    <div class="helper">Look for the gear icon<br>on your home screen</div>
+    <div class="arrow-down">&#9660;</div>
+    <div class="gear-circle">
+      <div class="gear">&#9881;</div>
+    </div>
+    <div class="label">SETTINGS</div>
+  </div>
+  <div class="step-box">
+    <div class="step-text">Step 1 of 5</div>
+  </div>
+</body>
+</html>

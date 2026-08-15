@@ -1,0 +1,481 @@
+<!-- wp:html -->
+<!--
+=================================================
+  LMT PROGRAMS PAGE — built from LMT-Train-Page (latest CSS)
+  Template: Full Width Content — REQUIRED
+  Slug: /programs/
+  Owner: Brian, CEO
+  Last Updated: May 6, 2026
+
+  Stats Lock: Adults 50+ across 13 locations · Targeted 3X Completion · 13 Locations
+  ⛔ BANNED STATS: Adults 50+ across 13 locations · 13 Locations · 1,200+ · 85% — DO NOT USE
+
+  Consolidates: Train + Workforce + Speak into one page
+=================================================
+-->
+
+<style>
+
+/* ── BUDDYBOSS RESET (DO NOT REMOVE) ── */
+body,.site,#page,#content,.bb-grid,.container,
+#primary,#main,.site-content,.entry-content,
+.site-inner,.content-sidebar-wrap{background-color:#0E1C2F!important}
+.entry-title,.page-title,
+.page-template-blank .entry-title,
+body.page .entry-header,
+.buddypress-page .entry-header,
+#primary .entry-header,
+.site-content .entry-header{display:none!important}
+.entry-content{padding:0!important;margin:0!important;max-width:none!important}
+.bb-grid,.container,#content,#primary,#main,.site-main{
+  padding:0!important;margin:0!important;max-width:none!important;width:100%!important}
+.site-footer,.footer-widgets,#colophon{margin-top:0!important;padding-top:0!important}
+
+/* ── FONTS & RESET ── */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+/* ── ANIMATIONS ── */
+@keyframes t-fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes t-pulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.6);opacity:0}}
+@keyframes t-shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+
+/* ── PAGE SCOPE ── */
+.lmt-programs{
+  --navy:#0E1C2F;--navy-mid:#162640;--navy-light:#1E3A5F;
+  --gold:#C8942E;--gold-light:#E8B84B;--gold-dim:rgba(200,148,46,.18);
+  --orange:#E8733A;--green:#109F35;
+  --white:#fff;--text-body:#C4CDD9;--text-muted:#A8B8CC;
+  --max:1180px;--radius:14px;
+  --transition:.25s cubic-bezier(.4,.2,.2,1);
+  font-family:'DM Sans',sans-serif!important;
+  color:#C4CDD9!important;font-size:18px;line-height:1.75;
+  -webkit-font-smoothing:antialiased;background:#0E1C2F;
+  display:block;width:100vw;position:relative;
+  left:50%;margin-left:-50vw;overflow-x:hidden
+}
+.lmt-programs a{text-decoration:none;color:inherit}
+.lmt-programs ul{list-style:none}
+.lmt-programs .au{animation:t-fadeUp .7s ease both}
+.lmt-programs .d1{animation-delay:.1s}
+.lmt-programs .d2{animation-delay:.22s}
+.lmt-programs .d3{animation-delay:.34s}
+.lmt-programs .d4{animation-delay:.46s}
+
+/* ── SCAFFOLDING ── */
+.lmt-programs section{position:relative}
+.lmt-programs .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+.lmt-programs .s-pad{padding-top:72px;padding-bottom:72px}
+
+.lmt-programs .section-label{
+  display:inline-block;font-size:13px;font-weight:600;
+  letter-spacing:2px;text-transform:uppercase;color:#C8942E!important;margin-bottom:14px
+}
+.lmt-programs h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(32px,4vw,52px);font-weight:900;line-height:1.08;letter-spacing:-.5px
+}
+.lmt-programs h2 em{font-style:italic;color:#C8942E!important}
+.lmt-programs h2.light{color:#fff}
+
+/* ── BUTTONS ── */
+.lmt-programs .btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#C8942E;color:#0E1C2F!important;font-weight:700;
+  font-size:17px;padding:16px 36px;border-radius:10px;
+  transition:all var(--transition);min-height:44px;border:none;cursor:pointer
+}
+.lmt-programs .btn-primary:hover{background:#E8B84B;transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,148,46,.35)}
+.lmt-programs .btn-secondary{
+  display:inline-flex;align-items:center;gap:8px;
+  color:#C4CDD9!important;font-size:17px;font-weight:500;
+  padding:16px 28px;border:1px solid rgba(255,255,255,.2);
+  border-radius:10px;transition:all var(--transition);min-height:44px
+}
+.lmt-programs .btn-secondary:hover{color:#fff;border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.05)}
+
+/* ── HERO ── */
+.lmt-programs .hero{
+  background:linear-gradient(160deg,#0A1520 0%,#0E1C2F 100%);
+  padding:100px 24px 80px;overflow:hidden
+}
+.lmt-programs .hero-bg{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 60% at 60% 30%,rgba(200,148,46,.08) 0%,transparent 60%),
+  radial-gradient(ellipse 50% 70% at 5% 90%,rgba(30,58,95,.5) 0%,transparent 70%);
+  pointer-events:none
+}
+.lmt-programs .hero-inner{
+  position:relative;z-index:2;max-width:1180px;margin:0 auto;
+  text-align:center
+}
+.lmt-programs .eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  border:1px solid rgba(200,148,46,.35);background:rgba(200,148,46,.08);
+  border-radius:100px;padding:7px 18px;
+  font-size:13px;font-weight:600;letter-spacing:1.8px;
+  text-transform:uppercase;color:#C8942E!important;margin-bottom:18px
+}
+.lmt-programs .eyebrow .dot{
+  width:7px;height:7px;background:#C8942E;border-radius:50%;position:relative
+}
+.lmt-programs .eyebrow .dot::after{
+  content:'';position:absolute;inset:-4px;border-radius:50%;
+  border:1px solid #C8942E;animation:t-pulse 1.8s ease-out infinite
+}
+.lmt-programs .hero h1,
+body .lmt-programs .hero h1{
+  font-family:'Playfair Display',serif!important;
+  font-size:clamp(44px,5.5vw,70px)!important;font-weight:900!important;
+  line-height:1.05!important;color:#fff!important;letter-spacing:-.5px!important;
+  margin-bottom:10px!important;max-width:900px;margin-left:auto;margin-right:auto
+}
+.lmt-programs .hero h1 em{font-style:italic!important;color:#C8942E!important}
+.lmt-programs .hero-sub{
+  font-size:19px;line-height:1.72;color:#C4CDD9!important;
+  max-width:680px;margin:0 auto 32px
+}
+.lmt-programs .hero-sub strong{color:#fff!important;font-weight:600}
+.lmt-programs .hero-btns{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+
+/* ── TRUST BAR ── */
+.lmt-programs .trust-bar{
+  background:#162640;padding:20px 32px;
+  display:flex;justify-content:center;gap:48px;flex-wrap:wrap
+}
+.lmt-programs .trust-item{font-size:13px;color:#A8B8CC!important;font-weight:500;letter-spacing:.02em}
+.lmt-programs .trust-item span{color:#C8942E!important;font-weight:700;font-size:15px}
+
+/* ── BREAK BAR ── */
+.lmt-programs .break-bar{
+  background:#C8942E;padding:22px 32px;text-align:center;position:relative;overflow:hidden;
+  width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;box-sizing:border-box
+}
+.lmt-programs .break-bar::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent);
+  background-size:200% 100%;animation:t-shimmer 3s linear infinite
+}
+.lmt-programs .break-bar p{
+  font-family:'Playfair Display',serif;font-size:clamp(20px,2.5vw,30px);
+  font-weight:700;color:#0E1C2F!important;position:relative;z-index:1;line-height:1.3
+}
+
+/* ── PROGRAM CARDS ── */
+.lmt-programs .programs-grid{
+  display:grid;grid-template-columns:1fr;gap:40px;margin-top:40px;max-width:800px;margin-left:auto;margin-right:auto
+}
+.lmt-programs .prog{
+  background:rgba(22,38,64,.55);border:1px solid rgba(200,148,46,.1);
+  border-radius:18px;padding:34px 28px;
+  transition:all var(--transition);position:relative;overflow:hidden
+}
+.lmt-programs .prog::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,#C8942E,transparent);opacity:0;
+  transition:opacity var(--transition)
+}
+.lmt-programs .prog:hover{transform:translateY(-6px);border-color:rgba(200,148,46,.35);background:rgba(22,38,64,.9)}
+.lmt-programs .prog:hover::before{opacity:1}
+.lmt-programs .prog-icon{font-size:36px;margin-bottom:14px}
+.lmt-programs .prog h3{
+  font-family:'Playfair Display',serif;font-size:21px;font-weight:700;
+  color:#fff;margin-bottom:10px;line-height:1.25
+}
+.lmt-programs .prog p{font-size:15px;color:#A8B8CC!important;line-height:1.65;margin-bottom:16px}
+.lmt-programs .prog .prog-tag{
+  font-size:14px;font-weight:600;color:#C8942E!important;
+  padding-top:14px;border-top:1px solid rgba(200,148,46,.1)
+}
+.lmt-programs .prog .check-list{margin-bottom:16px;display:flex;flex-direction:column;gap:8px}
+.lmt-programs .prog .check-item{
+  font-size:14px;color:#C4CDD9!important;padding-left:20px;position:relative;line-height:1.45
+}
+.lmt-programs .prog .check-item::before{
+  content:'✓';position:absolute;left:0;color:#C8942E!important;font-weight:700;font-size:13px
+}
+.lmt-programs .prog-video{
+  position:relative;width:100%;padding-bottom:60%;height:0;
+  overflow:visible;border-radius:12px;margin-bottom:20px
+}
+.lmt-programs .prog-video iframe{
+  position:absolute;top:0;left:0;width:100%;height:100%;border:0
+}
+.lmt-programs .prog-video-link{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:600;color:#C8942E!important;
+  margin-bottom:16px;cursor:pointer;text-decoration:none
+}
+.lmt-programs .prog-video-link:hover{color:#E8B84B!important}
+
+/* ── MODULE CARDS (free curriculum) ── */
+.lmt-programs .modules-section{background:#070F1A}
+.lmt-programs .mod-intro{text-align:center;max-width:680px;margin:0 auto 52px}
+.lmt-programs .mod-intro p{color:#A8B8CC!important;font-size:17px;margin-top:14px}
+.lmt-programs .modules-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.lmt-programs .mod{
+  background:rgba(22,38,64,.55);border:1px solid rgba(200,148,46,.1);
+  border-radius:18px;padding:34px 28px;transition:all var(--transition);
+  position:relative;overflow:hidden
+}
+.lmt-programs .mod::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,#C8942E,transparent);opacity:0;
+  transition:opacity var(--transition)
+}
+.lmt-programs .mod:hover{transform:translateY(-6px);border-color:rgba(200,148,46,.35);background:rgba(22,38,64,.9)}
+.lmt-programs .mod:hover::before{opacity:1}
+.lmt-programs .mod-num{
+  font-size:12px;font-weight:500;letter-spacing:2px;color:#C8942E!important;opacity:.7;margin-bottom:10px
+}
+.lmt-programs .mod-icon{font-size:36px;margin-bottom:14px}
+.lmt-programs .mod h3{
+  font-family:'Playfair Display',serif;font-size:21px;font-weight:700;
+  color:#fff;margin-bottom:10px;line-height:1.25
+}
+.lmt-programs .mod p{font-size:15px;color:#A8B8CC!important;line-height:1.65;margin-bottom:16px}
+.lmt-programs .mod-outcome{
+  font-size:14px;font-weight:600;color:#C8942E!important;
+  padding-top:14px;border-top:1px solid rgba(200,148,46,.1)
+}
+
+/* ── STATS ── */
+.lmt-programs .stats-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:30px;text-align:center;margin-top:40px
+}
+.lmt-programs .stat-number{
+  font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;
+  color:#C8942E;margin-bottom:8px
+}
+.lmt-programs .stat-label{font-size:1rem;font-weight:600;color:#fff;margin-bottom:6px}
+.lmt-programs .stat-desc{font-size:.9rem;color:#A8B8CC}
+
+/* ── CTA ── */
+.lmt-programs .cta-section{
+  background:linear-gradient(135deg,#0A1520 0%,#1E3A5F 100%);
+  padding:80px 32px 72px;text-align:center;position:relative;overflow:hidden;
+  width:100vw;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;box-sizing:border-box
+}
+.lmt-programs .cta-section::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 70% at 50% 50%,rgba(200,148,46,.09) 0%,transparent 70%);
+  pointer-events:none
+}
+.lmt-programs .cta-section>*{position:relative;z-index:1}
+.lmt-programs .cta-section h2{
+  font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,62px);
+  font-weight:900;color:#fff;line-height:1.08;margin-bottom:18px;letter-spacing:-.5px
+}
+.lmt-programs .cta-section h2 em{font-style:italic;color:#C8942E!important}
+.lmt-programs .cta-section p{font-size:19px;color:#A8B8CC!important;max-width:520px;margin:0 auto 36px;line-height:1.7}
+.lmt-programs .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.lmt-programs .cta-trust{font-size:13px;color:#A8B8CC!important;opacity:.8;margin-top:20px}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .lmt-programs .programs-grid{grid-template-columns:1fr}
+  .lmt-programs .modules-grid{grid-template-columns:1fr 1fr}
+  .lmt-programs .trust-bar{gap:24px}
+}
+@media(max-width:600px){
+  .lmt-programs .hero{padding:64px 20px 52px}
+  .lmt-programs .s-pad{padding-top:52px;padding-bottom:52px}
+  .lmt-programs .modules-grid{grid-template-columns:1fr}
+  .lmt-programs .wrap{padding:0 20px}
+  .lmt-programs .hero-btns{flex-direction:column;align-items:center}
+  .lmt-programs .cta-btns{flex-direction:column;align-items:center}
+}
+@media(prefers-reduced-motion:reduce){
+  .lmt-programs .au,.lmt-programs [class*="d"]{animation:none!important;opacity:1!important;transform:none!important}
+  .lmt-programs *{animation-duration:.001ms!important;transition-duration:.001ms!important}
+}
+
+</style>
+
+<!-- ============ PAGE CONTENT ============ -->
+<div class="lmt-programs" role="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="eyebrow au">
+        <span class="dot" aria-hidden="true"></span>
+        50+TechBridge Programs
+      </div>
+      <h1 class="au d1">Training, Speaking &amp; Coaching for <em>Adults 50+.</em></h1>
+      <p class="hero-sub au d2">
+        <strong>Free self-paced course. On-site partner training. Keynote speaking. Private coaching.</strong>
+        Everything we build is designed for how adults 50+ actually learn — no jargon, no fluff, no 24-year-old instructor.
+      </p>
+      <div class="hero-btns au d3">
+        <a href="https://learnmoretechnologies.com/join-now/" class="btn-primary">Join Free <span aria-hidden="true">→</span></a>
+        <a href="https://learnmoretechnologies.com/work-with-us/" class="btn-secondary">Work With Us <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-item"><span>13</span> Locations in Central Texas</div>
+    <div class="trust-item"><span>3X</span> Industry Completion Rate</div>
+    <div class="trust-item"><span>13</span> Locations in Central Texas</div>
+    <div class="trust-item"><span>13</span> Locations + Online</div>
+  </div>
+
+  <!-- BREAK BAR -->
+  <div class="break-bar" role="complementary">
+    <p>"The system wasn't built for you. We built this instead."</p>
+  </div>
+
+  <!-- THREE PROGRAMS -->
+  <section class="s-pad">
+    <div class="wrap">
+      <p class="section-label">How We Work</p>
+      <h2 class="light">Three Programs.<br><em>One Mission.</em></h2>
+      <p style="color:#A8B8CC;font-size:17px;margin-top:14px;max-width:640px;margin-bottom:0;">Close the digital skills gap for adults 50+. Every program is customized to the audience, delivered by someone who's been in the room.</p>
+
+      <div class="programs-grid">
+
+        <!-- Partner Training -->
+        <div class="prog">
+          <div class="prog-video">
+            <iframe src="https://www.youtube.com/embed/k3-TFUbT86o?rel=0&modestbranding=1" title="50+TechBridge Program Introduction" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <a href="https://www.youtube.com/watch?v=k3-TFUbT86o" target="_blank" class="prog-video-link">&#9655; Watch Full Screen on YouTube</a>
+          <h3>Partner Training</h3>
+          <p>I bring 50+TechBridge directly to your organization. Customized curriculum. On-site delivery. Ongoing enrollment. You provide the room — I provide everything else.</p>
+          <div class="check-list">
+            <div class="check-item">Customized to your members' needs</div>
+            <div class="check-item">In-person, hybrid, or online</div>
+            <div class="check-item">Enrollment system + follow-up included</div>
+            <div class="check-item">WIOA-eligible</div>
+          </div>
+          <div class="prog-tag"><em>Libraries · Churches · Senior Centers · Workforce Boards · YMCAs</em></div>
+        </div>
+
+        <!-- Speaking & Workshops -->
+        <div class="prog">
+          <div class="prog-video">
+            <iframe src="https://www.youtube.com/embed/Svb6LtzS070?rel=0&modestbranding=1" title="50+TechBridge Sizzle Reel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <a href="https://www.youtube.com/watch?v=Svb6LtzS070" target="_blank" class="prog-video-link">&#9655; Watch Full Screen on YouTube</a>
+          <h3>Speaking &amp; Workshops</h3>
+          <p>A 60-minute Lunch &amp; Learn or keynote. Your audience leaves with new tools on their phones and a path to keep learning.</p>
+          <div class="check-list">
+            <div class="check-item">What Is Tech, AI &amp; Independent Living</div>
+            <div class="check-item">The Digital Divide: Why 50+ Are Left Behind</div>
+            <div class="check-item">AI Won't Replace You — But It Will Replace the Person Who Doesn't Learn</div>
+            <div class="check-item">The $76 Trillion Case Against Ageism</div>
+          </div>
+          <div class="prog-tag"><em>Conferences · Community Events · Partner Kickoffs</em></div>
+        </div>
+
+        <!-- Private Coaching -->
+        <div class="prog">
+          <div class="prog-video">
+            <iframe src="https://www.youtube.com/embed/JQPtZDvhgs8?rel=0&modestbranding=1" title="The $850 Billion Cost of Ignoring Experienced Workers" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <a href="https://www.youtube.com/watch?v=JQPtZDvhgs8" target="_blank" class="prog-video-link">&#9655; Watch Full Screen on YouTube</a>
+          <h3>Private Coaching</h3>
+          <p>One-on-one digital skills coaching for individuals 50+ who want personal attention. We work on YOUR goals, at YOUR pace, on YOUR phone.</p>
+          <div class="check-list">
+            <div class="check-item">Personalized to your goals</div>
+            <div class="check-item">Smartphone, AI tools, online safety</div>
+            <div class="check-item">At your pace — no pressure</div>
+            <div class="check-item">Remote or in-person (Austin / San Antonio)</div>
+          </div>
+          <div class="prog-tag"><em>Professionals · Retirees · Family Members Helping Parents</em></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FREE CURRICULUM -->
+  <section class="modules-section s-pad">
+    <div class="wrap">
+      <div class="mod-intro">
+        <p class="section-label">The Free Curriculum</p>
+        <h2 class="light">Three modules.<br><em>Real tools. Real results.</em></h2>
+        <p>Each module is self-paced, mobile-friendly, and designed for how adults 50+ actually learn. Complete all three free. No credit card. No catch.</p>
+      </div>
+
+      <div class="modules-grid">
+        <div class="mod">
+          <div class="mod-num">MODULE 01 · FREE</div>
+          <div class="mod-icon">📱</div>
+          <h3>Your Device is a World-Changer</h3>
+          <p>The phone in your hand is one of the most powerful tools in human history. Most people 50+ are using 10% of what it can do. This module changes that.</p>
+          <div class="mod-outcome">→ Confident. Every time you pick it up.</div>
+        </div>
+
+        <div class="mod">
+          <div class="mod-num">MODULE 02 · FREE</div>
+          <div class="mod-icon">🎥</div>
+          <h3>From Consumer to Creator</h3>
+          <p>You've been watching other people's content for years. Your story, your experience, your voice has value. This module puts the microphone in your hand.</p>
+          <div class="mod-outcome">→ Creating. Not just consuming.</div>
+        </div>
+
+        <div class="mod">
+          <div class="mod-num">MODULE 03 · FREE</div>
+          <div class="mod-icon">🤝</div>
+          <h3>Your Community is Your Network</h3>
+          <p>The people around you — online and offline — are your greatest resource. This module teaches you how to build, grow, and protect your digital community.</p>
+          <div class="mod-outcome">→ Connected. On your own terms.</div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:40px;">
+        <a href="https://learnmoretechnologies.com/join-now/" class="btn-primary">Join Free <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="s-pad" style="background:#162640;">
+    <div class="wrap">
+      <p class="section-label">Results</p>
+      <h2 class="light">Numbers That <em>Mean Something.</em></h2>
+      <p style="color:#A8B8CC;font-size:17px;margin-top:14px;max-width:640px;">All verified by participant surveys. No inflated stats. No guesswork.</p>
+
+      <div class="stats-grid">
+        <div>
+          <div class="stat-number">3x</div>
+          <div class="stat-label">Completion Rate</div>
+          <div class="stat-desc">vs. traditional digital skills programs</div>
+        </div>
+        <div>
+          <div class="stat-number">13</div>
+          <div class="stat-label">More Confident</div>
+          <div class="stat-desc">Participants report increased confidence</div>
+        </div>
+        <div>
+          <div class="stat-number">13</div>
+          <div class="stat-label">Adults Trained</div>
+          <div class="stat-desc">Libraries, senior centers, veterans, online</div>
+        </div>
+        <div>
+          <div class="stat-number">MBE</div>
+          <div class="stat-label">Certified</div>
+          <div class="stat-desc">Minority Business Enterprise</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Ready to <em>Get Started?</em></h2>
+    <p>Join the free course today or apply to bring 50+TechBridge to your organization.</p>
+    <div class="cta-btns">
+      <a href="https://learnmoretechnologies.com/work-with-us/" class="btn-primary">Bring Us To Your Organization <span aria-hidden="true">→</span></a>
+    </div>
+    <p class="cta-trust">Free · Self-paced · WIOA-eligible · MBE Certified · Austin &amp; San Antonio</p>
+  </section>
+
+</div><!-- end .lmt-programs -->
+
+<!-- /wp:html -->

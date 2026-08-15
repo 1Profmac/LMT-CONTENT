@@ -1,0 +1,476 @@
+<!-- wp:html -->
+<!-- wp:html -->
+<!--
+=================================================
+  LMT CONTACT US PAGE — v1.1 March 16, 2026
+  Template: Full Width Content — REQUIRED
+  Slug: /contact-us/
+  Owner: Maya, COO
+  CTO Agent: Set template to Full Width Content before pasting HTML
+  Stats Lock: 200+ adults across 12 locations · 3X Completion Rate
+  ⛔ BANNED STATS: 1,200+ · 85% · 45 sites · 62% — DO NOT USE
+=================================================
+-->
+<style>
+
+/* ── FORCE FULL PAGE NAVY ── */
+body,.site,#page,#content,.bb-grid,.container,
+#primary,#main,.site-content,.entry-content,
+.site-inner,.content-sidebar-wrap{
+  background-color:#0E1C2F!important
+}
+.entry-title,.page-title,
+.page-template-blank .entry-title,
+body.page .entry-header,
+.buddypress-page .entry-header,
+#primary .entry-header,
+.site-content .entry-header{
+  display:none!important
+}
+.entry-content{padding:0!important;margin:0!important;max-width:none!important}
+.bb-grid,.container,#content,#primary,#main,.site-main{
+  padding:0!important;margin:0!important;max-width:none!important;width:100%!important
+}
+.site-footer,.footer-widgets,#colophon{margin-top:0!important;padding-top:0!important}
+
+/* ── PAGE VARS & BASE ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.lmt-contact {
+  --navy:       #0E1C2F;
+  --navy-mid:   #162640;
+  --navy-light: #1E3A5F;
+  --gold:       #C8942E;
+  --gold-light: #E8B84B;
+  --gold-dim:   rgba(200,148,46,.18);
+  --orange:     #E8733A;
+  --white:      #FFFFFF;
+  --off-white:  #F4F2ED;
+  --text-muted: #A8B8CC;
+  --text-body:  #C4CDD9;
+  --radius:     14px;
+  font-family: 'DM Sans', sans-serif !important;
+  color: #C4CDD9 !important;
+  font-size: 18px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  background: #0E1C2F;
+  display: block;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  overflow-x: hidden;
+}
+
+.lmt-contact .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+
+/* ── HERO ── */
+.lmt-contact .hero {
+  background: linear-gradient(160deg, #0A1520 0%, #0E1C2F 60%, #162640 100%);
+  padding: 100px 32px 80px;
+  position: relative;
+  overflow: hidden;
+}
+.lmt-contact .hero-grid {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle at 70% 50%, rgba(200,148,46,.07) 0%, transparent 60%);
+  pointer-events: none;
+}
+.lmt-contact .hero-inner {
+  max-width: 1180px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.1fr .9fr; gap: 60px; align-items: center;
+}
+.lmt-contact .hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(200,148,46,.18); border: 1px solid rgba(200,148,46,.3);
+  border-radius: 40px; padding: 6px 18px; margin-bottom: 28px;
+  font-size: 13px; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; color:#C8942E !important;
+}
+.lmt-contact .hero-eyebrow span { width: 7px; height: 7px; border-radius: 50%; background: #E8733A; display: inline-block; }
+.lmt-contact .hero h1,
+.bb-custom-typo .lmt-contact .hero h1,
+body .lmt-contact .hero h1,
+body.page .lmt-contact .hero h1 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(44px, 5.5vw, 68px) !important;
+  font-weight: 900 !important;
+  line-height: 1.05 !important;
+  color: #FFFFFF !important;
+  letter-spacing: -.5px !important;
+  margin-bottom: 20px !important;
+}
+.lmt-contact .hero h1 em,
+.bb-custom-typo .lmt-contact .hero h1 em {
+  font-style: italic !important;
+  color: #C8942E !important;
+}
+.lmt-contact .hero p {
+  font-size: 19px; color:#C4CDD9 !important; margin-bottom: 36px; max-width: 520px;
+}
+.lmt-contact .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* ── BUTTONS ── */
+.lmt-contact .btn-schedule {
+  display: inline-flex; align-items: center; gap: 12px;
+  background: #E8733A; color:#FFFFFF !important; font-weight: 700;
+  font-size: 22px; padding: 24px 52px; border-radius: 12px;
+  text-decoration: none; transition: .25s cubic-bezier(.4,.2,.2,1);
+  box-shadow: 0 8px 32px rgba(232,115,58,.4);
+  letter-spacing: .02em;
+}
+.lmt-contact .btn-schedule:hover { background: #F4873E; transform: translateY(-3px); box-shadow: 0 12px 40px rgba(232,115,58,.5); }
+.lmt-contact .btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #C8942E; color:#0E1C2F !important; font-weight: 700;
+  font-size: 16px; padding: 16px 32px; border-radius: 8px;
+  text-decoration: none; transition: .25s cubic-bezier(.4,.2,.2,1);
+}
+.lmt-contact .btn-primary:hover { background: #E8B84B; transform: translateY(-2px); }
+.lmt-contact .btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color:#FFFFFF !important; font-weight: 600;
+  font-size: 16px; padding: 16px 32px; border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.25); text-decoration: none;
+  transition: .25s cubic-bezier(.4,.2,.2,1);
+}
+.lmt-contact .btn-secondary:hover { border-color:#C8942E !important; color:#C8942E !important; }
+
+/* ── HERO RIGHT CARD ── */
+.lmt-contact .hero-card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(200,148,46,.2);
+  border-radius: 14px; padding: 36px 32px;
+}
+.lmt-contact .hero-card-label {
+  font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+  color:#C8942E !important; font-weight: 700; margin-bottom: 20px;
+}
+.lmt-contact .hero-card p {
+  font-size: 15px; color:#C4CDD9 !important; margin-bottom: 0;
+}
+.lmt-contact .contact-quick-link {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.06);
+  text-decoration: none;
+}
+.lmt-contact .contact-quick-link:last-child { border-bottom: none; }
+.lmt-contact .contact-quick-icon {
+  width: 42px; height: 42px; border-radius: 10px;
+  background: rgba(200,148,46,.15); border: 1px solid rgba(200,148,46,.25);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0;
+}
+.lmt-contact .contact-quick-text strong {
+  display: block; font-size: 14px; color:#FFFFFF !important; font-weight: 700;
+}
+.lmt-contact .contact-quick-text span {
+  font-size: 13px; color:#A8B8CC !important;
+}
+
+/* ── GOLD BREAK BAR ── */
+.lmt-contact .break-bar {
+  background: #C8942E; padding: 22px 32px; text-align: center;
+}
+.lmt-contact .break-bar p {
+  font-size: 17px; font-weight: 700; color:#0E1C2F !important;
+  max-width: 1180px; margin: 0 auto; font-style: italic;
+}
+
+/* ── THREE PATH SECTION ── */
+.lmt-contact .paths-section {
+  padding: 80px 32px;
+  background: #0E1C2F;
+}
+.lmt-contact .section-label {
+  font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+  color:#E8733A !important; font-weight: 700; margin-bottom: 12px;
+  display: flex; align-items: center; gap: 8px;
+}
+.lmt-contact .section-label::before {
+  content: ''; width: 24px; height: 2px; background: #E8733A; display: inline-block;
+}
+.lmt-contact .section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 4vw, 46px); font-weight: 700;
+  color:#FFFFFF !important; line-height: 1.2; margin-bottom: 12px;
+}
+.lmt-contact .section-title em { font-style: italic; color:#C8942E !important; }
+.lmt-contact .section-sub {
+  font-size: 18px; color:#A8B8CC !important; max-width: 600px; margin-bottom: 52px;
+}
+.lmt-contact .paths-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+}
+.lmt-contact .path-card {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px; padding: 36px 28px;
+  display: flex; flex-direction: column;
+  transition: .25s cubic-bezier(.4,.2,.2,1);
+}
+.lmt-contact .path-card:hover {
+  border-color: rgba(200,148,46,.4);
+  background: rgba(200,148,46,.04);
+  transform: translateY(-4px);
+}
+.lmt-contact .path-icon {
+  font-size: 32px; margin-bottom: 20px;
+}
+.lmt-contact .path-tag {
+  font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+  color:#C8942E !important; font-weight: 700; margin-bottom: 10px;
+}
+.lmt-contact .path-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 700;
+  color:#FFFFFF !important; margin-bottom: 12px; line-height: 1.2;
+}
+.lmt-contact .path-card p {
+  font-size: 15px; color:#A8B8CC !important;
+  margin-bottom: 28px; line-height: 1.7; flex: 1;
+}
+.lmt-contact .path-card ul {
+  list-style: none; margin-bottom: 28px;
+}
+.lmt-contact .path-card ul li {
+  font-size: 14px; color:#C4CDD9 !important;
+  padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,.05);
+  display: flex; align-items: center; gap: 8px;
+}
+.lmt-contact .path-card ul li:last-child { border-bottom: none; }
+.lmt-contact .path-card ul li::before {
+  content: '✓'; color:#C8942E; font-weight: 700; font-size: 13px; flex-shrink: 0;
+}
+.lmt-contact .path-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #C8942E; color:#0E1C2F !important; font-weight: 700;
+  font-size: 15px; padding: 14px 24px; border-radius: 8px;
+  text-decoration: none; transition: .25s cubic-bezier(.4,.2,.2,1);
+  text-align: center; justify-content: center;
+}
+.lmt-contact .path-cta:hover { background: #E8B84B; transform: translateY(-2px); }
+.lmt-contact .path-cta-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color:#FFFFFF !important; font-weight: 600;
+  font-size: 15px; padding: 14px 24px; border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.2); text-decoration: none;
+  transition: .25s cubic-bezier(.4,.2,.2,1);
+  text-align: center; justify-content: center;
+}
+.lmt-contact .path-cta-outline:hover { border-color:#C8942E !important; color:#C8942E !important; }
+
+/* ── DIRECT CONTACT STRIP ── */
+.lmt-contact .direct-strip {
+  background: #162640;
+  border-top: 1px solid rgba(200,148,46,.15);
+  border-bottom: 1px solid rgba(200,148,46,.15);
+  padding: 52px 32px;
+}
+.lmt-contact .direct-inner {
+  max-width: 1180px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; align-items: center;
+}
+.lmt-contact .direct-item {
+  display: flex; align-items: center; gap: 18px;
+}
+.lmt-contact .direct-icon {
+  width: 52px; height: 52px; border-radius: 12px;
+  background: rgba(200,148,46,.15); border: 1px solid rgba(200,148,46,.25);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; flex-shrink: 0;
+}
+.lmt-contact .direct-text strong {
+  display: block; font-size: 15px; color:#FFFFFF !important; font-weight: 700; margin-bottom: 2px;
+}
+.lmt-contact .direct-text a {
+  font-size: 14px; color:#C8942E !important; text-decoration: none;
+}
+.lmt-contact .direct-text a:hover { color:#E8B84B !important; }
+.lmt-contact .direct-text span {
+  font-size: 14px; color:#A8B8CC !important;
+}
+
+/* ── MBE BADGE STRIP ── */
+.lmt-contact .mbe-strip {
+  padding: 40px 32px; text-align: center;
+  background: #0E1C2F;
+  border-top: 1px solid rgba(255,255,255,.05);
+}
+.lmt-contact .mbe-strip p {
+  font-size: 14px; color:#A8B8CC !important;
+  max-width: 640px; margin: 0 auto;
+}
+.lmt-contact .mbe-strip strong { color:#FFFFFF !important; }
+.lmt-contact .mbe-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(200,148,46,.12); border: 1px solid rgba(200,148,46,.25);
+  border-radius: 6px; padding: 4px 14px;
+  font-size: 12px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color:#C8942E !important; margin-bottom: 14px;
+}
+
+/* ── CTA SECTION ── */
+.lmt-contact .cta-section {
+  background: linear-gradient(135deg, #0A1520 0%, #1E3A5F 100%);
+  padding: 80px 32px; text-align: center; position: relative; overflow: hidden;
+}
+.lmt-contact .cta-section::before {
+  content:''; position:absolute; inset:0;
+  background: radial-gradient(circle at 50% 50%, rgba(200,148,46,.08) 0%, transparent 70%);
+  pointer-events:none;
+}
+.lmt-contact .cta-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 4vw, 48px); font-weight: 700;
+  color: #FFFFFF !important; line-height: 1.2; margin-bottom: 20px;
+  position: relative;
+}
+.lmt-contact .cta-section h2 em { color: #C8942E !important; font-style: italic; }
+.lmt-contact .cta-section p {
+  font-size: 18px; color:#C4CDD9 !important; max-width: 600px;
+  margin: 0 auto 36px; line-height: 1.8; position: relative;
+}
+.lmt-contact .cta-btns { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; position: relative; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .lmt-contact .hero-inner { grid-template-columns: 1fr; }
+  .lmt-contact .hero-card { display: none; }
+  .lmt-contact .paths-grid { grid-template-columns: 1fr; }
+  .lmt-contact .direct-inner { grid-template-columns: 1fr; gap: 24px; }
+}
+@media (max-width: 600px) {
+  .lmt-contact .hero { padding: 64px 20px 52px; }
+  .lmt-contact .paths-section { padding: 52px 20px; }
+}
+
+</style>
+
+<div class="lmt-contact">
+
+  <!-- ══ HERO ══ -->
+  <section class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-inner wrap">
+      <div class="hero-content" style="text-align:center;grid-column:1/-1;">
+        <div class="hero-eyebrow"><span></span> Get In Touch</div>
+        <h1>Let's Talk About <em>What's Next.</em></h1>
+        <p style="max-width:640px;margin:0 auto 40px;">Pick a time that works for you. I'll confirm within 24 hours.</p>
+        <div class="hero-ctas" style="justify-content:center;margin-bottom:48px;">
+          <a href="https://cal.com/brian-mckinney-mrtu8q" class="btn-schedule" target="_blank">Schedule a Meeting →</a>
+        </div>
+        <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;max-width:800px;margin:0 auto;">
+          <a href="https://cal.com/brian-mckinney-mrtu8q/speaking-inquiry" target="_blank" class="btn-secondary" style="flex:1;min-width:200px;justify-content:center;">Book Brian to Speak</a>
+          <a href="https://cal.com/brian-mckinney-mrtu8q/discovery-call" target="_blank" class="btn-secondary" style="flex:1;min-width:200px;justify-content:center;">Strategy Session</a>
+          <a href="https://cal.com/brian-mckinney-mrtu8q/lets-connect" target="_blank" class="btn-secondary" style="flex:1;min-width:200px;justify-content:center;">Partner Inquiry</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ GOLD BREAK BAR ══ -->
+  <div class="break-bar">
+    <p>"The right conversation starts with the right door. You've found it."</p>
+  </div>
+
+  <!-- ══ THREE PATHS ══ -->
+  <section class="paths-section" id="paths">
+    <div class="wrap">
+      <div class="section-label">Who Are You?</div>
+      <h2 class="section-title">Three paths. <em>One mission.</em></h2>
+      <p class="section-sub">Tell us who you are and we'll make sure the right person gets back to you — fast.</p>
+
+      <div class="paths-grid">
+
+        <!-- PATH 1 — INDIVIDUAL -->
+        <div class="path-card">
+          <div class="path-icon">🧑‍💻</div>
+          <div class="path-tag">For Individuals 50+</div>
+          <h3>Start Learning. It's Free.</h3>
+          <p>You don't need a tech background. You don't need to be young. You just need to start. 50+TechBridge is free, self-paced, and built for you.</p>
+          <ul>
+            <li>100% free to join</li>
+            <li>No tech background needed</li>
+            <li>Self-paced — go at your own speed</li>
+            <li>WIOA-eligible curriculum</li>
+            <li>Instant access to first lesson</li>
+          </ul>
+          <a href="https://learnmoretechnologies.com/start-free-lesson/" class="path-cta">I'm Not Done Yet →</a>
+        </div>
+
+        <!-- PATH 2 — ORGANIZATION -->
+        <div class="path-card">
+          <div class="path-icon">🏢</div>
+          <div class="path-tag">For Organizations &amp; Businesses</div>
+          <h3>The $76T Opportunity Is Waiting.</h3>
+          <p>Your competitors haven't figured out the 50+ market yet. We have the data, the framework, and 200+ adults across 12 locations who can tell you exactly what this audience needs.</p>
+          <ul>
+            <li>50+ Audience Strategy Session</li>
+            <li>AI Readiness Assessment</li>
+            <li>Age-Inclusive Communication Audit</li>
+            <li>Monthly advisory retainers available</li>
+            <li>MBE certified — TX preferred vendor</li>
+          </ul>
+          <a href="https://cal.com/brian-mckinney-mrtu8q/discovery-call" target="_blank" class="path-cta">Book a Strategy Session →</a>
+        </div>
+
+        <!-- PATH 3 — SPEAKING -->
+        <div class="path-card">
+          <div class="path-icon">🎤</div>
+          <div class="path-tag">For Event Planners &amp; Conferences</div>
+          <h3>Book Brian. Move Your Audience.</h3>
+          <p>Brian McKinney doesn't just talk about ageism — he lived it. Every keynote is built from real data, real community, and a founder's story that audiences don't forget.</p>
+          <ul>
+            <li>"The $76T Blind Spot" keynote</li>
+            <li>"AI + the 50+ Workforce" workshop</li>
+            <li>"I'm Not Done Yet" — Founder's Journey</li>
+            <li>Half-day &amp; full-day corporate workshops</li>
+            <li>Speaking fee: $2,500–$7,500</li>
+          </ul>
+          <a href="https://cal.com/brian-mckinney-mrtu8q/speaking-inquiry" target="_blank" class="path-cta">Book Brian to Speak →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ DIRECT CONTACT STRIP ══ -->
+  <div class="direct-strip">
+    <div class="direct-inner">
+      <div class="direct-item">
+        <div class="direct-icon">✉️</div>
+        <div class="direct-text">
+          <strong>Email</strong>
+          <a href="mailto:hello@learnmoretechnologies.com">hello@learnmoretechnologies.com</a>
+        </div>
+      </div>
+      <div class="direct-item">
+        <div class="direct-icon">⏱️</div>
+        <div class="direct-text">
+          <strong>Response Time</strong>
+          <span>We respond within 1 business day</span>
+        </div>
+      </div>
+      <div class="direct-item">
+        <div class="direct-icon">📍</div>
+        <div class="direct-text">
+          <strong>Based In</strong>
+          <span>Austin &amp; San Antonio, Texas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ MBE BADGE ══ -->
+  <div class="mbe-strip">
+    <div class="mbe-badge">✓ MBE Certified</div>
+    <p><strong>Learn More Technologies is a certified Minority Business Enterprise (MBE)</strong> — active in Austin &amp; San Antonio. Our 50+TechBridge program is pursuing ETPL listing, unlocking WIOA funding from all 28 Texas Workforce Development Boards. Government program officers: we are a preferred partner for workforce training initiatives serving adults 50+.</p>
+    <p style="font-size:14px;color:#A8B8CC;margin-top:12px;">SAM.gov Registered · WIOA-Eligible Curriculum · Austin &amp; San Antonio Markets</p>
+  </div>
+
+</div><!-- end .lmt-contact -->
+
+<!-- /wp:html -->
+<!-- /wp:html -->

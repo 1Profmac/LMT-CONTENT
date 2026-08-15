@@ -1,0 +1,189 @@
+<!-- wp:html -->
+<!--
+=================================================
+  PARTNER WITH US — Landing Page v2.0 May 15, 2026
+  Template: Full Width Content — REQUIRED
+  Slug: /partner/
+  Nav: Partner With Us (replaces Work With Us + Contact Us)
+  Sub-pages: /partner/deploy/ | /partner/sponsor/ | /partner/speak/ | /partner/contact/
+  Owner: Brian McKinney
+  Stats Lock: 200+ adults across 12 locations · 3X Completion Rate
+=================================================
+-->
+
+<style>
+body,.site,#page,#content,.bb-grid,.container,
+#primary,#main,.site-content,.entry-content,
+.site-inner,.content-sidebar-wrap{background-color:#0E1C2F!important}
+.entry-title,.page-title,.page-template-blank .entry-title,
+body.page .entry-header,.buddypress-page .entry-header,
+#primary .entry-header,.site-content .entry-header{display:none!important}
+.entry-content{padding:0!important;margin:0!important;max-width:none!important}
+.bb-grid,.container,#content,#primary,#main,.site-main{padding:0!important;margin:0!important;max-width:none!important;width:100%!important}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+</style>
+
+<div class="lmt-partner">
+<style>
+.lmt-partner{font-family:'DM Sans',sans-serif;background:#0E1C2F;color:#D6DCE4;padding:0;margin:0;line-height:1.6}
+.lmt-partner *:focus{outline:3px solid #E8B84B;outline-offset:3px}
+
+/* HERO */
+.lmt-partner .hero{text-align:center;padding:80px 20px 40px}
+.lmt-partner .hero .badge{display:inline-block;background:rgba(200,148,46,.12);border:1px solid rgba(200,148,46,.3);color:#E8B84B;font-size:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:10px 24px;border-radius:100px;margin-bottom:24px}
+.lmt-partner .hero h1{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,54px);font-weight:900;color:#fff;margin:0 0 20px;line-height:1.2}
+.lmt-partner .hero h1 em{color:#E8B84B;font-style:italic}
+.lmt-partner .hero p{font-size:22px;color:#D6DCE4;max-width:700px;margin:0 auto;line-height:1.7}
+
+/* PATH CARDS */
+.lmt-partner .paths{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:960px;margin:0 auto;padding:60px 20px}
+.lmt-partner .path-card{background:rgba(255,255,255,.04);border:2px solid rgba(200,148,46,.15);border-radius:16px;padding:40px 28px;text-align:center;transition:all .2s;text-decoration:none;display:block}
+.lmt-partner .path-card:hover{border-color:#C8942E;background:rgba(200,148,46,.06);transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.lmt-partner .path-card .path-icon{font-size:3rem;margin-bottom:16px}
+.lmt-partner .path-card .path-name{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;margin-bottom:12px}
+.lmt-partner .path-card .path-for{font-size:15px;color:#C8942E;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
+.lmt-partner .path-card .path-desc{font-size:18px;color:#D6DCE4;line-height:1.6;margin-bottom:20px}
+.lmt-partner .path-card .path-cta{display:inline-block;background:#C8942E;color:#0E1C2F;font-weight:700;font-size:16px;padding:12px 28px;border-radius:8px;transition:all .2s}
+.lmt-partner .path-card:hover .path-cta{background:#E8B84B}
+
+/* TRUST BAR */
+.lmt-partner .trust{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;padding:40px 20px;border-top:1px solid rgba(200,148,46,.15);border-bottom:1px solid rgba(200,148,46,.15)}
+.lmt-partner .trust-item{text-align:center}
+.lmt-partner .trust-item .num{font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,40px);font-weight:900;color:#E8B84B;display:block}
+.lmt-partner .trust-item .label{font-size:14px;color:#A0AEC0;text-transform:uppercase;letter-spacing:.08em;margin-top:4px}
+
+/* WHO SECTION */
+.lmt-partner .who{padding:60px 20px;max-width:900px;margin:0 auto}
+.lmt-partner .who h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,38px);color:#fff;text-align:center;margin:0 0 16px}
+.lmt-partner .who h2 em{color:#E8B84B;font-style:italic}
+.lmt-partner .who .sub{font-size:20px;color:#D6DCE4;text-align:center;margin:0 0 40px;line-height:1.7;max-width:650px;margin-left:auto;margin-right:auto}
+.lmt-partner .who-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.lmt-partner .who-card{background:rgba(255,255,255,.04);border:1px solid rgba(200,148,46,.12);border-radius:12px;padding:24px 20px}
+.lmt-partner .who-card h3{font-size:20px;color:#E8B84B;margin:0 0 8px;font-weight:700}
+.lmt-partner .who-card p{font-size:17px;color:#D6DCE4;margin:0;line-height:1.6}
+
+/* BOTTOM CTA */
+.lmt-partner .bottom-cta{text-align:center;padding:60px 20px}
+.lmt-partner .bottom-cta h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,38px);color:#fff;margin:0 0 16px}
+.lmt-partner .bottom-cta h2 em{color:#E8B84B;font-style:italic}
+.lmt-partner .bottom-cta p{font-size:20px;color:#D6DCE4;max-width:600px;margin:0 auto 28px;line-height:1.7}
+.lmt-partner .bottom-cta .btn-big{display:inline-block;background:#C8942E;color:#0E1C2F;font-family:'DM Sans',sans-serif;font-weight:700;font-size:22px;padding:20px 48px;border-radius:8px;text-decoration:none;transition:all .2s}
+.lmt-partner .bottom-cta .btn-big:hover{background:#E8B84B;transform:translateY(-2px)}
+
+@media(max-width:768px){
+  .lmt-partner .paths{grid-template-columns:1fr}
+  .lmt-partner .who-grid{grid-template-columns:1fr}
+  .lmt-partner .trust{gap:24px}
+}
+</style>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="badge">Partner With Us</div>
+  <h1>Let's Close the <em>Digital Divide Together</em></h1>
+  <p>Whether you want to deploy training, sponsor the mission, book a keynote, or just connect — there's a seat at the table for you.</p>
+</section>
+
+<!-- FOUR PATH CARDS -->
+<section class="paths">
+
+  <!-- DEPLOY -->
+  <a href="https://cal.com/brian-mckinney-mrtu8q/discovery-call" class="path-card" target="_blank">
+    <div class="path-icon">🏛️</div>
+    <div class="path-for">For Organizations</div>
+    <div class="path-name">Deploy Training</div>
+    <div class="path-desc">Bring AI and digital skills training to your library, senior center, workforce board, or employer. Free 60-minute Lunch & Learn to start. Customized cohorts to scale.</div>
+    <div class="path-cta">Schedule a Discovery Call →</div>
+  </a>
+
+  <!-- SPEAK -->
+  <a href="https://cal.com/brian-mckinney-mrtu8q/speaking-inquiry" class="path-card" target="_blank">
+    <div class="path-icon">🎤</div>
+    <div class="path-for">For Events</div>
+    <div class="path-name">Book Brian to Speak</div>
+    <div class="path-desc">Keynotes, Lunch & Learns, and workshops on ageism, AI adoption, and the $76 trillion opportunity. Your audience leaves with real tools.</div>
+    <div class="path-cta">Book a Speaking Inquiry →</div>
+  </a>
+
+  <!-- CONNECT -->
+  <a href="https://cal.com/brian-mckinney-mrtu8q/lets-connect" class="path-card" target="_blank">
+    <div class="path-icon">💬</div>
+    <div class="path-for">For Everyone</div>
+    <div class="path-name">Let's Connect</div>
+    <div class="path-desc">Sponsor the mission, explore a partnership, or just have a conversation. No pitch, no pressure — just what's possible.</div>
+    <div class="path-cta">Schedule a Call →</div>
+  </a>
+
+</section>
+
+<!-- TRUST BAR -->
+<section class="trust">
+  <div class="trust-item">
+    <span class="num">12</span>
+    <span class="label">Locations Deployed</span>
+  </div>
+  <div class="trust-item">
+    <span class="num">50,000</span>
+    <span class="label">Pioneer Target</span>
+  </div>
+  <div class="trust-item">
+    <span class="num">$850B</span>
+    <span class="label">Lost to Age Discrimination</span>
+  </div>
+  <div class="trust-item">
+    <span class="num">MBE</span>
+    <span class="label">Certified · WIOA Eligible</span>
+  </div>
+</section>
+
+<!-- WHO PARTNERS WITH US -->
+<section class="who">
+  <h2>Who <em>Partners</em> With Us?</h2>
+  <p class="sub">Organizations that see the gap and want to close it.</p>
+
+  <div class="who-grid">
+    <div class="who-card">
+      <h3>Libraries</h3>
+      <p>Programs that fill seats, participants who come back, and stories that justify your budget to the city council.</p>
+    </div>
+    <div class="who-card">
+      <h3>Senior Centers</h3>
+      <p>Adults who go from avoiding their phones to setting up voice reminders, managing pharmacy apps, and using AI independently.</p>
+    </div>
+    <div class="who-card">
+      <h3>Workforce Boards</h3>
+      <p>WIOA-eligible training with completion data that demonstrates results. Confidence metrics that justify continued funding.</p>
+    </div>
+    <div class="who-card">
+      <h3>Employers</h3>
+      <p>Experienced workers who can use AI tools to extend their productive years. Knowledge retention instead of knowledge loss.</p>
+    </div>
+    <div class="who-card">
+      <h3>Community Banks</h3>
+      <p>CRA-qualifying digital equity investment. Train adults 50+ in LMI communities. Full documentation provided.</p>
+    </div>
+    <div class="who-card">
+      <h3>Foundations & Corporations</h3>
+      <p>CSR and ESG reporting. Digital equity is a measurable, brandable investment with real impact data and named cohorts.</p>
+    </div>
+    <div class="who-card">
+      <h3>Faith Communities</h3>
+      <p>Serve your congregation's 50+ members with free, no-pressure digital skills training. We come to you — during lunch, before bingo.</p>
+    </div>
+    <div class="who-card">
+      <h3>Conferences & Events</h3>
+      <p>Book Brian McKinney to speak on ageism, AI adoption, and the $76 trillion opportunity. Your audience leaves with real tools.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="bottom-cta">
+  <h2>Ageism Is the Problem. <em>We're the Bridge.</em></h2>
+  <p>200+ adults trained. 12 locations. 3X completion rate. Building to 50,000 Digital Pioneers. The model is proven. The mission is clear. The only question is — are you in?</p>
+  <a href="https://cal.com/brian-mckinney-mrtu8q" class="btn-big" target="_blank">Let's Talk →</a>
+  <p style="margin-top:20px;font-size:16px;color:#A0AEC0">Or email: <a href="mailto:hello@learnmoretechnologies.com" style="color:#E8B84B">hello@learnmoretechnologies.com</a></p>
+</section>
+
+</div><!-- .lmt-partner -->
+<\!-- /wp:html -->

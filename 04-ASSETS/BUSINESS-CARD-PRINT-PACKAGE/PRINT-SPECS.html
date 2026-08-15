@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Business Card — Print Package — Prof. Brian McKinney</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page {
+    size: letter;
+    margin: 0.5in;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+    color: #333;
+    padding: 0.5in;
+  }
+
+  h1 {
+    font-size: 14pt;
+    color: #0E1C2F;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 400;
+  }
+
+  /* Print-ready card at exact 3.5 x 2 inches */
+  .card-wrapper {
+    margin: 0 auto 40px auto;
+    text-align: center;
+  }
+  .card-label {
+    font-size: 9pt;
+    color: #999;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .card {
+    width: 3.5in;
+    height: 2in;
+    border: 1px solid #ccc;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    background: #ffffff;
+  }
+
+  /* ====== FRONT ====== */
+  .card-front {
+    display: flex;
+    align-items: center;
+    padding: 0 0.2in;
+  }
+  .card-front .seal-img {
+    width: 1.2in;
+    height: 1.2in;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+  .card-front .info {
+    margin-left: 0.15in;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-front .info .name {
+    font-size: 9pt;
+    font-weight: 800;
+    color: #0E1C2F;
+    letter-spacing: 0.5px;
+    margin-bottom: 1px;
+    white-space: nowrap;
+  }
+  .card-front .info .title {
+    font-size: 5.5pt;
+    font-weight: 600;
+    color: #C8942E;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .card-front .info .divider {
+    width: 0.3in;
+    height: 1px;
+    background: #C8942E;
+    margin-bottom: 6px;
+  }
+  .card-front .info .detail {
+    font-size: 5.5pt;
+    color: #333;
+    margin-bottom: 2.5px;
+    letter-spacing: 0.2px;
+  }
+  .card-front .info .tagline {
+    margin-top: 3px;
+    color: #C8942E;
+    font-weight: 700;
+    font-size: 5.5pt;
+  }
+  .card-front .accent-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #0E1C2F, #C8942E, #0E1C2F);
+  }
+
+  /* ====== BACK ====== */
+  .card-back {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.15in 0.2in;
+  }
+  .card-back .back-left {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  .card-back .back-left .tagline {
+    font-size: 8pt;
+    font-weight: 700;
+    color: #0E1C2F;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .card-back .back-left .mission {
+    font-size: 7.5pt;
+    color: #333;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.8;
+    max-width: 1.8in;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .card-back .back-left .bottom-line {
+    font-size: 5pt;
+    color: #666;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .card-back .qr-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .card-back .qr-section .qr-code {
+    width: 0.9in;
+    height: 0.9in;
+  }
+  .card-back .qr-section .qr-label {
+    font-size: 4.5pt;
+    color: #666;
+    margin-top: 3px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .card-back .accent-bar-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #0E1C2F, #C8942E, #0E1C2F);
+  }
+  .card-back .accent-bar-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #0E1C2F, #C8942E, #0E1C2F);
+  }
+
+  /* ====== SPECS TABLE ====== */
+  .specs {
+    margin: 40px auto 0 auto;
+    max-width: 5in;
+    page-break-before: always;
+  }
+  .specs h3 {
+    font-size: 11pt;
+    color: #0E1C2F;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #C8942E;
+    padding-bottom: 5px;
+  }
+  .specs table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8.5pt;
+  }
+  .specs td {
+    padding: 5px 8px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+  }
+  .specs td:first-child {
+    font-weight: 700;
+    color: #0E1C2F;
+    width: 40%;
+  }
+  .specs .section-break td {
+    padding-top: 15px;
+    border-bottom: none;
+    font-size: 9pt;
+    color: #C8942E;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  @media print {
+    body { padding: 0.5in; }
+    .card { border: 0.5pt solid #ccc; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Business Card — Print Package</h1>
+<h2>Prof. Brian McKinney — 50+TechBridge / Learn More Technologies</h2>
+
+<!-- FRONT -->
+<div class="card-wrapper">
+  <div class="card-label">Front</div>
+  <div class="card card-front">
+    <img src="Final-50+AgenticLogo.png" alt="Agentic50 Seal" class="seal-img">
+    <div class="info">
+      <div class="name">PROF. BRIAN McKINNEY</div>
+      <div class="title">Founder — Learn More Technologies</div>
+      <div class="divider"></div>
+      <div class="detail">Austin, TX</div>
+      <div class="detail">hello@learnmoretechnologies.com</div>
+      <div class="detail">learnmoretechnologies.com</div>
+      <div class="detail">linkedin.com/in/brianmckinneylmt</div>
+      <div class="detail">512-200-4241 (office)</div>
+      <div class="tagline">AI Training · Advocacy · Speaking</div>
+    </div>
+    <div class="accent-bar"></div>
+  </div>
+</div>
+
+<!-- BACK -->
+<div class="card-wrapper">
+  <div class="card-label">Back</div>
+  <div class="card card-back">
+    <div class="accent-bar-top"></div>
+    <div class="back-left">
+      <div class="tagline">50+TechBridge</div>
+      <div class="mission">
+        "Ageism is the problem.<br>
+        AI is the equalizer.<br>
+        We're the bridge."
+      </div>
+      <div class="bottom-line">#agentic50 · learnmoretechnologies.com</div>
+    </div>
+    <div class="qr-section">
+      <img src="QR-CODE-learnmoretechnologies.png" alt="QR Code" class="qr-code">
+      <div class="qr-label">Scan to connect</div>
+    </div>
+    <div class="accent-bar-bottom"></div>
+  </div>
+</div>
+
+<!-- PRINT SPECS -->
+<div class="specs">
+  <h3>Print Specifications</h3>
+  <table>
+    <tr class="section-break"><td colspan="2">Card Details</td></tr>
+    <tr><td>Card Size</td><td>3.5" x 2" (standard US business card)</td></tr>
+    <tr><td>Orientation</td><td>Horizontal / Landscape</td></tr>
+    <tr><td>Sides</td><td>Double-sided (front + back)</td></tr>
+    <tr><td>Corners</td><td>Rounded corners (0.125" radius) — REQUIRED</td></tr>
+    <tr><td>Bleed</td><td>0.125" on all sides (add if printer requires)</td></tr>
+
+    <tr class="section-break"><td colspan="2">Paper & Finish</td></tr>
+    <tr><td>Stock</td><td>32pt ultra-thick card stock (heavy weight) — REQUIRED</td></tr>
+    <tr><td>Color</td><td>White</td></tr>
+    <tr><td>Finish</td><td>Matte or Soft Touch (recommended for readability)</td></tr>
+
+    <tr class="section-break"><td colspan="2">Brand Colors (RGB)</td></tr>
+    <tr><td>Navy</td><td>#0E1C2F — RGB(14, 28, 47)</td></tr>
+    <tr><td>Gold</td><td>#C8942E — RGB(200, 148, 46)</td></tr>
+    <tr><td>Text</td><td>#333333 — RGB(51, 51, 51)</td></tr>
+    <tr><td>Background</td><td>#FFFFFF — White</td></tr>
+
+    <tr class="section-break"><td colspan="2">Brand Colors (CMYK for Print)</td></tr>
+    <tr><td>Navy</td><td>C:95 M:75 Y:35 K:55</td></tr>
+    <tr><td>Gold</td><td>C:0 M:30 Y:82 K:18</td></tr>
+    <tr><td>Text</td><td>C:0 M:0 Y:0 K:80</td></tr>
+
+    <tr class="section-break"><td colspan="2">Typography</td></tr>
+    <tr><td>Font Family</td><td>Montserrat (Google Fonts — free)</td></tr>
+    <tr><td>Name</td><td>Montserrat ExtraBold 800, 9pt</td></tr>
+    <tr><td>Title</td><td>Montserrat SemiBold 600, 5.5pt, uppercase</td></tr>
+    <tr><td>Details</td><td>Montserrat Regular 400, 5.5pt</td></tr>
+    <tr><td>Back Quote</td><td>Montserrat SemiBold 600, 7.5pt, italic</td></tr>
+
+    <tr class="section-break"><td colspan="2">Assets Required</td></tr>
+    <tr><td>Logo/Seal</td><td>Final-50+AgenticLogo.png (export at 300dpi, transparent BG)</td></tr>
+    <tr><td>QR Code</td><td>Links to: https://learnmoretechnologies.com</td></tr>
+
+    <tr class="section-break"><td colspan="2">Front Content</td></tr>
+    <tr><td>Name</td><td>PROF. BRIAN McKINNEY</td></tr>
+    <tr><td>Title</td><td>FOUNDER — LEARN MORE TECHNOLOGIES</td></tr>
+    <tr><td>Location</td><td>Austin, TX</td></tr>
+    <tr><td>Email</td><td>hello@learnmoretechnologies.com</td></tr>
+    <tr><td>Website</td><td>learnmoretechnologies.com</td></tr>
+    <tr><td>LinkedIn</td><td>linkedin.com/in/brianmckinneylmt</td></tr>
+    <tr><td>Phone</td><td>512-200-4241 (office)</td></tr>
+    <tr><td>Tagline</td><td>AI Training · Advocacy · Speaking</td></tr>
+
+    <tr class="section-break"><td colspan="2">Back Content</td></tr>
+    <tr><td>Brand Name</td><td>50+TechBridge</td></tr>
+    <tr><td>Quote</td><td>"Ageism is the problem. AI is the equalizer. We're the bridge."</td></tr>
+    <tr><td>Bottom Line</td><td>#agentic50 · learnmoretechnologies.com</td></tr>
+    <tr><td>QR Label</td><td>SCAN TO CONNECT</td></tr>
+  </table>
+</div>
+
+<!-- VISTAPRINT ORDERING INSTRUCTIONS -->
+<div class="specs" style="page-break-before: always;">
+  <h3>How to Order on Vistaprint</h3>
+  <table>
+    <tr class="section-break"><td colspan="2">Step 1 — Start Your Order</td></tr>
+    <tr><td>Go to</td><td>vistaprint.com → Business Cards</td></tr>
+    <tr><td>Template</td><td>Choose "Upload your own design" (DO NOT use a Vistaprint template)</td></tr>
+    <tr><td>Size</td><td>Standard 3.5" x 2"</td></tr>
+    <tr><td>Orientation</td><td>Horizontal</td></tr>
+
+    <tr class="section-break"><td colspan="2">Step 2 — Upload Front</td></tr>
+    <tr><td>Option A</td><td>Use their drag-and-drop editor: upload Final-50+AgenticLogo.png, place on left side, then add text fields on the right using the content from this spec sheet</td></tr>
+    <tr><td>Option B</td><td>If you have a full front design as one image (from Illustrator), upload that instead — export at 3.75" x 2.25" to include bleed</td></tr>
+    <tr><td>Font</td><td>Vistaprint has Montserrat — select it from their font list</td></tr>
+
+    <tr class="section-break"><td colspan="2">Step 3 — Upload Back</td></tr>
+    <tr><td>Select</td><td>"Add design to back" — same process</td></tr>
+    <tr><td>Left side</td><td>Add text: 50+TechBridge, the quote, and hashtag line</td></tr>
+    <tr><td>Right side</td><td>Upload QR-CODE-learnmoretechnologies.png, add "SCAN TO CONNECT" below it</td></tr>
+
+    <tr class="section-break"><td colspan="2">Step 4 — Select Options</td></tr>
+    <tr><td>Paper</td><td>Select "Heavyweight" or "Ultra Thick" — look for 32pt option (may be called "Premium" or "Luxe")</td></tr>
+    <tr><td>Finish</td><td>Matte or Soft Touch Matte</td></tr>
+    <tr><td>Corners</td><td>Select "Rounded Corners"</td></tr>
+    <tr><td>Quantity</td><td>250 recommended for first order</td></tr>
+
+    <tr class="section-break"><td colspan="2">Step 5 — Review & Order</td></tr>
+    <tr><td>Proof</td><td>ALWAYS preview the digital proof before checkout — check for cut-off text, color accuracy, and alignment</td></tr>
+    <tr><td>Tip</td><td>Zoom in on small text (email, phone, LinkedIn) to make sure it's readable</td></tr>
+    <tr><td>Shipping</td><td>Standard is fine (7-10 days) unless you need rush</td></tr>
+    <tr><td>Coupon</td><td>Check for promo codes — Vistaprint almost always has 25-50% off deals running</td></tr>
+
+    <tr class="section-break"><td colspan="2">Files in This Package</td></tr>
+    <tr><td>Final-50+AgenticLogo.png</td><td>Seal logo — 300dpi, transparent background</td></tr>
+    <tr><td>QR-CODE-learnmoretechnologies.png</td><td>QR code — links to learnmoretechnologies.com</td></tr>
+    <tr><td>PRINT-SPECS.html</td><td>This file — save as PDF via Ctrl+P → Save as PDF</td></tr>
+  </table>
+</div>
+
+</body>
+</html>

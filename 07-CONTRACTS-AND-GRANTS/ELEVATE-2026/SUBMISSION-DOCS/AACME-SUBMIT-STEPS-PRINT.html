@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>AACME Submission Steps — Print Version</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Georgia', serif; font-size: 11pt; color: #111; background: #fff; padding: 40px; max-width: 720px; margin: 0 auto; }
+
+  .header { border-bottom: 3px solid #111; padding-bottom: 12px; margin-bottom: 20px; }
+  .header h1 { font-size: 18pt; font-weight: bold; margin-bottom: 4px; }
+  .header .meta { font-size: 10pt; color: #444; }
+  .header .deadline { font-size: 12pt; font-weight: bold; color: #c00; margin-top: 6px; }
+
+  .day-block { margin-bottom: 24px; page-break-inside: avoid; }
+  .day-title { font-size: 13pt; font-weight: bold; background: #111; color: #fff; padding: 6px 10px; margin-bottom: 10px; }
+  .day-title.urgent { background: #c00; }
+
+  ul { list-style: none; padding-left: 0; }
+  ul li { padding: 5px 0 5px 24px; position: relative; border-bottom: 1px solid #eee; font-size: 10.5pt; line-height: 1.5; }
+  ul li:last-child { border-bottom: none; }
+  ul li::before { content: "☐"; position: absolute; left: 0; font-size: 12pt; color: #555; }
+
+  .sub { font-size: 9.5pt; color: #555; padding-left: 24px; margin-top: 2px; }
+
+  .section-title { font-size: 11pt; font-weight: bold; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid #ccc; padding-bottom: 4px; margin: 20px 0 10px; color: #333; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 10pt; margin-bottom: 16px; }
+  th { background: #111; color: #fff; padding: 6px 8px; text-align: left; font-size: 9.5pt; }
+  td { padding: 6px 8px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .check-col { width: 36px; text-align: center; font-size: 14pt; }
+
+  .contacts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+  .contact-card { border: 1px solid #ccc; padding: 10px 12px; border-radius: 4px; }
+  .contact-card .c-who { font-weight: bold; font-size: 10pt; }
+  .contact-card .c-phone { font-size: 11pt; color: #111; font-family: monospace; }
+  .contact-card .c-note { font-size: 9pt; color: #666; margin-top: 2px; }
+
+  .ref-box { background: #f5f5f5; border: 1px solid #ccc; padding: 12px 14px; font-size: 9.5pt; border-radius: 4px; }
+  .ref-box p { margin-bottom: 4px; }
+
+  @media print {
+    body { padding: 20px; font-size: 10.5pt; }
+    .day-block { page-break-inside: avoid; }
+    @page { margin: 0.75in; }
+  }
+
+  .print-btn { display: block; background: #111; color: #fff; border: none; padding: 10px 24px; font-size: 11pt; cursor: pointer; margin-bottom: 24px; font-family: inherit; }
+  @media print { .print-btn { display: none; } }
+</style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+
+<div class="header">
+  <h1>AACME Elevate FY27 — Submission Steps</h1>
+  <div class="meta">50+TechBridge / Learn More Technologies LLC &nbsp;|&nbsp; Arts Group Tier &nbsp;|&nbsp; $25,500 Request</div>
+  <div class="deadline">Your Deadline: August 13, 2026 &nbsp;|&nbsp; Official Deadline: August 18, 2026</div>
+</div>
+
+<!-- TODAY -->
+<div class="day-block">
+  <div class="day-title urgent">TODAY — Saturday, August 8</div>
+  <ul>
+    <li>Scan sign-in sheets from past sessions
+      <div class="sub">Save as: Exhibit-A-SignIn-Sheets.pdf → drop in Exhibit-A-SignIn-Sheets folder</div>
+    </li>
+    <li>Find Nexus award letter in email (search "Nexus" or "City of Austin")
+      <div class="sub">Save as: Exhibit-E-Nexus-Award-Letter.pdf → drop in Exhibit-E folder</div>
+    </li>
+    <li>Search email for MBE cert (search "MBE" or "SMBR")
+      <div class="sub">Save as: Exhibit-F-MBE-Designation-Letter.pdf → drop in Exhibit-F folder. If not found, call SMBR Monday: 512-974-7600</div>
+    </li>
+    <li>Open phone camera roll → find 3 session photos
+      <div class="sub">Rename each: Exhibit-C-Photo-1-[Location]-[Date].jpg → drop in Exhibit-C folder</div>
+    </li>
+    <li>Text or email 1–2 past participants asking for a short quote about the program</li>
+  </ul>
+</div>
+
+<!-- SUNDAY -->
+<div class="day-block">
+  <div class="day-title">Sunday, August 9</div>
+  <ul>
+    <li>Open application portal: austintexas.gov/arts-culture/elevate — create account or log in</li>
+    <li>Copy Q1 (Mission), Q3 (Experience), Q5 (Marketing) from reference page
+      <div class="sub">Reference: https://1profmac.github.io/aacme/application.html</div>
+    </li>
+    <li>Paste into official application fields and save as draft</li>
+  </ul>
+</div>
+
+<!-- MONDAY -->
+<div class="day-block">
+  <div class="day-title">Monday, August 10 — Make These Calls First Thing</div>
+  <ul>
+    <li>Call AACME Cultural Arts Division: 512-974-7400
+      <div class="sub">Confirm LLC / Arts Group eligibility. Ask if partner letters are required or can be added after submission. Ask what file formats are accepted for attachments.</div>
+    </li>
+    <li>Call Austin Public Library: 512-974-7400
+      <div class="sub">Request a brief support letter from a branch manager. Ask for their email to send the partner letter template.</div>
+    </li>
+    <li>If MBE cert still not found: Call City of Austin SMBR: 512-974-7600
+      <div class="sub">Ask them to email your MBE certification letter.</div>
+    </li>
+    <li>Email partner letter template to library contact
+      <div class="sub">Template at: https://1profmac.github.io/forms/partner-letter.html</div>
+    </li>
+  </ul>
+</div>
+
+<!-- TUESDAY -->
+<div class="day-block">
+  <div class="day-title">Tuesday, August 11</div>
+  <ul>
+    <li>Copy Q2 (Proposed Event) with confirmed library locations into application</li>
+    <li>Copy Q4 (Budget) — review line items, then paste into application</li>
+    <li>Collect any testimonial quotes received → save in Exhibit-B-Testimonials folder</li>
+    <li>Follow up with library contact if partner letter not yet returned</li>
+  </ul>
+</div>
+
+<!-- WEDNESDAY -->
+<div class="day-block">
+  <div class="day-title">Wednesday, August 12</div>
+  <ul>
+    <li>Read entire application start to finish — fix anything that feels off</li>
+    <li>Confirm all exhibits are in folders and properly named</li>
+    <li>Upload all exhibits as attachments in the application portal</li>
+    <li>Final check: budget adds up to $25,500, all 5 questions answered</li>
+  </ul>
+</div>
+
+<!-- THURSDAY -->
+<div class="day-block">
+  <div class="day-title urgent">Thursday, August 13 — SUBMIT</div>
+  <ul>
+    <li>Submit application</li>
+    <li>Screenshot the confirmation page — save to SUBMISSION-DOCS folder</li>
+    <li>Leave for your trip</li>
+  </ul>
+</div>
+
+<!-- EXHIBIT CHECKLIST -->
+<div class="section-title">Exhibit Checklist</div>
+<table>
+  <thead><tr><th>Exhibit</th><th>File Name</th><th>Done</th></tr></thead>
+  <tbody>
+    <tr><td>A — Sign-In Sheets</td><td>Exhibit-A-SignIn-Sheets.pdf</td><td class="check-col">☐</td></tr>
+    <tr><td>B — Testimonials</td><td>Exhibit-B-Testimonial-[Name].pdf</td><td class="check-col">☐</td></tr>
+    <tr><td>C — Session Photos (3)</td><td>Exhibit-C-Photo-[1/2/3]-[Location]-[Date].jpg</td><td class="check-col">☐</td></tr>
+    <tr><td>D — Partner Letters</td><td>Exhibit-D-PartnerLetter-[LibraryName].pdf</td><td class="check-col">☐</td></tr>
+    <tr><td>E — Nexus Award Letter</td><td>Exhibit-E-Nexus-Award-Letter.pdf</td><td class="check-col">☐</td></tr>
+    <tr><td>F — MBE Designation Letter</td><td>Exhibit-F-MBE-Designation-Letter.pdf</td><td class="check-col">☐</td></tr>
+  </tbody>
+</table>
+
+<!-- KEY CONTACTS -->
+<div class="section-title">Key Contacts</div>
+<div class="contacts-grid">
+  <div class="contact-card">
+    <div class="c-who">AACME Cultural Arts Division</div>
+    <div class="c-phone">512-974-7400</div>
+    <div class="c-note">Eligibility + submission questions</div>
+  </div>
+  <div class="contact-card">
+    <div class="c-who">Application Help Line</div>
+    <div class="c-phone">512-457-5161</div>
+    <div class="c-note">applicationhelp@thelongcenter.org</div>
+  </div>
+  <div class="contact-card">
+    <div class="c-who">Austin Public Library</div>
+    <div class="c-phone">512-974-7400</div>
+    <div class="c-note">Partner letters + session scheduling</div>
+  </div>
+  <div class="contact-card">
+    <div class="c-who">City of Austin SMBR</div>
+    <div class="c-phone">512-974-7600</div>
+    <div class="c-note">MBE certification copy</div>
+  </div>
+</div>
+
+<!-- REFERENCE -->
+<div class="section-title">Reference Links</div>
+<div class="ref-box">
+  <p><strong>Application Draft (5 Questions):</strong> https://1profmac.github.io/aacme/application.html</p>
+  <p><strong>Full Application File:</strong> Desktop/LMT-CONTENT/07-CONTRACTS-AND-GRANTS/ELEVATE-2026/AACME-2026-GRANT-APPLICATION.md</p>
+  <p><strong>Submit Here:</strong> austintexas.gov/arts-culture/elevate</p>
+  <p><strong>Partner Letter Template:</strong> https://1profmac.github.io/forms/partner-letter.html</p>
+</div>
+
+</body>
+</html>

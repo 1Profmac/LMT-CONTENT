@@ -1,0 +1,63 @@
+Conversation with HeyGen
+Started on May 10, 2026 at 05:49 PM America/Los_Angeles time PDT (GMT-0700)
+
+---
+
+05:49 PM | b30637ab2365417e83d185fab8a9a820: Click Here for HeyGen Support
+
+05:50 PM | John: Hi there 👋 Welcome to the HeyGen Resource Center for Free users! 
+ This is your go-to spot for answers to your questions and links to all our helpful information. 
+ Reminder: This is not a live chat! The Live Chat option is currently available for paid plans, but you should be able to find everything you need right here or in our Help Center (https://help.heygen.com/en/).
+
+05:50 PM | b30637ab2365417e83d185fab8a9a820: 💲 💳 Paid Plans, Billing & Pricing
+
+05:50 PM | John: This chat is for free plan users. If you're a paid plan user here by mistake, please click the option below of "I have a paid plan" 
+ 
+ For free users looking to learn more about our pricing, you can find our paid plans comparison by scrolling down on our Pricing Page (%E2%80%8Bhttps://www.heygen.com/pricing) or the subscription article below. 
+ [App: Article Inserter]
+
+05:50 PM | b30637ab2365417e83d185fab8a9a820: I already have a paid plan
+
+05:50 PM | John: How can we help here?
+
+05:51 PM | b30637ab2365417e83d185fab8a9a820: I paid, but my account says "Free"
+
+05:51 PM | John: If you are part of an enterprise / business / team space and seeing "Free" under your account, all you have to do is switch over to your teams' workspace to enjoy the paid plan benefits. 
+ 
+ [Image "Screenshot+2026-02-19+at+13_46_46.png"] 
+ If you have already paid for HeyGen plan, and still showing free on your account, please click on the button below to talk to our Finance team.
+
+05:51 PM | b30637ab2365417e83d185fab8a9a820: Talk to Finance team
+
+05:51 PM | John: Please describe your finance issue below and our team will be right with you!
+
+05:51 PM | John: In the meantime, these articles might help:
+
+05:51 PM | John: [Article: "Billing, Payments & Invoices"] 
+ [Article: "Refund Process and Policy"] 
+ [Article: "How to manage your HeyGen account settings"] 
+More in the Help Center (https://help.heygen.com?conversation_id=215474248323067&utm_content=suggestions-fallback&utm_source=operator)
+
+05:51 PM | Sam from HeyGen: Hello there 👋 Thanks for reaching out to us. Let me look into this for you!
+
+05:52 PM | b30637ab2365417e83d185fab8a9a820: my plan jumped from $29 to 158, without my authorization. i dont understand my billing it say i have $129 credit but i own 158 $ whats going on?
+
+05:53 PM | b30637ab2365417e83d185fab8a9a820: i like your service but i dont have the budget for 158$ per month
+
+05:54 PM | b30637ab2365417e83d185fab8a9a820: o ris tha annually?
+
+05:54 PM | b30637ab2365417e83d185fab8a9a820: sam are you thier
+
+05:54 PM | b30637ab2365417e83d185fab8a9a820: ?
+
+05:55 PM | Sam from HeyGen: Still here! Give me a moment to look into your account and billing details.
+
+05:55 PM | b30637ab2365417e83d185fab8a9a820: ok
+
+06:00 PM | Sam from HeyGen: Your $158.83 charge is made up of your Creator plan ($29) plus multiple Premium Credit pack add-ons (recurring monthly subscriptions at $15/pack) plus tax. The good news: the May 10 payment failed, so you haven't actually been charged that amount this month. 
+ Since these add-ons appear to have been added without your knowledge, I'm passing this to our finance team to get it sorted and bring your plan back to $29. They work PST business hours Sunday–Friday and will respond within the next business day. Please don't open any additional tickets for this, as it will slow things down.
+
+06:01 PM | b30637ab2365417e83d185fab8a9a820: can you give me a ticket #?
+
+---
+Exported from HeyGen on May 10, 2026 at 06:09 PM America/Los_Angeles time PDT (GMT-0700)

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  @keyframes pop {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  @keyframes confetti1 {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(400px) rotate(720deg); opacity: 0; }
+  }
+  @keyframes confetti2 {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(350px) rotate(-540deg); opacity: 0; }
+  }
+  @keyframes glow {
+    0% { box-shadow: 0 0 20px #C8942E; }
+    50% { box-shadow: 0 0 80px #E8B84B, 0 0 120px #C8942E; }
+    100% { box-shadow: 0 0 20px #C8942E; }
+  }
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    height: 1920px;
+    background: linear-gradient(180deg, #0E1C2F 0%, #1a3050 50%, #0E1C2F 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+  }
+  .confetti { position: absolute; width: 15px; height: 15px; border-radius: 3px; }
+  .c1 { background: #C8942E; top: -20px; left: 5%; animation: confetti1 3s ease-in infinite; }
+  .c2 { background: #E8733A; top: -20px; left: 15%; animation: confetti2 2.5s ease-in infinite; animation-delay: 0.3s; }
+  .c3 { background: #E8B84B; top: -20px; left: 25%; animation: confetti1 2.8s ease-in infinite; animation-delay: 0.6s; border-radius: 50%; }
+  .c4 { background: #109F35; top: -20px; left: 35%; animation: confetti2 3.2s ease-in infinite; animation-delay: 0.2s; }
+  .c5 { background: #C8942E; top: -20px; left: 45%; animation: confetti1 2.6s ease-in infinite; animation-delay: 0.8s; }
+  .c6 { background: #E8733A; top: -20px; left: 55%; animation: confetti2 3s ease-in infinite; animation-delay: 0.4s; border-radius: 50%; }
+  .c7 { background: #E8B84B; top: -20px; left: 65%; animation: confetti1 2.7s ease-in infinite; animation-delay: 1s; }
+  .c8 { background: #109F35; top: -20px; left: 75%; animation: confetti2 2.9s ease-in infinite; animation-delay: 0.7s; }
+  .c9 { background: #C8942E; top: -20px; left: 85%; animation: confetti1 3.1s ease-in infinite; animation-delay: 0.5s; }
+  .c10 { background: #E8B84B; top: -20px; left: 95%; animation: confetti2 2.4s ease-in infinite; animation-delay: 0.1s; }
+  .trophy {
+    font-size: 140px;
+    animation: float 2s ease-in-out infinite;
+    margin-bottom: 15px;
+  }
+  .badge {
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, #E8B84B, #C8942E);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: glow 2s ease-in-out infinite, pop 0.6s ease-out;
+    margin-bottom: 25px;
+  }
+  .badge-check {
+    font-size: 120px;
+    color: #FFFFFF;
+  }
+  .congrats {
+    font-size: 58px;
+    font-weight: 900;
+    color: #E8B84B;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 8px;
+    text-shadow: 0 0 30px rgba(232, 184, 75, 0.5);
+  }
+  .did-it {
+    font-size: 44px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .message {
+    font-size: 28px;
+    color: #C4CDD9;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    padding: 0 60px;
+  }
+  .share-box {
+    background: rgba(255,255,255,0.1);
+    border: 2px solid #C8942E;
+    border-radius: 16px;
+    padding: 25px 40px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .share-label {
+    font-size: 22px;
+    color: #C8942E;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+  }
+  .share-text {
+    font-size: 26px;
+    font-weight: 600;
+    color: #FFFFFF;
+    font-style: italic;
+  }
+  .pioneer-banner {
+    background: linear-gradient(90deg, #C8942E, #E8B84B, #C8942E);
+    background-size: 200% auto;
+    animation: shimmer 3s linear infinite;
+    border-radius: 16px;
+    padding: 25px 60px;
+    margin-bottom: 25px;
+  }
+  .pioneer-text {
+    font-size: 32px;
+    font-weight: 900;
+    color: #0E1C2F;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  .final-line {
+    font-size: 30px;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  .final-sub {
+    font-size: 24px;
+    color: #C4CDD9;
+    text-align: center;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+  <div class="confetti c1"></div><div class="confetti c2"></div><div class="confetti c3"></div>
+  <div class="confetti c4"></div><div class="confetti c5"></div><div class="confetti c6"></div>
+  <div class="confetti c7"></div><div class="confetti c8"></div><div class="confetti c9"></div>
+  <div class="confetti c10"></div>
+  <div class="trophy">&#127941;</div>
+  <div class="badge"><span class="badge-check">&#10003;</span></div>
+  <div class="congrats">ALL 3 COMPLETE!</div>
+  <div class="did-it">You're a Certified<br>Digital Pioneer!</div>
+  <div class="message">You made your phone easier to read.<br>You set up tools that save you time.<br>You took a step toward independence.<br>You did ALL of that.</div>
+  <div class="share-box">
+    <div class="share-label">Text a family member right now</div>
+    <div class="share-text">"Check your phone —<br>you can see where I am."</div>
+  </div>
+  <div class="pioneer-banner">
+    <div class="pioneer-text">Certified Digital Pioneer</div>
+  </div>
+  <div class="final-line">Technology works for YOU now.</div>
+  <div class="final-sub">Not your kids' terms. Not your doctor's terms. Yours.</div>
+</body>
+</html>

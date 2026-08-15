@@ -1,0 +1,1442 @@
+			@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap');:root{--color-primary-bg:#0E1C2F;--color-card-bg:#162640;--color-text-light:#FAFBFD;--color-accent-gold:#C8942E;--color-action-green:#109F35;--color-text-muted:#939597;--color-border:#C4CDD9;--color-body-text:#1A1A1A;--color-gold-hover:#a87424;--color-gold-light:#E8B84B;--color-orange:#E8733A;--color-border-subtle:rgba(255,255,255,0.08);--color-border-gold:rgba(200,148,46,0.25);--color-border-gold-hover:rgba(200,148,46,0.35);--color-card-bg-alpha:rgba(200,148,46,0.12)}body{font-family:'DM Sans',sans-serif !important}h1,h2,h3,h4,h5,h6{font-family:'DM Serif Display',serif !important}body,p,li,td,label{color:var(--color-body-text)}input[type="text"],input[type="email"],input[type="password"],input[type="search"],input[type="tel"],input[type="url"],textarea,select{color:var(--color-body-text) !important}input::placeholder,textarea::placeholder{color:#555555 !important}
+
+/* ═══════════════════════════════════════════════
+   LMT BLOG PAGE — FINAL UNIFIED CSS
+   REPLACES all previous body.blog rules
+   Paste into: Appearance > Customize > Additional CSS
+   DELETE all old body.blog CSS first
+   Last Updated: April 18, 2026 — 10:45am FINAL
+   ═══════════════════════════════════════════════
+
+   BuddyBoss overrides confirmed against:
+   - theme.min.css v2.19.0
+   - .first .post-inner-wrap { flex-flow: row-reverse }
+   - .lg-grid-2-3 { flex: 0 0 66.66%; max-width: 66.66% }
+   - .post-grid .first .ratio-wrap { width: 42.417% }
+   - .bb-grid { margin-left:-10px; margin-right:-10px }
+   - .bb-grid-cell { padding-left:10px; padding-right:10px }
+   - .content-area { padding-top: 1.875rem }
+   - body .widget-area:not(.widget-area-secondary) { padding-top: 1.875rem }
+   - .post-grid .hentry { margin-bottom: 20px }
+   ═══════════════════════════════════════════════ */
+
+/* ── Blog page background ── */
+body.blog,
+body.blog .site,
+body.blog #page,
+body.blog #content.site-content,
+body.blog .container,
+body.blog .bb-grid.site-content-grid,
+body.blog #primary.content-area,
+body.blog #main.site-main,
+body.blog .post-grid.bb-grid,
+body.blog #secondary.widget-area {
+  background-color: #0E1C2F !important;
+}
+
+/* ── Hide default page title ── */
+body.blog .page-header,
+body.blog .page-title {
+  display: none !important;
+}
+
+/* ── Content area — clear the sticky header ── */
+body.blog #content.site-content {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* ── Container ── */
+body.blog #content.site-content > .container {
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  padding: 24px 16px 32px 16px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* ══════════════════════════════════════════
+   LAYOUT: posts + sidebar, TOPS ALIGNED
+   Kills: .bb-grid margins, .content-area padding,
+   widget-area padding-top
+══════════════════════════════════════════ */
+
+/* Kill BuddyBoss .bb-grid negative margins */
+body.blog .bb-grid.site-content-grid {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  gap: 20px !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+  margin: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 0 !important;
+}
+
+/* Kill BuddyBoss .content-area { padding-top: 1.875rem } */
+body.blog #primary,
+body.blog #primary.content-area,
+body.blog div#primary,
+body.blog .content-area {
+  flex: 1 !important;
+  min-width: 0 !important;
+  width: auto !important;
+  max-width: none !important;
+  float: none !important;
+  padding: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin: 0 !important;
+}
+
+/* Kill BuddyBoss .bb-grid-cell padding */
+body.blog .bb-grid.site-content-grid > * {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body.blog #main,
+body.blog #main.site-main,
+body.blog .site-main {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* ══════════════════════════════════════════
+   POST GRID — uniform 2-col cards
+   Kills: .bb-grid flex, .bb-grid-cell flex sizing
+══════════════════════════════════════════ */
+body.blog .post-grid.bb-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 16px !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Kill ALL BuddyBoss grid cell sizing:
+   .lg-grid-2-3 { flex: 0 0 66.66%; max-width: 66.66% }
+   .lg-grid-1-3 { flex: 0 0 33.33%; max-width: 33.33% }
+   .bb-grid-cell { padding-left:10px; padding-right:10px }
+*/
+body.blog .post-grid .bb-grid-cell,
+body.blog .post-grid article.lg-grid-2-3,
+body.blog .post-grid article.lg-grid-1-3,
+body.blog .post-grid article.lg-grid-1-2,
+body.blog .post-grid article.md-grid-1-2,
+body.blog .post-grid article.md-grid-1-1,
+body.blog .post-grid article.sm-grid-1-1,
+body.blog .post-grid article.first {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: none !important;
+  padding: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 !important;
+}
+
+/* Kill BuddyBoss .post-grid .hentry { margin-bottom: 20px } */
+body.blog .post-grid .hentry,
+body.blog .post-grid article {
+  margin-bottom: 0 !important;
+}
+
+/* ══════════════════════════════════════════
+   KILL BUDDYBOSS .first HORIZONTAL LAYOUT
+   Kills: .first .post-inner-wrap { flex-flow: row-reverse }
+   Kills: .post-grid .first .ratio-wrap { width: 42.417% }
+══════════════════════════════════════════ */
+body.blog .first .post-inner-wrap,
+body.blog .post-grid .first .post-inner-wrap,
+body.blog .post-grid article.first .post-inner-wrap,
+body.blog .hentry.first .post-inner-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-flow: column !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+  -ms-flex-flow: column !important;
+  -ms-flex-direction: column !important;
+}
+
+body.blog .first .post-inner-wrap .entry-content-wrap,
+body.blog .post-grid .first .post-inner-wrap .entry-content-wrap {
+  flex: none !important;
+  padding: 12px 16px !important;
+}
+
+body.blog .first .post-inner-wrap .entry-title,
+body.blog .post-grid .first .post-inner-wrap .entry-title {
+  font-size: clamp(18px, 2vw, 22px) !important;
+  line-height: 1.3 !important;
+}
+
+body.blog .post-grid .first .ratio-wrap,
+body.blog .first .ratio-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* ══════════════════════════════════════════
+   POST CARDS — all cards vertical
+   Kills: .post-inner-wrap built-in bg/border
+══════════════════════════════════════════ */
+
+/* Card wrapper */
+body.blog .post-grid article,
+body.blog .post-grid article.post,
+body.blog .post-grid .hentry,
+body.blog .post-grid .type-post {
+  background: rgba(255,255,255,.03) !important;
+  background-color: rgba(255,255,255,.03) !important;
+  border: 1px solid rgba(255,255,255,.07) !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  transition: all .28s ease !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+body.blog .post-grid article:hover,
+body.blog .post-grid article.post:hover {
+  border-color: rgba(200,148,46,.35) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 16px 48px rgba(0,0,0,.3) !important;
+}
+
+/* Kill BuddyBoss .post-inner-wrap bg/border/shadow */
+body.blog .post-grid article .post-inner-wrap,
+body.blog .post-grid .lg-grid-1-3 .post-inner-wrap {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  height: auto !important;
+}
+
+body.blog .post-grid article .post-inner-wrap:hover {
+  box-shadow: none !important;
+}
+
+/* Transparent children inside cards */
+body.blog .post-grid article *,
+body.blog .post-grid article.post * {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Posts without featured image — gold top border */
+body.blog .post-grid article:not(.has-post-thumbnail) {
+  border-top: 3px solid #C8942E !important;
+}
+
+/* ── Featured image ── */
+body.blog .post-grid article .entry-media,
+body.blog .post-grid article .entry-img,
+body.blog .post-grid article .ratio-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+body.blog .post-grid article .entry-img {
+  display: block !important;
+  height: 160px !important;
+  padding-top: 0 !important;
+}
+
+/* Kill BuddyBoss .first .ratio-wrap .entry-img { padding-top: 55.27%; height: 100% } */
+body.blog .post-grid .first .ratio-wrap .entry-img,
+body.blog .post-grid article .ratio-wrap .entry-img {
+  padding-top: 0 !important;
+  height: 160px !important;
+}
+
+body.blog .post-grid article .entry-media img,
+body.blog .post-grid article .entry-img img,
+body.blog .post-grid article .wp-post-image {
+  width: 100% !important;
+  height: 160px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* ── Post inner content ── */
+body.blog .post-grid article .entry-header {
+  padding: 12px 16px 0 16px !important;
+  margin: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Kill BuddyBoss .post-grid .entry-header { margin-bottom: 1.25rem } */
+body.blog .post-grid .entry-header {
+  margin-bottom: 8px !important;
+}
+
+body.blog .post-grid article .entry-content,
+body.blog .post-grid article .entry-summary {
+  padding: 0 16px 12px 16px !important;
+  margin: 0 !important;
+  flex: 1 !important;
+  float: none !important;
+  position: relative !important;
+  display: block !important;
+  width: auto !important;
+}
+
+body.blog .post-grid article .entry-footer {
+  padding: 0 16px 12px 16px !important;
+}
+
+/* ── Post titles ── */
+body.blog .post-grid article .entry-title,
+body.blog .post-grid article .entry-title a {
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(18px, 2vw, 22px) !important;
+  font-weight: 700 !important;
+  color: #FFFFFF !important;
+  line-height: 1.3 !important;
+  margin-bottom: 8px !important;
+  margin: 0 0 8px 0 !important;
+  text-decoration: none !important;
+  display: block !important;
+  letter-spacing: normal !important;
+  word-break: normal !important;
+}
+
+body.blog .post-grid article .entry-title a:hover {
+  color: #C8942E !important;
+}
+
+/* ── Post text — clamp to 3 lines ── */
+body.blog .post-grid article .entry-content,
+body.blog .post-grid article .entry-summary {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 14px !important;
+  color: #A8B8CC !important;
+  line-height: 1.7 !important;
+  margin-bottom: 0 !important;
+  letter-spacing: normal !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  max-height: 4.2em !important;
+}
+
+body.blog .post-grid article .entry-content p,
+body.blog .post-grid article .entry-summary p {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 14px !important;
+  color: #A8B8CC !important;
+  line-height: 1.7 !important;
+  margin-bottom: 0 !important;
+  letter-spacing: normal !important;
+}
+
+body.blog .post-grid article *,
+body.blog .post-grid article p,
+body.blog .post-grid article span,
+body.blog .post-grid article div {
+  color: #FFFFFF !important;
+}
+
+body.blog .post-grid article .entry-summary p,
+body.blog .post-grid article .entry-content p {
+  color: #A8B8CC !important;
+}
+
+/* ── Post meta ── */
+body.blog .post-grid article .entry-meta,
+body.blog .post-grid article .entry-meta a,
+body.blog .post-grid article .post-meta a {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 12px !important;
+  color: #A8B8CC !important;
+  text-transform: uppercase !important;
+  letter-spacing: .06em !important;
+  margin-top: 12px !important;
+}
+
+body.blog .post-grid article .entry-meta a:hover {
+  color: #C8942E !important;
+}
+
+body.blog .post-grid article .entry-meta a,
+body.blog .post-grid article .author a,
+body.blog .post-grid article .posted-on a {
+  color: #C8942E !important;
+}
+
+/* Kill BuddyBoss .first .post-inner-wrap .entry-meta { margin-top: auto } */
+body.blog .post-grid .first .post-inner-wrap .entry-meta {
+  margin-top: 12px !important;
+}
+
+/* ── Read More button ── */
+body.blog a.more-link,
+body.blog .more-link,
+body.blog .entry-more-link,
+body.blog .read-more,
+body.blog a.read-more {
+  display: inline-block !important;
+  background: #C8942E !important;
+  color: #0E1C2F !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  padding: 10px 22px !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  margin: 8px 0 12px 16px !important;
+  letter-spacing: .02em !important;
+  transition: all .25s ease !important;
+}
+
+body.blog a.more-link:hover,
+body.blog a.read-more:hover {
+  background: #E8B84B !important;
+  color: #0E1C2F !important;
+  transform: translateY(-2px) !important;
+}
+
+/* ══════════════════════════════════════════
+   SIDEBAR — tops aligned with cards
+   Kills: body .widget-area { padding-top: 1.875rem }
+   Kills: .widget-area { padding-bottom: 1.25rem }
+   Kills: .bb-grid-cell { padding-left/right: 10px }
+══════════════════════════════════════════ */
+body.blog #secondary,
+body.blog #secondary.widget-area,
+body.blog div#secondary,
+body .widget-area#secondary,
+body body.blog .widget-area:not(.widget-area-secondary) {
+  width: 260px !important;
+  min-width: 260px !important;
+  max-width: 260px !important;
+  flex-shrink: 0 !important;
+  flex: 0 0 260px !important;
+  background: rgba(255,255,255,.03) !important;
+  border: 1px solid rgba(255,255,255,.07) !important;
+  border-radius: 16px !important;
+  padding: 12px !important;
+  padding-top: 0 !important;
+  padding-bottom: 12px !important;
+  margin-top: 0 !important;
+  border-top: none !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  position: sticky !important;
+  top: 80px !important;
+  float: none !important;
+  margin: 0 !important;
+}
+
+body.blog #secondary .widget,
+body.blog #secondary aside.widget {
+  background: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin-bottom: 16px !important;
+  padding-bottom: 16px !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(255,255,255,.06) !important;
+}
+
+body.blog #secondary .widget:last-child,
+body.blog #secondary aside.widget:last-child {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  border-bottom: none !important;
+}
+
+body.blog #secondary .widget:first-child {
+  margin-top: 0 !important;
+}
+
+/* ── Sidebar headings ── */
+body.blog #secondary .widget-title,
+body.blog #secondary .widgettitle,
+body.blog #secondary .wp-block-heading,
+body.blog #secondary h2,
+body.blog #secondary h3 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #FFFFFF !important;
+  margin-bottom: 16px !important;
+  padding-bottom: 10px !important;
+  border-bottom: 2px solid #C8942E !important;
+}
+
+/* ── Sidebar links ── */
+body.blog #secondary a {
+  color: #A8B8CC !important;
+  text-decoration: none !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  transition: color .2s !important;
+}
+
+body.blog #secondary a:hover {
+  color: #C8942E !important;
+}
+
+/* ── Sidebar lists ── */
+body.blog #secondary ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+body.blog #secondary li {
+  padding: 8px 0 !important;
+  border-bottom: 1px solid rgba(255,255,255,.04) !important;
+  font-size: 14px !important;
+  color: #A8B8CC !important;
+}
+
+body.blog #secondary li:last-child {
+  border-bottom: none !important;
+}
+
+/* ── Recent posts widget thumbnails ── */
+body.blog #secondary .widget_recent_entries ul li::before {
+  content: '' !important;
+  display: block !important;
+  width: 52px !important;
+  min-width: 52px !important;
+  height: 52px !important;
+  background: #162640 !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(200,148,46,.25) !important;
+  flex-shrink: 0 !important;
+}
+
+body.blog #secondary .widget_recent_entries ul li {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+body.blog #secondary .widget_recent_entries ul li a {
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  flex: 1 !important;
+}
+
+/* ── Recent comments — hide avatars ── */
+body.blog #secondary .widget_recent_comments img,
+body.blog #secondary .avatar {
+  display: none !important;
+}
+
+body.blog #secondary .widget_recent_comments ul {
+  list-style: none !important;
+  padding: 0 !important;
+}
+
+/* ── Sidebar search ── */
+body.blog #secondary .wp-block-search,
+body.blog #secondary .wp-block-search.wp-block-search__button-outside,
+body.blog #secondary .search-form {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  max-width: 100% !important;
+}
+
+body.blog #secondary .wp-block-search__inside-wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+}
+
+body.blog #secondary .wp-block-search__input {
+  width: 100% !important;
+  flex: none !important;
+  margin: 0 !important;
+}
+
+body.blog #secondary .wp-block-search__button {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  margin-left: 0 !important;
+  text-align: left !important;
+  justify-content: flex-start !important;
+}
+
+/* Hide the "Search" label — the button already says Search */
+body.blog #secondary .wp-block-search__label {
+  display: none !important;
+}
+
+body.blog #secondary .wp-block-search__input,
+body.blog #secondary .search-field,
+body.blog #secondary input[type="search"],
+body.blog #secondary input[type="text"] {
+  background: rgba(255,255,255,.05) !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+  border-radius: 8px !important;
+  padding: 10px 14px !important;
+  color: #FFFFFF !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 14px !important;
+  flex: none !important;
+  outline: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+body.blog #secondary .wp-block-search__input:focus,
+body.blog #secondary input[type="search"]:focus {
+  border-color: #C8942E !important;
+}
+
+body.blog #secondary .wp-block-search__button,
+body.blog #secondary .search-submit,
+body.blog #secondary input[type="submit"],
+body.blog #secondary button[type="submit"] {
+  background: #C8942E !important;
+  color: #0E1C2F !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 10px 18px !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+  transition: background .2s !important;
+  margin-top: 0 !important;
+}
+
+body.blog #secondary .wp-block-search__button:hover,
+body.blog #secondary .search-submit:hover {
+  background: #E8B84B !important;
+}
+
+/* ── Sidebar image widget ── */
+body.blog #secondary .widget_media_image img {
+  border-radius: 8px !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* ══════════════════════════════════════════
+   PAGINATION
+══════════════════════════════════════════ */
+body.blog .navigation,
+body.blog .nav-links,
+body.blog .pagination {
+  grid-column: 1 / -1 !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 40px 0 !important;
+}
+
+body.blog .page-numbers a,
+body.blog .page-numbers span,
+body.blog .nav-links a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(255,255,255,.03) !important;
+  border: 1px solid rgba(255,255,255,.15) !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  color: #A8B8CC !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  text-decoration: none !important;
+  transition: all .2s !important;
+}
+
+body.blog .page-numbers.current,
+body.blog .page-numbers a:hover,
+body.blog .nav-links a:hover {
+  background: #C8942E !important;
+  color: #0E1C2F !important;
+  border-color: #C8942E !important;
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  body.blog #content.site-content > .container {
+    padding: 16px !important;
+  }
+  body.blog .bb-grid.site-content-grid {
+    flex-direction: column !important;
+  }
+  body.blog .post-grid.bb-grid {
+    grid-template-columns: 1fr !important;
+  }
+  body.blog #secondary,
+  body.blog #secondary.widget-area,
+  body.blog div#secondary,
+  body .widget-area#secondary,
+  body body.blog .widget-area:not(.widget-area-secondary) {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    position: static !important;
+  }
+  body.blog .post-grid article .entry-title,
+  body.blog .post-grid article .entry-title a {
+    font-size: 18px !important;
+  }
+}
+
+
+body.single-post #main,body.single-post .site-main,body.single-post #primary,body.single-post .site-content{background:var(--color-primary-bg) !important}body.single-post article.post{background:var(--color-card-bg) !important;border-radius:16px !important;padding:48px !important;border:1px solid var(--color-border-subtle) !important}body.single-post p,body.single-post li,body.single-post span:not(.has-background *),body.single-post div:not(.has-background):not([style*="background"]),body.single-post td,body.single-post th,body.single-post blockquote,body.single-post cite,body.single-post label{color:var(--color-text-light) !important}body.single-post .has-white-background-color *,body.single-post .has-light-background-color *,body.single-post [style*="background-color: #fff"] *,body.single-post [style*="background-color:#fff"] *,body.single-post [style*="background-color: white"] *,body.single-post [style*="background-color: rgb(255"] *,body.single-post .has-background:not([class*="navy"]):not([class*="dark"]) *{color:var(--color-body-text) !important}body.single-post .entry-title,body.single-post h1.entry-title{font-family:'Playfair Display',serif !important;color:var(--color-text-light) !important}body.single-post .entry-content h1,body.single-post .entry-content h2,body.single-post .entry-content h3,body.single-post .entry-content h4{font-family:'Playfair Display',serif !important;color:var(--color-text-light) !important}body.single-post .entry-content a{color:var(--color-accent-gold) !important}body.single-post .entry-content a:hover{color:var(--color-gold-light) !important}body.single-post .entry-content table,body.single-post .entry-content tr,body.single-post .entry-content td,body.single-post .entry-content th{background:var(--color-card-bg) !important;color:var(--color-text-light) !important;border-color:rgba(255,255,255,.1) !important}body.single-post .entry-meta a{color:var(--color-accent-gold) !important}body.single-post .post-thumbnail img{width:100% !important;border-radius:12px !important;margin-bottom:32px !important}body.single-post #secondary .widget{background:var(--color-card-bg) !important;border-radius:12px !important;padding:24px !important;margin-bottom:24px !important;border:1px solid rgba(255,255,255,.06) !important}body.single-post #secondary .widget-title{font-family:'Playfair Display',serif !important;color:var(--color-text-light) !important;border-bottom:2px solid var(--color-accent-gold) !important;padding-bottom:10px !important;margin-bottom:16px !important}body.single-post #secondary a:hover{color:var(--color-accent-gold) !important}.lmt-train h1,.lmt-speak h1,.lmt-page h1{color:var(--color-text-light) !important;font-family:'Playfair Display',serif !important;font-weight:900 !important}.lmt-train h1 em,.lmt-speak h1 em,.lmt-page h1 em{color:var(--color-accent-gold) !important;font-style:italic !important}.lmt-train h2,.lmt-train h3,.lmt-train h4,.lmt-speak h2,.lmt-speak h3,.lmt-speak h4,.lmt-page h2,.lmt-page h3,.lmt-page h4{color:var(--color-text-light) !important}.lmt-train p,.lmt-train li,.lmt-speak p,.lmt-speak li,.lmt-page p,.lmt-page li{color:var(--color-border) !important}body.single-sfwd-courses,body.single-sfwd-courses .site,body.single-sfwd-courses #page,body.single-sfwd-courses #content,body.single-sfwd-courses .site-content{background-color:var(--color-primary-bg) !important}body.single-sfwd-courses .bb-course-banner .entry-meta,body.single-sfwd-courses .bb-course-banner .byline,body.single-sfwd-courses .bb-course-banner .posted-on,body.single-sfwd-courses .bb-course-banner .ld-expand-button,body.single-sfwd-courses .bb-course-banner .ld-expand-button *,body.single-sfwd-courses .bb-course-details-wrap{display:none !important;height:0 !important;overflow:hidden !important;margin:0 !important;padding:0 !important}body.single-sfwd-courses .bb-course-banner-inner h1,body.single-sfwd-courses .bb-course-banner-inner h1.entry-title{color:var(--color-text-light) !important;font-family:'Playfair Display',serif !important;font-size:clamp(2rem,4vw,3rem) !important;font-weight:700 !important;margin-bottom:16px !important}body.single-sfwd-courses h2,body.single-sfwd-courses h3,body.single-sfwd-courses h4{color:var(--color-accent-gold) !important;font-family:'Playfair Display',serif !important}body.single-sfwd-courses p,body.single-sfwd-courses li{color:var(--color-border) !important;font-size:18px !important;line-height:1.8 !important}html body.single-sfwd-courses .bb-learndash-content-wrap{display:flex !important;flex-direction:column !important;padding-top:0 !important;gap:0 !important}html body.single-sfwd-courses .bb-learndash-content-wrap .ld-progress{order:1 !important;margin-bottom:4px !important}html body.single-sfwd-courses .bb-learndash-content-wrap .learndash-wrapper{order:2 !important;margin-top:0 !important;padding-top:0 !important}html body.single-sfwd-courses .bb-learndash-content-wrap .ld-tabs,html body.single-sfwd-courses .bb-learndash-content-wrap .ld-tab-content,html body.single-sfwd-courses .bb-learndash-content-wrap [class*="ld-tab"],html body.single-sfwd-courses .bb-learndash-content-wrap [id*="ld-tab-content"]{order:3 !important;margin:16px 0 !important}html body.single-sfwd-courses .bb-learndash-content-wrap .bb-instructor-wrap{order:4 !important;background-color:var(--color-card-bg) !important;border:1px solid var(--color-border-gold) !important;border-radius:10px !important;padding:20px !important;margin-top:8px !important}body.single-sfwd-courses .bb-instructor-wrap h2,body.single-sfwd-courses .bb-instructor-wrap h3{color:var(--color-accent-gold) !important;font-size:1rem !important;text-transform:uppercase !important;letter-spacing:0.05em !important}body.single-sfwd-courses .bb-instructor-wrap *{color:var(--color-border) !important}body.single-sfwd-courses .learndash-wrapper .ld-section-heading h2{color:var(--color-accent-gold) !important;font-family:'DM Sans',sans-serif !important;font-size:0.75rem !important;font-weight:700 !important;text-transform:uppercase !important;letter-spacing:0.1em !important;margin-bottom:12px !important}body.single-sfwd-courses .learndash-wrapper .ld-item-list-item{background-color:var(--color-card-bg) !important;border:1px solid var(--color-border-gold) !important;border-radius:8px !important;margin-bottom:8px !important;padding:14px 18px !important}body.single-sfwd-courses .learndash-wrapper .ld-item-list-item:hover{border-color:var(--color-accent-gold) !important}body.single-sfwd-courses .learndash-wrapper .ld-item-list-item *{color:var(--color-text-light) !important}body.single-sfwd-courses .ld-progress-bar,body.single-sfwd-courses .bb-course-banner-inner .ld-progress-bar{background-color:var(--color-card-bg-alpha) !important;border-radius:4px !important}body.single-sfwd-courses .ld-progress-bar-percentage,body.single-sfwd-courses .bb-course-banner-inner .ld-progress-bar-percentage{background-color:var(--color-accent-gold) !important}body.single-sfwd-courses .ld-progress-steps,body.single-sfwd-courses .bb-course-banner-inner .ld-progress-steps{color:var(--color-border) !important;font-size:14px !important}body.single-sfwd-courses .bb-single-course-sidebar{background-color:var(--color-card-bg) !important;border:1px solid var(--color-border-gold) !important;border-radius:12px !important;padding:24px !important}body.single-sfwd-courses .bb-single-course-sidebar p,body.single-sfwd-courses .bb-single-course-sidebar span,body.single-sfwd-courses .bb-single-course-sidebar li,body.single-sfwd-courses .bb-single-course-sidebar label,body.single-sfwd-courses .bb-single-course-sidebar .ld-course-status,body.single-sfwd-courses .bb-single-course-sidebar .ld-course-status-segment,body.single-sfwd-courses .bb-single-course-sidebar .ld-course-status-segment *,body.single-sfwd-courses .bb-single-course-sidebar .course-includes-title,body.single-sfwd-courses .bb-single-course-sidebar .ld-item-list-item,body.single-sfwd-courses .bb-single-course-sidebar .ld-item-list-item *,body.single-sfwd-courses .bb-single-course-sidebar .learndash-course-includes-title,body.single-sfwd-courses .bb-single-course-sidebar .ld-status-incomplete,body.single-sfwd-courses .bb-single-course-sidebar .ld-status-progress,body.single-sfwd-courses .bb-single-course-sidebar .ld-status-complete{color:var(--color-body-text) !important}body.single-sfwd-courses .bb-single-course-sidebar .course-price,body.single-sfwd-courses .bb-single-course-sidebar .ld-price-tag{color:var(--color-accent-gold) !important;font-size:1.5rem !important;font-weight:700 !important}body.single-sfwd-courses .bb-single-course-sidebar a.btn-advance,body.single-sfwd-courses .bb-single-course-sidebar a.ld-primary-background,body.single-sfwd-courses .bb-single-course-sidebar .ld-button,body.single-sfwd-courses a.btn-advance.ld-primary-background{background-color:var(--color-accent-gold) !important;background:var(--color-accent-gold) !important;color:var(--color-primary-bg) !important;font-weight:700 !important;font-size:1rem !important;border:none !important;border-radius:6px !important;padding:14px 28px !important;display:block !important;text-align:center !important;width:100% !important}body.single-sfwd-courses .bb-single-course-sidebar a.btn-advance:hover,body.single-sfwd-courses a.btn-advance.ld-primary-background:hover{background-color:var(--color-gold-hover) !important;background:var(--color-gold-hover) !important;color:var(--color-text-light) !important}body.single-sfwd-lessons,body.single-sfwd-lessons .site,body.single-sfwd-lessons #page,body.single-sfwd-lessons #content,body.single-sfwd-lessons .site-content,body.single-sfwd-lessons .bb-content-area-wrap,body.single-sfwd-lessons .bb-grid-fixed-left,body.single-sfwd-lessons .ld-focus,body.single-sfwd-lessons .ld-focus-main,body.single-sfwd-lessons .ld-focus-main__content,body.single-sfwd-lessons #ld-focus-mode-course-steps,body.single-sfwd-lessons .bb-lesson-content-wrap,body.single-sfwd-lessons .ld-focus-content,body.single-sfwd-lessons .bb-grid-fixed-right{background-color:var(--color-primary-bg) !important;background:var(--color-primary-bg) !important}body.single-sfwd-lessons .ld-focus-main>*,body.single-sfwd-lessons .ld-focus-main .entry-wrap,body.single-sfwd-lessons .ld-focus-main .hentry,body.single-sfwd-lessons .ld-focus-main .type-sfwd-lessons,body.single-sfwd-lessons .ld-focus-main .bb-content-area{background-color:var(--color-primary-bg) !important;background:var(--color-primary-bg) !important}body.single-sfwd-lessons #page,body.single-sfwd-lessons #content,body.single-sfwd-lessons .site-content,body.single-sfwd-lessons .bb-content-area-wrap,body.single-sfwd-lessons .bb-grid-fixed-left,body.single-sfwd-lessons .ld-focus,body.single-sfwd-lessons .ld-focus-main,body.single-sfwd-lessons .ld-focus-main__content{max-width:100% !important;width:100% !important;padding-left:0 !important;padding-right:0 !important;margin-left:0 !important;margin-right:0 !important}body.single-sfwd-lessons .ld-focus-main__content .entry-content,body.single-sfwd-lessons .ld-focus-main__content .hentry{max-width:860px !important;padding:40px 48px !important;margin:0 auto !important}body.single-sfwd-lessons h1,body.single-sfwd-lessons h2,body.single-sfwd-lessons h3,body.single-sfwd-lessons h4,body.single-sfwd-lessons .entry-title,body.single-sfwd-lessons .ld-focus-main h1,body.single-sfwd-lessons .ld-focus-main h2,body.single-sfwd-lessons .ld-focus-main h3{color:var(--color-accent-gold) !important;font-family:'Playfair Display',serif !important;font-weight:700 !important}body.single-sfwd-lessons p,body.single-sfwd-lessons li,body.single-sfwd-lessons .ld-focus-main p,body.single-sfwd-lessons .ld-focus-main li,body.single-sfwd-lessons .entry-content p,body.single-sfwd-lessons .entry-content li{color:var(--color-body-text) !important;font-size:18px !important;line-height:1.8 !important}body.single-sfwd-lessons .entry-meta,body.single-sfwd-lessons .byline,body.single-sfwd-lessons .posted-on,body.single-sfwd-lessons .author-avatar,body.single-sfwd-lessons .vcard,body.single-sfwd-lessons .author.vcard,body.single-sfwd-lessons span.author,body.single-sfwd-lessons .entry-header .entry-meta{display:none !important;height:0 !important;overflow:hidden !important;margin:0 !important;padding:0 !important}body.single-sfwd-lessons .ld-focus-header,body.single-sfwd-lessons .ld-breadcrumbs,body.single-sfwd-lessons .ld-focus-header-nav{background-color:var(--color-primary-bg) !important;border-bottom:1px solid var(--color-border-gold) !important}body.single-sfwd-lessons .ld-breadcrumbs a,body.single-sfwd-lessons .ld-breadcrumbs span{color:var(--color-accent-gold) !important;font-size:13px !important}body.single-sfwd-lessons .ld-status-in-progress,body.single-sfwd-lessons .ld-button,body.single-sfwd-lessons .btn-complete,body.single-sfwd-lessons .ld-complete-button,body.single-sfwd-lessons a.ld-primary-background{background-color:var(--color-accent-gold) !important;background:var(--color-accent-gold) !important;color:var(--color-primary-bg) !important;font-weight:700 !important;border:none !important;border-radius:6px !important}body.single-sfwd-lessons .ld-nav-previous-next a,body.single-sfwd-lessons .ld-nav-previous-next button{background-color:var(--color-card-bg) !important;color:var(--color-accent-gold) !important;border:1px solid var(--color-border-gold-hover) !important;border-radius:6px !important}body.single-sfwd-lessons .ld-nav-previous-next a:hover,body.single-sfwd-lessons .ld-nav-previous-next button:hover{background-color:var(--color-accent-gold) !important;color:var(--color-primary-bg) !important}body.single-sfwd-lessons .ld-focus-sidebar,body.single-sfwd-lessons .ld-focus-sidebar__inner,body.single-sfwd-lessons .ld-course-steps{background-color:var(--color-card-bg) !important;color:var(--color-border) !important}body.single-sfwd-lessons .ld-focus-sidebar a,body.single-sfwd-lessons .ld-course-steps a{color:var(--color-border) !important}body.single-sfwd-lessons .ld-focus-sidebar a:hover,body.single-sfwd-lessons .ld-course-steps a:hover{color:var(--color-accent-gold) !important}body.single-sfwd-quiz,body.single-sfwd-quiz .site,body.single-sfwd-quiz .site-content,body.single-sfwd-quiz #page,body.single-sfwd-quiz #content,body.single-sfwd-quiz .entry-content,body.single-sfwd-quiz .hentry,body.single-sfwd-quiz .post-content,body.single-sfwd-quiz .bb-content-area-wrap,body.single-sfwd-quiz .ld-focus,body.single-sfwd-quiz .ld-focus-main,body.single-sfwd-quiz .ld-focus-main__content,body.single-sfwd-quiz .wpProQuiz_content,body.single-sfwd-quiz .wpProQuiz_reviewDiv,body.single-sfwd-quiz article{background-color:var(--color-primary-bg) !important;color:var(--color-border) !important}body.single-sfwd-quiz h1,body.single-sfwd-quiz h2,body.single-sfwd-quiz h3,body.single-sfwd-quiz .entry-title{color:var(--color-accent-gold) !important;font-family:'Playfair Display',serif !important}body.single-sfwd-quiz .wpProQuiz_question_text,body.single-sfwd-quiz .wpProQuiz_questionList{color:var(--color-text-light) !important;font-size:18px !important;font-weight:600 !important}body.single-sfwd-quiz .wpProQuiz_questionListItem label{color:var(--color-border) !important;font-size:17px !important;background-color:var(--color-card-bg) !important;padding:12px 16px !important;border-radius:6px !important;display:block !important;margin-bottom:8px !important;border:1px solid #1e3a5f !important;cursor:pointer !important}body.single-sfwd-quiz .wpProQuiz_questionListItem label:hover{background-color:#1e3a5f !important;border-color:var(--color-accent-gold) !important}body.single-sfwd-quiz .wpProQuiz_correct{background-color:#1a4a2e !important;border-color:#2d8a4e !important;color:#7fcc9a !important}body.single-sfwd-quiz .wpProQuiz_incorrect{background-color:#4a1a1a !important;border-color:#8a2d2d !important;color:#cc7f7f !important}body.single-sfwd-quiz .wpProQuiz_button,body.single-sfwd-quiz .wpProQuiz_button2,body.single-sfwd-quiz input[type="button"],body.single-sfwd-quiz input[type="submit"]{background-color:var(--color-accent-gold) !important;background:var(--color-accent-gold) !important;color:var(--color-primary-bg) !important;border:none !important;padding:12px 28px !important;font-weight:700 !important;border-radius:6px !important;font-size:16px !important;cursor:pointer !important}body.single-sfwd-quiz .ld-focus-sidebar,body.single-sfwd-quiz .ld-focus-sidebar__inner{background-color:var(--color-card-bg) !important;background:var(--color-card-bg) !important;color:var(--color-border) !important}body.single-sfwd-quiz .entry-meta,body.single-sfwd-quiz .byline,body.single-sfwd-quiz .posted-on{display:none !important}body.single-sfwd-quiz .ld-quiz-status,body.single-sfwd-quiz .wpProQuiz_header{color:var(--color-accent-gold) !important}body.single-sfwd-quiz,body.single-sfwd-quiz p,body.single-sfwd-quiz li,body.single-sfwd-quiz span,body.single-sfwd-quiz div{color:var(--color-border) !important}body.single-sfwd-quiz h1,body.single-sfwd-quiz h2,body.single-sfwd-quiz h3,body.single-sfwd-quiz .wpProQuiz_question_text{color:var(--color-accent-gold) !important}body.single-sfwd-quiz .wpProQuiz_questionListItem label{color:var(--color-border) !important}body.single-sfwd-quiz,body.single-sfwd-quiz html,body.single-sfwd-quiz .site,body.single-sfwd-quiz .site-inner,body.single-sfwd-quiz #page,body.single-sfwd-quiz #content,body.single-sfwd-quiz main,body.single-sfwd-quiz .site-content,body.single-sfwd-quiz .content-area,body.single-sfwd-quiz .entry-wrap,body.single-sfwd-quiz .bb-content-area,body.single-sfwd-quiz .bb-content-area-wrap,body.single-sfwd-quiz .bb-grid-fixed-left,body.single-sfwd-quiz .bb-grid-fixed-right,body.single-sfwd-quiz .bb-grid-wrap-inner,body.single-sfwd-quiz .ld-focus,body.single-sfwd-quiz .ld-focus-body,body.single-sfwd-quiz .ld-focus-main,body.single-sfwd-quiz .ld-focus-main__content,body.single-sfwd-quiz .ld-focus-content,body.single-sfwd-quiz .wpProQuiz_content,body.single-sfwd-quiz .wpProQuiz_reviewDiv,body.single-sfwd-quiz .wpProQuiz_quiz,body.single-sfwd-quiz article,body.single-sfwd-quiz .hentry,body.single-sfwd-quiz .entry-content,body.single-sfwd-quiz .post-content,body.single-sfwd-quiz .type-sfwd-quiz{background-color:var(--color-primary-bg) !important;background:var(--color-primary-bg) !important}body.single-sfwd-quiz .wpProQuiz_correct,body.single-sfwd-quiz .wpProQuiz_correct *{background-color:#1a4a2e !important}body.single-sfwd-quiz .wpProQuiz_incorrect,body.single-sfwd-quiz .wpProQuiz_incorrect *{background-color:#4a1a1a !important}a:focus,button:focus,input:focus,select:focus,textarea:focus,[role="button"]:focus,[tabindex]:focus,body.single-sfwd-courses a:focus,body.single-sfwd-lessons a:focus,body.single-sfwd-quiz a:focus,body.single-sfwd-courses button:focus,body.single-sfwd-lessons button:focus,body.single-sfwd-quiz button:focus,body.single-sfwd-quiz input:focus,body.single-sfwd-quiz .wpProQuiz_questionListItem input:focus + label{outline:3px solid var(--color-accent-gold) !important;outline-offset:3px !important;box-shadow:0 0 0 3px rgba(200,148,46,0.4) !important}*:focus-visible{outline:3px solid var(--color-accent-gold) !important;outline-offset:3px !important}*:focus:not(:focus-visible){outline:none !important}body.single-sfwd-courses p,body.single-sfwd-courses li,body.single-sfwd-lessons p,body.single-sfwd-lessons li,body.single-sfwd-quiz p,body.single-sfwd-quiz li{font-size:18px !important;line-height:1.8 !important}body.single-sfwd-lessons .ld-breadcrumbs a,body.single-sfwd-lessons .ld-breadcrumbs span,body.single-sfwd-quiz .ld-quiz-status{font-size:14px !important}body.single-sfwd-courses .entry-content,body.single-sfwd-lessons .entry-content,body.single-sfwd-quiz .wpProQuiz_content{line-height:1.8 !important}body.single-sfwd-courses p,body.single-sfwd-lessons p,body.single-sfwd-quiz p,body.single-sfwd-quiz .wpProQuiz_questionListItem label{letter-spacing:0.01em !important}body.single-sfwd-courses .entry-content a,body.single-sfwd-lessons .entry-content a,body.single-sfwd-quiz .entry-content a{text-decoration:underline !important;color:var(--color-accent-gold) !important}body.single-sfwd-courses .entry-content a:hover,body.single-sfwd-lessons .entry-content a:hover,body.single-sfwd-quiz .entry-content a:hover{text-decoration:none !important;color:var(--color-gold-light) !important}body.single-sfwd-quiz .wpProQuiz_questionListItem input[type="radio"]:checked + label,body.single-sfwd-quiz .wpProQuiz_questionListItem input[type="checkbox"]:checked + label{border:2px solid var(--color-accent-gold) !important;background-color:#1e3a5f !important;padding-left:14px !important;font-weight:600 !important}.skip-link,.screen-reader-text{position:absolute !important;left:-9999px !important;width:1px !important;height:1px !important;overflow:hidden !important}.skip-link:focus{left:6px !important;top:6px !important;width:auto !important;height:auto !important;padding:12px 20px !important;background:var(--color-accent-gold) !important;color:var(--color-primary-bg) !important;font-weight:700 !important;font-size:16px !important;z-index:99999 !important;border-radius:4px !important;text-decoration:none !important}body.single-sfwd-courses .bb-learndash-content-wrap,body.single-sfwd-lessons .ld-focus-main__content .entry-content,body.single-sfwd-quiz .wpProQuiz_content{max-width:100% !important;word-wrap:break-word !important;overflow-wrap:break-word !important}body.single-sfwd-quiz .wpProQuiz_button,body.single-sfwd-quiz .wpProQuiz_button2,body.single-sfwd-lessons .ld-button,body.single-sfwd-lessons .btn-complete,body.single-sfwd-courses .bb-single-course-sidebar a.btn-advance{min-height:44px !important;min-width:44px !important;padding:12px 28px !important}body.single-sfwd-lessons .ld-nav-previous-next a,body.single-sfwd-lessons .ld-nav-previous-next button{min-height:44px !important;min-width:44px !important;display:inline-flex !important;align-items:center !important;justify-content:center !important}@media (prefers-reduced-motion:reduce){*{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important}}.bb-header-inner,#masthead .bb-header-inner,.site-header .bb-header-inner{background-color:#0E1C2F !important;border-bottom:2px solid #C8942E !important;height:70px !important;min-height:70px !important;padding:0 32px !important;display:flex !important;align-items:center !important;justify-content:space-between !important}.site-header,#masthead{position:sticky !important;top:0 !important;z-index:999 !important;background:#0E1C2F !important}.bb-header-inner .site-logo img,.bb-header-inner .custom-logo,.bb-header-inner .site-logo a{height:38px !important;width:auto !important}.bb-header-inner .main-navigation ul li a,#masthead .main-navigation ul li a,.site-header .nav-menu>li>a{color:rgba(250,251,253,0.75) !important;font-family:'DM Sans',sans-serif !important;font-size:18px !important;font-weight:500 !important;letter-spacing:0.02em !important;padding:0 16px !important;height:70px !important;display:flex !important;align-items:center !important;border-bottom:3px solid transparent !important;transition:color 0.2s,border-color 0.2s !important;background:transparent !important}.bb-header-inner .main-navigation ul li a:hover,.site-header .nav-menu>li>a:hover{color:#FAFBFD !important;border-bottom-color:rgba(255,255,255,0.3) !important;background:transparent !important}.main-navigation ul li.menu-item-train>a:hover{border-bottom-color:#109F35 !important}.main-navigation ul li.menu-item-workforce>a:hover{border-bottom-color:#C8942E !important}.main-navigation ul li.menu-item-train>a::before{content:'For Individuals' !important;display:block !important;font-size:9px !important;font-weight:600 !important;letter-spacing:0.1em !important;text-transform:uppercase !important;color:#109F35 !important;margin-bottom:2px !important;line-height:1 !important}.main-navigation ul li.menu-item-workforce>a::before{content:'For Organizations' !important;display:block !important;font-size:9px !important;font-weight:600 !important;letter-spacing:0.1em !important;text-transform:uppercase !important;color:#C8942E !important;margin-bottom:2px !important;line-height:1 !important}.main-navigation ul li.menu-item-train>a,.main-navigation ul li.menu-item-workforce>a{flex-direction:column !important;align-items:flex-start !important;justify-content:center !important}.main-navigation ul li.menu-item-contact-us>a{color:rgba(250,251,253,0.75) !important;font-size:18px !important}.main-navigation ul li.menu-item-contact-us>a:hover{color:rgba(250,251,253,0.75) !important}.main-navigation ul li ul.sub-menu{background:#162640 !important;border:0.5px solid rgba(200,148,46,0.25) !important;border-top:none !important;border-radius:0 0 8px 8px !important;box-shadow:none !important;min-width:220px !important;padding:0 !important;margin-top:0 !important}.main-navigation ul li ul.sub-menu li a{color:#FAFBFD !important;font-size:18px !important;font-weight:500 !important;padding:12px 16px !important;height:auto !important;min-height:44px !important;border-bottom:0.5px solid rgba(255,255,255,0.06) !important;border-left:none !important;display:block !important;line-height:1.4 !important}.main-navigation ul li ul.sub-menu li:last-child a{border-bottom:none !important}.main-navigation ul li ul.sub-menu li a:hover{background:rgba(255,255,255,0.05) !important}.main-navigation ul li.menu-item-train ul.sub-menu li a:hover{color:#109F35 !important}.main-navigation ul li.menu-item-workforce ul.sub-menu li a:hover{color:#C8942E !important}.bb-header-inner .main-navigation ul li.nav-cta>a,.bb-header-inner .main-navigation ul li.menu-item-join-now>a,.bb-header-inner .main-navigation ul>li:last-child>a,#masthead .main-navigation ul>li:last-child>a,.site-header .nav-menu>li:last-child>a{background:#C8942E !important;color:#0E1C2F !important;font-size:18px !important;font-weight:700 !important;padding:10px 20px !important;border-radius:4px !important;height:auto !important;min-height:30px !important;line-height:1.2 !important;border-bottom:none !important;letter-spacing:0.02em !important;margin-left:8px !important;white-space:nowrap !important;align-self:center !important;display:inline-flex !important;align-items:center !important}.bb-header-inner .main-navigation ul li.nav-cta>a:hover,.bb-header-inner .main-navigation ul li.menu-item-join-now>a:hover,.bb-header-inner .main-navigation ul>li:last-child>a:hover,#masthead .main-navigation ul>li:last-child>a:hover,.site-header .nav-menu>li:last-child>a:hover{background:#E8B84B !important;color:#0E1C2F !important;border-bottom:none !important}.bb-header-inner .bb-header-buttons .sign-in-wrap,.bb-header-inner .bb-account-circle{display:none !important}@media (max-width:980px){.bb-header-inner .main-navigation{display:none !important}.bb-header-inner .bb-mobile-menu-toggle{display:flex !important}}#masthead .bb-header-buttons,.bb-header-buttons,.bb-header-buttons .search-wrap,.bb-header-buttons .bb-messages-open,.bb-header-buttons .bb-notifications-open,.bb-header-buttons .sign-in-wrap,.bb-header-buttons .bb-account-circle,.bb-header-inner .bb-account-circle,#header-aside,.header-aside{display:none !important}.bb-header-inner .bb-mobile-header,.bb-mobile-header,.bb-header-inner .bb-mobile-menu-toggle{display:flex !important}.bb-header-inner{background-color:#0E1C2F !important;border-bottom:2px solid #C8942E !important}.bb-header-inner .search-icon,.bb-header-inner #header-search{display:none !important}.site-header.sticky,.site-header.scrolled,#masthead.sticky{background:#0E1C2F !important}.admin-bar .site-header,.admin-bar #masthead{top:32px !important}@media screen and (max-width:782px){.admin-bar .site-header,.admin-bar #masthead{top:46px !important}}
+
+/* ── MOBILE NAV PANEL — Fix white-on-white ── */
+.bb-mobile-panel-inner,
+.bb-mobile-panel,
+#bb-mobile-panel,
+.mobile-menu-container,
+.bb-mobile-menu,
+.bb-slide-panel,
+.bb-slide-panel .panel-inner,
+.bb-mobile-panel-inner .main-navigation,
+body .bb-mobile-panel-inner,
+body .bb-slide-panel,
+body .mobile-menu-container {
+  background-color: #0E1C2F !important;
+  background: #0E1C2F !important;
+}
+.bb-mobile-panel-inner a,
+.bb-mobile-panel-inner li a,
+.bb-mobile-panel-inner .menu-item a,
+.bb-mobile-menu a,
+.bb-slide-panel a,
+.bb-slide-panel li a,
+.mobile-menu-container a,
+#bb-mobile-panel a,
+body .bb-mobile-panel-inner a {
+  color: #FAFBFD !important;
+  font-size: 18px !important;
+  padding: 12px 16px !important;
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  border-bottom: 1px solid rgba(255,255,255,.06) !important;
+}
+.bb-mobile-panel-inner a:hover,
+.bb-mobile-menu a:hover,
+.bb-slide-panel a:hover,
+.mobile-menu-container a:hover {
+  color: #C8942E !important;
+  background: rgba(255,255,255,.05) !important;
+}
+.bb-mobile-panel-inner .sub-menu,
+.bb-mobile-menu .sub-menu,
+.bb-slide-panel .sub-menu {
+  background: #162640 !important;
+}
+.bb-mobile-panel-inner .sub-menu a,
+.bb-mobile-menu .sub-menu a {
+  font-size: 16px !important;
+  padding-left: 32px !important;
+  color: rgba(250,251,253,.75) !important;
+}
+/* Close button */
+.bb-mobile-panel-inner .bb-close-panel,
+.bb-slide-panel .bb-close-panel,
+.bb-mobile-panel .close-panel,
+body .bb-close-panel {
+  color: #FFFFFF !important;
+  background: transparent !important;
+}
+/* Mobile panel header */
+.bb-mobile-panel-header,
+.bb-slide-panel .panel-head {
+  background: #0E1C2F !important;
+  border-bottom: 2px solid #C8942E !important;
+}
+
+/* ============================================================
+   ADA FIX — LearnDash Full Site
+   All contrast, readability, and navigation fixes
+   ============================================================ */
+
+/* CRITICAL: Lesson content area — force dark text on any light background
+   (WonderBlocks/Kadence blocks can inject white backgrounds) */
+.ld-focus-main-content p,
+.ld-focus-main-content h1,
+.ld-focus-main-content h2,
+.ld-focus-main-content h3,
+.ld-focus-main-content h4,
+.ld-focus-main-content h5,
+.ld-focus-main-content h6,
+.ld-focus-main-content li,
+.ld-tab-content p,
+.ld-tab-content h1,
+.ld-tab-content h2,
+.ld-tab-content h3,
+.ld-tab-content h4,
+.ld-tab-content li,
+.ld-focus-main-content .kb-block-container *,
+.ld-focus-main-content .wp-block-kadence-column *,
+.ld-focus-main-content [class*="kb-"] {
+    color: #1a1a1a !important;
+}
+
+/* LEFT SIDEBAR — lesson names sized to match participants */
+.ld-focus-sidebar .ld-nav-item a,
+.ld-focus-sidebar .ld-nav-item-name,
+.ld-focus-sidebar .ld-lesson-item-name,
+.ld-focus-sidebar .ld-item-name,
+.ld-focus-sidebar .ld-nav-section-item a,
+.ld-focus-sidebar .ld-step-title,
+.learndash-wrapper .ld-lesson-item-name,
+.learndash-wrapper .ld-nav-item a,
+.learndash-wrapper .ld-lesson-item a,
+.learndash-wrapper .ld-course-navigation a {
+    color: #ffffff !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+}
+
+/* LEFT SIDEBAR — progress & date stamp */
+.ld-focus-sidebar .ld-progress-percentage,
+.ld-focus-sidebar .ld-activity-date,
+.ld-focus-sidebar .ld-progress-heading,
+.ld-focus-sidebar .ld-progress-stats,
+.learndash-wrapper .ld-activity-date,
+.ld-activity-date {
+    color: #ffffff !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+}
+
+/* "LESSON X OF 3" / "QUIZ X OF 3" header label */
+.ld-focus-content .ld-item-list-count,
+.ld-focus-content .ld-step-modules,
+.ld-quiz-list-count,
+.ld-step-count,
+.ld-focus-main-menu-label,
+.ld-focus-main-content .ld-step-count,
+body.single-sfwd-quiz .ld-step-count,
+body.single-sfwd-quiz .ld-quiz-list-count,
+body.single-sfwd-lessons .ld-step-count {
+    color: #c4cdd9 !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+}
+
+/* Focus mode top nav arrows — high specificity to override base CSS */
+body.single-sfwd-lessons .ld-focus-header-nav a,
+body.single-sfwd-lessons .ld-focus-header-nav button,
+body.single-sfwd-lessons .ld-nav-previous-next a,
+body.single-sfwd-lessons .ld-nav-previous-next button,
+body.single-sfwd-quiz .ld-focus-header-nav a,
+body.single-sfwd-quiz .ld-focus-header-nav button,
+body.single-sfwd-quiz .ld-nav-previous-next a,
+body.single-sfwd-quiz .ld-nav-previous-next button {
+    background-color: #0E1C2F !important;
+    color: #ffffff !important;
+    border: 2px solid #C8942E !important;
+    opacity: 1 !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+}
+
+/* "In Progress" badge on course listing page */
+.ld-status-in-progress,
+.learndash-wrapper .ld-status-in-progress,
+.ld-course-list-item .ld-status-in-progress,
+.ld-item-list .ld-status-in-progress {
+    background-color: #0E1C2F !important;
+    color: #ffffff !important;
+    border: 2px solid #C8942E !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    padding: 4px 10px !important;
+    border-radius: 4px !important;
+}
+
+/* Quiz navigation buttons (Previous / Next / Finish) — high specificity to override base CSS */
+body.single-sfwd-quiz .wpProQuiz_button,
+body.single-sfwd-quiz .wpProQuiz_button2,
+body.single-sfwd-quiz .wpProQuiz_nav button,
+body.single-sfwd-quiz .wpProQuiz_buttonArea .wpProQuiz_button,
+body.single-sfwd-quiz .wpProQuiz_buttonArea input[type="button"],
+body.single-sfwd-quiz .wpProQuiz_buttonArea button,
+body.single-sfwd-quiz input[type="button"],
+body.single-sfwd-quiz input[type="submit"] {
+    background-color: #0E1C2F !important;
+    color: #ffffff !important;
+    border: 2px solid #C8942E !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    padding: 10px 20px !important;
+    border-radius: 4px !important;
+    opacity: 1 !important;
+}
+
+/* Quiz results — View Questions + Restart Quiz buttons */
+body.single-sfwd-quiz .wpProQuiz_reviewButton,
+body.single-sfwd-quiz .wpProQuiz_results input[type="button"],
+body.single-sfwd-quiz .wpProQuiz_results button,
+body.single-sfwd-quiz .wpProQuiz_quiz input[type="button"] {
+    background-color: #0E1C2F !important;
+    color: #ffffff !important;
+    border: 2px solid #C8942E !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    padding: 12px 24px !important;
+    border-radius: 6px !important;
+}
+
+/* Quiz results — score, time, date text */
+.wpProQuiz_results p,
+.wpProQuiz_results span,
+.wpProQuiz_results h4,
+.wpProQuiz_results li,
+.wpProQuiz_results .wpProQuiz_resultsList,
+.wpProQuiz_results .wpProQuiz_quiz_completed,
+.wpProQuiz_results .wpProQuiz_resultTable td,
+.wpProQuiz_resultTable td,
+.wpProQuiz_quiz_started,
+.wpProQuiz_quiz_completed {
+    color: #1a1a1a !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+}
+
+/* Quiz results — "You have reached X of Y point(s)" box */
+.wpProQuiz_grading,
+.wpProQuiz_resultGrading,
+.wpProQuiz_result_achieved,
+.wpProQuiz_points_text,
+div[class*="wpProQuiz_result"] p,
+div[class*="wpProQuiz_result"] span {
+    color: #1a1a1a !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+
+/* Participant names */
+.learndash-wrapper .ld-course-participants-list a,
+.learndash-wrapper .ld-course-participants-list span,
+.ld-focus-sidebar .ld-participants a,
+.ld-focus-sidebar .ld-participants span {
+    color: #f0f0f0 !important;
+    font-size: 15px !important;
+}
+
+/* ============================================================
+   END ADA FIX
+   ============================================================ */
+
+
+/* ==========================================================
+   MOBILE RESPONSIVENESS FIX
+   Source: AGENTIC50-Brand/mobile-css/mobile-fix.css
+   Generated: 2026-04-12
+   ========================================================== */
+
+/* 1. CRITICAL — Horizontal Scroll Fixes */
+* {
+  max-width: 100vw;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.nfd-scroll-slider-horizontal > .wp-block-cover {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.nfd-wc-search .wp-block-search__inside-wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.nfd-overlap-x,
+.nfd-overlap-x-sm,
+.nfd-overlap-x-md,
+.nfd-overlap-x-lg {
+  margin-inline-start: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .nfd-overlap-x-lg {
+    transform: none !important;
+  }
+  img, video, iframe, table, pre, svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* 2. FONT SIZES — ADA 16px Minimum */
+@media (max-width: 768px) {
+  body, p, li, span, a, td, th, label, input, textarea, select, button {
+    font-size: max(1rem, 16px) !important;
+  }
+  .nfd-text-xs { font-size: 14px !important; }
+  .nfd-text-sm { font-size: 15px !important; }
+  h1, .nfd-text-4xl, .nfd-text-5xl {
+    font-size: clamp(1.75rem, 5vw, 3rem) !important;
+    line-height: 1.2 !important;
+  }
+  h2, .nfd-text-3xl {
+    font-size: clamp(1.5rem, 4vw, 2.25rem) !important;
+    line-height: 1.25 !important;
+  }
+  h3, .nfd-text-2xl {
+    font-size: clamp(1.25rem, 3.5vw, 1.75rem) !important;
+    line-height: 1.3 !important;
+  }
+  h4, .nfd-text-xl {
+    font-size: clamp(1.125rem, 3vw, 1.5rem) !important;
+  }
+  [style*="font-size: calc(var(--wndb--text--xs)"] { font-size: 14px !important; }
+  [style*="font-size: calc(var(--wndb--text--sm)"] { font-size: 16px !important; }
+}
+
+/* 3. TOUCH TARGETS — Minimum 44px × 44px */
+@media (max-width: 768px) {
+  button, .nfd-btn, [role="button"], input[type="submit"], input[type="button"], .wp-block-button__link {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    padding: 12px 20px !important;
+  }
+  .toolbar-button, .icon-exchange, [class*="icon-btn"], [class*="btn-icon"] {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  nav a, .menu a, .nfd-nav a, footer a {
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 8px 4px !important;
+  }
+  .swiper-button-next, .swiper-button-prev, [class*="carousel"] button, [class*="slider"] button {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+  input[type="text"], input[type="email"], input[type="tel"], input[type="search"],
+  input[type="password"], input[type="url"], textarea, select {
+    min-height: 48px !important;
+    font-size: 16px !important;
+    padding: 12px 16px !important;
+  }
+}
+
+/* 4. GRID LAYOUT — Mobile Reflow */
+@media (max-width: 768px) {
+  .nfd-grid-cols-2, .nfd-grid-cols-3, .nfd-grid-cols-4, .nfd-grid-cols-5,
+  .nfd-grid-cols-6, .nfd-grid-cols-7, .nfd-grid-cols-8, .nfd-grid-cols-9,
+  .nfd-grid-cols-10, .nfd-grid-cols-11, .nfd-grid-cols-12 {
+    grid-template-columns: 1fr !important;
+  }
+  .nfd-flex-row { flex-direction: column !important; }
+  .nfd-container, [class*="wp-block-group"], [class*="wp-block-column"] {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nfd-grid-cols-3, .nfd-grid-cols-4, .nfd-grid-cols-5, .nfd-grid-cols-6,
+  .nfd-grid-cols-7, .nfd-grid-cols-8, .nfd-grid-cols-9, .nfd-grid-cols-10,
+  .nfd-grid-cols-11, .nfd-grid-cols-12 {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* 5. IMAGES — Responsive */
+@media (max-width: 768px) {
+  img { max-width: 100% !important; height: auto !important; }
+  .profile-card img, .group-card img, [class*="avatar"] img {
+    max-width: 100% !important; height: auto !important;
+  }
+  .wp-block-cover, .wp-block-cover__image-background {
+    min-height: 200px !important;
+  }
+}
+
+/* 6. NAVIGATION — Mobile Menu */
+@media (max-width: 768px) {
+  .nfd-nav, .nfd-header { position: relative !important; }
+  .nfd-absolute-header { position: relative !important; }
+  [class*="menu-toggle"], [class*="hamburger"], .nfd-mobile-menu-toggle {
+    display: flex !important;
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+}
+
+/* 7. PERFORMANCE — Simplify Effects on Mobile */
+@media (max-width: 768px) {
+  .nfd-bg-effect-blur, .nfd-bg-effect-noise, [class*="bg-effect"] { display: none !important; }
+  [style*="perspective"], [style*="transform: perspective"] {
+    transform: none !important; perspective: none !important;
+  }
+  .nfd-bg-effect-dots, .nfd-bg-effect-grid { display: none !important; }
+}
+
+/* 8. /speak PAGE — Specific Fixes */
+@media (max-width: 768px) {
+  [class*="wave"], [class*="dot-pattern"] { display: none !important; }
+  [class*="link-preview"] button {
+    min-height: 44px !important; min-width: 44px !important; font-size: 24px !important;
+  }
+  [class*="skeleton"] { min-height: 100px !important; border-radius: 8px !important; }
+}
+
+/* 9. /workforce PAGE — Specific Fixes */
+@media (max-width: 768px) {
+  [style*="width: 3000px"], [style*="width:3000px"] {
+    width: 100% !important; max-width: 100% !important;
+  }
+  .wp-block-search__inside-wrapper { width: 100% !important; }
+  [data-bp-item-id] { max-width: 100% !important; }
+}
+
+/* 10. SPACING — Mobile-Friendly */
+@media (max-width: 768px) {
+  [class*="nfd-gap-lg"], [class*="nfd-gap-xl"] { gap: 16px !important; }
+  [class*="nfd-p-lg"], [class*="nfd-p-xl"], [class*="nfd-py-lg"], [class*="nfd-py-xl"] {
+    padding: 24px 16px !important;
+  }
+  [class*="nfd-m-lg"], [class*="nfd-m-xl"], [class*="nfd-my-lg"], [class*="nfd-my-xl"] {
+    margin: 16px 0 !important;
+  }
+  /* Section padding for generic WP pages only — custom pages handle their own */
+  .wp-block-group { padding-top: 32px !important; padding-bottom: 32px !important; }
+}
+
+/* 11. SCROLL SLIDER — Mobile Fix */
+@media (max-width: 768px) {
+  .nfd-scroll-slider-horizontal {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-snap-type: x proximity !important;
+    padding-bottom: 8px !important;
+  }
+  .nfd-scroll-slider-horizontal > * {
+    min-width: 280px !important; max-width: 85vw !important;
+  }
+}
+
+/* 12. BUDDYPRESS/WOOCOMMERCE — Mobile Overrides */
+@media (max-width: 768px) {
+  #buddypress .activity-list, #buddypress .members-list, #buddypress .groups-list {
+    padding: 0 8px !important;
+  }
+  #buddypress .activity-list li, #buddypress .members-list li, #buddypress .groups-list li {
+    padding: 12px !important; margin-bottom: 8px !important;
+  }
+  .woocommerce .products, .wc-block-grid { grid-template-columns: 1fr !important; }
+  .woocommerce .product { margin-bottom: 16px !important; }
+}
+
+/* ==========================================================
+   END MOBILE RESPONSIVENESS FIX
+   ========================================================== */
+
+/* ==========================================================
+   MOBILE FIX — April 19, 2026
+   Fixes: page overflow, single-post padding, header on mobile,
+   light-on-light text on custom pages
+   ========================================================== */
+
+/* ── NUCLEAR: Force navy bg on ALL wrappers for custom pages ──
+   BuddyBoss injects wrapper divs on mobile that have white/light
+   backgrounds. The per-page style resets miss these.
+   This catches every possible wrapper. */
+body.page .site,
+body.page .site-inner,
+body.page #page,
+body.page #content,
+body.page .site-content,
+body.page .container,
+body.page .bb-grid,
+body.page .bb-grid-cell,
+body.page .site-content-grid,
+body.page #primary,
+body.page #main,
+body.page .site-main,
+body.page .content-area,
+body.page .entry-content,
+body.page .entry-wrap,
+body.page .bb-content-area,
+body.page .bb-content-area-wrap,
+body.page .content-sidebar-wrap {
+  background-color: #0E1C2F !important;
+}
+
+/* No wildcard background override — custom pages handle their own backgrounds */
+
+/* Kill shimmer animation on train page break bar */
+.lmt-train .break-bar::before {
+  display: none !important;
+}
+
+/* Homepage — fix overflow on mobile */
+@media (max-width: 768px) {
+  .lmt-home .hero-inner,
+  .lmt-home .blind-spot-inner,
+  .lmt-home .aud-inner {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .lmt-home .pillars-grid,
+  .lmt-home .data-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .lmt-home .proof-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+  }
+  .lmt-home .hero {
+    padding: 48px 16px 40px !important;
+  }
+  .lmt-home .blind-spot,
+  .lmt-home .pillars,
+  .lmt-home .audiences,
+  .lmt-home .proof,
+  .lmt-home .cta-section {
+    padding: 48px 16px !important;
+  }
+  .lmt-home .wrap {
+    padding: 0 16px !important;
+  }
+  .lmt-home .hero-btns,
+  .lmt-home .cta-buttons {
+    flex-direction: column !important;
+  }
+  .lmt-home .btn-green,
+  .lmt-home .btn-gold,
+  .lmt-home .btn-outline {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .lmt-home .aud-card {
+    padding: 28px 20px !important;
+  }
+  .lmt-home .pillar-card {
+    padding: 28px 20px !important;
+  }
+  .lmt-home .trust-bar {
+    gap: 16px !important;
+    padding: 16px !important;
+  }
+  .lmt-home .manifesto-break {
+    padding: 32px 16px !important;
+  }
+}
+
+/* Join-now page — show form card first on mobile */
+@media (max-width: 768px) {
+  .lmt-join .hero-inner {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+  }
+}
+
+/* Contact page — shorter hero so form is visible faster */
+@media (max-width: 768px) {
+  .lmt-contact .hero {
+    padding: 24px 16px 20px !important;
+  }
+  .lmt-contact .hero h1 {
+    font-size: 28px !important;
+    margin-bottom: 12px !important;
+  }
+  .lmt-contact .hero p {
+    font-size: 16px !important;
+    margin-bottom: 16px !important;
+  }
+}
+
+/* Join-now page — shorter hero so form is visible faster */
+@media (max-width: 768px) {
+  .lmt-join .hero {
+    padding: 24px 16px 20px !important;
+  }
+  .lmt-join .hero h1 {
+    font-size: 28px !important;
+    margin-bottom: 12px !important;
+  }
+  .lmt-join .hero-sub {
+    font-size: 15px !important;
+    margin-bottom: 16px !important;
+  }
+}
+
+/* Kill the 100vw trick globally — it always breaks on mobile */
+.lmt-home,
+.lmt-join,
+.lmt-train,
+.lmt-speak,
+.lmt-workforce,
+.lmt-contact {
+  width: 100% !important;
+  max-width: 100% !important;
+  left: auto !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  position: relative !important;
+}
+
+@media (max-width: 768px) {
+  /* Single post — reduce padding so content fits screen */
+  body.single-post article.post {
+    padding: 20px 16px !important;
+    border-radius: 8px !important;
+  }
+
+  /* LearnDash lessons — mobile padding */
+  body.single-sfwd-lessons .ld-focus-main__content .entry-content,
+  body.single-sfwd-lessons .ld-focus-main__content .hentry {
+    padding: 20px 16px !important;
+  }
+
+  /* Header — tighten for mobile */
+  .bb-header-inner,
+  #masthead .bb-header-inner,
+  .site-header .bb-header-inner {
+    padding: 0 12px !important;
+    height: 56px !important;
+    min-height: 56px !important;
+  }
+
+  .bb-header-inner .site-logo img,
+  .bb-header-inner .custom-logo {
+    height: 30px !important;
+  }
+
+  /* Workforce page — prevent overflow */
+  .lmt-workforce {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .lmt-workforce .hero {
+    padding: 48px 16px 40px !important;
+  }
+
+  .lmt-workforce .hero-inner {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .lmt-workforce .bring,
+  .lmt-workforce .deploy,
+  .lmt-workforce .data-strip,
+  .lmt-workforce .about,
+  .lmt-workforce .cta-section {
+    padding: 48px 16px !important;
+  }
+
+  .lmt-workforce .bring-grid,
+  .lmt-workforce .deploy-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .lmt-workforce .data-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .lmt-workforce .data-cell {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(200,148,46,.1) !important;
+  }
+
+  .lmt-workforce .about-inner {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .lmt-workforce .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .lmt-workforce .hero-ctas,
+  .lmt-workforce .cta-buttons {
+    flex-direction: column !important;
+  }
+
+  .lmt-workforce .btn-gold,
+  .lmt-workforce .btn-outline,
+  .lmt-workforce .btn-cta-primary,
+  .lmt-workforce .btn-cta-secondary {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .lmt-workforce .bring-card.featured {
+    transform: none !important;
+  }
+
+  /* Speak page SEO blocks — mobile padding */
+  .lmt-speak .entry-content > div[style],
+  body.page div[style*="max-width:900px"] {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Global — prevent anything from causing horizontal scroll */
+  body, html {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+  }
+
+  /* Fix tables on mobile */
+  table {
+    display: block !important;
+    overflow-x: auto !important;
+    max-width: 100% !important;
+  } /* Fix BuddyBoss activation page text */
+  .bbp-template-notice p,
+  .bp-template-notice p,
+  #buddypress .standard-form label,
+  #buddypress .standard-form input,
+  .activation-page h2,
+  .activation-page p,
+  .activation-page label,
+  body.bp-user .entry-content,
+  body.buddypress .entry-content h2,
+  body.buddypress .entry-content p,
+  body.buddypress .entry-content label,
+  body.buddypress #buddypress h2,
+  body.buddypress #buddypress p,
+  body.buddypress #buddypress label {
+    color: #FFFFFF !important;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    height: 1920px;
+    background: #0E1C2F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  .phone {
+    width: 500px;
+    height: 1000px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    border: 6px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 80px 40px 40px;
+    position: relative;
+  }
+  .phone::before {
+    content: '';
+    width: 150px;
+    height: 25px;
+    background: #333;
+    border-radius: 15px;
+    position: absolute;
+    top: 20px;
+  }
+  .instruction {
+    font-size: 40px;
+    font-weight: 700;
+    color: #0E1C2F;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .helper {
+    font-size: 22px;
+    color: #888;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .menu {
+    width: 100%;
+    list-style: none;
+  }
+  .menu-item {
+    padding: 22px 30px;
+    font-size: 30px;
+    color: #333;
+    border-bottom: 1px solid #E0E0E0;
+  }
+  .menu-item.active {
+    background: #C8942E;
+    color: #FFFFFF;
+    font-weight: 700;
+    border-radius: 8px;
+    position: relative;
+  }
+  .menu-item.active::after {
+    content: '  \25C0';
+    font-size: 24px;
+    position: absolute;
+    right: 20px;
+  }
+  .step-box {
+    margin-top: 40px;
+    background: #0E1C2F;
+    border: 3px solid #C8942E;
+    border-radius: 12px;
+    padding: 18px 50px;
+  }
+  .step-text {
+    font-size: 36px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+</style>
+</head>
+<body>
+  <div class="phone">
+    <div class="instruction">Tap Accessibility</div>
+    <div class="helper">Go back to Settings first</div>
+    <ul class="menu">
+      <li class="menu-item">General</li>
+      <li class="menu-item">Display</li>
+      <li class="menu-item active">Accessibility</li>
+      <li class="menu-item">Privacy</li>
+      <li class="menu-item">Battery</li>
+      <li class="menu-item">Storage</li>
+    </ul>
+  </div>
+  <div class="step-box">
+    <div class="step-text">Step 4 of 5</div>
+  </div>
+</body>
+</html>

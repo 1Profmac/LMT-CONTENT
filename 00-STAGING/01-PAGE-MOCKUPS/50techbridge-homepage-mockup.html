@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>50+TechBridge - Homepage Mockup</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; color: #fff; }
+
+/* NAV */
+nav {
+    background: #1a1a2e;
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+nav .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+    color: #fff;
+    text-decoration: none;
+}
+nav .logo span { color: #d4a847; }
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+nav ul li a:hover { color: #fff; }
+.nav-btn {
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700 !important;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, transform 0.15s;
+    line-height: 1;
+    white-space: nowrap;
+}
+/* Gold — Learn More Technologies */
+.nav-btn--gold {
+    background: #d4a843;
+    color: #0d1b2a !important;
+}
+.nav-btn--gold:hover { background: #b8922e; transform: translateY(-1px); }
+/* Purple — Digital Pioneer Gallery */
+.nav-btn--purple {
+    background: #7c3aed;
+    color: #FFFFFF !important;
+}
+.nav-btn--purple:hover { background: #6d28d9; transform: translateY(-1px); }
+/* Green — Start Free Lessons */
+.nav-btn--green {
+    background: #27ae60;
+    color: #FFFFFF !important;
+}
+.nav-btn--green:hover { background: #1e8449; transform: translateY(-1px); }
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #1a1a2e 100%);
+    padding: 100px 40px 80px;
+    text-align: center;
+}
+.hero-label {
+    display: inline-block;
+    background: rgba(212, 168, 71, 0.15);
+    color: #d4a847;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 1.15;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+.hero h1 em {
+    font-style: italic;
+    color: #d4a847;
+}
+.hero p {
+    font-size: 20px;
+    color: #aab;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+.hero-btn {
+    display: inline-block;
+    background: #d4a847;
+    color: #1a1a2e;
+    padding: 16px 40px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+.hero-btn:hover { background: #c49a3a; transform: translateY(-2px); }
+.hero-sub {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #778;
+}
+
+/* STATS BAR */
+.stats {
+    background: #16213e;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.stat { text-align: center; }
+.stat .number {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: #d4a847;
+}
+.stat .label {
+    font-size: 14px;
+    color: #889;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* COURSES */
+.courses {
+    background: #1a1a2e;
+    padding: 80px 40px;
+}
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+.section-header h2 em { color: #d4a847; font-style: italic; }
+.section-header p {
+    color: #889;
+    font-size: 17px;
+    max-width: 550px;
+    margin: 0 auto;
+}
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.course-card {
+    background: #16213e;
+    border-radius: 12px;
+    padding: 36px 28px;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: transform 0.2s, border-color 0.2s;
+}
+.course-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(212,168,71,0.3);
+}
+.course-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(212,168,71,0.12);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.course-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.course-card p {
+    color: #889;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+.course-tag {
+    display: inline-block;
+    background: rgba(212,168,71,0.1);
+    color: #d4a847;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* HOW IT WORKS */
+.how {
+    background: #16213e;
+    padding: 80px 40px;
+}
+.steps {
+    display: flex;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.step {
+    flex: 1;
+    text-align: center;
+}
+.step-num {
+    width: 48px;
+    height: 48px;
+    background: #d4a847;
+    color: #1a1a2e;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+.step h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.step p {
+    color: #889;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* TESTIMONIAL / QUOTE */
+.quote-section {
+    background: #1a1a2e;
+    padding: 80px 40px;
+    text-align: center;
+}
+.quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-style: italic;
+    max-width: 700px;
+    margin: 0 auto 20px;
+    line-height: 1.5;
+    color: #ddd;
+}
+.quote-author {
+    color: #d4a847;
+    font-size: 16px;
+    font-weight: 600;
+}
+.quote-role {
+    color: #778;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* PARTNER CTA */
+.partner {
+    background: linear-gradient(135deg, #16213e, #1a1a2e);
+    padding: 80px 40px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+.partner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+.partner h2 em { color: #d4a847; font-style: italic; }
+.partner p {
+    color: #889;
+    font-size: 17px;
+    max-width: 550px;
+    margin: 0 auto 32px;
+    line-height: 1.6;
+}
+.partner-btns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+.btn-outline {
+    display: inline-block;
+    border: 2px solid #d4a847;
+    color: #d4a847;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.btn-outline:hover { background: #d4a847; color: #1a1a2e; }
+
+/* FOOTER */
+footer {
+    background: #111;
+    padding: 40px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+footer p { color: #556; font-size: 14px; }
+footer a { color: #d4a847; text-decoration: none; }
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 36px; }
+    .hero p { font-size: 17px; }
+    .stats { flex-direction: column; gap: 24px; }
+    .course-grid { grid-template-columns: 1fr; }
+    .steps { flex-direction: column; }
+    .partner-btns { flex-direction: column; align-items: center; }
+    nav ul { gap: 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="#" class="logo">50+<span>TechBridge</span></a>
+    <ul>
+        <li><a href="#courses">Programs</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#partner">Partner With Us</a></li>
+        <li><a href="https://learnmoretechnologies.com" class="nav-btn nav-btn--gold">Learn More Technologies</a></li>
+        <li><a href="#gallery" class="nav-btn nav-btn--purple">Digital Pioneer Gallery</a></li>
+        <li><a href="https://50plustechbridge.com/start-free-lesson/" class="nav-btn nav-btn--green">Start Free Lessons</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-label">Free Digital Skills Training</div>
+    <h1>Built for Pioneers. <em>Designed for You.</em></h1>
+    <p>Hands-on digital skills courses designed specifically for adults 50+. No tech experience needed. Start learning in 30 seconds.</p>
+    <a href="#" class="hero-btn">Start Your Free Lesson</a>
+    <div class="hero-sub">No credit card. No commitment. Just learning.</div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+    <div class="stat">
+        <div class="number">200+</div>
+        <div class="label">Adults Trained</div>
+    </div>
+    <div class="stat">
+        <div class="number">12</div>
+        <div class="label">Locations</div>
+    </div>
+    <div class="stat">
+        <div class="number">9</div>
+        <div class="label">Library Partners</div>
+    </div>
+    <div class="stat">
+        <div class="number">3</div>
+        <div class="label">Senior Centers</div>
+    </div>
+</section>
+
+<!-- COURSES -->
+<section class="courses" id="courses">
+    <div class="section-header">
+        <h2>What You'll <em>Learn</em></h2>
+        <p>Three courses. Real skills. Everything you need to feel confident with technology.</p>
+    </div>
+    <div class="course-grid">
+        <div class="course-card">
+            <div class="course-icon">1</div>
+            <h3>Introduction to Digital Skills &amp; AgeTech</h3>
+            <p>Start here. Learn the basics of navigating the digital world safely and confidently.</p>
+            <span class="course-tag">Lesson 1 of 3</span>
+        </div>
+        <div class="course-card">
+            <div class="course-icon">2</div>
+            <h3>Using Mobile Devices &amp; Accessibility</h3>
+            <p>Master your phone and tablet. Learn accessibility features designed to help you.</p>
+            <span class="course-tag">Lesson 2 of 3</span>
+        </div>
+        <div class="course-card">
+            <div class="course-icon">3</div>
+            <h3>Technology for Independent Living</h3>
+            <p>Use technology to stay connected, manage health, and live independently.</p>
+            <span class="course-tag">Lesson 3 of 3</span>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+    <div class="section-header">
+        <h2>How It <em>Works</em></h2>
+        <p>Three simple steps. No confusion. No tech jargon.</p>
+    </div>
+    <div class="steps">
+        <div class="step">
+            <div class="step-num">1</div>
+            <h3>Sign Up Free</h3>
+            <p>Enter your name, email, and a password. Takes 30 seconds.</p>
+        </div>
+        <div class="step">
+            <div class="step-num">2</div>
+            <h3>Watch &amp; Learn</h3>
+            <p>Video lessons with a real instructor. Pause, rewind, go at your pace.</p>
+        </div>
+        <div class="step">
+            <div class="step-num">3</div>
+            <h3>Practice &amp; Grow</h3>
+            <p>Guided projects help you use what you learned in real life.</p>
+        </div>
+    </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote-section">
+    <div class="quote">"Technology shouldn't be a barrier. It should be a bridge."</div>
+    <div class="quote-author">Brian McKinney</div>
+    <div class="quote-role">Founder, Learn More Technologies</div>
+</section>
+
+<!-- PARTNER CTA -->
+<section class="partner" id="partner">
+    <h2>Bring 50+TechBridge to <em>Your Community</em></h2>
+    <p>We partner with libraries, senior centers, and workforce agencies to deliver customized digital skills training. WIOA-eligible.</p>
+    <div class="partner-btns">
+        <a href="#" class="hero-btn">Start Free Lesson</a>
+        <a href="#" class="btn-outline">Partner With Us</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2026 Learn More Technologies &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">FAQ</a> &nbsp;|&nbsp; <a href="mailto:brian@learnmo.com">Contact</a></p>
+</footer>
+
+</body>
+</html>

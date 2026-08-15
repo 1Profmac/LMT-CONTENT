@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    height: 1920px;
+    background: #0E1C2F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  .phone {
+    width: 500px;
+    height: 1000px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    border: 6px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    position: relative;
+  }
+  .phone::before {
+    content: '';
+    width: 150px;
+    height: 25px;
+    background: #333;
+    border-radius: 15px;
+    position: absolute;
+    top: 20px;
+  }
+  .phone-title {
+    font-size: 52px;
+    font-weight: 700;
+    color: #0E1C2F;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .step-box {
+    margin-top: 40px;
+    background: #0E1C2F;
+    border: 3px solid #C8942E;
+    border-radius: 12px;
+    padding: 18px 50px;
+  }
+  .step-text {
+    font-size: 36px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+  .maya {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #C8942E;
+    margin-bottom: 20px;
+  }
+  .maya-name {
+    font-size: 28px;
+    color: #666;
+    margin-bottom: 30px;
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+  <div class="phone">
+    <img class="maya" src="../../../04-ASSETS/Maya.PNG" alt="Maya, your Digital Pioneer guide">
+    <div class="maya-name">Meet Maya, your guide</div>
+    <div class="phone-title">Let's Make<br>Your Phone<br>Easier to Read</div>
+  </div>
+  <div class="step-box">
+    <div class="step-text">Follow along — 5 easy steps</div>
+  </div>
+</body>
+</html>

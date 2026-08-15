@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    height: 1920px;
+    background: #0E1C2F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  .phone {
+    width: 500px;
+    height: 1000px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    border: 6px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 80px 40px 40px;
+    position: relative;
+  }
+  .phone::before {
+    content: '';
+    width: 150px;
+    height: 25px;
+    background: #333;
+    border-radius: 15px;
+    position: absolute;
+    top: 20px;
+  }
+  .instruction {
+    font-size: 42px;
+    font-weight: 700;
+    color: #0E1C2F;
+    text-align: center;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+  .helper {
+    font-size: 24px;
+    color: #888;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .slider-section {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .slider-label {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .slider-track {
+    width: 100%;
+    height: 14px;
+    background: #E0E0E0;
+    border-radius: 7px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .slider-fill {
+    width: 75%;
+    height: 14px;
+    background: #C8942E;
+    border-radius: 7px;
+  }
+  .slider-handle {
+    width: 40px;
+    height: 40px;
+    background: #C8942E;
+    border-radius: 50%;
+    position: absolute;
+    top: -13px;
+    left: 72%;
+    border: 3px solid #FFF;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+  .slider-labels {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 40px;
+  }
+  .small-text {
+    font-size: 20px;
+    color: #999;
+  }
+  .big-text {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0E1C2F;
+  }
+  .arrow-row {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .arrow-row span {
+    font-size: 40px;
+    color: #C8942E;
+    letter-spacing: 5px;
+  }
+  .preview-section {
+    padding: 25px;
+    background: #F5F5F5;
+    border-radius: 12px;
+    width: 100%;
+    text-align: center;
+  }
+  .preview-label {
+    font-size: 20px;
+    color: #999;
+    margin-bottom: 10px;
+  }
+  .preview-big {
+    font-size: 34px;
+    font-weight: 700;
+    color: #0E1C2F;
+  }
+  .step-box {
+    margin-top: 40px;
+    background: #0E1C2F;
+    border: 3px solid #C8942E;
+    border-radius: 12px;
+    padding: 18px 50px;
+  }
+  .step-text {
+    font-size: 36px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+</style>
+</head>
+<body>
+  <div class="phone">
+    <div class="instruction">Slide Text Size<br>to the Right</div>
+    <div class="helper">Make it comfortable for your eyes</div>
+    <div class="slider-section">
+      <div class="slider-label">Text Size</div>
+      <div class="slider-track">
+        <div class="slider-fill"></div>
+        <div class="slider-handle"></div>
+      </div>
+      <div class="slider-labels">
+        <span class="small-text">small</span>
+        <span class="big-text">BIGGER</span>
+      </div>
+      <div class="arrow-row">
+        <span>Slide this way &#8594; &#8594; &#8594;</span>
+      </div>
+    </div>
+    <div class="preview-section">
+      <div class="preview-label">Your text will look like this:</div>
+      <div class="preview-big">Now you can read this!</div>
+    </div>
+  </div>
+  <div class="step-box">
+    <div class="step-text">Step 3 of 5</div>
+  </div>
+</body>
+</html>

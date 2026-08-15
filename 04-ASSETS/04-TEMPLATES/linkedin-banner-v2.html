@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LinkedIn Banner — LMT v2</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #333; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+
+.banner {
+  width: 1584px;
+  height: 396px;
+  background: #0E1C2F;
+  position: relative;
+  overflow: hidden;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Faint gold radial glow */
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(200,148,46,.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Gold diagonal accent lines (top right) */
+.banner .accent-1,
+.banner .accent-2,
+.banner .accent-3 {
+  position: absolute;
+  width: 2px;
+  height: 120px;
+  background: rgba(200,148,46,.25);
+  transform: rotate(-45deg);
+}
+.banner .accent-1 { top: -20px; right: 80px; }
+.banner .accent-2 { top: -10px; right: 120px; }
+.banner .accent-3 { top: 0px; right: 160px; }
+
+/* Profile photo placeholder zone */
+.photo-zone {
+  position: absolute;
+  left: 60px;
+  bottom: -40px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px dashed rgba(200,148,46,.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(200,148,46,.4);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Text container — right side */
+.text-area {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: right;
+  z-index: 2;
+}
+
+.pillars {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 900;
+  color: #C8942E;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.tagline {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  color: #FFFFFF;
+  margin-bottom: 24px;
+}
+
+/* Gold separator line */
+.separator {
+  width: 300px;
+  height: 1px;
+  background: #C8942E;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+
+.stats {
+  font-size: 15px;
+  font-weight: 700;
+  color: #C8942E;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.url {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,.7);
+  letter-spacing: .5px;
+}
+
+/* Gold bottom accent line */
+.bottom-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, #C8942E 30%, #C8942E 70%, transparent 100%);
+}
+</style>
+</head>
+<body>
+
+<div class="banner">
+  <!-- Diagonal accent lines -->
+  <div class="accent-1"></div>
+  <div class="accent-2"></div>
+  <div class="accent-3"></div>
+
+  <!-- Profile photo placement guide -->
+  <div class="photo-zone">Profile<br>photo<br>here</div>
+
+  <!-- Text content -->
+  <div class="text-area">
+    <div class="pillars">ADVOCACY · EDUCATION · SPEAKING</div>
+    <div class="tagline">Ageism is the problem. We're the solution.</div>
+    <div class="separator"></div>
+    <div class="stats">Targeted 3X Completion Rate · MBE Certified</div>
+    <div class="url">learnmoretechnologies.com</div>
+  </div>
+
+  <!-- Bottom accent -->
+  <div class="bottom-line"></div>
+</div>
+
+</body>
+</html>

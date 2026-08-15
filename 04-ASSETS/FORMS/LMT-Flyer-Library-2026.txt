@@ -1,0 +1,122 @@
+================================================================================
+  SIZE: 8.5 x 11 (Letter) | PRINT: Full color | QUANTITY: Per branch
+  FILE: LMT-Flyer-Library-2026.txt
+================================================================================
+
+
+        ╔══════════════════════════════════════════════════════════════╗
+        ║                                                              ║
+        ║         FREE AI TRAINING FOR ADULTS 50+                     ║
+        ║                                                              ║
+        ║    No coding. No jargon. No cost. Just real AI skills.      ║
+        ║                                                              ║
+        ╚══════════════════════════════════════════════════════════════╝
+
+
+                    Brought to you by 50+TechBridge
+               A program of Learn More Technologies (LMT)
+               ─────────────────────────────────────────
+
+
+================================================================================
+  HEADLINE (large, bold — top third of flyer)
+================================================================================
+
+  You're Not Bad at Technology.
+  You've Just Never Had the Right Teacher.
+
+
+================================================================================
+  SUBHEADLINE (medium — below headline)
+================================================================================
+
+  50+TechBridge is teaching adults 50+ to use AI — the same tools
+  reshaping jobs, healthcare, and everyday life. Free. Right here
+  at your library.
+
+
+================================================================================
+  WHAT YOU'LL LEARN (3 bullet points — center section)
+================================================================================
+
+  ✓  How to use ChatGPT and AI tools in real life
+  ✓  AI for job searching, writing, and daily tasks
+  ✓  How to stay safe and smart online with AI
+
+
+================================================================================
+  WHO IT'S FOR (qualification box)
+================================================================================
+
+  This program is for you if:
+
+  → You're 50 or older
+  → You want to understand what AI actually is
+  → You're curious but don't know where to start
+  → You've been left out of the tech conversation — until now
+
+
+================================================================================
+  STATS BAR (bold numbers — builds credibility)
+================================================================================
+
+      9 Locations  |  3X Completion Rate  |  100% Free
+
+
+================================================================================
+  SESSION INFO BLOCK (customize per branch — leave blank for template)
+================================================================================
+
+  WHEN:    ________________________________
+
+  WHERE:   ________________________________
+           ________________________________
+
+  COST:    FREE — No registration required
+
+
+================================================================================
+  CTA — CALL TO ACTION (bottom third, large and bold)
+================================================================================
+
+  Ready to start?
+
+  Visit:   learnmoretechnologies.com/start-free-lesson/
+
+  Questions? Email:   hello@learnmoretechnologies.com
+
+  Book a session for your group:
+           calendly.com/brianmckinney/new-meeting
+
+
+================================================================================
+  FOOTER / LOGO BAR (very bottom)
+================================================================================
+
+  50+TechBridge | Learn More Technologies
+  Austin, Texas | learnmoretechnologies.com
+  MBE-Certified  |  WIOA-Eligible
+
+  #agentic50  |  #AgeTech  |  #DigitalInclusion
+
+
+================================================================================
+  DESIGN NOTES FOR CANVA
+================================================================================
+
+  Recommended layout:
+  - Top 35%: Bold headline + subheadline on dark/colored background
+  - Middle 40%: 3 bullet points + who it's for box + stats bar
+  - Bottom 25%: CTA block + session info + footer
+
+  Colors: Use LMT brand colors (dark navy or black background, white text,
+          orange or indigo accent for headline and bullet icons)
+
+  Image: Add a photo of adults 50+ engaged with technology (smiling,
+         in a library or classroom setting). Avoid stock photos that look
+         posed or generic.
+
+  QR Code: Generate a QR code pointing to learnmoretechnologies.com/start-free-lesson/
+           and place it next to or below the CTA.
+
+================================================================================

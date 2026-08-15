@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    height: 1920px;
+    background: #0E1C2F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  .phone {
+    width: 500px;
+    height: 1000px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    border: 6px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    position: relative;
+  }
+  .phone::before {
+    content: '';
+    width: 150px;
+    height: 25px;
+    background: #333;
+    border-radius: 15px;
+    position: absolute;
+    top: 20px;
+  }
+  .phone-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #0E1C2F;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 30px;
+  }
+  .subtitle {
+    font-size: 28px;
+    color: #888;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .icons-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  .icon-item {
+    text-align: center;
+  }
+  .icon-circle {
+    width: 80px;
+    height: 80px;
+    background: #C8942E;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  .icon-emoji {
+    font-size: 40px;
+  }
+  .icon-label {
+    font-size: 16px;
+    color: #333;
+  }
+  .step-box {
+    margin-top: 40px;
+    background: #0E1C2F;
+    border: 3px solid #C8942E;
+    border-radius: 12px;
+    padding: 18px 50px;
+  }
+  .step-text {
+    font-size: 36px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+</style>
+</head>
+<body>
+  <div class="phone">
+    <div class="phone-title">3 Tools That<br>Save You Time<br>Every Week</div>
+    <div class="icons-row">
+      <div class="icon-item">
+        <div class="icon-circle"><span class="icon-emoji">&#127908;</span></div>
+        <div class="icon-label">Reminder</div>
+      </div>
+      <div class="icon-item">
+        <div class="icon-circle"><span class="icon-emoji">&#9925;</span></div>
+        <div class="icon-label">Weather</div>
+      </div>
+      <div class="icon-item">
+        <div class="icon-circle"><span class="icon-emoji">&#128138;</span></div>
+        <div class="icon-label">Pharmacy</div>
+      </div>
+    </div>
+    <div class="subtitle">5 minutes. 3 tools. Let's go.</div>
+  </div>
+  <div class="step-box">
+    <div class="step-text">Follow along — 3 easy steps</div>
+  </div>
+</body>
+</html>

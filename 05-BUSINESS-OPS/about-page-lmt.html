@@ -1,0 +1,519 @@
+<!-- ============================================================
+     ABOUT PAGE — Learn More Technologies (learnmoretechnologies.com)
+     Built: 2026-08-14 | Updated: 2026-08-14
+     Source docs: Mission-Statement.pdf + Learn-More-Technologies-Mission-Report.pdf
+     Instructions: Paste into a WordPress Custom HTML block at /about/
+     Brand: #0E1C2F (navy) | #c8942f (gold) | #ffffff (white)
+     ============================================================ -->
+
+<style>
+  .lmt-about * { box-sizing: border-box; font-family: inherit; }
+  .lmt-about { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+  /* HERO */
+  .lmt-hero {
+    background: #0E1C2F;
+    color: #fff;
+    padding: 80px 40px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 60px;
+  }
+  .lmt-hero .eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #c8942f;
+    margin-bottom: 16px;
+  }
+  .lmt-hero h1 {
+    font-size: clamp(1.9rem, 5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 28px;
+    color: #fff;
+  }
+  .lmt-hero h1 span { color: #c8942f; }
+  .lmt-hero .official-sentence {
+    font-size: 1.15rem;
+    line-height: 1.65;
+    max-width: 720px;
+    margin: 0 auto 36px;
+    color: #d0dce8;
+    font-style: italic;
+  }
+  .lmt-btn {
+    display: inline-block;
+    background: #c8942f;
+    color: #fff;
+    padding: 16px 36px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 8px;
+    transition: background 0.2s;
+  }
+  .lmt-btn:hover { background: #a97726; color: #fff; }
+  .lmt-btn-outline {
+    background: transparent;
+    border: 2px solid #c8942f;
+    color: #c8942f;
+  }
+  .lmt-btn-outline:hover { background: #c8942f; color: #fff; }
+
+  /* STATS BAR */
+  .lmt-stats {
+    background: #c8942f;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 70px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .lmt-stat {
+    flex: 1 1 200px;
+    text-align: center;
+    padding: 32px 24px;
+    border-right: 1px solid rgba(255,255,255,0.25);
+  }
+  .lmt-stat:last-child { border-right: none; }
+  .lmt-stat .num {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+  .lmt-stat .label {
+    font-size: 0.88rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.85);
+  }
+
+  /* SECTIONS */
+  .lmt-section { margin-bottom: 70px; }
+  .lmt-section-label {
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #c8942f;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .lmt-section h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 700;
+    color: #0E1C2F;
+    margin: 0 0 20px;
+    line-height: 1.2;
+  }
+  .lmt-section p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #333;
+    max-width: 780px;
+    margin-bottom: 16px;
+  }
+
+  /* BLOCKQUOTE — for official statements */
+  .lmt-blockquote {
+    border-left: 5px solid #c8942f;
+    margin: 28px 0;
+    padding: 20px 28px;
+    background: #f7f8fa;
+    border-radius: 0 6px 6px 0;
+  }
+  .lmt-blockquote p {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #0E1C2F;
+    line-height: 1.6;
+    margin: 0;
+    max-width: none;
+  }
+
+  /* TWO-COL LAYOUT */
+  .lmt-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  @media (max-width: 700px) {
+    .lmt-two-col { grid-template-columns: 1fr; gap: 30px; }
+  }
+
+  /* CARDS — What We Do */
+  .lmt-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+    margin-top: 32px;
+  }
+  .lmt-card {
+    background: #f7f8fa;
+    border-top: 4px solid #c8942f;
+    border-radius: 6px;
+    padding: 32px 28px;
+  }
+  .lmt-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0E1C2F;
+    margin: 0 0 12px;
+  }
+  .lmt-card p {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: #444;
+    margin: 0;
+  }
+
+  /* VALUES — Dignity / Accessibility / Community */
+  .lmt-values-wrap {
+    background: #0E1C2F;
+    border-radius: 8px;
+    padding: 60px 50px;
+    margin-bottom: 70px;
+  }
+  .lmt-values-wrap .lmt-section-label { color: #c8942f; }
+  .lmt-values-wrap h2 { color: #fff; }
+  .lmt-values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    margin-top: 36px;
+  }
+  .lmt-value-card {
+    background: rgba(255,255,255,0.06);
+    border-top: 4px solid #c8942f;
+    border-radius: 6px;
+    padding: 28px 26px;
+  }
+  .lmt-value-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #c8942f;
+    margin: 0 0 12px;
+  }
+  .lmt-value-card p {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: #c5d4e0;
+    margin: 0;
+  }
+  @media (max-width: 700px) {
+    .lmt-values-wrap { padding: 40px 24px; }
+  }
+
+  /* BIO SECTION */
+  .lmt-bio {
+    background: #f7f8fa;
+    border-radius: 8px;
+    padding: 60px 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 70px;
+    border-top: 4px solid #c8942f;
+  }
+  @media (max-width: 700px) {
+    .lmt-bio { grid-template-columns: 1fr; padding: 40px 28px; text-align: center; }
+  }
+  .lmt-bio-photo {
+    width: 100%;
+    max-width: 240px;
+    border-radius: 8px;
+    border: 4px solid #c8942f;
+    display: block;
+    margin: 0 auto;
+  }
+  .lmt-bio-content .eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #c8942f;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .lmt-bio-content h2 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #0E1C2F;
+    margin: 0 0 18px;
+  }
+  .lmt-bio-content p {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #444;
+    margin-bottom: 14px;
+  }
+  .lmt-bio-content p strong { color: #0E1C2F; }
+  .lmt-bio-quote {
+    color: #c8942f;
+    font-style: italic;
+    font-size: 1rem;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #ddd;
+  }
+
+  /* PARTNERS */
+  .lmt-partners {
+    background: #f7f8fa;
+    border-radius: 8px;
+    padding: 48px 40px;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  .lmt-partners h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 28px;
+  }
+  .lmt-partner-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px;
+  }
+  .lmt-partner-list li {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 14px 28px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #0E1C2F;
+  }
+  .lmt-certs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .lmt-cert-badge {
+    background: #0E1C2F;
+    color: #c8942f;
+    border-radius: 4px;
+    padding: 8px 20px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* ORG IDENTIFIER */
+  .lmt-org-id {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 50px;
+    padding: 0 20px;
+  }
+
+  /* CTA BANNER */
+  .lmt-cta-banner {
+    background: linear-gradient(135deg, #0E1C2F 0%, #1a3252 100%);
+    color: #fff;
+    border-radius: 8px;
+    padding: 64px 48px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .lmt-cta-banner h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 16px;
+  }
+  .lmt-cta-banner h2 span { color: #c8942f; }
+  .lmt-cta-banner p {
+    font-size: 1.1rem;
+    color: #c5d4e0;
+    margin: 0 0 32px;
+  }
+</style>
+
+<div class="lmt-about">
+
+  <!-- ===== HERO ===== -->
+  <div class="lmt-hero">
+    <div class="eyebrow">About Learn More Technologies</div>
+    <h1>We exist so adults 50+ are<br><span>never left behind.</span></h1>
+    <p class="official-sentence">Learn More Technologies exists to make digital independence a right for adults 50+ — not a privilege for the already fluent.</p>
+    <a href="/start-free-lesson/" class="lmt-btn">Start a Free Lesson</a>
+    <a href="/partner-with-us/" class="lmt-btn lmt-btn-outline">Partner With Us</a>
+  </div>
+
+  <!-- ===== STATS BAR ===== -->
+  <div class="lmt-stats">
+    <div class="lmt-stat">
+      <span class="num">9</span>
+      <span class="label">Community Locations</span>
+    </div>
+    <div class="lmt-stat">
+      <span class="num">3X</span>
+      <span class="label">Industry Completion Rate</span>
+    </div>
+    <div class="lmt-stat">
+      <span class="num">74%</span>
+      <span class="label">Feel More Confident After Training</span>
+    </div>
+    <div class="lmt-stat">
+      <span class="num">Free</span>
+      <span class="label">Always. English &amp; Spanish. No Jargon.</span>
+    </div>
+  </div>
+
+  <!-- ===== PURPOSE ===== -->
+  <div class="lmt-section">
+    <div class="lmt-section-label">Purpose Statement</div>
+    <div class="lmt-two-col">
+      <div>
+        <h2>Age is not a barrier to technology — it is an asset.</h2>
+      </div>
+      <div>
+        <div class="lmt-blockquote">
+          <p>Learn More Technologies exists so adults 50 and older can live, work, create, and connect in a digital world without being left behind. We exist to prove that age is not a barrier to technology — it is an asset — and that digital independence is a right, not a privilege reserved for the already fluent.</p>
+        </div>
+        <p>Too many capable people are locked out of AI, online services, creative tools, and economic opportunity because training was never designed for them. We built 50+TechBridge to close that gap in the places adults already gather: public libraries, senior centers, and cultural sites — free, in their language, at their pace, with instructors who respect their intelligence.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MISSION ===== -->
+  <div class="lmt-section">
+    <div class="lmt-section-label">Mission Statement</div>
+    <div class="lmt-two-col">
+      <div>
+        <h2>What we do — and how we do it.</h2>
+      </div>
+      <div>
+        <div class="lmt-blockquote">
+          <p>Our mission is to close the digital divide for adults 50+ through free, hands-on AI and technology education delivered in community — so overlooked talent can create, stay safe online, remain employable, and participate fully in civic and cultural life.</p>
+        </div>
+        <p>We operate 50+TechBridge as that mission in practice: live workshops, bilingual English and Spanish materials, a creative-output model where participants make real work, and a methodology grounded in dignity, accessibility, and community.</p>
+        <p>Participants are <strong>Digital Pioneers</strong> — not beginners to be talked down to.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== VALUES — Dignity / Accessibility / Community ===== -->
+  <div class="lmt-values-wrap">
+    <div class="lmt-section-label">What Guides Our Work</div>
+    <h2>Three principles. Every session. Every location.</h2>
+    <div class="lmt-values-grid">
+
+      <div class="lmt-value-card">
+        <h3>Dignity</h3>
+        <p>No participant should feel embarrassed for not knowing something. Instruction is patient, respectful, and built for adult intelligence — never for a stereotype of age.</p>
+      </div>
+
+      <div class="lmt-value-card">
+        <h3>Accessibility</h3>
+        <p>Programming is free, offered in English and Spanish, and delivered at neighborhood locations people already trust. Cost, transportation, and jargon should not be the barrier.</p>
+      </div>
+
+      <div class="lmt-value-card">
+        <h3>Community</h3>
+        <p>Technology education is most powerful when it happens together. We teach in libraries and cultural centers, and we treat lived experience as an asset AI can amplify — not replace.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== WHAT WE DO ===== -->
+  <div class="lmt-section">
+    <div class="lmt-section-label">What We Do</div>
+    <h2>Three ways we serve adults 50+ and the organizations that support them</h2>
+    <div class="lmt-cards">
+
+      <div class="lmt-card">
+        <h3>AI Training</h3>
+        <p>Free, hands-on Technology Assisted Trainings deployed across 9 locations in Central Texas — 6 Austin Public Library branches, 2 AARP-partnered senior centers, and a Foundation Communities veterans program. No coding. No jargon. No age limit. Customized to every community's needs.</p>
+      </div>
+
+      <div class="lmt-card">
+        <h3>Advocacy</h3>
+        <p>We work with workforce boards, funders, and policymakers to advance digital equity for adults 50+. We publish <em>Agentic50 Weekly</em> — AI news translated for adults 50+, cutting through the noise to deliver what actually matters.</p>
+      </div>
+
+      <div class="lmt-card">
+        <h3>Speaking</h3>
+        <p>Keynotes, Lunch &amp; Learns, and workshops on ageism in tech, AI adoption for older adults, and the $76 trillion economic opportunity the market is ignoring. Available for libraries, conferences, workforce boards, and partner organizations.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== BRIAN BIO ===== -->
+  <div class="lmt-bio">
+    <div class="lmt-bio-photo-wrap">
+      <!-- Replace src with Brian's actual headshot URL in WP Media Library -->
+      <img
+        src="/wp-content/uploads/brian-mckinney-headshot.jpg"
+        alt="Brian McKinney, Founder of Learn More Technologies and 50+TechBridge"
+        class="lmt-bio-photo"
+        loading="lazy"
+        width="240"
+        height="240"
+      />
+    </div>
+    <div class="lmt-bio-content">
+      <div class="eyebrow">Meet the Founder</div>
+      <h2>Brian McKinney</h2>
+      <p>Two years ago, I hadn't heard of ChatGPT. Today, I manage <strong>30+ AI-powered workflows</strong> as a solo founder — newsletters, content, grant scanning, client outreach, and course management. All AI.</p>
+      <p>I'm not a developer. I'm a seasoned professional who made AI my business partner — and now I teach adults 50+ to do the same.</p>
+      <p>I built 50+TechBridge because I saw adults who were smart, experienced, and ready — but being left behind by a system that didn't bother to include them. <strong>That ends here.</strong></p>
+      <p class="lmt-bio-quote">"While everyone else is still teaching email, we're teaching AI."</p>
+    </div>
+  </div>
+
+  <!-- ===== PARTNERS & CERTS ===== -->
+  <div class="lmt-partners">
+    <h3>Trusted Partners &amp; Credentials</h3>
+    <ul class="lmt-partner-list">
+      <li>AARP</li>
+      <li>Foundation Communities</li>
+      <li>Austin Public Library</li>
+      <li>City of Austin</li>
+    </ul>
+    <div class="lmt-certs">
+      <span class="lmt-cert-badge">MBE Certified</span>
+      <span class="lmt-cert-badge">WIOA Eligible</span>
+      <span class="lmt-cert-badge">Nexus Grant Recipient</span>
+      <span class="lmt-cert-badge">Free to All Adults 50+</span>
+    </div>
+  </div>
+
+  <!-- ===== ORGANIZATION IDENTIFIER ===== -->
+  <p class="lmt-org-id">
+    Learn More Technologies LLC (dba 50+TechBridge) is an Austin, Texas education organization — MBE-certified, WIOA-eligible, and a City of Austin Nexus Grant recipient — dedicated to AI literacy and digital skills for adults 50+.<br>
+    <strong>learnmoretechnologies.com</strong> &nbsp;·&nbsp; hello@learnmoretechnologies.com
+  </p>
+
+  <!-- ===== CTA BANNER ===== -->
+  <div class="lmt-cta-banner">
+    <h2>Ready to <span>start learning</span> — or bring us to your community?</h2>
+    <p>Free lessons available now. No credit card. No jargon. Just real skills.</p>
+    <a href="/start-free-lesson/" class="lmt-btn">Start Your Free Lesson</a>
+    <a href="/partner-with-us/" class="lmt-btn lmt-btn-outline">Book a Partnership Call</a>
+  </div>
+
+</div>
+<!-- end .lmt-about -->

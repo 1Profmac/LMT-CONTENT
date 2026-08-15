@@ -1,0 +1,159 @@
+LESSON 1 PAGE DESIGN — LearnDash / WordPress
+"Your Phone is More Powerful Than You Think"
+
+=============================================
+SECTION 1: HERO
+=============================================
+
+LESSON 1
+Your Phone is More Powerful Than You Think
+
+Today you'll do one thing: make your phone easier to read.
+Two settings. Two minutes. You've got this, Digital Pioneer.
+
+=============================================
+SECTION 2: CHOOSE YOUR LANGUAGE
+=============================================
+
+Header: "Choose Your Language"
+Subtext: "Same lesson. Your language. Your pace."
+
+Three cards side by side (top 3):
+
+┌─────────────┐  ┌─────────────┐  ┌─────────────┐
+│     🇺🇸      │  │     🇲🇽      │  │     🇻🇳      │
+│             │  │             │  │             │
+│   English   │  │   Español   │  │  Tiếng Việt │
+│             │  │             │  │             │
+└─────────────┘  └─────────────┘  └─────────────┘
+
+"More languages" dropdown below:
+- 中文 (Chinese)
+- Français (French)
+- हिन्दी (Hindi) — coming soon
+- العربية (Arabic) — coming soon
+
+=============================================
+SECTION 3: CHOOSE HOW YOU LEARN BEST
+=============================================
+
+Header: "How Do You Learn Best?"
+Subtext: "Pick your style. No wrong answer."
+
+Three cards side by side:
+
+┌──────────────────┐
+│       👀         │
+│                  │
+│    SHOW ME       │
+│                  │
+│  "I learn by     │
+│   watching."     │
+│                  │
+│  Animated video  │
+│  with Barb       │
+│  walking you     │
+│  through each    │
+│  step visually.  │
+│                  │
+│  ⏱ 2.5 min       │
+└──────────────────┘
+
+┌──────────────────┐
+│       👂         │
+│                  │
+│    TELL ME       │
+│                  │
+│  "I learn by     │
+│   listening."    │
+│                  │
+│  Audio guide     │
+│  with Barb's     │
+│  voice walking   │
+│  you through     │
+│  step by step.   │
+│                  │
+│  ⏱ 2.5 min       │
+└──────────────────┘
+
+┌──────────────────┐
+│       🤲         │
+│                  │
+│   LET ME TRY     │
+│                  │
+│  "I learn by     │
+│   doing."        │
+│                  │
+│  Step-by-step    │
+│  written guide   │
+│  with pictures.  │
+│  Go at your own  │
+│  pace.           │
+│                  │
+│  ⏱ 5 min         │
+└──────────────────┘
+
+=============================================
+SECTION 4: THE LESSON (loads based on choice)
+=============================================
+
+Based on their selection:
+
+SHOW ME → Plays the animated video (Galaxy + HeyGen Barb)
+TELL ME → Plays audio-only version with simple slide visuals
+LET ME TRY → Shows written step-by-step guide with screenshots
+
+All three deliver the same outcome:
+Text size increased + Bold text turned on.
+
+=============================================
+SECTION 5: YOU DID IT
+=============================================
+
+After completing any style:
+
+Gold checkmark animation
+
+"You just made your phone easier to read.
+Most people never even try. You did.
+That's what makes you a Digital Pioneer."
+
+[Next Lesson: Set Up 3 Tools →]
+
+=============================================
+STYLE NAME OPTIONS (ranked by research)
+=============================================
+
+BEST (action-based, friendly, no jargon):
+1. Show Me / Tell Me / Let Me Try  ← RECOMMENDED
+   - Based on proven "Tell Me, Show Me, Let Me Try" training model
+   - Instantly understood by any age
+   - No academic language
+
+GOOD ALTERNATIVES:
+2. Watch It / Hear It / Do It
+   - Slightly more direct
+   - Very clear
+
+3. See It / Listen / Hands On
+   - Simple but "Hands On" might confuse for a phone lesson
+
+4. The Watcher / The Listener / The Explorer
+   - More personality but might feel childish
+
+AVOID:
+- Visual / Auditory / Kinesthetic (too academic)
+- VAK (nobody knows what this means)
+- Learning Style A/B/C (boring)
+
+=============================================
+DESIGN NOTES
+=============================================
+
+- Brand colors: Navy (#0E1C2F) + Gold (#C8942E) + White
+- Cards have hover effect with gold border glow
+- Selected card gets gold border + checkmark
+- Mobile responsive: cards stack vertically
+- Language flags use emoji or small flag icons
+- After selection, page smoothly scrolls to lesson content
+- Progress saved — if they leave and come back, their choices are remembered

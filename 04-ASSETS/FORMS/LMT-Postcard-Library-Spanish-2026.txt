@@ -1,0 +1,87 @@
+================================================================================
+  SIZE: 4 x 6 pulgadas | IMPRESIÓN: Color completo, ambos lados | PAPEL: 14pt brillo
+  FILE: LMT-Postcard-Library-Spanish-2026.txt
+  IDIOMA: Español
+================================================================================
+
+════════════════════════════════════════
+  LADO FRONTAL
+════════════════════════════════════════
+
+  [SUPERIOR — titular grande en negrita, 60-70% del frente]
+
+  Capacitación Gratuita
+  de IA para Adultos 50+
+
+  Sin programación. Sin tecnicismos. Sin costo.
+
+  [FRANJA INFERIOR — barra oscura]
+
+  50+TechBridge | learnmoretechnologies.com
+
+  [IMAGEN: Foto de adulto 50+ hispano sonriendo usando una
+   tableta o laptop en una biblioteca — cálido y real]
+
+════════════════════════════════════════
+  LADO TRASERO
+════════════════════════════════════════
+
+  MITAD IZQUIERDA (contenido)
+  ───────────────────────────
+
+  Usted No Es Malo Para la Tecnología.
+  Simplemente Nunca Ha Tenido el Maestro Correcto.
+
+  ✓ Aprenda herramientas de IA para la vida diaria
+  ✓ No se necesita experiencia previa
+  ✓ 100% Gratis — en su biblioteca local
+
+  9 ubicaciones | 3X tasa de finalización | Siempre gratis
+
+  CUÁNDO:  ____________________________
+  DÓNDE:   ____________________________
+
+  ¿Listo para comenzar?
+  learnmoretechnologies.com/start-free-lesson/
+  hello@learnmoretechnologies.com
+
+  [CÓDIGO QR — parte inferior izquierda]
+
+  50+TechBridge | Learn More Technologies
+  Certificado MBE | Elegible WIOA | Austin, TX
+
+
+  MITAD DERECHA (área estándar de correo postal)
+  ───────────────────────────────────────────────
+
+  [ÁREA DE ESTAMPILLA — arriba a la derecha]
+  ┌─────────────┐
+  │  ESTAMPILLA │
+  │    AQUÍ     │
+  └─────────────┘
+
+  PARA:
+  ________________________
+  ________________________
+  ________________________
+  ________________________
+
+
+================================================================================
+  NOTAS DE DISEÑO PARA CANVA (Postal 4x6)
+================================================================================
+
+  Frente:
+  - Fondo oscuro (marino o negro), titular en blanco en negrita
+  - Acento naranja en "Gratuita" o palabras clave
+  - Foto real ocupa 50-60% del frente (arriba o sangría completa)
+  - Franja inferior: nombre de organización + URL en texto blanco limpio
+
+  Trasero:
+  - Izquierda 60%: todo el contenido
+  - Derecha 40%: formato estándar de correo (caja de estampilla arriba a la derecha, líneas de dirección)
+  - Código QR en la esquina inferior izquierda del área de contenido
+  - Tamaño mínimo de fuente 9pt para legibilidad a escala postal
+  - Exportar: PDF de impresión, 300 DPI, con 3mm de sangría
+
+================================================================================

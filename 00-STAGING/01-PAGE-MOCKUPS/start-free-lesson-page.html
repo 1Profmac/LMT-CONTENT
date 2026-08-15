@@ -1,0 +1,296 @@
+<!-- wp:html -->
+<!-- wp:html -->
+
+<!--
+=================================================
+  LMT JOIN NOW PAGE — v2.0 May 12, 2026
+  Template: Full Width Content — REQUIRED
+  Slug: /start-free-lesson/
+  Owner: Brian McKinney
+  Stats Lock: Adults 50+ across 13 locations · Targeted 3X Completion · 13 Locations
+  ⛔ BANNED STATS: 1,200+ · 85% · 45 sites · 62% · 347 · 23 organizations · 74% — DO NOT USE
+=================================================
+-->
+
+<style>
+
+/* BUDDYBOSS RESET — DO NOT REMOVE */
+body,.site,#page,#content,.bb-grid,.container,
+#primary,#main,.site-content,.entry-content,
+.site-inner,.content-sidebar-wrap{background-color:#0E1C2F!important}
+.entry-title,.page-title,.page-template-blank .entry-title,
+body.page .entry-header,.buddypress-page .entry-header,
+#primary .entry-header,.site-content .entry-header{display:none!important}
+.entry-content{padding:0!important;margin:0!important;max-width:none!important}
+.bb-grid,.container,#content,#primary,#main,.site-main{padding:0!important;margin:0!important;max-width:none!important;width:100%!important}
+.site-footer,.footer-widgets,#colophon{margin-top:0!important;padding-top:0!important}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+</style>
+
+<div class="lmt-join">
+<style>
+.lmt-join { font-family:'DM Sans',sans-serif; background:#0E1C2F; color:#C4CDD9; }
+
+/* ── HERO ── */
+.lmt-join .hero {
+  background:#0E1C2F;
+  padding:80px 40px 72px;
+  position:relative;
+  overflow:hidden;
+}
+.lmt-join .hero-bg {
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse at 20% 50%,rgba(200,148,46,.08) 0%,transparent 60%),
+             radial-gradient(ellipse at 80% 20%,rgba(200,148,46,.05) 0%,transparent 50%);
+  pointer-events:none;
+}
+.lmt-join .hero-inner {
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
+}
+.lmt-join .hero-badge {
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(200,148,46,.12);border:1px solid rgba(200,148,46,.3);
+  color:#C8942E;font-size:0.72rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;padding:8px 16px;border-radius:100px;
+  margin-bottom:24px;
+}
+.lmt-join .hero-badge span { width:6px;height:6px;background:#C8942E;border-radius:50%; }
+.lmt-join .hero h1 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(36px,4.5vw,58px);
+  font-weight:900;line-height:1.05;
+  color:#FFFFFF;margin:0 0 20px;
+}
+.lmt-join .hero h1 em { color:#C8942E;font-style:italic; }
+.lmt-join .hero-sub {
+  font-size:1.1rem;line-height:1.7;color:#A8B8CC;margin:0 0 28px;
+}
+.lmt-join .hero-checks {
+  display:flex;flex-wrap:wrap;gap:12px 24px;list-style:none;padding:0;margin:0;
+}
+.lmt-join .hero-checks li {
+  font-size:0.9rem;font-weight:600;color:#C8942E;
+  display:flex;align-items:center;gap:6px;
+}
+.lmt-join .hero-checks li::before { content:"✓"; }
+
+/* ── FORM CARD ── */
+.lmt-join .form-card {
+  background:#FFFFFF;
+  border:none;
+  border-radius:16px;
+  padding:40px 36px;
+  box-shadow:0 24px 64px rgba(0,0,0,.35);
+}
+.lmt-join .form-card h2 {
+  font-family:'Playfair Display',serif;
+  font-size:1.6rem;font-weight:700;
+  color:#0E1C2F;margin:0 0 8px;line-height:1.2;
+}
+.lmt-join .form-card h2 em { color:#C8942E;font-style:italic; }
+.lmt-join .form-card .form-sub {
+  font-size:0.9rem;color:#4B5563;margin:0 0 28px;
+}
+.lmt-join .form-card label {
+  display:block;font-size:0.82rem;font-weight:600;
+  color:#1A2A3E;margin-bottom:6px;letter-spacing:.03em;
+}
+.lmt-join .form-card input[type="text"],
+.lmt-join .form-card input[type="email"] {
+  width:100%;box-sizing:border-box;
+  background:#F8FAFC;
+  border:1.5px solid #D1D5DB;
+  border-radius:8px;padding:13px 16px;
+  font-size:16px;color:#1A2A3E;
+  font-family:'DM Sans',sans-serif;
+  margin-bottom:18px;
+  transition:border-color .2s;
+}
+.lmt-join .form-card input:focus {
+  outline:none;border-color:#C8942E;
+  background:#FFFBF5;
+}
+.lmt-join .form-card input::placeholder { color:#9CA3AF; }
+.lmt-join .form-card .checkbox-row {
+  display:flex;align-items:flex-start;gap:10px;margin-bottom:24px;
+}
+.lmt-join .form-card .checkbox-row input[type="checkbox"] {
+  width:18px;height:18px;margin-top:2px;
+  accent-color:#C8942E;flex-shrink:0;
+}
+.lmt-join .form-card .checkbox-row span {
+  font-size:0.82rem;color:#4B5563;line-height:1.5;
+}
+.lmt-join .form-card .btn-submit {
+  width:100%;background:#C8942E;color:#0E1C2F;
+  font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:700;
+  border:none;border-radius:8px;padding:16px;cursor:pointer;
+  transition:all .2s;letter-spacing:.02em;
+}
+.lmt-join .form-card .btn-submit:hover {
+  background:#E8B84B;transform:translateY(-2px);
+}
+.lmt-join .form-card .form-legal {
+  font-size:0.75rem;color:#9CA3AF;
+  text-align:center;margin-top:14px;line-height:1.5;
+}
+.lmt-join .form-card .form-legal a { color:#6B7280;text-decoration:underline; }
+
+/* ── BREAK BAR ── */
+.lmt-join .break-bar {
+  background:#C8942E;padding:28px 40px;text-align:center;
+}
+.lmt-join .break-bar p {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.1rem,2vw,1.4rem);
+  font-weight:700;color:#0E1C2F;margin:0;font-style:italic;
+}
+
+/* ── WHAT YOU GET ── */
+.lmt-join .benefits {
+  background:#111827;padding:80px 40px;
+}
+.lmt-join .benefits .wrap { max-width:1100px;margin:0 auto; }
+.lmt-join .benefits .section-label {
+  font-size:0.72rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:#C8942E;margin-bottom:12px;
+}
+.lmt-join .benefits h2 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(28px,3vw,40px);color:#FFFFFF;margin:0 0 48px;
+}
+.lmt-join .benefits h2 em { color:#C8942E;font-style:italic; }
+.lmt-join .benefits-grid {
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+}
+.lmt-join .benefit-card {
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(200,148,46,.12);
+  border-radius:12px;padding:28px 24px;
+}
+.lmt-join .benefit-card .icon { font-size:1.8rem;margin-bottom:14px; }
+.lmt-join .benefit-card h3 {
+  font-size:1rem;font-weight:700;color:#FFFFFF;margin:0 0 8px;
+}
+.lmt-join .benefit-card p { font-size:0.88rem;color:#A8B8CC;margin:0;line-height:1.6; }
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  .lmt-join .hero { padding:52px 20px; }
+  .lmt-join .hero-inner { grid-template-columns:1fr;gap:40px; }
+  .lmt-join .benefits { padding:52px 20px; }
+  .lmt-join .benefits-grid { grid-template-columns:1fr; }
+  .lmt-join .form-card { padding:28px 20px; }
+}
+</style>
+
+<!-- HERO -->
+<section class="hero" aria-label="Join 50+TechBridge">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+
+    <!-- LEFT: Value prop -->
+    <div class="hero-left">
+      <div class="hero-badge"><span></span> 50+TechBridge — Free Curriculum</div>
+      <h1>Your Device is a <em>World-Changer.</em></h1>
+      <p class="hero-sub">You already have the experience no 25-year-old can match. These three free modules give you the tools to use it. No tech background needed. Start in the next five minutes.</p>
+      <ul class="hero-checks">
+        <li>100% Free</li>
+        <li>Self-paced</li>
+        <li>WIOA-eligible</li>
+        <li>Targeted 3x completion rate</li>
+        <li>No credit card</li>
+        <li>Instant access</li>
+      </ul>
+    </div>
+
+    <!-- RIGHT: Registration form -->
+    <div class="hero-right">
+      <div class="form-card">
+        <h2>Join 50+TechBridge <em>— It's 100% Free</em></h2>
+        <p class="form-sub">No credit card. No hidden fees. Instant access to your first lesson.</p>
+
+        <form action="https://learnmoretechnologies.us20.list-manage.com/subscribe/post?u=864533a4fa581c8a9caedaea9&amp;id=5ed5071656&amp;f_id=00d7c4f1f0" method="post" target="mc-hidden" id="mc-form" novalidate>
+          <label for="jn-fname">First Name</label>
+          <input type="text" id="jn-fname" name="FNAME" placeholder="Your first name" autocomplete="given-name">
+          <label for="jn-email">Email Address *</label>
+          <input type="email" id="jn-email" name="EMAIL" placeholder="you@example.com" required autocomplete="email">
+          <!-- Mailchimp anti-bot honeypot -->
+          <div style="position:absolute;left:-5000px" aria-hidden="true">
+            <input type="text" name="b_864533a4fa581c8a9caedaea9_5ed5071656" tabindex="-1" value="">
+          </div>
+          <div class="checkbox-row">
+            <input type="checkbox" id="jn-optin" checked>
+            <label for="jn-optin" style="display:inline;font-size:0.82rem;color:#4B5563;font-weight:400;">Yes, subscribe me to Agentic50 Weekly — AI news, tools, and the Pioneer Bridge Report for adults 50+. Bi-weekly. Unsubscribe anytime.</label>
+          </div>
+          <button type="submit" name="subscribe" class="btn-submit">Get Started →</button>
+        </form>
+        <iframe name="mc-hidden" style="display:none"></iframe>
+        <script>
+        document.getElementById('mc-form').addEventListener('submit', function() {
+          setTimeout(function() {
+            window.location.href = 'https://learnmoretechnologies.com/register/';
+          }, 1500);
+        });
+        </script>
+
+        <p class="form-legal">By joining, you agree to our <a href="https://learnmoretechnologies.com/privacy-policy/">Privacy Policy</a>. We never share your information.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BREAK BAR -->
+<div class="break-bar">
+  <p>"Not a theory. Not a webinar. Three cohort sessions that change what's possible — starting today."</p>
+</div>
+
+<!-- WHAT YOU GET -->
+<section class="benefits" aria-label="What you get">
+  <div class="wrap">
+    <p class="section-label">Everything Included</p>
+    <h2>Everything You Need <em>To Succeed</em></h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="icon">🎓</div>
+        <h3>Free Intro Cohort</h3>
+        <p>Step-by-step lessons designed for adults 50+. Three instructors, three learning styles. Your choice.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">📬</div>
+        <h3>Agentic50 Weekly</h3>
+        <p>The Pioneer Bridge Report — AI news, tools, and opportunities translated for adults 50+. Bi-weekly.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">🎙️</div>
+        <h3>Podcast & Audio Lessons</h3>
+        <p>Listen and learn with DR. Maya — podcast-style lessons you can follow while you do it.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">👥</div>
+        <h3>Peer Instruction</h3>
+        <p>Taught by people your age who remember what it felt like to not know what a browser was.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">🌍</div>
+        <h3>English & Spanish</h3>
+        <p>Lessons available in English and Spanish. Vietnamese, Chinese, and French coming soon.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">🔔</div>
+        <h3>Always Free</h3>
+        <p>The course is free. The newsletter is free. No credit card. No catch. Just start.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</div><!-- .lmt-join -->
+
+<!-- /wp:html -->
+<!-- /wp:html -->

@@ -1,0 +1,93 @@
+LUNCH & LEARN — UNIVERSAL EVENT PACKAGE
+Use for any partner org. Customize name/date/location.
+Generated: May 3, 2026
+
+===========================
+EVENT FLYER COPY
+===========================
+
+FREE TECH WORKSHOP FOR ADULTS 50+
+
+You're already holding the most powerful tool ever made. Let's learn how to use it.
+
+Date: [TBD]
+Time: 12:00 PM - 1:00 PM
+Location: [Partner Name + Address]
+
+In this free hands-on workshop, you'll:
+- Set up one tool on your phone that saves you time every week
+- Learn how to spot scams and protect yourself online
+- See how AI can help you — not replace you
+
+No experience needed. Bring your phone and your curiosity.
+
+RSVP: [phone/email/link]
+Lunch provided.
+
+Presented by Brian McKinney | 50+TechBridge
+
+
+===========================
+60-MINUTE AGENDA
+===========================
+
+0:00-0:05  Welcome + Brian intro ("I'm a Pioneer too")
+0:05-0:15  Hook — "You're already holding the most powerful tool ever made"
+0:15-0:40  Hands-on project — participants DO something on their phones
+0:40-0:50  Q&A + share-out — "Show your neighbor what you just did"
+0:50-0:55  Free course enrollment offer (QR code on screen)
+0:55-1:00  Next steps + thank you
+
+
+===========================
+3-EMAIL FOLLOW-UP SEQUENCE
+(Load into Mailchimp)
+===========================
+
+--- EMAIL 1: SAME DAY ---
+
+Subject: You did it — here's your free course
+
+[First Name],
+
+Today you proved something: you CAN learn this. And you did it in under an hour.
+
+Here's your free course link to keep going: [LINK]
+
+Lesson 1 picks up right where we left off. Takes about 15 minutes.
+
+You're a Pioneer now.
+
+— Brian
+
+
+--- EMAIL 2: DAY 3 ---
+
+Subject: How's Lesson 1 going?
+
+[First Name],
+
+Just checking in. If you've started Lesson 1 — nice work. If you haven't yet — no pressure. It'll be there when you're ready.
+
+One tip: do it on the same phone you brought to the workshop. Everything connects.
+
+Hit reply if you get stuck. I read every message.
+
+— Brian
+
+
+--- EMAIL 3: DAY 7 ---
+
+Subject: You're part of something bigger
+
+[First Name],
+
+One week ago you walked into a room and tried something new. That takes guts.
+
+You're now part of a growing community of Pioneers — adults 50+ who decided technology works FOR them, not against them.
+
+Keep going. Lesson 2 is waiting: [LINK]
+
+And if you know someone who needs this — forward this email. The course is free.
+
+— Brian

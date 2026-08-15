@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banner V7 - WIOA / Institutional Version</title>
+<style>
+  body {
+    background: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+  }
+  .wrapper { display: flex; flex-direction: column; align-items: center; }
+  .label { text-align: center; font-size: 14px; color: #555; margin-bottom: 10px; font-weight: bold; letter-spacing: 1px; }
+
+  .banner {
+    width: 330px; height: 800px; border-radius: 8px 8px 0 0; overflow: hidden;
+    position: relative; box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    background: #0E1C2F; display: flex; flex-direction: column; align-items: center; color: #FFFFFF;
+  }
+
+  /* === ZONE 1: LOGO === */
+  .logo-zone {
+    width: 100%;
+    padding: 20px 30px 12px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lmt-text { text-align: center; }
+  .lmt-line1 {
+    font-size: 26px; font-weight: 900; color: #FFFFFF;
+    letter-spacing: 4px; line-height: 1.1;
+  }
+  .lmt-line2 {
+    font-size: 26px; font-weight: 900; color: #FFFFFF;
+    letter-spacing: 4px; line-height: 1.1;
+  }
+  .lmt-rule {
+    width: 220px; height: 2px; background: #C8942E; margin: 6px auto 0;
+  }
+
+  /* === ZONE 2: STAMP + HEADLINE === */
+  .headline-zone {
+    margin: 6px 20px 0;
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+  }
+  .headline-stamp {
+    width: 90px; height: 90px; border-radius: 50%; overflow: hidden;
+    background: #FFFFFF; box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+  .headline-stamp img { width: 100%; height: 100%; object-fit: cover; }
+  .headline-zone .main {
+    margin-top: 10px; font-size: 24px; font-weight: 900;
+    line-height: 1.1; text-transform: uppercase; color: #FFFFFF;
+  }
+  .headline-zone .main span { color: #C8942E; }
+  .headline-zone .sub {
+    margin-top: 6px; font-size: 11px; color: #F5F5F0;
+    font-style: italic; opacity: 0.85;
+  }
+
+  /* === ZONE 3: BRIAN SPEAKING PHOTO === */
+  .brian-zone {
+    margin-top: 12px; width: calc(100% - 40px);
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .brian-photo {
+    width: 100%; height: 140px; border-radius: 8px;
+    border: 2px solid rgba(200,148,46,0.4); overflow: hidden;
+    background: #1a2a40; box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  }
+  .brian-photo img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center 20%;
+  }
+  .brian-credit {
+    margin-top: 6px; font-size: 12px; font-weight: 700; letter-spacing: 1px;
+  }
+  .brian-credit-title {
+    font-size: 8px; color: #C8942E; letter-spacing: 2px;
+    text-transform: uppercase; margin-top: 1px;
+  }
+
+  /* === ZONE 4: WIOA VALUE PROP === */
+  .value-zone {
+    margin: 12px 20px 0;
+    width: calc(100% - 40px);
+    text-align: center;
+  }
+  .value-headline {
+    font-size: 13px; font-weight: 700; color: #C8942E;
+    text-transform: uppercase; letter-spacing: 1.5px;
+    margin-bottom: 8px;
+  }
+  .value-pills {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 5px;
+  }
+  .value-pill {
+    padding: 4px 10px;
+    background: rgba(200,148,46,0.1);
+    border: 1px solid rgba(200,148,46,0.3);
+    border-radius: 20px;
+    font-size: 8px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.8px;
+    color: #F5F5F0;
+  }
+
+  /* === ZONE 5: CREDIBILITY === */
+  .cred-zone {
+    margin: 12px 20px 0;
+    width: calc(100% - 40px);
+    text-align: center;
+  }
+  .cred-line {
+    font-size: 10px; color: #F5F5F0; opacity: 0.8;
+    letter-spacing: 0.5px; line-height: 1.6;
+  }
+  .cred-line strong { color: #C8942E; opacity: 1; }
+  .cred-divider {
+    width: 40px; height: 1px; background: rgba(200,148,46,0.3);
+    margin: 8px auto;
+  }
+
+  /* === ZONE 6: ASPIRATION === */
+  .aspiration-zone { margin: 10px 24px 0; text-align: center; }
+  .aspiration-text {
+    font-size: 13px; font-weight: 600; color: #F5F5F0;
+    line-height: 1.4; letter-spacing: 0.5px;
+  }
+  .aspiration-text span {
+    font-size: 20px; font-weight: 900; color: #C8942E;
+  }
+
+  /* === ZONE 7: QR CODE === */
+  .qr-zone {
+    margin-top: 12px; display: flex; flex-direction: column; align-items: center;
+  }
+  .qr-box {
+    width: 78px; height: 78px; background: #FFFFFF; border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .qr-grid {
+    width: 58px; height: 58px; display: grid;
+    grid-template-columns: repeat(7,1fr); grid-template-rows: repeat(7,1fr); gap: 1px;
+  }
+  .qr-grid div { background: #0E1C2F; border-radius: 1px; }
+  .qr-grid div:nth-child(even) { background: #FFFFFF; }
+  .qr-cta {
+    margin-top: 4px; font-size: 9px; font-weight: 700;
+    color: #C8942E; letter-spacing: 1px; text-transform: uppercase;
+  }
+
+  /* === ZONE 8: BOTTOM === */
+  .bottom-zone {
+    margin-top: auto; width: 100%; position: relative; height: 80px;
+  }
+  .gold-wave {
+    position: absolute; bottom: 0; left: 0; width: 100%; height: 80px;
+  }
+  .bottom-url {
+    position: absolute; bottom: 20px; left: 0; width: 100%;
+    text-align: center; font-size: 12px; font-weight: 900;
+    letter-spacing: 1.5px; color: #0E1C2F; z-index: 2;
+  }
+
+  /* Stand */
+  .stand { width: 350px; height: 16px; background: linear-gradient(to bottom,#888,#aaa); border-radius: 0 0 6px 6px; margin: 0 auto; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+  .stand-pole { width: 20px; height: 30px; background: linear-gradient(to right,#999,#bbb,#999); margin: 0 auto; }
+  .stand-foot { width: 180px; height: 10px; background: linear-gradient(to bottom,#888,#aaa); border-radius: 0 0 50% 50%; margin: 0 auto; }
+
+  /* Annotations */
+  .annotations { margin-top: 30px; max-width: 420px; background: #fff; border-radius: 8px; padding: 24px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+  .annotations h3 { margin: 0 0 12px; font-size: 14px; color: #0E1C2F; }
+  .annotations ul { margin: 0; padding: 0 0 0 18px; font-size: 12px; line-height: 1.8; color: #333; }
+  .annotations li strong { color: #C8942E; }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="label">V7 — WIOA / INSTITUTIONAL VERSION</div>
+  <div class="banner">
+
+    <!-- ZONE 1: Learn More Technologies -->
+    <div class="logo-zone">
+      <div class="lmt-text">
+        <div class="lmt-line1">LEARN MORE</div>
+        <div class="lmt-line2">TECHNOLOGIES</div>
+        <div class="lmt-rule"></div>
+      </div>
+    </div>
+
+    <!-- ZONE 2: Stamp + headline -->
+    <div class="headline-zone">
+      <div class="headline-stamp">
+        <img src="file:///C:/Users/Jordyn/Desktop/LMT-CONTENT/50techbridge-logo-options/Agentic logo for Print.png" alt="Pioneers Podcast Stamp" onerror="this.style.display='none'; this.parentNode.style.background='#0E1C2F'; this.parentNode.innerHTML+='<div style=&quot;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;width:100%&quot;><div style=&quot;font-size:7px;color:#C8942E;font-weight:700;letter-spacing:1px&quot;>PIONEERS PODCAST</div><div style=&quot;font-size:20px;margin:2px 0&quot;>&#127908;</div><div style=&quot;font-size:8px;color:#fff;font-weight:900&quot;>#AGENTIC50</div></div>'">
+      </div>
+      <div class="main">Closing the<br><span>Digital Divide</span></div>
+      <div class="sub">Workforce Digital Literacy Programs</div>
+    </div>
+
+    <!-- ZONE 3: Brian Speaking -->
+    <div class="brian-zone">
+      <div class="brian-photo">
+        <img src="file:///C:/Users/Jordyn/Desktop/LMT-CONTENT/04-ASSETS/01-IMAGES/NanoBanna/brianSpeaking20260615 V2.png" alt="Brian McKinney Speaking" onerror="this.style.display='none'; this.parentNode.style.background='#1a2a40'; this.parentNode.innerHTML+='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:#3a4a5a;font-size:12px;letter-spacing:1px&quot;>[ BRIAN SPEAKING PHOTO ]</div>'">
+      </div>
+      <div class="brian-credit">Brian McKinney</div>
+      <div class="brian-credit-title">Founder &amp; CEO</div>
+    </div>
+
+    <!-- ZONE 4: WIOA-aligned services -->
+    <div class="value-zone">
+      <div class="value-headline">Customized Training For</div>
+      <div class="value-pills">
+        <div class="value-pill">Digital Equity</div>
+        <div class="value-pill">Workforce Readiness</div>
+        <div class="value-pill">AI Literacy</div>
+        <div class="value-pill">Community Development</div>
+        <div class="value-pill">Independent Living</div>
+      </div>
+    </div>
+
+    <!-- ZONE 5: Credibility -->
+    <div class="cred-zone">
+      <div class="cred-divider"></div>
+      <div class="cred-line"><strong>City of Austin</strong> Nexus Grant Recipient</div>
+      <div class="cred-line"><strong>Austin Public Library</strong> Training Partner</div>
+      <div class="cred-divider"></div>
+    </div>
+
+    <!-- ZONE 6: Aspiration -->
+    <div class="aspiration-zone">
+      <div class="aspiration-text">Our Mission to Empower<br><span>50,000</span> Adults 50+</div>
+    </div>
+
+    <!-- ZONE 7: QR Code -->
+    <div class="qr-zone">
+      <div class="qr-box">
+        <div class="qr-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      </div>
+      <div class="qr-cta">Schedule a Partnership Meeting</div>
+    </div>
+
+    <!-- ZONE 8: Bottom -->
+    <div class="bottom-zone">
+      <svg class="gold-wave" viewBox="0 0 330 80" preserveAspectRatio="none">
+        <path d="M0,35 Q80,5 165,28 T330,12 L330,80 L0,80 Z" fill="#C8942E"/>
+      </svg>
+      <div class="bottom-url">50plustechbridge.com</div>
+    </div>
+  </div>
+  <div class="stand"></div>
+  <div class="stand-pole"></div>
+  <div class="stand-foot"></div>
+
+  <div class="annotations">
+    <h3>V7 — What a WIOA Exec Needs to See</h3>
+    <ul>
+      <li><strong>Brian McKinney, Founder & CEO</strong> — back under the photo. They need to know who signs the contract</li>
+      <li><strong>"Workforce Digital Literacy Programs"</strong> — replaces "AI Training . Community Development . Speaking" — this is procurement language</li>
+      <li><strong>Service pills</strong> — Digital Equity, Workforce Readiness, AI Literacy, Community Development, Independent Living — all WIOA trigger words</li>
+      <li><strong>Credibility lines</strong> — City of Austin grant + Austin Public Library partnership. Someone already vetted you</li>
+      <li><strong>"Schedule a Partnership Meeting"</strong> — replaces "Book a Free Consultation" — institutional CTA, not consumer CTA</li>
+      <li><strong>Aspiration stays</strong> — 50,000 shows scale ambition. WIOA wants to fund things that scale</li>
+    </ul>
+
+    <h3 style="margin-top:16px;">V6 vs V7 — When to Use Each:</h3>
+    <ul>
+      <li><strong>V6 (Community)</strong> — library events, speaking gigs, community centers, general networking</li>
+      <li><strong>V7 (Institutional)</strong> — WIOA conferences, grant meetings, workforce board presentations, partner pitches</li>
+    </ul>
+
+    <h3 style="margin-top:16px;">Print specs:</h3>
+    <ul>
+      <li>Standard retractable: <strong>33.5" x 79"</strong></li>
+      <li>Resolution: <strong>150-180 PPI minimum</strong></li>
+      <li>File format: PDF or high-res PNG</li>
+      <li>Bleed: 0.25" on all sides</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,421 @@
+PODCAST SCRIPT — "You Already Have a Business"
+Episode: Your AI Business Team — Build, Organize, and Operate After 50
+Show: 50+TechBridge with Brian McKinney
+Format: Solo host | Target length: 20–25 minutes
+Source: Book Chapter 10b
+---
+
+[INTRO MUSIC — 10 seconds, fade under voice]
+
+---
+
+[COLD OPEN — no music, just voice]
+
+"She said five words.
+
+Five words that I've been thinking about
+every single day since she said them.
+
+A woman — 61 years old, hands folded on the table,
+sitting quietly at the back of my free tech talk
+at a senior center in East Austin —
+waited until everyone else had left,
+found me by the coffee,
+and said:
+
+'Is there a way to get paid for this?'
+
+Stay right there. Because her answer
+changed her life — and it might change yours.
+
+I'm Brian McKinney.
+You're listening to 50+TechBridge.
+Let's get into it."
+
+---
+
+[INTRO MUSIC UP — full for 5 seconds, fade down]
+
+---
+
+[EPISODE INTRO | ~2 minutes]
+
+"Welcome back to 50+TechBridge. If you're new here —
+I'm Brian McKinney, founder of Learn More Technologies,
+former AARP Community Development Manager,
+and the person who decided that adults 50 and older
+deserve better technology education than what they've been offered.
+
+We train people. We go to senior centers and churches
+and libraries and community organizations
+and we sit down with people during lunch
+and we have real conversations about technology.
+
+No jargon. No judgment. Just: here's what this does,
+here's why it helps, here's how you do it.
+
+We've trained Adults 50+ across 13 locations so far.
+3 times the industry course completion rate.
+Participants say they feel more confident with technology.
+13 locations have invited us in.
+
+Today's episode is different.
+
+Today I'm not just talking about using technology
+to stay connected and independent —
+though that's always part of it.
+
+Today I'm talking about using technology
+to start something.
+
+To build something.
+To generate income.
+After 50.
+
+Because Margaret asked the right question —
+and I want to make sure you hear the answer."
+
+---
+
+[SEGMENT 1 — MARGARET'S STORY | ~4 minutes]
+
+"Let me tell you about Margaret.
+
+Margaret is 61. She grew up in Austin.
+She spent the last six years as the primary caregiver
+for her mother, who had complex health needs —
+multiple doctors, complicated medications,
+insurance paperwork that would make your head spin,
+family members who needed everything translated
+from medical language into plain English,
+and a system that was not designed
+to help anyone navigate it alone.
+
+Margaret did that. For six years.
+
+Her mother passed in 2024.
+
+And a few weeks later, Margaret came to one of our
+Lunch and Learn sessions at a senior center.
+She sat in the back. She was quiet.
+I remember noticing her because she was
+paying attention differently than most people do —
+not just listening, but processing.
+Like she was filing everything away.
+
+After the session she found me.
+
+And she said: 'I've been doing this my whole life.
+Taking care of people. Managing complicated situations.
+Solving problems nobody else wanted to touch.
+I'm good at it. I know I'm good at it.
+Is there a way to do that and actually get paid?'
+
+And I said: yes.
+
+The answer is yes.
+
+The answer has always been yes.
+
+But here's what's different today:
+the tools that make it possible
+are free, they're available on any smartphone,
+and they require no technical training to start.
+
+AI is the infrastructure that Margaret was missing.
+AI is the infrastructure that a lot of people over 50 are missing.
+
+Let me tell you what I mean."
+
+---
+
+[SEGMENT 2 — THE REFRAME | ~3 minutes]
+
+"Here's the thing I want you to really hear —
+especially if you're someone who thinks of yourself
+as 'not a tech person.'
+
+You don't need to understand technology to use AI for your business.
+
+You need to know what question to ask.
+
+That's it. That's the whole skill.
+
+And here's what I know about every single person
+who has come to one of our sessions:
+you have spent your entire adult life
+learning to ask the right questions.
+
+In the operating room, or on the construction site,
+or in the classroom, or in the boardroom,
+or at the bedside of someone you love —
+you learned how to identify what's actually happening,
+figure out what information you need,
+and ask for exactly that.
+
+That is the skill AI requires.
+
+Not coding. Not algorithms. Not computer science.
+
+What question do you need answered?
+
+Ask it.
+Adjust the answer.
+Use it.
+
+I tell our Pioneers: the tools are available to you.
+Right now. Regardless of your age, your background,
+your comfort with technology.
+
+The question is whether you're willing to try.
+
+So let me give you the exact steps I gave Margaret."
+
+---
+
+[SEGMENT 3 — THE 7 STEPS | ~10 minutes]
+
+"Seven steps. I'm going to go through all of them.
+If you're driving, don't worry — this episode has
+a full transcript at learnmoretechnologies.com.
+
+---
+
+Step one: Name what you know.
+
+Before you open any app or tool —
+grab a piece of paper and write down
+five things you've done in your life
+that other people found hard or confusing.
+
+Not things you were paid for.
+Things you just did — because you knew how,
+because someone needed help,
+because you were the person in the room
+who understood it.
+
+For Margaret: managing complex medical schedules.
+Coordinating between multiple specialists.
+Translating medical language for families in crisis.
+Navigating insurance systems.
+
+For Robert — one of our Adults 50+ across 13 locations:
+running a construction crew, reading building plans,
+negotiating with suppliers.
+
+For Gloria — another Pioneer, 68 years old:
+thirty years as a home health aide.
+Knowing what families in crisis need before they ask.
+Knowing how to calm a frightened patient.
+Knowing what questions to ask the doctor
+when the family doesn't know what to ask.
+
+These are not hobbies.
+These are businesses.
+
+The only thing missing was the infrastructure.
+
+---
+
+Step two: Build your business plan in 30 minutes.
+
+Open ChatGPT — free at chat.openai.com.
+Or Claude — free at claude.ai.
+Both work on your phone.
+
+Type this:
+'I want to start a small business helping [describe what you do].
+My customers are [describe who needs it].
+I want to work from home and charge enough to make it worth my time.
+Help me build a simple one-page business plan.'
+
+In five minutes you have a business plan.
+
+Service name. Target customer. Pricing.
+First five marketing ideas. A professional summary.
+
+Print it. Put it on the wall.
+You are now a business owner.
+
+---
+
+Step three: Name your business and build your brand.
+
+Same tool. Next prompt:
+'Help me come up with five names for my business.
+Then write a one-sentence description of what I offer.
+Then write a short professional bio I can use on a website.'
+
+You give it the raw material — your age, your experience,
+your reason for starting.
+It shapes it into language that works.
+
+Twenty minutes. Done.
+
+---
+
+Step four: Get online for free.
+
+Website: go to Wix.com or Squarespace.com.
+Both have free plans. Templates you fill in like a form.
+Ask the AI to write every word that goes on the page.
+
+Google: go to business.google.com.
+Create a free business profile.
+This puts you on Google Maps and Google Search.
+
+Website and Google presence. Cost: zero.
+Time: one afternoon.
+
+---
+
+Step five: Find your first client.
+
+Not with an ad campaign.
+Not with a social media strategy.
+
+With a list of ten people who already know you.
+
+Ask the AI to help you write a personal message —
+not salesy, just honest —
+explaining what you're now offering
+and who you'd love an introduction to.
+
+Send it to ten people.
+
+One of those ten knows someone who needs exactly what you do.
+
+That's your first client.
+I've seen this work every single time.
+
+---
+
+Step six: The free business stack.
+
+Everything you need to run a legitimate solo business —
+completely free:
+
+Google Calendar: your schedule.
+Gmail: your professional email.
+Google Docs: proposals, contracts, client notes.
+Wave.com: invoicing and accounting. Completely free.
+Canva: business cards, flyers, social graphics. Free.
+ChatGPT or Claude: your writer and strategist. Free.
+
+Monthly cost: zero dollars.
+Complete business infrastructure.
+
+---
+
+Step seven: The daily habit.
+
+Every morning, before you start work,
+open your AI tool and ask one question.
+
+Could be:
+'I have a client meeting today. What should I ask to understand their needs?'
+
+Or: 'Help me write a follow-up email that's professional but not pushy.'
+
+Or: 'How do I price a project like this? Here's what's involved.'
+
+The AI gives you a starting point.
+Something to react to rather than create from scratch.
+
+One question. Every morning.
+That habit runs the business."
+
+---
+
+[SEGMENT 4 — MARGARET'S OUTCOME | ~2 minutes]
+
+"So what happened with Margaret?
+
+Three months after that coffee conversation —
+she launched Care Navigator Consulting.
+
+She helps families of adults with complex medical needs
+do exactly what she spent six years doing for her own mother.
+
+She charges $75 an hour.
+She has four clients.
+She works twenty hours a week from home.
+
+She built the business plan with ChatGPT.
+Wrote her website copy with Claude.
+Sends invoices through Wave.
+Writes every client email with AI —
+then adjusts it until it sounds like her.
+
+She is not a tech person.
+
+She is a person who spent fifty years
+becoming expert at something the world desperately needs —
+and who finally found the tools to turn it into income.
+
+She told me last month:
+'I did it after 50. I kept hearing you say that.
+I decided to believe you.'
+
+[pause]
+
+That's why I do this."
+
+---
+
+[CLOSE | ~2 minutes]
+
+"Here's what I want to leave you with today.
+
+The business you're looking for is not somewhere else.
+
+It's in the decades behind you.
+In the problems you've already solved.
+In the skills you built without calling them skills.
+In the knowledge you accumulated
+without knowing you were accumulating it.
+
+AI builds the documents.
+Free tools build the systems.
+Your expertise builds the relationships.
+Your relationships build the business.
+
+You don't need to understand how AI works.
+
+You need to understand what you know —
+and trust that the world will pay for it.
+
+Open one conversation.
+Type one question.
+Take one step.
+
+If you want help figuring out what business
+your expertise could build —
+come to one of our free Lunch and Learn sessions.
+We're in Austin, at senior centers, churches,
+and community organizations across the city.
+
+Or start with our free course at learnmoretechnologies.com.
+
+I'm Brian McKinney. This has been 50+TechBridge.
+
+You're not done yet."
+
+---
+
+[OUTRO MUSIC — fade in and up]
+
+---
+
+PRODUCTION NOTES:
+- Record in one sitting if possible — conversational energy is key
+- Margaret's story is the emotional anchor — don't rush it
+- The 7 steps can be slightly faster pace — information dense
+- Close slowly and warmly — this is the call to action moment
+- Edit for flow; it's okay to cut repetition in post
+- Episode transcript goes on learnmoretechnologies.com/podcast/
+- Submit to: Apple Podcasts, Spotify, Google Podcasts, Amazon Music
+- Episode title options:
+  1. "You Already Have a Business. You Just Don't Know It Yet."
+  2. "7 Steps to Start Your AI-Powered Business After 50 — For Free"
+  3. "Margaret's Question Changed Everything"

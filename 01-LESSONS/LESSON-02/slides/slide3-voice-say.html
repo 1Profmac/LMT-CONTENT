@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.15); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.6; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    height: 1920px;
+    background: #0E1C2F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  .phone {
+    width: 500px;
+    height: 1000px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    border: 6px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 80px 40px 40px;
+    position: relative;
+  }
+  .phone::before {
+    content: '';
+    width: 150px;
+    height: 25px;
+    background: #333;
+    border-radius: 15px;
+    position: absolute;
+    top: 20px;
+  }
+  .instruction {
+    font-size: 38px;
+    font-weight: 700;
+    color: #0E1C2F;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .voice-circle {
+    width: 140px;
+    height: 140px;
+    background: linear-gradient(135deg, #C8942E, #E8B84B);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  .mic-icon {
+    font-size: 70px;
+    color: #FFF;
+  }
+  .listening {
+    font-size: 22px;
+    color: #C8942E;
+    margin-bottom: 30px;
+  }
+  .speech-bubble {
+    background: #F5F5F5;
+    border-radius: 16px;
+    padding: 25px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .speech-bubble::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #F5F5F5;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+  }
+  .speech-label {
+    font-size: 18px;
+    color: #999;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .speech-text {
+    font-size: 26px;
+    font-weight: 600;
+    color: #0E1C2F;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .result-box {
+    background: #109F35;
+    border-radius: 12px;
+    padding: 18px 25px;
+    width: 100%;
+    text-align: center;
+  }
+  .result-text {
+    font-size: 22px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+  .step-box {
+    margin-top: 40px;
+    background: #0E1C2F;
+    border: 3px solid #C8942E;
+    border-radius: 12px;
+    padding: 18px 50px;
+  }
+  .step-text {
+    font-size: 36px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+</style>
+</head>
+<body>
+  <div class="phone">
+    <div class="instruction">Now Say This<br>to Your Phone</div>
+    <div class="voice-circle">
+      <span class="mic-icon">&#127908;</span>
+    </div>
+    <div class="listening">Listening...</div>
+    <div class="speech-bubble">
+      <div class="speech-label">Say:</div>
+      <div class="speech-text">"Remind me to take<br>my pill every morning<br>at 8 AM"</div>
+    </div>
+    <div class="result-box">
+      <div class="result-text">&#10003; Reminder set for 8:00 AM daily</div>
+    </div>
+  </div>
+  <div class="step-box">
+    <div class="step-text">Step 1 of 3</div>
+  </div>
+</body>
+</html>

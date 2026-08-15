@@ -1,0 +1,79 @@
+LESSON 1 — GALAXY ANIMATED VERSION
+10 scenes. Upload phone mockups as reference images.
+Set character type to match your brand.
+
+===================================
+SCENE 1 — BARB WELCOME (3 sec)
+===================================
+A warm friendly woman in her late 50s, casual professional clothing, waving at camera from a cozy home office. She has a welcoming smile. Soft warm lighting. Slight head nod animation. Navy blue and gold color palette. Clean modern minimal style.
+
+Voice: "Hey there, Digital Pioneer. I'm Barb, and I'm so glad you're here."
+
+===================================
+SCENE 2 — BARB TALKS TO YOU (4 sec)
+===================================
+Same woman sitting in home office, gesturing with one hand while talking, relaxed and encouraging. A smartphone floats beside her with a subtle glow. Navy blue background with gold accents. Clean modern minimal style.
+
+Voice: "We're going to do one thing. Just one. Make your phone easier to read. The whole thing takes about two minutes. You won't break anything, I promise."
+
+===================================
+SCENE 3 — PHONE HOME SCREEN (3 sec)
+===================================
+A smartphone floating in center of frame showing a simplified home screen with colorful app icons in a grid. A glowing gold circle pulses around the gear Settings icon. A friendly hand with index finger reaches toward the icon. Dark navy background. Clean modern minimal style.
+
+Voice: "First, find the Settings icon on your phone. It looks like a little gear. Go ahead and tap it."
+
+===================================
+SCENE 4 — SETTINGS MENU (3 sec)
+===================================
+A smartphone showing a simplified settings menu list. Items listed: Wi-Fi, Bluetooth, Display, Sound, Wallpaper. The Display row slides into a gold highlighted state. A small gold arrow points to Display. Dark navy background. Clean modern minimal style.
+
+Voice: "Now look for Display and tap it."
+
+===================================
+SCENE 5 — TEXT SIZE SLIDER (4 sec)
+===================================
+A smartphone showing a Display settings screen. A horizontal slider bar labeled Text Size. The slider handle glows gold and animates sliding from left to right. Sample text below the slider grows larger as the slider moves. Dark navy background. Clean modern minimal style.
+
+Voice: "See where it says Text Size? Now drag that slider to the right. Watch your text get bigger. How about that?"
+
+===================================
+SCENE 6 — YOUR TURN PAUSE (4 sec)
+===================================
+A smartphone lying flat on a wooden table next to a cup of coffee and reading glasses. Warm soft lighting. Large gold text floats above saying Your Turn. A gentle pulsing glow around the phone. Cozy encouraging feeling. Dark navy background fading to warm tones. Clean modern minimal style.
+
+Voice: "Now you try it on your phone. Go ahead. I'll wait right here."
+
+===================================
+SCENE 7 — ACCESSIBILITY MENU (3 sec)
+===================================
+A smartphone showing a settings menu. The row labeled Accessibility slides into a gold highlighted state. A small gold arrow bounces pointing to it. Dark navy background. Clean modern minimal style.
+
+Voice: "Great. Now go back to Settings and look for Accessibility. Tap that."
+
+===================================
+SCENE 8 — BOLD TEXT TOGGLE (4 sec)
+===================================
+A smartphone showing Accessibility settings. A toggle switch labeled Bold Text animates from gray off position to green on position. Gold sparkle effect when it switches on. The text on screen becomes visibly bolder. Dark navy background. Clean modern minimal style.
+
+Voice: "Find where it says Bold Text. See that little switch? Flip it on."
+
+===================================
+SCENE 9 — YOUR TURN PAUSE 2 (4 sec)
+===================================
+Same cozy table scene with smartphone, coffee, and reading glasses. Gold text floats above saying Take Your Time. A small clock icon with a friendly smile. Warm patient feeling. Dark navy background fading to warm tones. Clean modern minimal style.
+
+Voice: "Go ahead, do it on your phone. Turn on Bold Text. Take your time, I'm not going anywhere."
+
+===================================
+SCENE 10 — CELEBRATION (4 sec)
+===================================
+A smartphone showing a home screen with visibly bigger and bolder text on all app labels. A large gold checkmark animates popping into the center. Confetti particles float down in gold and navy. Barb appears in a small circle in the corner giving a thumbs up. Text overlay says You Did It Digital Pioneer. Dark navy background. Clean modern minimal style.
+
+Voice: "Look at that. Bigger text. Bold text. You just changed two settings all by yourself. Your phone works for you now. That's what makes you a Digital Pioneer. Next time, we're setting up three tools that save you time every week. I'll see you there."
+
+===================================
+TOTAL: ~36 seconds of animation
+Add voiceover in separate tool (HeyGen or Canva)
+Final video with voice: ~2 min 30 sec
+===================================

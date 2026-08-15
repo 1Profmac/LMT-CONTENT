@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your AI Business Team — 50+TechBridge</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    background: #111;
+    color: #1a1a1a;
+  }
+
+  .slide {
+    width: 1280px;
+    height: 720px;
+    margin: 0 auto 4px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .brand-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 6px; background: #C8942E; }
+  .logo { position: absolute; top: 22px; left: 36px; font-size: 13px; font-weight: 800; color: #C8942E; letter-spacing: 0.5px; }
+  .slide-num { position: absolute; top: 18px; right: 28px; font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.25); letter-spacing: 1px; }
+  .tag { font-size: 12px; font-weight: 700; color: #C8942E; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 18px; }
+
+  /* SLIDE 1 — TITLE */
+  #s1 { background: #0E1C2F; justify-content: center; align-items: center; text-align: center; padding: 60px; }
+  #s1 h1 { font-size: 68px; font-weight: 900; color: white; line-height: 1.08; margin-bottom: 22px; }
+  #s1 h1 span { color: #C8942E; }
+  #s1 p { font-size: 20px; color: #A8B8CC; max-width: 780px; line-height: 1.5; }
+  #s1 .byline { position: absolute; bottom: 28px; font-size: 14px; color: rgba(255,255,255,0.45); }
+  #s1 .byline strong { color: white; }
+
+  /* SLIDE 2 — MARGARET */
+  #s2 { background: #f8f6f0; padding: 60px 80px; justify-content: center; }
+  #s2 .quote-block {
+    background: #0E1C2F; border-radius: 16px; padding: 40px 48px;
+    border-left: 8px solid #C8942E; margin-bottom: 28px;
+  }
+  #s2 .quote-block p { font-size: 28px; font-weight: 700; color: white; line-height: 1.4; font-style: italic; }
+  #s2 .who { font-size: 17px; color: #555; line-height: 1.6; }
+  #s2 .who strong { color: #0E1C2F; }
+
+  /* SLIDE 3 — THE REFRAME */
+  #s3 { background: #0E1C2F; padding: 60px 80px; justify-content: center; }
+  #s3 h2 { font-size: 52px; font-weight: 900; color: white; line-height: 1.1; margin-bottom: 32px; }
+  #s3 h2 span { color: #C8942E; }
+  #s3 .two-truths { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  #s3 .truth { background: rgba(255,255,255,0.07); border-radius: 12px; padding: 28px; border-top: 4px solid #C8942E; }
+  #s3 .truth .label { font-size: 12px; font-weight: 700; color: #C8942E; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+  #s3 .truth p { font-size: 18px; color: white; line-height: 1.5; }
+  #s3 .truth .cross { text-decoration: line-through; color: #666; }
+
+  /* SLIDE 4 — STEP 1 */
+  #s4 { background: white; padding: 60px 80px; justify-content: center; }
+  #s4 .step-num { font-size: 120px; font-weight: 900; color: #f0ece0; line-height: 1; position: absolute; right: 60px; top: 50%; transform: translateY(-50%); }
+  #s4 h2 { font-size: 48px; font-weight: 900; color: #0E1C2F; margin-bottom: 24px; }
+  #s4 h2 span { color: #C8942E; }
+  #s4 .instruction { font-size: 20px; color: #333; line-height: 1.6; max-width: 700px; margin-bottom: 28px; }
+  #s4 .examples { display: flex; gap: 16px; }
+  #s4 .ex { background: #f8f6f0; border: 2px solid #0E1C2F; border-radius: 10px; padding: 16px 20px; flex: 1; }
+  #s4 .ex .name { font-size: 14px; font-weight: 800; color: #C8942E; margin-bottom: 6px; }
+  #s4 .ex p { font-size: 13px; color: #555; line-height: 1.4; }
+
+  /* SLIDE 5 — STEPS 2 & 3 */
+  #s5 { background: #0E1C2F; padding: 55px 80px; justify-content: center; }
+  #s5 h2 { font-size: 42px; font-weight: 900; color: white; margin-bottom: 32px; }
+  #s5 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  #s5 .step-card { background: rgba(255,255,255,0.07); border-radius: 12px; padding: 28px; }
+  #s5 .step-card .num { font-size: 13px; font-weight: 700; color: #C8942E; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+  #s5 .step-card h3 { font-size: 22px; font-weight: 800; color: white; margin-bottom: 14px; }
+  #s5 .prompt-box { background: #0a1520; border-left: 3px solid #C8942E; border-radius: 6px; padding: 14px 16px; font-size: 13px; color: #A8B8CC; font-style: italic; line-height: 1.5; margin-bottom: 12px; }
+  #s5 .result { font-size: 14px; color: #A8B8CC; line-height: 1.5; }
+  #s5 .result strong { color: white; }
+
+  /* SLIDE 6 — STEP 4 GET ONLINE */
+  #s6 { background: #f8f6f0; padding: 60px 80px; justify-content: center; }
+  #s6 h2 { font-size: 44px; font-weight: 900; color: #0E1C2F; margin-bottom: 10px; }
+  #s6 .sub { font-size: 18px; color: #C8942E; font-weight: 700; margin-bottom: 32px; }
+  #s6 .tools { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  #s6 .tool { background: white; border: 2px solid #0E1C2F; border-radius: 12px; padding: 24px; display: flex; gap: 18px; align-items: flex-start; }
+  #s6 .tool .icon { font-size: 40px; flex-shrink: 0; }
+  #s6 .tool h4 { font-size: 18px; font-weight: 800; color: #0E1C2F; margin-bottom: 6px; }
+  #s6 .tool p { font-size: 14px; color: #555; line-height: 1.4; }
+  #s6 .cost { text-align: center; margin-top: 24px; font-size: 20px; font-weight: 800; color: #0E1C2F; }
+  #s6 .cost span { color: #C8942E; font-size: 32px; }
+
+  /* SLIDE 7 — FREE STACK */
+  #s7 { background: #0E1C2F; padding: 55px 80px; justify-content: center; }
+  #s7 h2 { font-size: 42px; font-weight: 900; color: white; margin-bottom: 8px; }
+  #s7 .sub { font-size: 18px; color: #C8942E; font-weight: 700; margin-bottom: 30px; }
+  #s7 .stack { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+  #s7 .tool { background: rgba(255,255,255,0.07); border-radius: 10px; padding: 20px; text-align: center; border-top: 3px solid #C8942E; }
+  #s7 .tool .icon { font-size: 34px; margin-bottom: 10px; display: block; }
+  #s7 .tool h4 { font-size: 15px; font-weight: 800; color: white; margin-bottom: 6px; }
+  #s7 .tool p { font-size: 12px; color: #A8B8CC; line-height: 1.4; }
+  #s7 .total { background: #C8942E; border-radius: 10px; padding: 16px 30px; display: flex; justify-content: space-between; align-items: center; }
+  #s7 .total .label { font-size: 18px; font-weight: 800; color: white; }
+  #s7 .total .amount { font-size: 36px; font-weight: 900; color: #0E1C2F; }
+
+  /* SLIDE 8 — FIRST CLIENT */
+  #s8 { background: white; padding: 60px 80px; flex-direction: row; align-items: center; gap: 60px; }
+  #s8 .left { flex: 1; }
+  #s8 .right { flex: 1; }
+  #s8 h2 { font-size: 44px; font-weight: 900; color: #0E1C2F; margin-bottom: 16px; }
+  #s8 h2 span { color: #C8942E; }
+  #s8 .instruction { font-size: 17px; color: #444; line-height: 1.6; margin-bottom: 24px; }
+  #s8 .path { list-style: none; }
+  #s8 .path li { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 16px; }
+  #s8 .path .num { width: 32px; height: 32px; background: #C8942E; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 900; color: white; flex-shrink: 0; }
+  #s8 .path p { font-size: 16px; color: #333; line-height: 1.5; padding-top: 4px; }
+  #s8 .promise { background: #0E1C2F; border-radius: 12px; padding: 28px; }
+  #s8 .promise p { font-size: 22px; font-weight: 700; color: white; line-height: 1.4; font-style: italic; }
+  #s8 .promise .attr { font-size: 14px; color: #C8942E; font-weight: 600; margin-top: 12px; font-style: normal; }
+
+  /* SLIDE 9 — MARGARET'S OUTCOME */
+  #s9 { background: #C8942E; padding: 60px 80px; justify-content: center; }
+  #s9 h2 { font-size: 44px; font-weight: 900; color: #0E1C2F; margin-bottom: 32px; }
+  #s9 .outcome { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
+  #s9 .stat { background: rgba(255,255,255,0.25); border-radius: 12px; padding: 24px; text-align: center; }
+  #s9 .stat .num { font-size: 48px; font-weight: 900; color: #0E1C2F; line-height: 1; margin-bottom: 6px; }
+  #s9 .stat .desc { font-size: 14px; color: white; line-height: 1.3; }
+  #s9 .quote { background: rgba(14,28,47,0.85); border-radius: 12px; padding: 24px 32px; }
+  #s9 .quote p { font-size: 22px; color: white; font-style: italic; font-weight: 600; line-height: 1.5; }
+  #s9 .quote .attr { font-size: 14px; color: #C8942E; font-weight: 700; margin-top: 10px; font-style: normal; }
+
+  /* SLIDE 10 — CLOSE */
+  #s10 { background: #0E1C2F; justify-content: center; align-items: center; text-align: center; padding: 60px; }
+  #s10 h2 { font-size: 50px; font-weight: 900; color: white; line-height: 1.15; margin-bottom: 28px; max-width: 900px; }
+  #s10 h2 span { color: #C8942E; }
+  #s10 .three-steps { display: flex; gap: 32px; justify-content: center; margin-bottom: 36px; }
+  #s10 .step { text-align: center; }
+  #s10 .step .icon { font-size: 40px; margin-bottom: 10px; display: block; }
+  #s10 .step p { font-size: 18px; font-weight: 700; color: white; }
+  #s10 .cta { font-size: 22px; color: #C8942E; font-weight: 800; }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: TITLE -->
+<div class="slide" id="s1">
+  <div class="slide-num">01 / 10</div>
+  <h1>You Already Have<br>a <span>Business.</span><br>You Just Don't Know It Yet.</h1>
+  <p>How to build, organize, and operate your own business after 50 — using free AI tools, starting today.</p>
+  <p class="byline"><strong>Brian McKinney</strong> &nbsp;·&nbsp; Founder, 50+TechBridge &nbsp;·&nbsp; learnmoretechnologies.com</p>
+  <div class="brand-bar"></div>
+</div>
+
+<!-- SLIDE 2: MARGARET -->
+<div class="slide" id="s2">
+  <div class="slide-num">02 / 10</div>
+  <div class="logo">50+TechBridge</div>
+  <div class="tag">The Question That Started Everything</div>
+  <div class="quote-block">
+    <p>"I've been taking care of people my whole life. Managing complicated situations. Solving problems nobody else wanted to touch. Is there a way to actually get paid for this?"</p>
+  </div>
+  <p class="who"><strong>Margaret, age 61.</strong> Six years as primary caregiver for her mother. Complex medical needs, multiple doctors, insurance paperwork, family translation. She said these words at a free Lunch &amp; Learn session at a senior center in East Austin — and the answer changed her life.</p>
+  <div class="brand-bar"></div>
+</div>
+
+<!-- SLIDE 3: THE REFRAME -->
+<div class="slide" id="s3">
+  <div class="slide-num">03 / 10</div>
+  <div class="logo">50+TechBridge</div>
+  <h2>You Don't Need to Learn Tech.<br>You Need to Know <span>What to Ask.</span></h2>
+  <div class="two-truths">
+    <div class="truth">
+      <div class="label">What AI Requires</div>
+      <p>The ability to ask a clear question.<br><br>You've spent fifty years learning to do exactly that.</p>
+    </div>
+    <div class="truth">
+      <div class="label">What AI Does NOT Require</div>
+      <p class="cross">Coding · Computer science<br>Technical training · A degree<br>Being a "tech person"</p>
+    </div>
+  </div>
+  <div class="brand-bar"></div>
+</div>
+
+<!-- SLIDE 4: STEP 1 -->
+<div class="slide" id="s4">
+  <div class="slide-num">04 / 10</div>
+  <div class="step-num">1</div>
+  <div class="tag">Step One</div>
+  <h2>Name What <span>You Know</span></h2>
+  <p class="instruction">Write down 5 things you've done that other people found hard or confusing. Not jobs — things you just did because you knew how.</p>
+  <div class="examples">
+    <div class="ex">
+      <div class="name">Margaret</div>
+      <p>Managing complex medical care, coordinating specialists, translating for families</p>
+    </div>
+    <div class="ex">
+      <div class="name">Robert</div>
+      <p>Running a construction crew, reading building plans, negotiating with suppliers</p>
+    </div>
+    <div class="ex">
+      <div class="name">Gloria</div>
+      <p>Home health aide, knowing what families in crisis need before they ask</p>
+    </div>
+  </div>
+  <div class="brand-bar"></div>
+</div>
+
+<!-- SLIDE 5: STEPS 2 & 3 -->
+<div class="slide" id="s5">
+  <div class="slide-num">05 / 10</div>
+  <div class="logo">50+TechBridge</div>
+  <h2>Build Your Plan &amp; Brand — in 50 Minutes</h2>
+  <div class="two-col">
+    <div class="step-card">
+      <div class="num">Step 2 — Business Plan (30 min)</div>
+      <h3>Open ChatGPT or Claude. Type:</h3>
+      <div class="prompt-box">"I want to start a small business helping [what you do]. My customers are [who needs it]. Help me build a simple one-page business plan."</div>
+      <p class="result">You get: <strong>service name · pricing · target customer · first 5 marketing ideas</strong></p>
+    </div>
+    <div class="step-card">
+      <div class="num">Step 3 — Brand (20 min)</div>
+      <h3>Same tool. Next prompt:</h3>
+      <div class="prompt-box">"Give me 5 business names, a one-sentence description of what I offer, and a short professional bio."</div>
+      <p class="result">You get: <strong>business name · tagline · bio ready to use anywhere</strong></p>
+    </div>
+  </div>
+  <div class="brand-bar"></div>
+</div>
+
+<!-- SLIDE 6: GET ONLINE -->
+<div class="slide" id="s6">
+  <div class="slide-num">06 / 10</div>
+  <div class="tag">Step 4</div>
+  <h2>Get Online — This Afternoon</h2>
+  <div class="sub">Cost: $0 &nbsp;·&nbsp; Time: One afternoon &nbsp;·&nbsp; No designer needed</div>
+  <div class="tools">
+    <div class="tool">
+      <div class="icon">🌐</div>
+      <div>
+        <h4>Free Website — Wix or Squarespace</h4>
+        <p>Free plans. Templates you fill in like a form. Ask AI to write every word on the page.</p>
+      </div>
+    </div>
+    <div class="tool">
+      <div class="icon">📍</div>
+      <div>
+        <h4>Google Business Profile — business.google.com</h4>
+        <p>Free profile. Puts you on Google Maps and Google Search. Takes 20 minutes to set up.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cost">Website + Google presence = <span>$0</span></div>
+  <div class="brand-bar"></div>
+</div>
+
+<!-- SLIDE 7: FREE STACK -->
+<div class="slide" id="s7">
+  <div class="slide-num">07 / 10</div>
+  <div class="logo">50+TechBridge</div>
+  <h2>Your Complete Business Stack</h2>
+  <div class="sub">Step 6 — Everything you need to run a professional solo business</div>
+  <div class="stack">
+    <div class="tool"><span class="icon">📅</span><h4>Google Calendar</h4><p>Your schedule. Appointments, deadlines, follow-ups.</p></div>
+    <div class="tool"><span class="icon">📧</span><h4>Gmail</h4><p>Professional email. AI writes your templates.</p></div>
+    <div class="tool"><span class="icon">📄</span><h4>Google Docs</h4><p>Proposals, contracts, client notes. All in one place.</p></div>
+    <div class="tool"><span class="icon">💰</span><h4>Wave.com</h4><p>Free invoicing and accounting. Send professional invoices in minutes.</p></div>
+    <div class="tool"><span class="icon">🎨</span><h4>Canva</h4><p>Business cards, flyers, social graphics. Drag and drop. No design skills needed.</p></div>
+    <div class="tool"><span class="icon">🤖</span><h4>ChatGPT / Claude</h4><p>Your writer, strategist, and first-draft machine.</p></div>
+  </div>
+  <div class="total">
+    <div class="label">Monthly cost of this entire stack</div>
+    <div class="amount">$0.00</div>
+  </div>
+  <div class="brand-bar"></div>
+</div>
+
+<!-- SLIDE 8: FIRST CLIENT -->
+<div class="slide" id="s8">
+  <div class="slide-num">08 / 10</div>
+  <div class="left">
+    <div class="tag">Step 5</div>
+    <h2>Your First Client<br>Is One <span>Text Away</span></h2>
+    <p class="instruction">The fastest path to your first paying client is not an ad campaign. It's ten people who already know you.</p>
+    <ul class="path">
+      <li><div class="num">1</div><p>Ask AI to write a short personal message introducing your new business</p></li>
+      <li><div class="num">2</div><p>Send it to 10 people — family, old colleagues, neighbors, church friends</p></li>
+      <li><div class="num">3</div><p>One of those 10 knows someone who needs exactly what you do</p></li>
+    </ul>
+  </div>
+  <div class="right">
+    <div class="promise">
+      <p>"One of those ten people knows someone who needs exactly what you do. That's your first client. I've seen this work every single time."</p>
+      <div class="attr">— Brian McKinney, Founder 50+TechBridge</div>
+    </div>
+  </div>
+  <div class="brand-bar"></div>
+</div>
+
+<!-- SLIDE 9: MARGARET'S OUTCOME -->
+<div class="slide" id="s9">
+  <div class="slide-num">09 / 10</div>
+  <h2>What Margaret Built in 3 Months</h2>
+  <div class="outcome">
+    <div class="stat"><div class="num">$75</div><div class="desc">per hour charge rate</div></div>
+    <div class="stat"><div class="num">4</div><div class="desc">paying clients</div></div>
+    <div class="stat"><div class="num">20</div><div class="desc">hours per week, from home</div></div>
+    <div class="stat"><div class="num">$0</div><div class="desc">spent on tools or setup</div></div>
+  </div>
+  <div class="quote">
+    <p>"I did it after 50. I kept hearing you say that. I decided to believe you."</p>
+    <div class="attr">— Margaret, Founder, Care Navigator Consulting · Austin, Texas</div>
+  </div>
+  <div class="brand-bar"></div>
+</div>
+
+<!-- SLIDE 10: CLOSE -->
+<div class="slide" id="s10">
+  <div class="slide-num">10 / 10</div>
+  <h2>The business you're looking for<br>is in the <span>decades behind you.</span></h2>
+  <div class="three-steps">
+    <div class="step"><span class="icon">💬</span><p>Open one<br>conversation</p></div>
+    <div class="step"><span class="icon">❓</span><p>Type one<br>question</p></div>
+    <div class="step"><span class="icon">👣</span><p>Take one<br>step</p></div>
+  </div>
+  <div class="cta">learnmoretechnologies.com &nbsp;·&nbsp; Free course. No signup fee. Start today.</div>
+  <div class="brand-bar"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+ 0/0 results. Your article content is not in the HTML source code. Confirmed.
+
+  BuddyBoss theme is hiding your article content from Google. Your visitors see it because their browser runs
+  JavaScript. Google's crawler reads the HTML and sees nothing.
+
+  This is a BuddyBoss problem. You need to contact BuddyBoss support and tell them:
+
+  ▎ "My blog post content is not in the HTML source code. When I View Page Source and search for text from my
+  article, it returns 0 results. Google Search Console shows 'Discovered - currently not indexed' on all my posts.
+   Your theme is loading article content via JavaScript and Google can't see it. How do I fix this?"
+
+  That's the root cause. Everything else — Yoast fields, internal links, keywords — none of it matters until
+  Google can actually read your articles.

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Let's Connect — 50+TechBridge | Learn More Technologies</title>
+<meta name="description" content="Digital literacy and workforce readiness programs powered by AI — built for adults 50+. Connect with Learn More Technologies.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0E1C2F;
+    color: #FFFFFF;
+  }
+
+  /* === HEADER === */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    border-bottom: 2px solid rgba(200,148,46,0.2);
+  }
+  .header h1 {
+    font-size: 28px; font-weight: 900; letter-spacing: 2px;
+    color: #FFFFFF;
+  }
+  .header .rule {
+    width: 180px; height: 2px; background: #C8942E;
+    margin: 10px auto;
+  }
+  .header .tagline {
+    font-size: 14px; color: #C8942E; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+  }
+  .header .intro {
+    max-width: 600px; margin: 20px auto 0;
+    font-size: 16px; line-height: 1.6; color: #F5F5F0;
+    opacity: 0.9;
+  }
+  .header .intro strong { color: #C8942E; }
+
+  /* === THREE PATHS === */
+  .paths {
+    max-width: 900px; margin: 0 auto;
+    padding: 40px 20px;
+    display: flex; gap: 20px;
+    flex-wrap: wrap; justify-content: center;
+  }
+  .path-card {
+    flex: 1; min-width: 260px; max-width: 300px;
+    background: rgba(200,148,46,0.06);
+    border: 1px solid rgba(200,148,46,0.2);
+    border-radius: 12px;
+    padding: 30px 24px;
+    text-align: center;
+    transition: border-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    color: #FFFFFF;
+    display: block;
+  }
+  .path-card:hover {
+    border-color: #C8942E;
+    transform: translateY(-4px);
+  }
+  .path-icon {
+    font-size: 40px; margin-bottom: 16px;
+  }
+  .path-card h3 {
+    font-size: 18px; font-weight: 700; color: #C8942E;
+    margin-bottom: 10px;
+  }
+  .path-card p {
+    font-size: 14px; line-height: 1.5; color: #F5F5F0;
+    opacity: 0.85;
+  }
+  .path-card .path-cta {
+    display: inline-block; margin-top: 16px;
+    padding: 10px 24px;
+    background: #C8942E; color: #0E1C2F;
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    border-radius: 6px; text-decoration: none;
+    transition: background 0.3s;
+  }
+  .path-card:hover .path-cta {
+    background: #d9a840;
+  }
+
+  /* === BOOKING SECTION === */
+  .booking {
+    max-width: 700px; margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 2px solid rgba(200,148,46,0.2);
+  }
+  .booking h2 {
+    font-size: 24px; font-weight: 700; color: #FFFFFF;
+    margin-bottom: 8px;
+  }
+  .booking .sub {
+    font-size: 14px; color: #C8942E; margin-bottom: 24px;
+  }
+  .booking .cal-embed {
+    background: rgba(200,148,46,0.06);
+    border: 1px solid rgba(200,148,46,0.2);
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 16px;
+  }
+  .booking .cal-embed p {
+    font-size: 14px; color: #F5F5F0; opacity: 0.7;
+  }
+  .booking .cal-link {
+    display: inline-block;
+    padding: 14px 36px;
+    background: #C8942E; color: #0E1C2F;
+    font-size: 16px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    border-radius: 8px; text-decoration: none;
+    transition: background 0.3s;
+  }
+  .booking .cal-link:hover { background: #d9a840; }
+
+  /* === DOWNLOAD === */
+  .download {
+    max-width: 700px; margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  .download-box {
+    background: rgba(200,148,46,0.08);
+    border: 1px solid rgba(200,148,46,0.25);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex; align-items: center; justify-content: center;
+    gap: 20px; flex-wrap: wrap;
+  }
+  .download-box .dl-text {
+    font-size: 15px; font-weight: 600; color: #F5F5F0;
+  }
+  .download-box .dl-text strong { color: #C8942E; }
+  .download-box .dl-btn {
+    padding: 10px 24px;
+    border: 2px solid #C8942E; color: #C8942E;
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    border-radius: 6px; text-decoration: none;
+    transition: all 0.3s; background: transparent;
+  }
+  .download-box .dl-btn:hover {
+    background: #C8942E; color: #0E1C2F;
+  }
+
+  /* === NEWSLETTER === */
+  .newsletter {
+    max-width: 700px; margin: 0 auto;
+    padding: 30px 20px 20px;
+    text-align: center;
+  }
+  .newsletter h3 {
+    font-size: 18px; color: #FFFFFF; margin-bottom: 6px;
+  }
+  .newsletter .nl-sub {
+    font-size: 13px; color: #F5F5F0; opacity: 0.7; margin-bottom: 16px;
+  }
+  .newsletter-form {
+    display: flex; gap: 10px;
+    max-width: 440px; margin: 0 auto;
+    flex-wrap: wrap; justify-content: center;
+  }
+  .newsletter-form input {
+    flex: 1; min-width: 220px;
+    padding: 12px 16px;
+    border: 1px solid rgba(200,148,46,0.3);
+    border-radius: 6px;
+    background: rgba(255,255,255,0.05);
+    color: #FFFFFF; font-size: 14px;
+    outline: none;
+  }
+  .newsletter-form input::placeholder { color: rgba(255,255,255,0.4); }
+  .newsletter-form input:focus { border-color: #C8942E; }
+  .newsletter-form button {
+    padding: 12px 24px;
+    background: #C8942E; color: #0E1C2F;
+    border: none; border-radius: 6px;
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    cursor: pointer; transition: background 0.3s;
+  }
+  .newsletter-form button:hover { background: #d9a840; }
+
+  /* === FOOTER === */
+  .footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid rgba(200,148,46,0.15);
+    margin-top: 20px;
+  }
+  .footer .brand {
+    font-size: 13px; color: #C8942E; font-weight: 700;
+    letter-spacing: 1.5px; margin-bottom: 4px;
+  }
+  .footer .urls {
+    font-size: 12px; color: #F5F5F0; opacity: 0.5;
+  }
+  .footer .urls a { color: #F5F5F0; text-decoration: none; }
+  .footer .urls a:hover { color: #C8942E; }
+
+  /* === RESPONSIVE === */
+  @media (max-width: 600px) {
+    .header h1 { font-size: 22px; }
+    .paths { flex-direction: column; align-items: center; }
+    .path-card { max-width: 100%; }
+    .download-box { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>LEARN MORE TECHNOLOGIES</h1>
+    <div class="rule"></div>
+    <div class="tagline">Closing the Digital Divide</div>
+    <div class="intro">
+      <strong>Digital literacy</strong> and <strong>workforce readiness</strong> programs built for adults 50+ — powered by AI. We partner with libraries, workforce boards, and community organizations to deliver customized training that changes lives.
+    </div>
+  </div>
+
+  <!-- THREE PATHS -->
+  <div class="paths">
+    <a class="path-card" href="#booking">
+      <div class="path-icon">&#127963;</div>
+      <h3>I'm a Partner or Funder</h3>
+      <p>WIOA boards, grant makers, government agencies, or corporate sponsors looking to fund digital equity programs.</p>
+      <span class="path-cta">Schedule a Meeting</span>
+    </a>
+
+    <a class="path-card" href="#booking">
+      <div class="path-icon">&#128218;</div>
+      <h3>I'm an Organization</h3>
+      <p>Libraries, senior centers, workforce agencies, or nonprofits that want to bring AI-powered digital literacy training to your community.</p>
+      <span class="path-cta">Let's Build a Program</span>
+    </a>
+
+    <a class="path-card" href="#newsletter">
+      <div class="path-icon">&#128075;</div>
+      <h3>I'm an Adult 50+</h3>
+      <p>Ready to learn AI, smartphones, and digital tools at your own pace — with training designed for your generation.</p>
+      <span class="path-cta">Get Started</span>
+    </a>
+  </div>
+
+  <!-- BOOKING -->
+  <div class="booking" id="booking">
+    <h2>Book a Conversation</h2>
+    <div class="sub">30 minutes. No pitch. Just a real conversation about what's possible.</div>
+    <div class="cal-embed">
+      <p>[ Embed your Cal.com scheduling widget here ]</p>
+      <p style="margin-top:8px; font-size:12px; opacity:0.5;">Replace this div with your Cal.com embed code</p>
+    </div>
+    <a class="cal-link" href="https://cal.com" target="_blank">Book a Time</a>
+  </div>
+
+  <!-- CAPABILITY STATEMENT DOWNLOAD -->
+  <div class="download">
+    <div class="download-box">
+      <div class="dl-text"><strong>Capability Statement</strong> — our programs, partnerships, and impact at a glance</div>
+      <a class="dl-btn" href="#" download>Download PDF</a>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter" id="newsletter">
+    <h3>Not ready to talk yet? Stay connected.</h3>
+    <div class="nl-sub">Join the Agentic50 newsletter — weekly AI news and digital literacy tips for adults 50+</div>
+    <form class="newsletter-form" action="#" method="post">
+      <input type="email" placeholder="Your email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="brand">50+TechBridge</div>
+    <div class="urls">
+      <a href="https://learnmoretechnologies.com">learnmoretechnologies.com</a> &nbsp;|&nbsp;
+      <a href="https://50plustechbridge.com">50plustechbridge.com</a>
+    </div>
+  </div>
+
+</body>
+</html>

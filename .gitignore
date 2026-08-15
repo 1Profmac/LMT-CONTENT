@@ -1,0 +1,29 @@
+# VIDEO FILES — too large for GitHub, store on YouTube/Google Drive/hard drive
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wmv
+*.webm
+
+# LARGE MEDIA
+*.pdf
+*.zip
+*.eps
+*.psd
+*.ai
+
+# IMAGES (keep these local, reference by filename in docs)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+
+# SYSTEM FILES
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+05-BUSINESS-OPS/05-TECH/Hcapta keys 20260509.txt

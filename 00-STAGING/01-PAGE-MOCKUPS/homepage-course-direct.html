@@ -1,0 +1,486 @@
+<!-- wp:html -->
+
+<!--
+=================================================
+  50+TECHBRIDGE HOMEPAGE — Course Direct v1.0
+  Template: Full Width Content — REQUIRED
+  Slug: / (homepage)
+  Owner: Brian McKinney
+  Date: June 11, 2026
+  Design: Based on GIT rebrand template (Tailwind + Space Grotesk)
+  Stats Lock: Use locations, not headcount (per verified numbers rule)
+  BANNED STATS: 1,200+ / 85% / 45 sites / 347 / 23 organizations / 74%
+=================================================
+-->
+
+<style>
+/* BUDDYBOSS RESET — DO NOT REMOVE */
+body,.site,#page,#content,.bb-grid,.container,
+#primary,#main,.site-content,.entry-content,
+.site-inner,.content-sidebar-wrap{background-color:#0f172a!important}
+.entry-title,.page-title,.page-template-blank .entry-title,
+body.page .entry-header,.buddypress-page .entry-header,
+#primary .entry-header,.site-content .entry-header{display:none!important}
+.entry-content{padding:0!important;margin:0!important;max-width:none!important}
+.bb-grid,.container,#content,#primary,#main,.site-main{padding:0!important;margin:0!important;max-width:none!important;width:100%!important}
+.site-footer,.footer-widgets,#colophon{margin-top:0!important;padding-top:0!important}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap');
+</style>
+
+<div class="tb-home">
+<style>
+/*
+  COLOR STORY: "Tech Pioneer" — Brand + Technology Hybrid
+  Brand foundation stays: navy, gold, DM fonts
+  Tech injection: electric blue #3B82F6 accent, subtle grid lines, gradient CTAs
+  --navy:       #0E1C2F
+  --navy-mid:   #162640
+  --gold:       #C8942E
+  --gold-light: #E8B84B
+  --blue:       #3B82F6  (tech accent — links, numbers, hover states)
+  --blue-light: #60A5FA  (tech highlight)
+  --orange:     #E8733A  (CTA warmth)
+  --white:      #FAFBFD
+  --muted:      #939597
+  --border:     #C4CDD9
+*/
+.tb-home { font-family:'DM Sans',sans-serif; color:#C4CDD9; margin:0; padding:0; }
+.tb-home h1,.tb-home h2,.tb-home h3 { font-family:'DM Serif Display',serif; }
+
+/* ── HERO ── */
+.tb-home .hero {
+  background: #0E1C2F;
+  padding: 80px 40px 72px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+/* Tech grid pattern */
+.tb-home .hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+/* Warm glow top-right */
+.tb-home .hero::after {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -15%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(200,148,46,0.08) 0%, rgba(59,130,246,0.04) 40%, transparent 70%);
+  pointer-events: none;
+}
+.tb-home .hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.tb-home .hero-label {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #C8942E;
+  background: rgba(200,148,46,0.1);
+  border: 1px solid rgba(200,148,46,0.25);
+  padding: 8px 20px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+.tb-home .hero h1 {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 900;
+  line-height: 1.08;
+  color: #FAFBFD;
+  margin: 0 0 16px;
+}
+.tb-home .hero h1 span {
+  background: linear-gradient(135deg, #C8942E, #3B82F6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+}
+.tb-home .hero h2 {
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 700;
+  color: #E8B84B;
+  margin: 0 0 20px;
+  line-height: 1.3;
+}
+.tb-home .hero-desc {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #A8B8CC;
+  max-width: 640px;
+  margin: 0 auto 32px;
+}
+.tb-home .hero-cta {
+  display: inline-block;
+  background: linear-gradient(135deg, #C8942E, #E8733A);
+  color: #0E1C2F;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 16px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 24px rgba(200,148,46,0.3);
+}
+.tb-home .hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(200,148,46,0.4);
+}
+
+/* ── WHAT YOU LEARN ── */
+.tb-home .lessons {
+  background: #FAFBFD;
+  padding: 80px 40px;
+}
+.tb-home .lessons-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.tb-home .lessons h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  color: #0E1C2F;
+  text-align: center;
+  margin: 0 0 12px;
+}
+.tb-home .lessons .sub {
+  font-size: 1rem;
+  color: #939597;
+  text-align: center;
+  margin: 0 0 48px;
+}
+.tb-home .lesson-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.tb-home .lesson-card {
+  background: #ffffff;
+  border: 2px solid #e8ecf1;
+  border-radius: 12px;
+  padding: 32px 24px;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.tb-home .lesson-card:hover {
+  border-color: #3B82F6;
+  box-shadow: 0 8px 24px rgba(59,130,246,0.1);
+  transform: translateY(-2px);
+}
+.tb-home .lesson-card .num {
+  display: inline-block;
+  background: linear-gradient(135deg, #3B82F6, #60A5FA);
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+.tb-home .lesson-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0E1C2F;
+  margin: 0 0 8px;
+}
+.tb-home .lesson-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── HOW IT WORKS ── */
+.tb-home .how {
+  background: #f0f4f8;
+  padding: 80px 40px;
+}
+.tb-home .how-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.tb-home .how h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  color: #0E1C2F;
+  margin: 0 0 48px;
+}
+.tb-home .how-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+.tb-home .how-step .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #0E1C2F;
+  color: #C8942E;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  border: 2px solid #3B82F6;
+}
+.tb-home .how-step h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0E1C2F;
+  margin: 0 0 8px;
+}
+.tb-home .how-step p {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── TRUST BAR ── */
+.tb-home .trust {
+  background: #0E1C2F;
+  padding: 60px 40px;
+  position: relative;
+}
+.tb-home .trust::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(59,130,246,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+.tb-home .trust-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.tb-home .trust-item .big {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 700;
+  background: linear-gradient(135deg, #C8942E, #3B82F6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 4px;
+}
+.tb-home .trust-item p {
+  font-size: 0.85rem;
+  color: #A8B8CC;
+  margin: 0;
+}
+
+/* ── CTA BOTTOM ── */
+.tb-home .cta-bottom {
+  background: #FAFBFD;
+  padding: 80px 40px;
+  text-align: center;
+}
+.tb-home .cta-bottom h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  color: #0E1C2F;
+  margin: 0 0 12px;
+}
+.tb-home .cta-bottom p {
+  font-size: 1.05rem;
+  color: #64748b;
+  margin: 0 0 32px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tb-home .cta-bottom .btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #C8942E, #E8733A);
+  color: #0E1C2F;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 16px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 24px rgba(200,148,46,0.3);
+}
+.tb-home .cta-bottom .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(200,148,46,0.4);
+}
+.tb-home .cta-bottom .sub-link {
+  display: block;
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: #939597;
+}
+.tb-home .cta-bottom .sub-link a {
+  color: #3B82F6;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* ── FOOTER ── */
+.tb-home .tb-footer {
+  background: #0E1C2F;
+  padding: 24px 40px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #939597;
+  border-top: 1px solid rgba(59,130,246,0.1);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .tb-home .hero { padding: 56px 20px 48px; }
+  .tb-home .lesson-grid { grid-template-columns: 1fr; }
+  .tb-home .how-steps { grid-template-columns: 1fr; gap: 24px; }
+  .tb-home .trust-inner { grid-template-columns: repeat(2, 1fr); }
+  .tb-home .lessons, .tb-home .how, .tb-home .cta-bottom { padding: 56px 20px; }
+}
+</style>
+
+<!-- ============================================================
+     HERO — Direct intro
+============================================================ -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-label">50+TechBridge — Free AI Lessons</span>
+    <h1>Learn AI. No Jargon. <span>No Age Limit.</span></h1>
+    <h2>AI training built by adults 50+, for adults 50+. Join the Digital Pioneers.</h2>
+    <p class="hero-desc">
+      While everyone else is still teaching email, we're teaching AI.
+      Small groups. 3 weeks. Real skills. Learn together with adults 50+
+      just like you — in person or online, anywhere in the world.
+    </p>
+    <a href="https://learnmoretechnologies.com/start-free-lesson/" class="hero-cta">Get Started</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHAT YOU'LL LEARN
+============================================================ -->
+<section class="lessons">
+  <div class="lessons-inner">
+    <h2>3 Weeks. 3 Lessons. One Group.</h2>
+    <p class="sub">Each cohort learns together — one lesson per week, nobody left behind.</p>
+    <div class="lesson-grid">
+      <div class="lesson-card">
+        <div class="num">1</div>
+        <h3>Set Up Your Phone</h3>
+        <p>Adjust display settings, text size, and accessibility features so your device works for you — not against you.</p>
+      </div>
+      <div class="lesson-card">
+        <div class="num">2</div>
+        <h3>Use Voice Commands</h3>
+        <p>Talk to your phone to check the weather, call your pharmacy, set reminders, and more — hands-free.</p>
+      </div>
+      <div class="lesson-card">
+        <div class="num">3</div>
+        <h3>Navigate with Maps</h3>
+        <p>Find the nearest grocery store, get directions to the doctor, and never get lost again.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     HOW IT WORKS
+============================================================ -->
+<section class="how">
+  <div class="how-inner">
+    <h2>How It Works</h2>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="icon">1.</div>
+        <h3>Join a Cohort</h3>
+        <p>Pick a start date. You'll be placed in a small group of 8–12 adults 50+.</p>
+      </div>
+      <div class="how-step">
+        <div class="icon">2.</div>
+        <h3>Learn Together</h3>
+        <p>Meet once a week — in person or on Zoom. Watch, practice, and help each other.</p>
+      </div>
+      <div class="how-step">
+        <div class="icon">3.</div>
+        <h3>Graduate as a Digital Pioneer</h3>
+        <p>Complete all 3 lessons and earn your Digital Pioneer certificate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TRUST BAR
+============================================================ -->
+<section class="trust">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <div class="big">50K</div>
+      <p>Pioneers by 2028</p>
+    </div>
+    <div class="trust-item">
+      <div class="big">Global</div>
+      <p>English, Spanish & Growing</p>
+    </div>
+    <div class="trust-item">
+      <div class="big">8–12</div>
+      <p>Adults Per Cohort</p>
+    </div>
+    <div class="trust-item">
+      <div class="big">Free</div>
+      <p>Always. No Exceptions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BOTTOM CTA
+============================================================ -->
+<section class="cta-bottom">
+  <h2>Next Cohort Starting Soon</h2>
+  <p>50,000 Digital Pioneers by 2028. It starts with you.</p>
+  <a href="https://learnmoretechnologies.com/start-free-lesson/" class="btn">Get Started</a>
+  <span class="sub-link">Run an organization anywhere in the world? <a href="https://learnmoretechnologies.com/partner-with-us/">Host a cohort at your location</a></span>
+</section>
+
+<!-- FOOTER -->
+<div class="tb-footer">
+  &copy; 2026 50+TechBridge &middot; Learn More Technologies &middot; hello@learnmoretechnologies.com
+</div>
+
+</div><!-- .tb-home -->
+
+<!-- /wp:html -->

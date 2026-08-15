@@ -1,0 +1,927 @@
+<!-- wp:html -->
+<!--
+=================================================
+  LMT WORKFORCE PAGE — v1.1 March 16, 2026
+  Template: Full Width Content — REQUIRED
+  Slug: /workforce/
+  Owner: Maya, COO
+  CTO Agent: Set template to Full Width Content before pasting HTML
+  Stats Lock: Adults 50+ across 13 locations · Targeted 3X Completion · 13 Locations
+  ⛔ BANNED STATS: 1,200+ · 85% · 45 sites — DO NOT USE
+=================================================
+-->
+
+<style>
+/* ── BUDDYBOSS RESET — DO NOT REMOVE ── */
+/* Fixes all white/dark gap issues on Full Width template */
+body,.site,#page,#content,.bb-grid,.container,
+#primary,#main,.site-content,.entry-content,
+.site-inner,.content-sidebar-wrap{
+  background-color:#0E1C2F!important
+}
+.entry-title,.page-title,
+.page-template-blank .entry-title,
+body.page .entry-header,
+.buddypress-page .entry-header,
+#primary .entry-header,
+.site-content .entry-header{
+  display:none!important
+}
+.entry-content{padding:0!important;margin:0!important;max-width:none!important}
+.bb-grid,.container,#content,#primary,#main,.site-main{
+  padding:0!important;margin:0!important;max-width:none!important;width:100%!important
+}
+.site-footer,.footer-widgets,#colophon{margin-top:0!important;padding-top:0!important}
+
+/* ── RESET & BASE ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.lmt-workforce {
+  --navy:        #0E1C2F;
+  --navy-mid:    #162640;
+  --navy-light:  #1E3658;
+  --gold:        #C8942E;
+  --gold-light:  #E8B84B;
+  --gold-dim:    rgba(200,148,46,.18);
+  --orange:      #E8733A;
+  --green:       #109F35;
+  --white:       #FFFFFF;
+  --text-body:   #C4CDD9;
+  --text-muted:  #A8B8CC;
+  --radius:      14px;
+  font-family: 'DM Sans', sans-serif !important;
+  color: #C4CDD9 !important;
+  font-size: 18px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  background: #0E1C2F;
+  display: block;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  overflow-x: hidden;
+}
+
+.lmt-workforce .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+
+/* ── GOOGLE FONTS ── */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+/* ────────────────────────────────
+   HERO
+──────────────────────────────── */
+.lmt-workforce .hero {
+  background: linear-gradient(155deg, #080F1A 0%, #0E1C2F 55%, #162640 100%);
+  padding: 108px 32px 90px;
+  position: relative;
+  overflow: hidden;
+}
+.lmt-workforce .hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 75% 50%, rgba(200,148,46,.08) 0%, transparent 70%),
+    radial-gradient(ellipse 30% 40% at 20% 80%, rgba(16,159,53,.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+.lmt-workforce .hero-inner {
+  max-width: 1180px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.15fr .85fr; gap: 64px; align-items: center;
+  position: relative; z-index: 1;
+}
+.lmt-workforce .hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(200,148,46,.15); border: 1px solid rgba(200,148,46,.3);
+  border-radius: 40px; padding: 6px 16px;
+  font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: #C8942E !important; margin-bottom: 22px;
+}
+.lmt-workforce .hero h1 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(34px, 4.5vw, 58px) !important;
+  font-weight: 700 !important; line-height: 1.12 !important;
+  color: #FFFFFF !important; margin-bottom: 24px;
+}
+.lmt-workforce .hero h1 em {
+  font-style: italic; color: #C8942E !important;
+}
+.lmt-workforce .hero-sub {
+  font-size: 19px; color: #A8B8CC !important;
+  line-height: 1.7; max-width: 580px; margin-bottom: 36px;
+}
+.lmt-workforce .hero-ctas {
+  display: flex; gap: 14px; flex-wrap: wrap;
+}
+.lmt-workforce .btn-gold {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #C8942E; color: #0E1C2F !important;
+  font-weight: 700; font-size: 15px; padding: 16px 30px;
+  border-radius: 8px; text-decoration: none;
+  transition: all .25s ease;
+}
+.lmt-workforce .btn-gold:hover { background: #E8B84B; transform: translateY(-2px); }
+.lmt-workforce .btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: #FFFFFF !important;
+  font-weight: 600; font-size: 15px; padding: 16px 30px;
+  border-radius: 8px; border: 1px solid rgba(255,255,255,.2);
+  text-decoration: none; transition: all .25s ease;
+}
+.lmt-workforce .btn-outline:hover { border-color: #C8942E !important; color: #C8942E !important; }
+
+/* Hero stat card */
+.lmt-workforce .hero-card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(200,148,46,.2);
+  border-radius: 20px; padding: 40px 36px;
+  position: relative;
+}
+.lmt-workforce .hero-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, #C8942E, #E8733A);
+  border-radius: 20px 20px 0 0;
+}
+.lmt-workforce .stat-row {
+  display: flex; flex-direction: column; gap: 20px;
+}
+.lmt-workforce .stat-item {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.lmt-workforce .stat-item:last-child { border-bottom: none; padding-bottom: 0; }
+.lmt-workforce .stat-icon {
+  width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0;
+  background: rgba(200,148,46,.15); border: 1px solid rgba(200,148,46,.25);
+  display: flex; align-items: center; justify-content: center; font-size: 20px;
+}
+.lmt-workforce .stat-num {
+  font-size: 26px; font-weight: 800; color: #C8942E !important;
+  line-height: 1; margin-bottom: 4px;
+  font-family: 'DM Sans', sans-serif;
+}
+.lmt-workforce .stat-label {
+  font-size: 13px; color: #A8B8CC !important; line-height: 1.4;
+}
+
+/* ── TRUST BAR ── */
+.lmt-workforce .trust-bar {
+  background: #162640;
+  border-top: 1px solid rgba(200,148,46,.15);
+  border-bottom: 1px solid rgba(200,148,46,.15);
+  padding: 18px 32px;
+}
+.lmt-workforce .trust-inner {
+  max-width: 1180px; margin: 0 auto;
+  display: flex; flex-wrap: wrap; gap: 10px 40px;
+  align-items: center; justify-content: center;
+}
+.lmt-workforce .trust-item {
+  font-size: 13px; font-weight: 600; color: #A8B8CC !important;
+  display: flex; align-items: center; gap: 7px;
+  text-transform: uppercase; letter-spacing: .06em;
+}
+.lmt-workforce .trust-item span { color: #C8942E !important; }
+.lmt-workforce .trust-dot {
+  width: 4px; height: 4px; border-radius: 50%; background: rgba(200,148,46,.4);
+}
+
+/* ────────────────────────────────
+   THE PROBLEM SECTION
+──────────────────────────────── */
+.lmt-workforce .problem {
+  padding: 90px 32px;
+  background: #0E1C2F;
+}
+.lmt-workforce .section-eyebrow {
+  font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+  color: #E8733A !important; font-weight: 700; margin-bottom: 12px;
+  display: flex; align-items: center; gap: 10px;
+}
+.lmt-workforce .section-eyebrow::before {
+  content: ''; width: 28px; height: 2px; background: #E8733A; display: inline-block;
+}
+.lmt-workforce .section-title {
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(28px, 3.5vw, 44px) !important;
+  font-weight: 700 !important; color: #FFFFFF !important;
+  line-height: 1.2; margin-bottom: 16px;
+}
+.lmt-workforce .section-title em { color: #C8942E !important; font-style: italic; }
+.lmt-workforce .section-sub {
+  font-size: 18px; color: #A8B8CC !important;
+  max-width: 640px; margin-bottom: 52px; line-height: 1.7;
+}
+.lmt-workforce .problem-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 28px;
+}
+.lmt-workforce .problem-card {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 16px; padding: 36px 30px;
+  position: relative; overflow: hidden;
+  transition: all .25s ease;
+}
+.lmt-workforce .problem-card:hover {
+  border-color: rgba(232,115,58,.3);
+  transform: translateY(-3px);
+}
+.lmt-workforce .problem-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: #E8733A;
+}
+.lmt-workforce .problem-num {
+  font-size: 52px; font-weight: 900; color: rgba(232,115,58,.15) !important;
+  line-height: 1; margin-bottom: -8px;
+  font-family: 'DM Sans', sans-serif;
+}
+.lmt-workforce .problem-card h3 {
+  font-size: 20px !important; font-weight: 700 !important;
+  color: #FFFFFF !important; margin-bottom: 10px; line-height: 1.25;
+}
+.lmt-workforce .problem-card p {
+  font-size: 15px; color: #A8B8CC !important; line-height: 1.7;
+}
+.lmt-workforce .problem-card .data-callout {
+  display: inline-block; background: rgba(232,115,58,.1);
+  border: 1px solid rgba(232,115,58,.25); border-radius: 8px;
+  padding: 8px 14px; margin-top: 14px;
+  font-size: 13px; font-weight: 700; color: #E8733A !important;
+}
+
+/* ────────────────────────────────
+   THE DATA STRIP
+──────────────────────────────── */
+.lmt-workforce .data-strip {
+  background: linear-gradient(135deg, #162640 0%, #0E1C2F 100%);
+  border-top: 1px solid rgba(200,148,46,.15);
+  border-bottom: 1px solid rgba(200,148,46,.15);
+  padding: 64px 32px;
+}
+.lmt-workforce .data-inner {
+  max-width: 1180px; margin: 0 auto;
+}
+.lmt-workforce .data-headline {
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(26px, 3vw, 38px) !important;
+  font-weight: 700 !important; color: #FFFFFF !important;
+  text-align: center; margin-bottom: 48px; line-height: 1.3;
+}
+.lmt-workforce .data-headline em { color: #C8942E !important; font-style: italic; }
+.lmt-workforce .data-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
+  border: 1px solid rgba(200,148,46,.2); border-radius: 16px; overflow: hidden;
+}
+.lmt-workforce .data-cell {
+  background: rgba(255,255,255,.02); padding: 36px 24px;
+  text-align: center; border-right: 1px solid rgba(200,148,46,.1);
+  transition: background .2s;
+}
+.lmt-workforce .data-cell:last-child { border-right: none; }
+.lmt-workforce .data-cell:hover { background: rgba(200,148,46,.05); }
+.lmt-workforce .data-big {
+  font-size: clamp(32px, 3.5vw, 48px); font-weight: 900;
+  color: #C8942E !important; line-height: 1; margin-bottom: 8px;
+  font-family: 'DM Sans', sans-serif;
+}
+.lmt-workforce .data-desc {
+  font-size: 13px; color: #A8B8CC !important; line-height: 1.5;
+}
+.lmt-workforce .data-source {
+  text-align: center; margin-top: 20px;
+  font-size: 12px; color: rgba(168,184,204,.5) !important;
+}
+
+/* ────────────────────────────────
+   WHAT WE OFFER
+──────────────────────────────── */
+.lmt-workforce .offer {
+  padding: 90px 32px;
+  background: #0A1520;
+}
+.lmt-workforce .offer-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 0;
+}
+.lmt-workforce .offer-card {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 16px; padding: 36px 28px;
+  display: flex; flex-direction: column;
+  transition: all .28s ease;
+}
+.lmt-workforce .offer-card:hover {
+  border-color: rgba(200,148,46,.35);
+  background: rgba(200,148,46,.04);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0,0,0,.3);
+}
+.lmt-workforce .offer-tag {
+  display: inline-block;
+  font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  padding: 4px 12px; border-radius: 20px; margin-bottom: 20px;
+}
+.lmt-workforce .offer-tag.tag-gold {
+  background: rgba(200,148,46,.15); color: #C8942E !important;
+  border: 1px solid rgba(200,148,46,.25);
+}
+.lmt-workforce .offer-tag.tag-orange {
+  background: rgba(232,115,58,.12); color: #E8733A !important;
+  border: 1px solid rgba(232,115,58,.25);
+}
+.lmt-workforce .offer-tag.tag-green {
+  background: rgba(16,159,53,.12); color: #109F35 !important;
+  border: 1px solid rgba(16,159,53,.25);
+}
+.lmt-workforce .offer-icon {
+  font-size: 36px; margin-bottom: 18px;
+}
+.lmt-workforce .offer-card h3 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 22px !important; font-weight: 700 !important;
+  color: #FFFFFF !important; margin-bottom: 12px; line-height: 1.2;
+}
+.lmt-workforce .offer-card p {
+  font-size: 15px; color: #A8B8CC !important; line-height: 1.7; flex: 1; margin-bottom: 24px;
+}
+.lmt-workforce .offer-list {
+  list-style: none; margin-bottom: 28px;
+}
+.lmt-workforce .offer-list li {
+  font-size: 14px; color: #C4CDD9 !important;
+  padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,.05);
+  display: flex; align-items: flex-start; gap: 8px;
+}
+.lmt-workforce .offer-list li:last-child { border-bottom: none; }
+.lmt-workforce .offer-list li::before {
+  content: '✓'; color: #C8942E; font-weight: 800; font-size: 13px; flex-shrink: 0; margin-top: 1px;
+}
+.lmt-workforce .offer-price {
+  font-size: 13px; color: #A8B8CC !important; margin-bottom: 20px;
+  padding-top: 16px; border-top: 1px solid rgba(255,255,255,.06);
+}
+.lmt-workforce .offer-price strong { color: #C8942E !important; }
+.lmt-workforce .btn-card {
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  background: #C8942E; color: #0E1C2F !important;
+  font-weight: 700; font-size: 14px; padding: 13px 22px;
+  border-radius: 8px; text-decoration: none; transition: all .25s;
+  text-align: center;
+}
+.lmt-workforce .btn-card:hover { background: #E8B84B; transform: translateY(-2px); }
+.lmt-workforce .btn-card-outline {
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  background: transparent; color: #FFFFFF !important;
+  font-weight: 600; font-size: 14px; padding: 13px 22px;
+  border-radius: 8px; border: 1px solid rgba(255,255,255,.2);
+  text-decoration: none; transition: all .25s;
+}
+.lmt-workforce .btn-card-outline:hover { border-color: #C8942E !important; color: #C8942E !important; }
+
+/* ────────────────────────────────
+   WHO WE SERVE
+──────────────────────────────── */
+.lmt-workforce .serve {
+  padding: 80px 32px;
+  background: #0E1C2F;
+}
+.lmt-workforce .serve-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+}
+.lmt-workforce .serve-card {
+  background: rgba(255,255,255,.025);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 14px; padding: 30px 24px;
+  text-align: center; transition: all .25s;
+}
+.lmt-workforce .serve-card:hover {
+  border-color: rgba(200,148,46,.3); background: rgba(200,148,46,.03);
+}
+.lmt-workforce .serve-emoji { font-size: 36px; margin-bottom: 14px; }
+.lmt-workforce .serve-card h4 {
+  font-size: 16px !important; font-weight: 700 !important;
+  color: #FFFFFF !important; margin-bottom: 8px;
+}
+.lmt-workforce .serve-card p {
+  font-size: 13px; color: #A8B8CC !important; line-height: 1.6;
+}
+
+/* ────────────────────────────────
+   WIOA ELIGIBILITY CALLOUT
+──────────────────────────────── */
+.lmt-workforce .wioa-bar {
+  background: linear-gradient(135deg, rgba(16,159,53,.12) 0%, rgba(16,159,53,.05) 100%);
+  border: 1px solid rgba(16,159,53,.25);
+  border-radius: 16px; margin: 0 32px 80px;
+  max-width: 1116px; margin-left: auto; margin-right: auto;
+  padding: 44px 48px;
+  display: grid; grid-template-columns: auto 1fr auto; gap: 32px; align-items: center;
+}
+.lmt-workforce .wioa-icon {
+  width: 72px; height: 72px; border-radius: 16px;
+  background: rgba(16,159,53,.2); border: 1px solid rgba(16,159,53,.35);
+  display: flex; align-items: center; justify-content: center; font-size: 34px; flex-shrink: 0;
+}
+.lmt-workforce .wioa-text h3 {
+  font-size: 22px !important; font-weight: 700 !important;
+  color: #FFFFFF !important; margin-bottom: 8px;
+}
+.lmt-workforce .wioa-text p {
+  font-size: 15px; color: #A8B8CC !important; line-height: 1.65; max-width: 620px;
+}
+.lmt-workforce .wioa-badge {
+  background: rgba(16,159,53,.2); border: 1px solid rgba(16,159,53,.4);
+  border-radius: 10px; padding: 16px 22px; text-align: center; flex-shrink: 0;
+}
+.lmt-workforce .wioa-badge strong {
+  display: block; font-size: 13px; font-weight: 800;
+  color: #109F35 !important; letter-spacing: .05em; text-transform: uppercase;
+}
+.lmt-workforce .wioa-badge span {
+  font-size: 12px; color: #A8B8CC !important;
+}
+
+/* ────────────────────────────────
+   PROOF / RESULTS
+──────────────────────────────── */
+.lmt-workforce .proof {
+  padding: 80px 32px;
+  background: #162640;
+}
+.lmt-workforce .proof-inner {
+  max-width: 1180px; margin: 0 auto;
+  display: grid; grid-template-columns: .9fr 1.1fr; gap: 60px; align-items: center;
+}
+.lmt-workforce .proof-quote {
+  position: relative; padding-left: 28px;
+}
+.lmt-workforce .proof-quote::before {
+  content: '"';
+  position: absolute; left: -8px; top: -20px;
+  font-size: 100px; line-height: 1; color: rgba(200,148,46,.2) !important;
+  font-family: 'Playfair Display', serif;
+}
+.lmt-workforce .proof-quote blockquote {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(20px, 2.5vw, 28px); font-style: italic;
+  color: #FFFFFF !important; line-height: 1.5; margin-bottom: 24px;
+}
+.lmt-workforce .proof-attr {
+  font-size: 14px; color: #A8B8CC !important;
+}
+.lmt-workforce .proof-attr strong { color: #C8942E !important; }
+.lmt-workforce .proof-stats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+}
+.lmt-workforce .proof-stat {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 14px; padding: 28px 22px; text-align: center;
+}
+.lmt-workforce .proof-stat-big {
+  font-size: clamp(32px, 3vw, 44px); font-weight: 900;
+  color: #C8942E !important; line-height: 1; margin-bottom: 6px;
+  font-family: 'DM Sans', sans-serif;
+}
+.lmt-workforce .proof-stat-label {
+  font-size: 13px; color: #A8B8CC !important; line-height: 1.4;
+}
+
+/* ────────────────────────────────
+   PROCESS STEPS
+──────────────────────────────── */
+.lmt-workforce .process {
+  padding: 80px 32px;
+  background: #0E1C2F;
+}
+.lmt-workforce .steps {
+  display: flex; flex-direction: column; gap: 0;
+  max-width: 800px; margin: 0 auto;
+}
+.lmt-workforce .step {
+  display: grid; grid-template-columns: 64px 1fr; gap: 28px; align-items: flex-start;
+  padding: 32px 0; border-bottom: 1px solid rgba(255,255,255,.06); position: relative;
+}
+.lmt-workforce .step:last-child { border-bottom: none; }
+.lmt-workforce .step-num {
+  width: 64px; height: 64px; border-radius: 14px; flex-shrink: 0;
+  background: rgba(200,148,46,.12); border: 1px solid rgba(200,148,46,.25);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; font-weight: 900; color: #C8942E !important;
+  font-family: 'DM Sans', sans-serif;
+}
+.lmt-workforce .step-body h4 {
+  font-size: 19px !important; font-weight: 700 !important;
+  color: #FFFFFF !important; margin-bottom: 8px; line-height: 1.3;
+}
+.lmt-workforce .step-body p {
+  font-size: 15px; color: #A8B8CC !important; line-height: 1.7;
+}
+
+/* ────────────────────────────────
+   GOLD MANIFESTO BREAK
+──────────────────────────────── */
+.lmt-workforce .manifesto-break {
+  background: #C8942E; padding: 40px 32px; text-align: center;
+}
+.lmt-workforce .manifesto-break .manifesto-inner {
+  max-width: 900px; margin: 0 auto;
+}
+.lmt-workforce .manifesto-break p {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(20px, 2.5vw, 30px); font-style: italic; font-weight: 700;
+  color: #0E1C2F !important; line-height: 1.45;
+}
+
+/* ────────────────────────────────
+   CTA SECTION
+──────────────────────────────── */
+.lmt-workforce .cta-section {
+  padding: 100px 32px;
+  background: linear-gradient(160deg, #0A1520 0%, #0E1C2F 60%, #162640 100%);
+  text-align: center; position: relative; overflow: hidden;
+}
+.lmt-workforce .cta-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(200,148,46,.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.lmt-workforce .cta-inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
+.lmt-workforce .cta-eyebrow {
+  font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+  color: #C8942E !important; font-weight: 700; margin-bottom: 16px;
+}
+.lmt-workforce .cta-section h2 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(28px, 3.5vw, 44px) !important;
+  font-weight: 700 !important; color: #FFFFFF !important;
+  line-height: 1.2; margin-bottom: 16px;
+}
+.lmt-workforce .cta-section h2 em { color: #C8942E !important; font-style: italic; }
+.lmt-workforce .cta-section p {
+  font-size: 18px; color: #A8B8CC !important; margin-bottom: 36px; line-height: 1.7;
+}
+.lmt-workforce .cta-buttons {
+  display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+}
+.lmt-workforce .btn-cta-primary {
+  display: inline-flex; align-items: center; gap: 9px;
+  background: #C8942E; color: #0E1C2F !important;
+  font-weight: 700; font-size: 16px; padding: 18px 36px;
+  border-radius: 8px; text-decoration: none; transition: all .25s;
+}
+.lmt-workforce .btn-cta-primary:hover { background: #E8B84B; transform: translateY(-2px); }
+.lmt-workforce .btn-cta-secondary {
+  display: inline-flex; align-items: center; gap: 9px;
+  background: transparent; color: #FFFFFF !important;
+  font-weight: 600; font-size: 16px; padding: 18px 36px;
+  border-radius: 8px; border: 1px solid rgba(255,255,255,.2);
+  text-decoration: none; transition: all .25s;
+}
+.lmt-workforce .btn-cta-secondary:hover { border-color: #C8942E !important; color: #C8942E !important; }
+.lmt-workforce .cta-trust {
+  margin-top: 32px; font-size: 13px; color: rgba(168,184,204,.6) !important;
+}
+
+/* ────────────────────────────────
+   RESPONSIVE
+──────────────────────────────── */
+@media (max-width: 900px) {
+  .lmt-workforce .hero-inner,
+  .lmt-workforce .proof-inner {
+    grid-template-columns: 1fr;
+  }
+  .lmt-workforce .hero-card { display: none; }
+  .lmt-workforce .problem-grid,
+  .lmt-workforce .offer-grid,
+  .lmt-workforce .serve-grid {
+    grid-template-columns: 1fr;
+  }
+  .lmt-workforce .data-grid { grid-template-columns: 1fr 1fr; }
+  .lmt-workforce .wioa-bar { grid-template-columns: 1fr; text-align: center; }
+}
+@media (max-width: 600px) {
+  .lmt-workforce .hero { padding: 72px 20px 60px; }
+  .lmt-workforce .wrap { padding: 0 20px; }
+  .lmt-workforce .data-grid { grid-template-columns: 1fr 1fr; }
+  .lmt-workforce .proof-stats { grid-template-columns: 1fr 1fr; }
+}
+</style>
+
+<!-- ══════════════════════════════════════════
+     PAGE OPEN
+══════════════════════════════════════════ -->
+<div class="lmt-workforce">
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="hero-eyebrow">⚡ Workforce Development · 50+TechBridge</div>
+      <h1>Your Most Experienced Workers Are Also Your <em>Most Trainable.</em></h1>
+      <p class="hero-sub">LSE and Protiviti research is definitive: a trained 60-year-old outperforms an untrained 25-year-old. The training gap isn't a talent problem — it's an opportunity hiding in plain sight.</p>
+      <div class="hero-ctas">
+        <a href="https://learnmoretechnologies.com/workforce/" class="btn-gold">Schedule a Workforce Consult →</a>
+        <a href="https://learnmoretechnologies.com/train/" class="btn-outline">See Our Training Programs</a>
+      </div>
+    </div>
+    <div class="hero-card" style="padding:0;background:transparent;border:none;box-shadow:none;">
+      <div style="position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,0.5);">
+        <iframe
+          src="https://www.youtube.com/embed/JQPtZDvhgs8?rel=0&modestbranding=1"
+          title="The $850 Billion Cost of Ignoring Experienced Workers — Part 1"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRUST BAR ── -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><span>Adults 50+ across 13 locations</span> Pioneers & Counting</div>
+    <div class="trust-dot"></div>
+    <div class="trust-item"><span>3X</span> Industry Completion Rate</div>
+    <div class="trust-dot"></div>
+    <div class="trust-item"><span>13</span> Locations in Central Texas</div>
+    <div class="trust-dot"></div>
+    <div class="trust-item"><span>23</span> Organizations Invited Us In</div>
+    <div class="trust-dot"></div>
+    <div class="trust-item"><span>WIOA</span> Eligible Curriculum</div>
+  </div>
+</div>
+
+<!-- ── THE PROBLEM ── -->
+<section class="problem">
+  <div class="wrap">
+    <div class="section-eyebrow">The Real Problem</div>
+    <h2 class="section-title">The 60-Point Training Gap Is Costing You <em>$18,000 Per Worker Per Year.</em></h2>
+    <p class="section-sub">This isn't opinion. It's what the research shows — and most organizations are leaving this money, productivity, and talent on the table.</p>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-num">01</div>
+        <h3>Experienced Workers Are Being Written Off Prematurely</h3>
+        <p>Adults 50+ bring decades of institutional knowledge, client relationships, and judgment that can't be replicated. When organizations assume these workers "can't adapt," they lose exactly the talent they need most.</p>
+        <div class="data-callout">90% of adults 50+ feel invisible to their employers' development programs</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">02</div>
+        <h3>The Problem Isn't Capability — It's the Training Method</h3>
+        <p>Standard corporate training was built for workers who grew up digital. When it fails for adults 50+, organizations blame the worker. We've spent 15 years proving the training is the problem — not the person.</p>
+        <div class="data-callout">Our curriculum runs at targeted 3X the industry completion rate</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">03</div>
+        <h3>AI Is Widening the Gap — Fast</h3>
+        <p>Every organization is deploying AI tools. Workers who aren't trained get left behind — increasing errors, slowing productivity, and creating compliance risk. The workforce that doesn't upskill today is the liability of tomorrow.</p>
+        <div class="data-callout">LSE/Protiviti: trained 60-year-old outperforms untrained 25-year-old</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">04</div>
+        <h3>WIOA Funding Is Available — Most Organizations Don't Claim It</h3>
+        <p>Workforce Innovation and Opportunity Act funding exists specifically to train adult workers for the modern economy. Our curriculum is WIOA-eligible. Most organizations don't know how to access it — we do.</p>
+        <div class="data-callout">50+TechBridge is WIOA-eligible — we help you navigate funding</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── THE DATA ── -->
+<section class="data-strip">
+  <div class="data-inner">
+    <h2 class="data-headline">The numbers that change every workforce conversation.</h2>
+    <div class="data-grid">
+      <div class="data-cell">
+        <div class="data-big">$76T</div>
+        <div class="data-desc">Wealth controlled by adults 50+ — 52% of all U.S. net worth</div>
+      </div>
+      <div class="data-cell">
+        <div class="data-big">60pts</div>
+        <div class="data-desc">Performance gap eliminated when 50+ workers receive proper AI training</div>
+      </div>
+      <div class="data-cell">
+        <div class="data-big">$18K</div>
+        <div class="data-desc">Productivity lost per untrained 50+ worker annually (LSE/Protiviti)</div>
+      </div>
+      <div class="data-cell">
+        <div class="data-big">1 in 4</div>
+        <div class="data-desc">U.S. workers will be 55 or older by 2030 — this is your workforce</div>
+      </div>
+    </div>
+    <p class="data-source">Sources: LSE, Protiviti, AARP Economic Research, U.S. Bureau of Labor Statistics</p>
+  </div>
+</section>
+
+<!-- ── WHAT WE OFFER ── -->
+<section class="offer">
+  <div class="wrap">
+    <div class="section-eyebrow">Three Ways We Work With You</div>
+    <h2 class="section-title">Train. Assess. <em>Transform.</em></h2>
+    <p class="section-sub">Every engagement is designed to create lasting capability — not one-time compliance checkboxes.</p>
+
+    <div class="offer-grid">
+      <!-- CARD 1 -->
+      <div class="offer-card">
+        <span class="offer-tag tag-gold">Most Popular</span>
+        <div class="offer-icon">🎓</div>
+        <h3>50+TechBridge Workforce Deployment</h3>
+        <p>Deploy our proven curriculum inside your organization. 6-module AI fluency program built specifically for adults 50+ — peer-led, self-paced, and designed to eliminate shame from the learning experience.</p>
+        <ul class="offer-list">
+          <li>AI Foundations, Browsing, Communication & Collaboration</li>
+          <li>Digital Finance, Career Tools, Online Safety</li>
+          <li>Three deployment tiers: Digital, Hybrid, Full</li>
+          <li>Train-the-trainer certification available</li>
+          <li>Co-branded for your organization</li>
+        </ul>
+        <div class="offer-price"><strong>$249 – $2,000</strong> · Scales with deployment size</div>
+        <a href="https://learnmoretechnologies.com/workforce/" class="btn-card">Deploy at My Organization →</a>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="offer-card">
+        <span class="offer-tag tag-orange">High Impact</span>
+        <div class="offer-icon">🔍</div>
+        <h3>AI Workforce Readiness Assessment</h3>
+        <p>Before you train, understand exactly where your 50+ workforce stands — and where the gaps are costing you money. We audit your team, identify the highest-impact training needs, and deliver a clear roadmap.</p>
+        <ul class="offer-list">
+          <li>Current AI tool adoption audit by role and age cohort</li>
+          <li>Gap analysis mapped to productivity & compliance risk</li>
+          <li>Recommended training sequence with timeline</li>
+          <li>Staff training budget & WIOA funding guidance</li>
+          <li>Implementation roadmap deliverable</li>
+        </ul>
+        <div class="offer-price"><strong>$2,000 – $4,000</strong> · Half-day engagement</div>
+        <a href="https://learnmoretechnologies.com/workforce/" class="btn-card">Schedule Assessment →</a>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="offer-card">
+        <span class="offer-tag tag-green">Speaking</span>
+        <div class="offer-icon">🎤</div>
+        <h3>"AI + the 50+ Workforce" Keynote</h3>
+        <p>Brian McKinney takes the stage with data, story, and a practical framework your leadership team can act on immediately. The most requested workforce keynote in our Speaking portfolio.</p>
+        <ul class="offer-list">
+          <li>The 60-point training gap — live data presentation</li>
+          <li>LSE/Protiviti research unpacked for your audience</li>
+          <li>What "AI fluency" actually means for experienced workers</li>
+          <li>Actionable framework your HR team leaves with</li>
+          <li>Available as half-day workshop add-on</li>
+        </ul>
+        <div class="offer-price"><strong>$2,500 – $7,500</strong> · Keynote + optional workshop</div>
+        <a href="https://learnmoretechnologies.com/speak/" class="btn-card">Book the Keynote →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHO WE SERVE ── -->
+<section class="serve">
+  <div class="wrap">
+    <div class="section-eyebrow">Who We Work With</div>
+    <h2 class="section-title" style="margin-bottom:40px;">Built for the organizations that <em>can't afford to get this wrong.</em></h2>
+    <div class="serve-grid">
+      <div class="serve-card">
+        <div class="serve-emoji">🏛️</div>
+        <h4>Workforce Development Boards</h4>
+        <p>WIOA-eligible training your clients can access through your existing funding streams. We do the curriculum. You get the outcomes.</p>
+      </div>
+      <div class="serve-card">
+        <div class="serve-emoji">🏥</div>
+        <h4>Healthcare Systems</h4>
+        <p>Patient-facing staff, clinical support, and administrative teams 50+ navigating EHR upgrades, telehealth tools, and AI-assisted workflows.</p>
+      </div>
+      <div class="serve-card">
+        <div class="serve-emoji">🏦</div>
+        <h4>Financial Institutions</h4>
+        <p>Compliance-sensitive environments where 50+ workers need digital fluency — not anxiety — when handling client data and AI-assisted tools.</p>
+      </div>
+      <div class="serve-card">
+        <div class="serve-emoji">🏢</div>
+        <h4>Employers with 50+ Workforces</h4>
+        <p>Mid-size to enterprise employers who know their experienced workers are their biggest asset — and want a training program that actually works.</p>
+      </div>
+      <div class="serve-card">
+        <div class="serve-emoji">🤝</div>
+        <h4>Nonprofits & Community Orgs</h4>
+        <p>Senior centers, Area Agencies on Aging, faith communities, and housing providers deploying workforce programming for the 50+ community.</p>
+      </div>
+      <div class="serve-card">
+        <div class="serve-emoji">🎓</div>
+        <h4>Community Colleges & Libraries</h4>
+        <p>Public-access training partners who want a proven curriculum and peer-learning model to serve adult learners in their communities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WIOA CALLOUT ── -->
+<div class="wioa-bar">
+  <div class="wioa-icon">✅</div>
+  <div class="wioa-text">
+    <h3>50+TechBridge is WIOA-Eligible</h3>
+    <p>The Workforce Innovation and Opportunity Act (WIOA) funds adult training for the modern economy. Our curriculum qualifies — and we help workforce boards and employers navigate the funding process. No IT setup required. Ready to deploy in 30 days.</p>
+  </div>
+  <div class="wioa-badge">
+    <strong>WIOA Eligible</strong>
+    <span>MBE Certified · Texas</span>
+  </div>
+</div>
+
+<!-- ── PROOF ── -->
+<section class="proof">
+  <div class="proof-inner">
+    <div class="proof-quote">
+      <blockquote>"When something is built from real pain, real experience, and real love for the people you're serving — they show up for it."</blockquote>
+      <div class="proof-attr">— <strong>Brian McKinney</strong>, Founder, Learn More Technologies</div>
+    </div>
+    <div class="proof-stats">
+      <div class="proof-stat">
+        <div class="proof-stat-big">Adults 50+ across 13 locations</div>
+        <div class="proof-stat-label">Pioneers Trained & Counting</div>
+      </div>
+      <div class="proof-stat">
+        <div class="proof-stat-big">3X</div>
+        <div class="proof-stat-label">Industry Completion Rate</div>
+      </div>
+      <div class="proof-stat">
+        <div class="proof-stat-big">13</div>
+        <div class="proof-stat-label">Feel More Confident After Training</div>
+      </div>
+      <div class="proof-stat">
+        <div class="proof-stat-big">23</div>
+        <div class="proof-stat-label">Organizations Invited Us In</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="process">
+  <div class="wrap">
+    <div class="section-eyebrow">How It Works</div>
+    <h2 class="section-title" style="margin-bottom:48px;">From first conversation to <em>trained workforce</em> in 30 days.</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <h4>Schedule a Workforce Strategy Session</h4>
+          <p>We start with a 45-minute conversation. Tell us about your workforce, your challenges, and your goals. We'll tell you exactly how 50+TechBridge can help — and what a deployment would look like for your organization.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <h4>Choose Your Deployment Model</h4>
+          <p>Digital (self-paced, online access), Hybrid (online + in-person facilitation), or Full Deployment (custom, train-the-trainer, co-branded). We scope the right fit for your budget, timeline, and team size.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <h4>We Handle Setup — You Focus on Your Team</h4>
+          <p>Zero IT requirements. No LMS to configure. We provide access, onboarding materials, and a co-branded quick-reference guide for every participant. Your team is ready to train within days of signing.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-body">
+          <h4>Track Completion — Celebrate the Results</h4>
+          <p>We provide completion data, confidence survey results, and a post-training report. You get proof of outcomes for your leadership team, your board, and your WIOA funding documentation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MANIFESTO BREAK ── -->
+<div class="manifesto-break">
+  <div class="manifesto-inner">
+    <p>"Age catches up with us all. The question is whether your organization will be ready when it does — or whether you'll spend the next decade replacing wisdom you could have kept."</p>
+  </div>
+</div>
+
+<!-- ── CTA ── -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Ready to Close the Gap?</div>
+    <h2>Your Experienced Workforce Deserves <em>Better Training.</em></h2>
+    <p>Let's talk about what 50+TechBridge can do for your organization. 30-minute strategy session. No pitch. Just a real conversation about your workforce and what's possible.</p>
+    <div class="cta-buttons">
+      <a href="https://learnmoretechnologies.com/workforce/" class="btn-cta-primary">Schedule Workforce Consult →</a>
+      <a href="https://learnmoretechnologies.com/train/" class="btn-cta-secondary">View Training Programs</a>
+    </div>
+    <p class="cta-trust">MBE Certified · Texas · WIOA Eligible · Austin &amp; San Antonio Markets · <a href="mailto:hello@learnmoretechnologies.com" style="color:#A8B8CC;">hello@learnmoretechnologies.com</a></p>
+  </div>
+</section>
+
+</div><!-- end .lmt-workforce -->
+
+<!-- /wp:html -->
+<!-- /wp:html -->
