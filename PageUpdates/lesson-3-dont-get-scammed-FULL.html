@@ -2,9 +2,12 @@
   LESSON 3 — DON'T GET SCAMMED
   50+TechBridge · Free Lesson 3 of 3
   Last updated: August 2026
-  Template: lmt-pp (matches Lesson 1 & 2 BuddyBoss dark theme)
+  Template: Coffeetalk & Classroom (matches Lesson 1 exactly)
   HOW TO USE: LearnDash LMS > Lessons > Don't Get Scammed > Edit
   Switch to Code Editor. Replace ALL content. Update.
+
+  TODO: Replace VIDEO_ID_COFFEE and VIDEO_ID_CLASSROOM with
+  actual YouTube video IDs when videos are complete.
 -->
 
 <style>
@@ -18,86 +21,69 @@ body,.site,#page,#content,.bb-grid,.container,
 .lmt-pp{
   --navy:#0E1C2F;--navy-mid:#162640;
   --gold:#C8942E;--gold-light:#E8B84B;
-  --orange:#E8733A;--green:#109F35;
   --white:#fff;--text-body:#C4CDD9;--text-muted:#A8B8CC;
   font-family:'DM Sans',sans-serif!important;
   color:#C4CDD9!important;font-size:18px;line-height:1.75;
   background:#0E1C2F;max-width:900px;margin:0 auto;padding:40px 20px
 }
 
-/* ── TITLES ── */
+/* ── HEADER ── */
 .lmt-pp .pp-title{
   font-family:'Playfair Display',serif!important;
   font-size:clamp(28px,3.5vw,42px)!important;font-weight:700!important;
   color:#fff!important;text-align:center;margin-bottom:8px
 }
 .lmt-pp .pp-title em{color:#C8942E!important;font-style:normal}
-.lmt-pp .pp-sub{text-align:center;color:#A8B8CC!important;font-size:16px;margin-bottom:32px}
-
-/* ── STEP BADGE ── */
-.lmt-pp .step-badge{
-  display:inline-block;background:#162640;border:1px solid rgba(200,148,46,.3);
-  color:#C8942E;font-size:11px;font-weight:700;letter-spacing:2px;
-  text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:12px
-}
-.lmt-pp .step-title{
-  font-family:'Playfair Display',serif!important;
-  font-size:clamp(22px,3vw,32px)!important;font-weight:700!important;
-  color:#fff!important;margin:0 0 20px
+.lmt-pp .pp-sub{
+  text-align:center;color:#A8B8CC!important;font-size:16px;margin-bottom:32px
 }
 
-/* ── STAT ROW ── */
-.lmt-pp .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0}
-.lmt-pp .stat-box{
-  background:#162640;border:1px solid rgba(200,148,46,.2);
-  border-radius:12px;padding:20px 16px;text-align:center
+/* ── TWO CARDS ── */
+.lmt-pp .pp-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:24px
 }
-.lmt-pp .stat-box .big{font-size:32px;font-weight:700;color:#C8942E;display:block;line-height:1.1}
-.lmt-pp .stat-box .lbl{font-size:13px;color:#A8B8CC;margin-top:8px;display:block;line-height:1.4}
+.lmt-pp .pp-card{
+  background:rgba(22,38,64,.55);border:2px solid rgba(200,148,46,.15);
+  border-radius:18px;padding:34px 28px;text-align:center;
+  cursor:pointer;transition:all .25s cubic-bezier(.4,.2,.2,1);position:relative;overflow:hidden
+}
+.lmt-pp .pp-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,#C8942E,transparent);opacity:0;
+  transition:opacity .25s cubic-bezier(.4,.2,.2,1)
+}
+.lmt-pp .pp-card:hover{transform:translateY(-6px);border-color:rgba(200,148,46,.35);background:rgba(22,38,64,.9)}
+.lmt-pp .pp-card:hover::before{opacity:1}
+.lmt-pp .pp-card .pp-icon{font-size:48px;display:block;margin-bottom:16px}
+.lmt-pp .pp-card h3{
+  font-family:'Playfair Display',serif!important;font-size:24px;font-weight:700;
+  color:#fff!important;margin-bottom:8px
+}
+.lmt-pp .pp-card p{font-size:15px;color:#A8B8CC!important;line-height:1.6;margin-bottom:16px}
+.lmt-pp .pp-card .pp-btn{
+  display:inline-block;background:#C8942E;color:#0E1C2F!important;
+  font-weight:700;font-size:16px;padding:14px 32px;border-radius:10px;
+  text-decoration:none;transition:all .25s
+}
+.lmt-pp .pp-card:hover .pp-btn{background:#E8B84B;transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,148,46,.35)}
 
-/* ── CALLOUTS ── */
-.lmt-pp .callout-gold{
-  background:rgba(200,148,46,.08);border-left:3px solid #C8942E;
-  border-radius:0 10px 10px 0;padding:20px 24px;margin:24px 0
-}
-.lmt-pp .callout-gold strong{color:#C8942E!important}
-.lmt-pp .callout-red{
-  background:rgba(214,48,49,.08);border-left:3px solid #d63031;
-  border-radius:0 10px 10px 0;padding:20px 24px;margin:24px 0
-}
-.lmt-pp .callout-red strong{color:#fff!important}
-.lmt-pp .callout-green{
-  background:rgba(16,159,53,.08);border-left:3px solid #109F35;
-  border-radius:0 10px 10px 0;padding:20px 24px;margin:24px 0
-}
-.lmt-pp .callout-green strong{color:#109F35!important}
-.lmt-pp .callout-navy{
-  background:#162640;border:1px solid rgba(200,148,46,.15);
-  border-radius:10px;padding:22px 26px;margin:24px 0
-}
+.lmt-pp .pp-meta{text-align:center;margin-bottom:40px}
+.lmt-pp .pp-meta .pp-same{font-size:14px;color:#A8B8CC!important;margin-bottom:4px}
+.lmt-pp .pp-meta .pp-time{font-size:15px;color:#C8942E!important;font-weight:600}
 
-/* ── FRIDGE LINE ── */
-.lmt-pp .fridge-line{
-  background:#162640;border:2px solid #C8942E;
-  border-radius:12px;padding:24px 28px;text-align:center;margin:32px 0
+/* ── VIDEO SECTIONS ── */
+.lmt-pp .pp-video{display:none;margin-bottom:40px}
+.lmt-pp .pp-video.active{display:block}
+.lmt-pp .pp-vwrap{
+  position:relative;width:100%;padding-bottom:56.25%;height:0;
+  overflow:hidden;border-radius:12px;margin-bottom:12px;
+  box-shadow:0 12px 40px rgba(0,0,0,0.4)
 }
-.lmt-pp .fridge-line .fl-label{
-  font-size:11px;letter-spacing:2px;text-transform:uppercase;
-  color:#C8942E;font-weight:700;margin-bottom:10px
-}
-.lmt-pp .fridge-line .fl-text{font-size:20px;font-weight:700;color:#fff;line-height:1.5}
+.lmt-pp .pp-vwrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.lmt-pp .pp-switch{text-align:center;margin-top:12px}
+.lmt-pp .pp-switch a{font-size:13px;color:#C8942E!important;text-decoration:underline;cursor:pointer}
 
-/* ── LISTS ── */
-.lmt-pp .check-list{list-style:none;padding:0;margin:16px 0}
-.lmt-pp .check-list li{padding:8px 0 8px 30px;position:relative;border-bottom:1px solid rgba(255,255,255,.06);color:#C4CDD9}
-.lmt-pp .check-list li:last-child{border-bottom:none}
-.lmt-pp .check-list li::before{content:'✓';position:absolute;left:0;color:#109F35;font-weight:700}
-.lmt-pp .stop-list{list-style:none;padding:0;margin:16px 0}
-.lmt-pp .stop-list li{padding:8px 0 8px 30px;position:relative;border-bottom:1px solid rgba(255,255,255,.06);color:#C4CDD9}
-.lmt-pp .stop-list li:last-child{border-bottom:none}
-.lmt-pp .stop-list li::before{content:'✗';position:absolute;left:0;color:#d63031;font-weight:700}
-
-/* ── ACTIVITY (matches Lesson 1 style) ── */
+/* ── ACTIVITY ── */
 .lmt-pp .pp-activity{
   background:rgba(200,148,46,.06);border:1px solid rgba(200,148,46,.2);
   border-radius:18px;padding:32px;margin-bottom:32px
@@ -110,26 +96,13 @@ body,.site,#page,#content,.bb-grid,.container,
 .lmt-pp .pp-activity li{font-size:16px;color:#C4CDD9!important;line-height:1.9;margin-bottom:8px}
 .lmt-pp .pp-activity li strong{color:#fff!important}
 
-/* ── HOMEWORK ── */
-.lmt-pp .hw-list{list-style:none;padding:0;margin:0;counter-reset:hw}
-.lmt-pp .hw-list li{
-  counter-increment:hw;padding:14px 0 14px 50px;position:relative;
-  border-bottom:1px solid rgba(255,255,255,.06);color:#C4CDD9
+/* ── FRIDGE LINE ── */
+.lmt-pp .fridge-line{
+  background:#162640;border:2px solid #C8942E;
+  border-radius:12px;padding:24px 28px;text-align:center;margin:32px 0
 }
-.lmt-pp .hw-list li:last-child{border-bottom:none}
-.lmt-pp .hw-list li::before{
-  content:counter(hw);position:absolute;left:0;top:13px;
-  background:#C8942E;color:#0E1C2F;font-weight:700;font-size:13px;
-  width:28px;height:28px;border-radius:50%;display:flex;
-  align-items:center;justify-content:center;line-height:28px;text-align:center
-}
-
-/* ── REPORT BOX ── */
-.lmt-pp .report-box{
-  background:#162640;border:1px solid rgba(200,148,46,.15);
-  border-radius:10px;padding:22px 26px;margin:24px 0;font-size:15px
-}
-.lmt-pp .report-box a{color:#C8942E!important;font-weight:700;text-decoration:none}
+.lmt-pp .fridge-line .fl-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#C8942E;font-weight:700;margin-bottom:10px}
+.lmt-pp .fridge-line .fl-text{font-size:20px;font-weight:700;color:#fff;line-height:1.5}
 
 /* ── DONE BUTTON ── */
 .lmt-pp .pp-done{
@@ -143,7 +116,7 @@ body,.site,#page,#content,.bb-grid,.container,
 /* ── CTA BOX ── */
 .lmt-pp .cta-box{
   background:#162640;border:2px solid #C8942E;
-  border-radius:14px;padding:36px 32px;margin-top:40px;text-align:center
+  border-radius:14px;padding:36px 32px;margin-top:8px;text-align:center
 }
 .lmt-pp .cta-box .cta-label{
   font-size:11px;font-weight:700;letter-spacing:2px;
@@ -161,19 +134,15 @@ body,.site,#page,#content,.bb-grid,.container,
 }
 .lmt-pp .cta-btn:hover{background:#E8B84B}
 
-/* ── DIVIDER ── */
-.lmt-pp hr{border:none;border-top:1px solid rgba(255,255,255,.08);margin:40px 0}
-
-/* ── EYEBROW ── */
-.lmt-pp .eyebrow{
-  font-size:11px;font-weight:700;letter-spacing:2px;
-  text-transform:uppercase;color:#E8733A;margin-bottom:8px;display:block
+/* ── CELEBRATE ── */
+.lmt-pp .pp-celebrate{
+  text-align:center;color:#C8942E!important;font-weight:600;font-size:17px;margin-bottom:24px
 }
 
 /* ── RESPONSIVE ── */
 @media(max-width:600px){
+  .lmt-pp .pp-grid{grid-template-columns:1fr}
   .lmt-pp{padding:20px 16px}
-  .lmt-pp .stat-row{grid-template-columns:1fr}
 }
 </style>
 
@@ -181,262 +150,85 @@ body,.site,#page,#content,.bb-grid,.container,
 <div class="lmt-pp">
 
   <!-- HEADER -->
-  <span class="eyebrow">50+TechBridge · Free Lesson 3 of 3</span>
-  <h2 class="pp-title">Don't Get <em>Scammed</em></h2>
-  <p class="pp-sub">Three skills. Clear people hang up.</p>
+  <h2 class="pp-title">Lesson 3: Don't Get <em>Scammed</em></h2>
+  <h3 style="font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,32px);font-weight:700;color:#C8942E;text-align:center;margin-bottom:12px;">Everyone Learns Differently. We Built For That.</h3>
+  <p style="text-align:center;color:#C4CDD9;font-size:17px;max-width:620px;margin:0 auto 12px auto;line-height:1.7;">Same lesson. Two styles. Pick the one that feels like you.</p>
+  <p style="text-align:center;color:#A8B8CC;font-size:15px;margin:0 auto 36px auto;font-style:italic;">Choose your style, Pioneer:</p>
 
-  <p>You already did the brave part. You asked a machine a real question and stayed in charge of the answer.</p>
-  <p>This lesson is how you stay in charge when a stranger wants your fear. I am not going to spend fifteen minutes trying to frighten you. <strong style="color:#fff">Frightened people send money. Clear people hang up.</strong></p>
+  <!-- TWO CARDS -->
+  <table id="pp-cards" cellpadding="0" cellspacing="0" border="0" width="100%" style="max-width:820px;margin:0 auto 24px auto;border-collapse:separate;border-spacing:20px 0;">
+    <tr>
+      <td width="50%" valign="top" onclick="showVersion('coffee')" style="background:rgba(22,38,64,.55);border:3px solid rgba(200,148,46,.3);border-radius:20px;padding:0;text-align:center;cursor:pointer;overflow:hidden;">
+        <img src="https://learnmoretechnologies.com/wp-content/uploads/2026/05/CoffeeChat.png" alt="Two adults enjoying coffee and conversation" style="width:100%;height:200px;object-fit:cover;display:block;border-radius:17px 17px 0 0;">
+        <div style="padding:24px 20px 28px 20px;">
+          <h3 style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;margin-bottom:8px;">&#9749; Coffee Talk</h3>
+          <p style="font-size:15px;color:#C4CDD9;line-height:1.5;margin-bottom:18px;">Relaxed. Like learning from a friend over coffee.</p>
+          <span style="display:inline-block;background:#C8942E;color:#0E1C2F;font-weight:700;font-size:16px;padding:14px 32px;border-radius:10px;">Watch &#8594;</span>
+        </div>
+      </td>
+      <td width="50%" valign="top" onclick="showVersion('classroom')" style="background:rgba(22,38,64,.55);border:3px solid rgba(200,148,46,.3);border-radius:20px;padding:0;text-align:center;cursor:pointer;overflow:hidden;">
+        <img src="https://learnmoretechnologies.com/wp-content/uploads/2026/05/classroom-setting-e1777907004759.png" alt="Brian McKinney presenting to a classroom of adults" style="width:100%;height:200px;object-fit:cover;display:block;border-radius:17px 17px 0 0;">
+        <div style="padding:24px 20px 28px 20px;">
+          <h3 style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;margin-bottom:8px;">&#128218; The Classroom</h3>
+          <p style="font-size:15px;color:#C4CDD9;line-height:1.5;margin-bottom:18px;">Structured. Step by step. Brian's teaching.</p>
+          <span style="display:inline-block;background:#C8942E;color:#0E1C2F;font-weight:700;font-size:16px;padding:14px 32px;border-radius:10px;">Watch &#8594;</span>
+        </div>
+      </td>
+    </tr>
+  </table>
 
-  <div class="callout-gold">
-    <strong>Three skills. That is the whole class.</strong><br><br>
-    1. Spot a fake<br>
-    2. Name the pressure<br>
-    3. Lock the door — passwords and 2FA<br><br>
-    If you walk out with those, you are already ahead of most of the country.
+  <div class="pp-meta">
+    <p class="pp-same">Same lesson. Same result. Your choice.</p>
+    <p class="pp-time">&#9203; Takes about 8 minutes</p>
   </div>
 
-  <hr>
-
-  <!-- YOU ARE NOT THE PUNCHLINE -->
-  <h3 class="step-title">You Are Not the Punchline</h3>
-
-  <div class="stat-row">
-    <div class="stat-box">
-      <span class="big">$2.4B</span>
-      <span class="lbl">Reported lost by adults 60+ in 2024 (FTC)</span>
+  <!-- COFFEE TALK VIDEO -->
+  <div class="pp-video" id="version-coffee">
+    <p style="text-align:center;font-family:'Playfair Display',serif;font-size:22px;color:#fff;margin-bottom:16px;">&#9749; You chose <em style="color:#C8942E;">Coffee Talk</em></p>
+    <div class="pp-vwrap">
+      <!-- REPLACE VIDEO_ID_COFFEE with YouTube ID when video is ready -->
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_COFFEE?rel=0&modestbranding=1" title="Lesson 3 — Don't Get Scammed (Coffee Talk)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <div class="stat-box">
-      <span class="big">~$5B</span>
-      <span class="lbl">Reported lost by adults 60+ in 2024 (FBI IC3)</span>
+    <div class="pp-switch"><a onclick="showVersion('classroom')">Not your vibe? Switch to &#128218; The Classroom &#8594;</a></div>
+  </div>
+
+  <!-- CLASSROOM VIDEO -->
+  <div class="pp-video" id="version-classroom">
+    <p style="text-align:center;font-family:'Playfair Display',serif;font-size:22px;color:#fff;margin-bottom:16px;">&#128218; You chose <em style="color:#C8942E;">The Classroom</em></p>
+    <div class="pp-vwrap">
+      <!-- REPLACE VIDEO_ID_CLASSROOM with YouTube ID when video is ready -->
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_CLASSROOM?rel=0&modestbranding=1" title="Lesson 3 — Don't Get Scammed (Classroom)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <div class="stat-box">
-      <span class="big">3 in 4</span>
-      <span class="lbl">Older adults who reported a scam lost NO money</span>
-    </div>
+    <div class="pp-switch"><a onclick="showVersion('coffee')">Not your vibe? Switch to &#9749; Coffee Talk &#8594;</a></div>
   </div>
 
-  <p>Those numbers are real. They are ugly. <strong style="color:#fff">They are not a verdict on your intelligence.</strong></p>
-
-  <div class="callout-green">
-    <strong>Here is the line almost nobody reads out loud:</strong><br><br>
-    About 3 in 4 older adults who reported a scam to the FTC <strong style="color:#fff">lost no money</strong>. They spotted it. That can be you.
-  </div>
-
-  <p>The dollars exploded because a smaller number of scams now take <strong style="color:#fff">life-changing</strong> amounts — often a hundred thousand dollars or more — through fake investments, fake banks, fake government, fake "tech support."</p>
-  <p>Phone calls still take the most money per person. The FTC's median loss on a phone-started fraud for older adults was about <strong style="color:#fff">$2,200</strong>. If you are 80 and the phone rings, that call is still the dangerous one.</p>
-  <p>So we will not treat you like a child. We will treat you like someone who already has judgment — and who is being hunted by professionals.</p>
-
-  <hr>
-
-  <!-- STEP 1 -->
-  <div class="step-badge">STEP 1 OF 3</div>
-  <h3 class="step-title">Spot a Fake</h3>
-
-  <p>A fake wants you to believe the costume.</p>
-
-  <div class="callout-red">
-    <strong>Example fake email:</strong><br>
-    From: amazon-security@email-secure-alert.com<br>
-    Subject: Your account will close in 20 minutes<br><br>
-    <span style="color:#C4CDD9"><em>Look at the costume, not the logo.</em></span>
-  </div>
-
-  <p><strong style="color:#fff">The sender.</strong> Would Amazon really write from <code style="background:#162640;padding:2px 6px;border-radius:4px;font-size:15px">email-secure-alert.com</code>? Hover or tap and look. Do not click the link to "check."</p>
-  <p><strong style="color:#fff">The greeting.</strong> "Dear Customer" from a bank that knows your name is a tell. Not always. Often.</p>
-  <p><strong style="color:#fff">The ask.</strong> A link to "verify." A phone number in the message. A QR code you did not ask for. A request for a code that just arrived on your phone.</p>
-  <p><strong style="color:#fff">The surprise.</strong> You did not start this conversation. That matters more than the grammar. AI made the spelling better. <strong style="color:#C8942E">Do not use "no typos" as your safety test. That test is dead.</strong></p>
-
-  <div class="callout-gold">
-    <strong>Spot a fake — ask these four questions:</strong>
-    <ul class="check-list" style="margin-top:12px">
-      <li>Who started this conversation?</li>
-      <li>Does the email address look odd?</li>
-      <li>Are they sending me to a link or number they gave me?</li>
-      <li>Would my bank already know my name?</li>
-    </ul>
-  </div>
-
-  <div class="callout-navy">
-    <strong style="color:#C8942E">The FTC will NEVER:</strong>
-    <ul class="stop-list" style="margin-top:12px">
-      <li>Threaten you</li>
-      <li>Tell you to move money to "protect it"</li>
-      <li>Demand gift cards or crypto</li>
-    </ul>
-  </div>
-
-  <div class="fridge-line">
-    <div class="fl-label">How to check</div>
-    <div class="fl-text">Hang up. Look up. Call back.</div>
-  </div>
-
-  <p>Hang up. Look up the number on a statement, the back of the card, or the official website <strong style="color:#fff">you</strong> type yourself. Call that number. Do not call the number in the text. That number is the costume's sleeve.</p>
-
-  <hr>
-
-  <!-- STEP 2 -->
-  <div class="step-badge">STEP 2 OF 3</div>
-  <h3 class="step-title">Name the Pressure</h3>
-
-  <p>Fakes work because of feelings, not because you cannot read. Learn the four levers.</p>
-
-  <div class="callout-navy">
-    <strong style="color:#C8942E">The four pressure tactics:</strong><br><br>
-    <strong style="color:#E8733A">Hurry.</strong> "Twenty minutes." "A warrant." "Your grandson is at the jail." Hurry is the product. If you are not allowed to think, you are not in a real official process.<br><br>
-    <strong style="color:#E8733A">Fear.</strong> Arrest. Deportation. A virus on the computer. Fear makes smart people obedient.<br><br>
-    <strong style="color:#E8733A">Secrecy.</strong> "Don't tell your wife." "Don't tell the bank teller." Isolation is the scam. A real emergency can stand a second adult.<br><br>
-    <strong style="color:#E8733A">Authority.</strong> A badge number. A case number. Caller ID that says "Austin Police" or "IRS." Caller ID is a costume. They can fake it.
-  </div>
-
-  <div class="callout-red">
-    <strong>The fifth lever — the one that empties retirement accounts:</strong><br><br>
-    <span style="color:#C4CDD9">"Move your money to protect it." Someone says your account is compromised. To keep it safe, you must wire it, buy gold, feed a crypto ATM, or hand cash to a courier. That money is not going into a vault with your name on it. <strong style="color:#fff">It is going to them.</strong><br><br>
-    Combined $100,000-plus impersonation losses rose <strong style="color:#fff">eightfold</strong> from 2020 to 2024. That is the FTC's own spotlight.</span>
-  </div>
-
-  <div class="callout-gold">
-    <strong>Stop if they ask for any of these:</strong>
-    <ul class="stop-list" style="margin-top:12px">
-      <li>Gift cards</li>
-      <li>Wire transfer</li>
-      <li>Crypto or a Bitcoin ATM</li>
-      <li>A courier at the door</li>
-      <li>Remote access to your computer</li>
-    </ul>
-    <p style="margin:16px 0 0;font-weight:700;color:#fff">No legitimate tax office, bank, or grandchild-in-trouble story needs a Walmart gift card.</p>
-  </div>
-
-  <p><strong style="color:#fff">Tech support</strong> deserves its own breath. A pop-up says your computer is infected. A polite person offers to "take over the screen." Older adults are <strong style="color:#fff">five times</strong> more likely than younger adults to report losing money on that scam, says the FTC.</p>
-  <p><strong style="color:#C8942E">If you did not call them, they do not get to drive.</strong></p>
-
-  <!-- VOICE CLONING -->
-  <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#fff;margin:36px 0 12px">The New Costume — A Voice You Love</h3>
-
-  <p>AARP found roughly <strong style="color:#fff">eight or nine in ten</strong> adults 50+ are worried about cloned voices and deepfake video. You are not imagining the pit in your stomach.</p>
-  <p>Scams flagged as AI-enabled — realistic voices or videos — jumped <strong style="color:#fff">about twenty times</strong> from 2023 to 2025. Someone can call and sound like a grandchild. A few seconds of old video or voicemail can be enough.</p>
-
-  <div class="fridge-line">
-    <div class="fl-text">A familiar voice is no longer proof.</div>
-  </div>
-
-  <div class="callout-gold">
-    <strong>Use a family code word.</strong><br><br>
-    Pick a word or short phrase you would never put on Facebook — "Blue canoe," the name of a dog from years ago. Share it this week with the people you would actually send money to.<br><br>
-    If a panicked voice asks for bail, tickets, or a gift card and <strong style="color:#fff">cannot give the word — you hang up.</strong> Then you call your person on the number in your phone.<br><br>
-    You are not cruel for checking. You are literate.
-  </div>
-
-  <hr>
-
-  <!-- STEP 3 -->
-  <div class="step-badge">STEP 3 OF 3</div>
-  <h3 class="step-title">Lock the Door — Passwords &amp; 2FA</h3>
-
-  <p>A password is a key. Most people have one key and twenty doors.</p>
-
-  <div class="callout-navy">
-    <strong style="color:#C8942E">NIST, in plain English:</strong><br><br>
-    <ul class="check-list" style="margin-top:12px">
-      <li>Longer is better — aim for 15+ characters</li>
-      <li>A phrase beats P@ssw0rd!</li>
-      <li>You do not have to change it every 90 days</li>
-      <li>Turn on a second lock (2FA)</li>
-    </ul>
-  </div>
-
-  <p>A passphrase like <strong style="color:#fff">maple-porch-radio-Thursday</strong> is stronger and kinder to your memory than <strong style="color:#fff">Mg#9!x</strong>.</p>
-  <p><strong style="color:#fff">Unique matters.</strong> The password on email cannot be the password on the bank. Email is the skeleton key. If they get email, they can reset everything else.</p>
-
-  <div class="callout-gold">
-    <strong>Can't remember twenty phrases? Two honest options:</strong><br><br>
-    1. A <strong style="color:#fff">password manager</strong> — a vault app — if you have someone who can sit with you once to set it up.<br><br>
-    2. A <strong style="color:#fff">small notebook</strong> in a drawer or a lockbox at home. Not a sticky note on the monitor. A hidden notebook beats one reused password on the internet.
-  </div>
-
+  <!-- ACTIVITY -->
   <div class="pp-activity">
-    <h3>Turn On 2FA This Week</h3>
+    <h3>Now You Do It:</h3>
     <ol>
-      <li>Open your <strong>Email app</strong> (Gmail, Outlook, etc.)</li>
-      <li>Go to <strong>Settings → Security</strong></li>
-      <li>Look for <strong>Two-factor, 2-step verification, or Multifactor</strong></li>
-      <li>Turn it on — it will send a code to your phone</li>
-      <li>Then do the same for your <strong>bank app</strong></li>
+      <li><strong>The fridge rule.</strong> Write this down and put it somewhere visible: <em>Unexpected + hurry + money or a code = hang up and verify.</em></li>
+      <li><strong>Pick a family code word.</strong> One word or short phrase only your people know. Text it to them today. Not on Facebook.</li>
+      <li><strong>Turn on 2FA for email.</strong> Go to Settings &#8594; Security &#8594; look for Two-factor or 2-step verification. Turn it on.</li>
+      <li><strong>Check your email password.</strong> Is it the same as your bank? Change one of them to a long phrase — like <em>maple-porch-radio-Thursday.</em></li>
+      <li>If a scam already happened: <strong>call the bank now</strong>, then report at ReportFraud.ftc.gov and ic3.gov.</li>
     </ol>
-    <p style="color:#C4CDD9">CISA says any second factor is better than none. Perfect is the enemy of a locked door.</p>
+    <p class="pp-celebrate">You are now ahead of most of the country. You did that. &#127881;</p>
   </div>
 
-  <div class="callout-red">
-    <strong style="font-size:18px">Never read a verification code to anyone.</strong><br><br>
-    <span style="color:#C4CDD9">Anyone who calls and asks you to read the code that just arrived is a scammer — even if they already know your name, even if they say they are the bank. You type the code into the site <strong style="color:#fff">you</strong> opened. You never speak it to a stranger.</span>
-  </div>
-
-  <hr>
-
-  <!-- IF IT ALREADY HAPPENED -->
-  <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#fff;margin:0 0 16px">If It Already Happened</h3>
-
-  <p>Some of you are not here for prevention. You are here because something already left the account. Listen to me.</p>
-  <p><strong style="color:#C8942E">This is not a moral failure.</strong> Professionals ran a play on a human nervous system. You are allowed to still be a competent person.</p>
-
-  <div class="callout-navy">
-    <strong style="color:#C8942E">If money already moved — do these six things:</strong>
-    <ol style="padding-left:20px;margin:16px 0 0">
-      <li style="margin-bottom:10px;color:#C4CDD9">Stop sending</li>
-      <li style="margin-bottom:10px;color:#C4CDD9">Call the bank — <strong style="color:#fff">number on the card</strong></li>
-      <li style="margin-bottom:10px;color:#C4CDD9">Tell them: wire / gift card / crypto ATM — whatever you used</li>
-      <li style="margin-bottom:10px;color:#C4CDD9">Change your email password. Turn on 2FA</li>
-      <li style="margin-bottom:10px;color:#C4CDD9">Report: <strong style="color:#C8942E">ReportFraud.ftc.gov</strong> and <strong style="color:#C8942E">ic3.gov</strong></li>
-      <li style="color:#C4CDD9">Tell one trusted person</li>
-    </ol>
-  </div>
-
-  <p>Speed matters. The FTC works with the FBI's recovery team. Recovery is not a promise. Silence is a guarantee of no chance. Identity theft steps live at <strong style="color:#C8942E">identitytheft.gov</strong>.</p>
-
-  <hr>
-
-  <!-- HOMEWORK -->
-  <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#fff;margin:0 0 20px">Your Homework — Twenty Minutes</h3>
-
-  <ol class="hw-list">
-    <li><strong style="color:#fff">Hang-up rule on the fridge.</strong> Unexpected + hurry + money or a code = hang up and verify.</li>
-    <li><strong style="color:#fff">Family code word</strong> sent to the people who matter. Not posted online.</li>
-    <li><strong style="color:#fff">Email 2FA</strong> turned on. Then the bank.</li>
-    <li><strong style="color:#fff">One unique long phrase</strong> for email if it's still the same as three other sites.</li>
-    <li>If a scam already happened — <strong style="color:#fff">file the two reports today.</strong></li>
-  </ol>
-
-  <p>If you do nothing else, do the fridge line and the code word. Those two beat a weekend of worry.</p>
-
-  <!-- CLOSE -->
+  <!-- FRIDGE LINE -->
   <div class="fridge-line">
     <div class="fl-label">Put this on your fridge</div>
     <div class="fl-text">Unexpected + hurry + money or a code<br>= hang up and verify</div>
   </div>
 
-  <p>Digital independence includes the right to say no to a frightened voice. Come sit with us at a library table. Bring the friend who always clicks. Bring the friend who is too proud to ask.</p>
-  <p>The series is free. The next conversation is free. Nobody here will ask you for a gift card.</p>
-
-  <div class="report-box">
-    <strong style="color:#fff">Report a scam:</strong><br><br>
-    <a href="https://reportfraud.ftc.gov" target="_blank">reportfraud.ftc.gov</a> &nbsp;·&nbsp;
-    <a href="https://ic3.gov" target="_blank">ic3.gov</a> &nbsp;·&nbsp;
-    <a href="https://identitytheft.gov" target="_blank">identitytheft.gov</a><br><br>
-    Questions? <a href="mailto:hello@learnmoretechnologies.com">hello@learnmoretechnologies.com</a>
-  </div>
-
-  <p style="color:#A8B8CC;font-style:italic">— Brian McKinney · 50+TechBridge<br>Hang up. Look up. Call back. I'll see you in the room.</p>
-
   <!-- DONE BUTTON -->
-  <button class="pp-done" onclick="this.textContent='✅ Done! You are now ahead of most of the country, Pioneer.'; this.style.background='#0C7A28'; this.disabled=true;">
-    ✅ I GOT IT — I'M READY
+  <button class="pp-done" onclick="this.textContent='&#9989; Done! You are a Digital Pioneer.'; this.style.background='#0C7A28'; this.disabled=true;">
+    &#9989; I GOT IT — I'M READY
   </button>
 
-  <hr>
-
-  <!-- BRIDGE MODEL CTA -->
+  <!-- BRIDGE MODEL CTA (replaces "Next Day" — this is the last free lesson) -->
   <div class="cta-box">
-    <span class="cta-label">You Finished the Free Lessons</span>
+    <span class="cta-label">You Finished All Three Free Lessons</span>
     <h3>Want to go deeper?</h3>
     <p>We offer a free 60-minute Lunch &amp; Learn for your organization.<br>
     If you want to go deeper, we design a custom cohort just for your team.<br>
@@ -447,3 +239,13 @@ body,.site,#page,#content,.bb-grid,.container,
   </div>
 
 </div>
+
+<script>
+function showVersion(v){
+  document.getElementById('pp-cards').style.display='none';
+  document.getElementById('version-coffee').classList.remove('active');
+  document.getElementById('version-classroom').classList.remove('active');
+  document.getElementById('version-'+v).classList.add('active');
+  document.getElementById('version-'+v).scrollIntoView({behavior:'smooth',block:'start'});
+}
+</script>
