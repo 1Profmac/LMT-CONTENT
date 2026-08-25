@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Pioneer Gallery — Art & Technology Exhibitions by Adults 50+ | LearnMoreTechnologies</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & BASE ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:#0E1C2F;
+  color:#C4CDD9;
+  font-size:18px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+:root{
+  --navy:#0E1C2F;
+  --navy-mid:#162640;
+  --navy-light:#1E3A5F;
+  --gold:#C8942E;
+  --gold-light:#E8B84B;
+  --gold-dim:rgba(200,148,46,.15);
+  --orange:#E8733A;
+  --orange-dim:rgba(232,115,58,.15);
+  --teal:#00C9B1;
+  --teal-dim:rgba(0,201,177,.12);
+  --purple:#9B6DFF;
+  --purple-dim:rgba(155,109,255,.12);
+  --green:#27D476;
+  --green-dim:rgba(39,212,118,.12);
+  --white:#fff;
+  --text-body:#C4CDD9;
+  --text-muted:#7A92AC;
+  --radius:14px;
+  --max:1180px;
+}
+
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{max-width:100%;display:block}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+@keyframes pulse{0%{transform:scale(1);opacity:.5}100%{transform:scale(1.8);opacity:0}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+.au{animation:fadeUp .7s ease both}
+.d1{animation-delay:.1s}.d2{animation-delay:.22s}.d3{animation-delay:.34s}
+.d4{animation-delay:.46s}.d5{animation-delay:.58s}.d6{animation-delay:.70s}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
+.s-pad{padding-top:80px;padding-bottom:80px}
+section{position:relative;overflow:hidden}
+
+.section-label{
+  display:inline-block;font-size:12px;font-weight:700;
+  letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:16px;
+}
+
+h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.1}
+h2{font-size:clamp(32px,4vw,52px);font-weight:900;letter-spacing:-.5px}
+h2 em{font-style:italic;color:var(--gold)}
+h3{font-size:clamp(20px,2.5vw,26px);font-weight:700}
+
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 28px;border-radius:8px;font-family:'DM Sans',sans-serif;
+  font-size:15px;font-weight:700;cursor:pointer;border:none;
+  transition:all .25s ease;text-decoration:none;
+}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 30px rgba(200,148,46,.4)}
+.btn-outline{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.3)}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+
+/* ── NAV ── */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(14,28,47,.95);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(200,148,46,.2);
+  padding:18px 40px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.nav-logo{font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:var(--white)}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{color:#aab8cc;font-size:14px;font-weight:500;transition:color .2s;letter-spacing:.3px}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{
+  background:var(--gold);color:var(--navy)!important;
+  padding:10px 24px;border-radius:6px;font-weight:700!important;
+  transition:background .2s, transform .2s;
+}
+.nav-cta:hover{background:var(--gold-light)!important;transform:translateY(-1px)}
+
+/* ── HERO IMAGE BLOCK ── */
+.hero-img-block{
+  width:100%;
+  position:relative;
+  overflow:hidden;
+  max-height:560px;
+}
+.hero-img-block img{
+  width:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center 25%;
+  max-height:560px;
+}
+.hero-img-block::after{
+  content:'';
+  position:absolute;bottom:0;left:0;right:0;
+  height:140px;
+  background:linear-gradient(to bottom,transparent 0%,#0E1C2F 100%);
+}
+
+/* ── HERO TEXT SECTION ── */
+.hero{
+  background:#0E1C2F;
+  padding:48px 40px 72px;
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+.hero .wrap{position:relative;z-index:2}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;animation:float 6s ease-in-out infinite}
+.orb-1{width:400px;height:400px;background:rgba(200,148,46,.08);top:-100px;left:-80px;animation-delay:0s}
+.orb-2{width:300px;height:300px;background:rgba(0,201,177,.07);bottom:-60px;right:3%;animation-delay:2s}
+.orb-3{width:200px;height:200px;background:rgba(155,109,255,.08);top:30%;left:5%;animation-delay:4s}
+
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(200,148,46,.12);border:1px solid rgba(200,148,46,.3);
+  color:var(--gold-light);padding:5px 16px;border-radius:50px;
+  font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:18px;
+}
+.hero-eyebrow::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--gold);animation:pulse 1.5s ease-out infinite}
+
+.hero h1{font-size:clamp(42px,6vw,78px);font-weight:900;color:var(--white);line-height:1.05;max-width:900px;margin:0 auto 24px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero h1 .accent{
+  background:linear-gradient(90deg,var(--gold),var(--orange),var(--teal));
+  background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  animation:shimmer 4s linear infinite;
+}
+.hero-sub{font-size:clamp(17px,2vw,21px);color:#A8B8CC;max-width:680px;margin:0 auto 32px;line-height:1.6}
+.hero-cta-row{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+
+.hero-stats{display:flex;align-items:center;gap:20px;max-width:1180px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.hero-stats-label{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#7A92AC;white-space:nowrap}
+.hero-stats-pills{display:flex;gap:8px;flex-wrap:wrap}
+.hero-stat{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:6px 14px;border-radius:6px;
+  font-size:12px;font-weight:600;white-space:nowrap;
+  background:rgba(200,148,46,.15);color:#E8B84B;border:1px solid rgba(200,148,46,.35);
+}
+.hero-stat .num{font-family:'Playfair Display',serif;font-size:14px;font-weight:900;color:var(--gold-light)}
+.hero-stat .lbl{font-size:12px;color:#C4CDD9;font-weight:500;}
+
+/* ── BRIDGE STRIP ── */
+.bridge-strip{
+  background:linear-gradient(90deg,rgba(0,201,177,.08) 0%,rgba(200,148,46,.06) 50%,rgba(0,201,177,.08) 100%);
+  border-top:1px solid rgba(0,201,177,.2);
+  border-bottom:1px solid rgba(200,148,46,.2);
+  padding:18px 40px;
+}
+.bridge-inner{
+  max-width:1180px;margin:0 auto;
+  display:flex;align-items:center;gap:24px;flex-wrap:wrap;
+}
+.bridge-icon{
+  font-size:22px;flex-shrink:0;
+  width:42px;height:42px;border-radius:50%;
+  background:rgba(0,201,177,.12);border:1px solid rgba(0,201,177,.3);
+  display:flex;align-items:center;justify-content:center;
+}
+.bridge-text{flex:1;min-width:260px}
+.bridge-text strong{
+  display:block;font-size:14px;font-weight:700;
+  color:#fff;margin-bottom:4px;letter-spacing:.2px;
+}
+.bridge-text p{font-size:13px;color:#7A92AC;line-height:1.5;margin:0}
+.bridge-text p em{color:var(--teal);font-style:normal;font-weight:600}
+.bridge-tags{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.bridge-tag{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:5px 12px;border-radius:5px;font-size:11px;font-weight:700;
+  letter-spacing:.5px;white-space:nowrap;
+}
+.bt-teal{background:rgba(0,201,177,.12);color:#00C9B1;border:1px solid rgba(0,201,177,.3)}
+.bt-gold{background:rgba(200,148,46,.12);color:#E8B84B;border:1px solid rgba(200,148,46,.3)}
+.bt-purple{background:rgba(155,109,255,.12);color:#9B6DFF;border:1px solid rgba(155,109,255,.3)}
+
+/* ── SOCIAL BAR ── */
+.social-bar{background:#08111e;border-bottom:1px solid rgba(200,148,46,.2);padding:10px 40px}
+.social-bar-inner{display:flex;align-items:center;gap:20px;max-width:1180px;margin:0 auto;flex-wrap:wrap}
+.social-label{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#7A92AC;white-space:nowrap}
+.social-links{display:flex;gap:8px;flex-wrap:wrap}
+.soc-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;transition:all .2s;white-space:nowrap}
+.soc-fb{background:rgba(66,103,178,.18);color:#7b9ef0;border:1px solid rgba(66,103,178,.35)}
+.soc-fb:hover{background:rgba(66,103,178,.35);transform:translateY(-1px)}
+.soc-li{background:rgba(10,102,194,.18);color:#60a8e0;border:1px solid rgba(10,102,194,.35)}
+.soc-li:hover{background:rgba(10,102,194,.35);transform:translateY(-1px)}
+.soc-yt{background:rgba(255,0,0,.15);color:#ff7070;border:1px solid rgba(255,0,0,.3)}
+.soc-yt:hover{background:rgba(255,0,0,.3);transform:translateY(-1px)}
+.soc-ig{background:rgba(228,64,95,.15);color:#f07090;border:1px solid rgba(228,64,95,.3)}
+.soc-ig:hover{background:rgba(228,64,95,.3);transform:translateY(-1px)}
+.soc-x{background:rgba(255,255,255,.08);color:#ccc;border:1px solid rgba(255,255,255,.15)}
+.soc-x:hover{background:rgba(255,255,255,.16);transform:translateY(-1px)}
+.soc-email{background:rgba(200,148,46,.15);color:#E8B84B;border:1px solid rgba(200,148,46,.3)}
+.soc-email:hover{background:rgba(200,148,46,.3);transform:translateY(-1px)}
+
+/* ── START WHERE YOU ARE ── */
+.start-where{background:#0a1220;border-top:1px solid rgba(255,255,255,.05)}
+.start-where-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:64px;align-items:start}
+.start-where-left h2{color:var(--white);margin-bottom:16px}
+.start-where-left .level-pills{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}
+.level-pill{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:20px;
+  font-size:12px;font-weight:700;letter-spacing:.5px;white-space:nowrap}
+.lp-novice{background:rgba(39,212,118,.12);color:#27D476;border:1px solid rgba(39,212,118,.3)}
+.lp-exp{background:rgba(200,148,46,.12);color:#E8B84B;border:1px solid rgba(200,148,46,.3)}
+.lp-pro{background:rgba(155,109,255,.12);color:#9B6DFF;border:1px solid rgba(155,109,255,.3)}
+.start-where-left p{font-size:16px;color:#8a9fb8;line-height:1.7}
+.start-where-left p strong{color:#fff}
+.path-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.path-card{
+  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);
+  border-radius:12px;padding:18px 20px;
+  transition:border-color .2s,background .2s;
+}
+.path-card:hover{background:rgba(255,255,255,.06);border-color:rgba(200,148,46,.25)}
+.path-card .path-icon{font-size:22px;margin-bottom:10px;display:block}
+.path-card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:6px;font-family:'DM Sans',sans-serif}
+.path-card p{font-size:13px;color:#7A92AC;line-height:1.55;margin:0}
+.path-card .path-for{
+  display:inline-block;margin-top:10px;
+  font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;
+  color:var(--gold);
+}
+.start-cta{margin-top:28px;padding-top:22px;border-top:1px solid rgba(255,255,255,.06);
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.start-cta p{font-size:14px;color:#7A92AC;margin:0;line-height:1.5}
+.start-cta p strong{color:#fff}
+
+/* ── WHAT IS ── */
+.what-is{background:var(--navy-mid)}
+.what-is-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.what-is-text h2{margin-bottom:20px;color:var(--white)}
+.what-is-text p{color:var(--text-body);margin-bottom:18px}
+.what-is-text p strong{color:var(--white)}
+.what-is-card-col{display:flex;flex-direction:column;gap:16px}
+.feature-card{
+  background:var(--navy-light);border:1px solid rgba(255,255,255,.06);
+  border-radius:var(--radius);padding:24px 28px;
+  display:flex;align-items:flex-start;gap:16px;
+  transition:border-color .25s, transform .25s;
+}
+.feature-card:hover{border-color:rgba(200,148,46,.4);transform:translateX(4px)}
+.feature-icon{width:44px;height:44px;min-width:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.feature-card h3{font-size:17px;font-weight:700;color:var(--white);margin-bottom:6px}
+.feature-card p{font-size:15px;color:var(--text-muted);line-height:1.5;margin:0}
+
+/* ── 4-CARD GRID (DISCIPLINES) ── */
+.disciplines{background:var(--navy)}
+.disciplines-header{text-align:center;max-width:700px;margin:0 auto 56px}
+.disciplines-header h2{color:var(--white);margin-bottom:16px}
+.disciplines-header p{color:var(--text-muted);font-size:17px}
+.disc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.disc-card{border-radius:18px;padding:36px 32px;position:relative;overflow:hidden;border:1px solid transparent;transition:transform .3s, box-shadow .3s;cursor:default}
+.disc-card:hover{transform:translateY(-6px)}
+.disc-card.gold{background:rgba(200,148,46,.08);border-color:rgba(200,148,46,.25)}
+.disc-card.gold:hover{box-shadow:0 20px 60px rgba(200,148,46,.2)}
+.disc-card.teal{background:rgba(0,201,177,.08);border-color:rgba(0,201,177,.25)}
+.disc-card.teal:hover{box-shadow:0 20px 60px rgba(0,201,177,.2)}
+.disc-card.purple{background:rgba(155,109,255,.08);border-color:rgba(155,109,255,.25)}
+.disc-card.purple:hover{box-shadow:0 20px 60px rgba(155,109,255,.2)}
+.disc-card.orange{background:rgba(232,115,58,.08);border-color:rgba(232,115,58,.25)}
+.disc-card.orange:hover{box-shadow:0 20px 60px rgba(232,115,58,.2)}
+.disc-number{font-family:'Playfair Display',serif;font-size:64px;font-weight:900;opacity:.12;position:absolute;top:16px;right:24px;line-height:1}
+.disc-card.gold .disc-number{color:var(--gold)}
+.disc-card.teal .disc-number{color:var(--teal)}
+.disc-card.purple .disc-number{color:var(--purple)}
+.disc-card.orange .disc-number{color:var(--orange)}
+.disc-icon{font-size:36px;margin-bottom:16px}
+.disc-badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:50px;margin-bottom:14px}
+.disc-card.gold .disc-badge{background:rgba(200,148,46,.2);color:var(--gold-light)}
+.disc-card.teal .disc-badge{background:rgba(0,201,177,.15);color:var(--teal)}
+.disc-card.purple .disc-badge{background:rgba(155,109,255,.15);color:var(--purple)}
+.disc-card.orange .disc-badge{background:rgba(232,115,58,.15);color:var(--orange)}
+.disc-card h3{font-size:24px;color:var(--white);margin-bottom:12px}
+.disc-card p{font-size:15px;color:var(--text-body);line-height:1.65;margin:0}
+
+/* ── STEPS ARC ── */
+.arc{background:var(--navy-mid)}
+.arc-header{text-align:center;max-width:680px;margin:0 auto 64px}
+.arc-header h2{color:var(--white);margin-bottom:16px}
+.arc-header p{color:var(--text-muted);font-size:17px}
+.arc-steps{display:flex;flex-direction:column;gap:0;max-width:860px;margin:0 auto}
+.arc-step{display:flex;gap:32px;align-items:flex-start;padding:28px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.arc-step:last-child{border-bottom:none}
+.step-num-wrap{display:flex;flex-direction:column;align-items:center;gap:0;min-width:56px}
+.step-num{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:22px;font-weight:900;flex-shrink:0}
+.step-line{width:2px;flex:1;min-height:24px;background:rgba(255,255,255,.08)}
+.step-num.s1{background:rgba(200,148,46,.2);color:var(--gold-light);border:2px solid rgba(200,148,46,.4)}
+.step-num.s2{background:rgba(0,201,177,.15);color:var(--teal);border:2px solid rgba(0,201,177,.3)}
+.step-num.s3{background:rgba(155,109,255,.15);color:var(--purple);border:2px solid rgba(155,109,255,.3)}
+.step-num.s4{background:rgba(232,115,58,.15);color:var(--orange);border:2px solid rgba(232,115,58,.3)}
+.step-num.s5{background:rgba(39,212,118,.15);color:var(--green);border:2px solid rgba(39,212,118,.3)}
+.step-body{padding-top:10px}
+.step-week{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.arc-step:nth-child(1) .step-week{color:var(--gold)}
+.arc-step:nth-child(2) .step-week{color:var(--teal)}
+.arc-step:nth-child(3) .step-week{color:var(--purple)}
+.arc-step:nth-child(4) .step-week{color:var(--orange)}
+.arc-step:nth-child(5) .step-week{color:var(--green)}
+.step-body h3{font-size:20px;color:var(--white);margin-bottom:8px}
+.step-body p{font-size:15px;color:var(--text-muted);margin:0;line-height:1.6}
+.step-body ul{margin-top:10px;display:flex;flex-direction:column;gap:6px}
+.step-body ul li{font-size:14px;color:var(--text-muted);padding-left:18px;position:relative}
+.step-body ul li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--text-muted)}
+.highlight-box{background:linear-gradient(135deg,rgba(39,212,118,.12),rgba(0,201,177,.08));border:1px solid rgba(39,212,118,.3);border-radius:12px;padding:20px 24px;margin-top:16px}
+.highlight-box p{font-size:15px;color:#b0f0d8;margin:0;font-weight:500}
+.highlight-box strong{color:var(--green)}
+
+/* ── VENUES ── */
+.venues{background:var(--navy)}
+.venues-header{text-align:center;max-width:680px;margin:0 auto 52px}
+.venues-header h2{color:var(--white);margin-bottom:16px}
+.venues-header p{color:var(--text-muted);font-size:17px}
+.venues-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px}
+.venue-card{background:var(--navy-mid);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:28px 24px;transition:border-color .25s,transform .25s;text-align:center}
+.venue-card:hover{border-color:rgba(200,148,46,.35);transform:translateY(-4px)}
+.venue-icon{font-size:32px;margin-bottom:14px}
+.venue-card h3{font-size:17px;color:var(--white);margin-bottom:8px;font-weight:700}
+.venue-card p{font-size:14px;color:var(--text-muted);margin:0;line-height:1.5}
+.data-table-wrap{background:var(--navy-mid);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);overflow:hidden}
+.data-table{width:100%;border-collapse:collapse}
+.data-table th{background:rgba(200,148,46,.12);color:var(--gold);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:14px 20px;text-align:left;border-bottom:1px solid rgba(255,255,255,.07)}
+.data-table td{padding:16px 20px;font-size:15px;color:var(--text-body);border-bottom:1px solid rgba(255,255,255,.04)}
+.data-table tr:last-child td{border-bottom:none}
+.data-table tr:hover td{background:rgba(255,255,255,.025)}
+.data-table td:first-child{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--white)}
+.data-table tr.highlight-row td{background:rgba(39,212,118,.06)}
+.data-table tr.highlight-row td:first-child{color:var(--green)}
+.badge{display:inline-block;font-size:11px;font-weight:700;padding:4px 12px;border-radius:50px;letter-spacing:.5px}
+.badge-gold{background:rgba(200,148,46,.2);color:var(--gold-light)}
+.badge-teal{background:rgba(0,201,177,.15);color:var(--teal)}
+.badge-purple{background:rgba(155,109,255,.15);color:var(--purple)}
+.badge-orange{background:rgba(232,115,58,.15);color:var(--orange)}
+.badge-green{background:rgba(39,212,118,.15);color:var(--green)}
+.badge-white{background:rgba(255,255,255,.1);color:#fff}
+
+/* ── IMPACT ── */
+.impact{background:linear-gradient(135deg,#0d1e35 0%,#111827 100%);border-top:1px solid rgba(200,148,46,.15);border-bottom:1px solid rgba(200,148,46,.15)}
+.impact-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.impact-text h2{color:var(--white);margin-bottom:20px}
+.impact-text p{color:var(--text-body);margin-bottom:16px}
+.impact-text p strong{color:var(--white)}
+.proof-strip{display:flex;flex-direction:column;gap:16px}
+.proof-item{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:18px 20px;transition:border-color .2s}
+.proof-item:hover{border-color:rgba(200,148,46,.3)}
+.proof-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.proof-dot.gold{background:var(--gold)}
+.proof-dot.teal{background:var(--teal)}
+.proof-dot.orange{background:var(--orange)}
+.proof-dot.green{background:var(--green)}
+.proof-dot.purple{background:var(--purple)}
+.proof-item p{font-size:15px;color:var(--text-body);margin:0}
+.proof-item p strong{color:var(--white)}
+
+/* ── TEAM ── */
+.team{background:var(--navy-mid)}
+.team-header{text-align:center;max-width:680px;margin:0 auto 52px}
+.team-header h2{color:var(--white);margin-bottom:16px}
+.team-header p{color:var(--text-muted);font-size:17px}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.team-card{background:var(--navy-light);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:32px 28px;transition:border-color .25s,transform .25s}
+.team-card:hover{border-color:rgba(200,148,46,.35);transform:translateY(-4px)}
+.team-avatar{width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px}
+.team-card h3{font-size:19px;color:var(--white);margin-bottom:4px}
+.team-role{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
+.team-card p{font-size:14px;color:var(--text-muted);line-height:1.6;margin:0}
+.team-card.lead .team-avatar{background:rgba(200,148,46,.2)}.team-card.lead .team-role{color:var(--gold)}
+.team-card.advisor .team-avatar{background:rgba(0,201,177,.15)}.team-card.advisor .team-role{color:var(--teal)}
+.team-card.guest .team-avatar{background:rgba(155,109,255,.15)}.team-card.guest .team-role{color:var(--purple)}
+.team-card.volunteer .team-avatar{background:rgba(232,115,58,.15)}.team-card.volunteer .team-role{color:var(--orange)}
+.team-card.partner .team-avatar{background:rgba(39,212,118,.15)}.team-card.partner .team-role{color:var(--green)}
+.team-card.mbe .team-avatar{background:rgba(200,148,46,.15)}.team-card.mbe .team-role{color:var(--gold)}
+.mbe-badge{display:inline-flex;align-items:center;gap:8px;margin-top:14px;background:rgba(200,148,46,.12);border:1px solid rgba(200,148,46,.3);padding:8px 16px;border-radius:50px;font-size:12px;font-weight:700;color:var(--gold-light);letter-spacing:.5px}
+
+/* ── TRACK RECORD ── */
+.track-record{background:var(--navy)}
+.track-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:center}
+.track-text h2{color:var(--white);margin-bottom:20px}
+.track-text p{color:var(--text-body);margin-bottom:24px}
+.award-badge{display:inline-flex;align-items:center;gap:12px;background:rgba(200,148,46,.1);border:1px solid rgba(200,148,46,.3);border-radius:12px;padding:16px 24px;margin-bottom:24px}
+.award-badge .icon{font-size:28px}
+.award-badge-text .label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:2px}
+.award-badge-text .value{font-size:18px;font-weight:700;color:var(--white)}
+.track-wins{display:flex;flex-direction:column;gap:12px}
+.track-win{display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:16px 18px}
+.win-check{width:28px;height:28px;min-width:28px;border-radius:50%;background:rgba(39,212,118,.15);display:flex;align-items:center;justify-content:center;font-size:14px;margin-top:1px}
+.track-win p{font-size:15px;color:var(--text-body);margin:0;line-height:1.5}
+.track-win p strong{color:var(--white)}
+
+/* ── SPONSOR STRIP ── */
+.sponsor-strip{background:linear-gradient(135deg,rgba(14,28,47,0.95),rgba(22,38,64,0.95));border-top:1px solid rgba(200,148,46,.2);border-bottom:1px solid rgba(200,148,46,.1);padding:36px 0}
+.sponsor-inner{display:flex;align-items:center;gap:0;flex-wrap:wrap;justify-content:center}
+.sponsor-block{flex:1;min-width:220px;padding:0 40px;text-align:center}
+.sponsor-divider{width:1px;height:60px;background:rgba(255,255,255,.1);flex-shrink:0}
+.sponsor-label{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.sponsor-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:6px;line-height:1.2}
+.sponsor-detail{font-size:12px;color:#7A92AC;line-height:1.5}
+
+/* ── APPLY MODAL ── */
+.modal-overlay{
+  display:none;position:fixed;inset:0;z-index:999;
+  background:rgba(4,10,20,0.88);backdrop-filter:blur(8px);
+  align-items:center;justify-content:center;padding:20px;
+}
+.modal-overlay.open{display:flex}
+.modal-box{
+  background:#0e1c2f;border:1px solid rgba(200,148,46,.3);
+  border-radius:20px;width:100%;max-width:620px;
+  max-height:90vh;overflow-y:auto;
+  box-shadow:0 40px 100px rgba(0,0,0,0.7);
+  position:relative;
+}
+.modal-header{
+  padding:32px 36px 24px;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  position:sticky;top:0;background:#0e1c2f;z-index:2;
+  border-radius:20px 20px 0 0;
+}
+.modal-header h2{font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:#fff;margin-bottom:6px}
+.modal-header h2 em{font-style:italic;color:#C8942E}
+.modal-header p{font-size:14px;color:#7A92AC;margin:0}
+.modal-close{
+  position:absolute;top:20px;right:24px;
+  background:rgba(255,255,255,.08);border:none;color:#fff;
+  width:36px;height:36px;border-radius:50%;font-size:18px;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:background .2s;
+}
+.modal-close:hover{background:rgba(255,255,255,.18)}
+.modal-body{padding:28px 36px 36px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.form-row.full{grid-template-columns:1fr}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group label{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#7A92AC}
+.form-group input,.form-group select,.form-group textarea{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+  border-radius:8px;padding:12px 14px;color:#fff;font-family:'DM Sans',sans-serif;
+  font-size:14px;outline:none;transition:border-color .2s;width:100%;
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+  border-color:rgba(200,148,46,.6);background:rgba(200,148,46,.05);
+}
+.form-group select option{background:#0e1c2f;color:#fff}
+.form-group textarea{resize:vertical;min-height:90px}
+.form-group input::placeholder,.form-group textarea::placeholder{color:#4a5e78}
+.form-submit-row{margin-top:24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.form-submit-row p{font-size:12px;color:#7A92AC;margin:0;line-height:1.5}
+.form-success{
+  display:none;text-align:center;padding:40px 20px;
+}
+.form-success h3{font-family:'Playfair Display',serif;font-size:24px;color:#fff;margin-bottom:12px}
+.form-success p{color:#7A92AC;font-size:15px;line-height:1.6}
+.success-icon{font-size:48px;margin-bottom:16px;display:block}
+
+/* ── CTA ── */
+.cta-section{background:linear-gradient(160deg,#0d1e35 0%,#0E1C2F 100%);text-align:center;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 800px 500px at 50% 50%, rgba(200,148,46,.1) 0%, transparent 70%);pointer-events:none}
+.cta-section .section-label{color:var(--teal)}
+.cta-section h2{color:var(--white);max-width:700px;margin:0 auto 20px}
+.cta-section p{color:var(--text-muted);max-width:560px;margin:0 auto 40px;font-size:18px}
+.cta-row{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+.contact-strip{margin-top:48px;padding-top:32px;border-top:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+.contact-item{display:flex;align-items:center;gap:10px;color:var(--text-muted);font-size:15px}
+.contact-item a{color:var(--gold);font-weight:600;transition:color .2s}
+.contact-item a:hover{color:var(--gold-light)}
+
+/* ── FOOTER ── */
+footer{background:#08111E;border-top:1px solid rgba(255,255,255,.06);padding:32px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-logo{font-family:'Playfair Display',serif;font-size:17px;font-weight:900;color:var(--white)}
+.footer-logo span{color:var(--gold)}
+footer p{font-size:13px;color:var(--text-muted)}
+.footer-links{display:flex;gap:24px}
+.footer-links a{font-size:13px;color:var(--text-muted);transition:color .2s}
+.footer-links a:hover{color:var(--gold)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  nav{padding:16px 24px}
+  .nav-links{display:none}
+  .hero{padding:32px 24px 56px}
+  .wrap{padding:0 24px}
+  .what-is-grid,.impact-inner,.track-inner{grid-template-columns:1fr}
+  .disc-grid{grid-template-columns:1fr}
+  .venues-grid{grid-template-columns:repeat(2,1fr)}
+  .team-grid{grid-template-columns:1fr}
+  .hero-stats{flex-direction:column}
+  .hero-stat{border-right:none;border-bottom:1px solid rgba(255,255,255,.08)}
+  .hero-stat:last-child{border-bottom:none}
+  .data-table-wrap{overflow-x:auto}
+  .social-bar{padding:10px 20px}
+  .social-label{display:none}
+}
+@media(max-width:600px){
+  .venues-grid{grid-template-columns:1fr}
+  .contact-strip{gap:20px;flex-direction:column}
+  footer{flex-direction:column;text-align:center}
+  .footer-links{justify-content:center}
+  .sponsor-inner{flex-direction:column;gap:24px}
+  .sponsor-divider{width:60px;height:1px}
+  .sponsor-block{padding:0 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Digital Pioneer <span>Gallery</span></div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#join" class="nav-cta" onclick="openModal();return false;">Apply for Cohort</a>
+  </div>
+</nav>
+
+<!-- HERO IMAGE -->
+<div class="hero-img-block">
+  <img
+    src="images/pioneers-gallery.png"
+    alt="Digital Pioneer Gallery opening at The Carver Museum — adults 50+ standing with their artwork and certificates of completion"
+  >
+</div>
+
+<!-- HERO TEXT -->
+<section class="hero" id="top">
+  <div class="hero-orb orb-1"></div>
+  <div class="hero-orb orb-2"></div>
+  <div class="hero-orb orb-3"></div>
+
+  <div class="wrap">
+    <div class="hero-eyebrow au d1">City of Austin &middot; ACME Elevate 2027 &middot; Gallery Program</div>
+
+    <h1 class="au d2">
+      The <em>Digital Pioneer</em><br>
+      <span class="accent">Gallery</span>
+    </h1>
+
+    <p class="hero-sub au d3">
+      Art &amp; Technology Exhibitions by Adults 50+<br>
+      From first brush stroke to public gallery wall.
+    </p>
+
+    <div class="hero-cta-row au d4">
+      <a href="#" onclick="openModal();return false;" class="btn btn-gold">Apply for the Next Cohort &rarr;</a>
+      <a href="#process" class="btn btn-outline">See How It Works</a>
+    </div>
+
+    <div class="hero-stats au d5">
+      <span class="hero-stats-label">Program Proof</span>
+      <div class="hero-stats-pills">
+        <div class="hero-stat"><span class="num">264+</span><span class="lbl">Adults Trained</span></div>
+        <div class="hero-stat"><span class="num">13</span><span class="lbl">Locations</span></div>
+        <div class="hero-stat"><span class="num">6</span><span class="lbl">Gallery Walks / Year</span></div>
+        <div class="hero-stat"><span class="num">9</span><span class="lbl">Library Partners</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRIDGE STRIP -->
+<div class="bridge-strip">
+  <div class="bridge-inner">
+    <div class="bridge-icon">&#9654;</div>
+    <div class="bridge-text">
+      <strong>Where Austin's Underserved Creative Community Meets Austin's Hotel &amp; Travel Economy</strong>
+      <p>The Digital Pioneer Gallery is the <em>intersection point</em> — connecting 50+ artists from Austin's historically underserved communities directly with hotels, venues, and travel businesses seeking authentic Austin stories, commissions, and cultural programming.</p>
+    </div>
+    <div class="bridge-tags">
+      <span class="bridge-tag bt-teal">&#9670; Underserved Artists</span>
+      <span class="bridge-tag bt-gold">&#9670; Hotel &amp; Tourism Sector</span>
+      <span class="bridge-tag bt-purple">&#9670; HOT-Funded Culture</span>
+    </div>
+  </div>
+</div>
+
+<!-- SOCIAL BAR -->
+<div class="social-bar">
+  <div class="social-bar-inner">
+    <span class="social-label">Follow &amp; Share</span>
+    <div class="social-links">
+      <a href="https://www.facebook.com/learnmoretechnologies" target="_blank" rel="noopener" class="soc-btn soc-fb">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook
+      </a>
+      <a href="https://www.linkedin.com/company/learnmoretechnologies" target="_blank" rel="noopener" class="soc-btn soc-li">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn
+      </a>
+      <a href="https://www.youtube.com/@learnmoretechnologies" target="_blank" rel="noopener" class="soc-btn soc-yt">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0E1C2F"/></svg>YouTube
+      </a>
+      <a href="https://www.instagram.com/learnmoretechnologies" target="_blank" rel="noopener" class="soc-btn soc-ig">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Instagram
+      </a>
+      <a href="https://x.com/learnmoretech" target="_blank" rel="noopener" class="soc-btn soc-x">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X / Twitter
+      </a>
+      <a href="mailto:hello@learnmoretechnologies.com?subject=Digital Pioneer Gallery" class="soc-btn soc-email">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>Email
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- START WHERE YOU ARE -->
+<section class="start-where s-pad" id="who">
+  <div class="wrap">
+    <div class="start-where-grid">
+
+      <div class="start-where-left au">
+        <div class="section-label">Who This Is For</div>
+        <h2>Start from<br><em>where you are.</em></h2>
+        <div class="level-pills">
+          <span class="level-pill lp-novice">&#9679; First-Time Creator</span>
+          <span class="level-pill lp-exp">&#9679; Experienced Artist</span>
+          <span class="level-pill lp-pro">&#9679; Working Professional</span>
+        </div>
+        <p>Whatever level you are — <strong>you are invited.</strong> You don't need a portfolio. You don't need to know anything about technology. You just need something to say and a willingness to say it in public.</p>
+        <p>The program meets you where you are and builds around what you actually need — not a one-size-fits-all curriculum.</p>
+        <div class="start-cta">
+          <a href="#join" class="btn btn-gold">Find Your Path &rarr;</a>
+          <p><strong>No prior tech experience required.</strong><br>Bring your story. We'll build the rest.</p>
+        </div>
+      </div>
+
+      <div class="path-grid au d1">
+
+        <div class="path-card">
+          <span class="path-icon">&#127912;</span>
+          <h3>Make Your First Digital Artwork</h3>
+          <p>Never touched a tablet or AI tool? We start at zero — no judgment, no jargon, no pressure. You'll create and exhibit a real piece of original art.</p>
+          <span class="path-for">For: First-Timers &amp; Curious Beginners</span>
+        </div>
+
+        <div class="path-card">
+          <span class="path-icon">&#128200;</span>
+          <h3>Grow Your Audience &amp; Social Presence</h3>
+          <p>Build an email list you own. Grow a social following that converts. Learn what to post, when, and why — without burning out on algorithms.</p>
+          <span class="path-for">For: Artists Ready to Reach More People</span>
+        </div>
+
+        <div class="path-card">
+          <span class="path-icon">&#128221;</span>
+          <h3>Market Your Work &amp; Write Your Story</h3>
+          <p>Artist statements, bio writing, pitch emails, grant language — learn to describe your work in a way that moves people and opens doors.</p>
+          <span class="path-for">For: Artists Who Struggle to Sell Themselves</span>
+        </div>
+
+        <div class="path-card">
+          <span class="path-icon">&#128188;</span>
+          <h3>Run Your Art Practice Like a Business</h3>
+          <p>Pricing, invoicing, client communication, and commission contracts. Stop undercharging. Build the back-office your creative career deserves.</p>
+          <span class="path-for">For: Experienced Artists &amp; Professionals</span>
+        </div>
+
+        <div class="path-card">
+          <span class="path-icon">&#9993;</span>
+          <h3>Email Newsletters &amp; Direct Audience</h3>
+          <p>Build a list of collectors, fans, and supporters you contact directly — no algorithm between you and your people.</p>
+          <span class="path-for">For: Artists Building Long-Term Relationships</span>
+        </div>
+
+        <div class="path-card">
+          <span class="path-icon">&#9889;</span>
+          <h3>Automate the Repetitive. Create More.</h3>
+          <p>Set up systems that handle follow-ups, scheduling, and content distribution — so your energy goes back to the work that only you can make.</p>
+          <span class="path-for">For: Busy Professionals &amp; Studio Artists</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT THE PROGRAM -->
+<section class="what-is s-pad" id="about">
+  <div class="wrap">
+    <div class="what-is-grid">
+      <div class="what-is-text au">
+        <div class="section-label">About the Program</div>
+        <h2>Artists don't have<br><em>age limits.</em></h2>
+        <p>The Digital Pioneer Gallery is a cohort-based digital arts program by <strong>50+TechBridge</strong> that puts AI tools in the hands of adults 50+ — and puts their finished work on Austin's gallery walls.</p>
+        <p>Each participant creates an original piece of <strong>AI-assisted digital artwork</strong>, builds an artist statement, and exhibits their work at a <strong>public Gallery Walk</strong> held at Austin's premier cultural institutions.</p>
+        <p>This is not a classroom exercise. It is a <strong>gallery exhibition</strong> — a public creative act, open to Austin residents and tourists alike.</p>
+        <a href="#join" class="btn btn-gold" style="margin-top:12px">Join a Cohort &rarr;</a>
+      </div>
+      <div class="what-is-card-col">
+        <div class="feature-card au d1">
+          <div class="feature-icon" style="background:rgba(200,148,46,.15)">&#127912;</div>
+          <div>
+            <h3>Original AI-Assisted Artwork</h3>
+            <p>Every participant creates and exhibits a real, signed, original piece — a genuine contribution to Austin's creative record.</p>
+          </div>
+        </div>
+        <div class="feature-card au d2">
+          <div class="feature-icon" style="background:rgba(0,201,177,.12)">&#127963;</div>
+          <div>
+            <h3>Public Gallery Exhibitions</h3>
+            <p>Six Gallery Walks per year at Austin's cultural institutions — free, open to everyone, promoted through VisitAustin.</p>
+          </div>
+        </div>
+        <div class="feature-card au d3">
+          <div class="feature-icon" style="background:rgba(155,109,255,.12)">&#128181;</div>
+          <div>
+            <h3>Marketing &amp; Sales Training</h3>
+            <p>Participants learn to price, license, and sell their creative work — entering Austin's active creative economy.</p>
+          </div>
+        </div>
+        <div class="feature-card au d4">
+          <div class="feature-icon" style="background:rgba(39,212,118,.12)">&#127942;</div>
+          <div>
+            <h3>Digital Pioneer Certificate</h3>
+            <p>Every graduate receives an official Digital Pioneer Artist Certificate at their Gallery Walk exhibition.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 CREATIVE TRACKS -->
+<section class="disciplines s-pad" id="disciplines">
+  <div class="wrap">
+    <div class="disciplines-header au">
+      <div class="section-label">4 Creative Tracks</div>
+      <h2>Choose your <em>artistic discipline</em></h2>
+      <p>Each cohort is organized around a creative track. Participants select the discipline that matches their creative vision — and build mastery in it over 8 weeks.</p>
+    </div>
+
+    <div class="disc-grid">
+      <div class="disc-card gold au d1">
+        <div class="disc-number">01</div>
+        <div class="disc-icon">&#128214;</div>
+        <div class="disc-badge">Track 1</div>
+        <h3>Digital Storytelling</h3>
+        <p>AI-assisted personal and community narratives, visual stories, and digital memoir. Transform your life experience into art that speaks.</p>
+      </div>
+      <div class="disc-card teal au d2">
+        <div class="disc-number">02</div>
+        <div class="disc-icon">&#127775;</div>
+        <div class="disc-badge">Track 2</div>
+        <h3>Digital Visual Art</h3>
+        <p>AI-generated and AI-assisted imagery, digital design, and visual creative projects. Paint, design, and compose with the power of AI.</p>
+      </div>
+      <div class="disc-card purple au d3">
+        <div class="disc-number">03</div>
+        <div class="disc-icon">&#128257;</div>
+        <div class="disc-badge">Track 3</div>
+        <h3>Community Media</h3>
+        <p>AI-powered newsletters, social campaigns, and digital content created for and about Austin communities. Your voice, amplified.</p>
+      </div>
+      <div class="disc-card orange au d4">
+        <div class="disc-number">04</div>
+        <div class="disc-icon">&#9881;</div>
+        <div class="disc-badge">Track 4</div>
+        <h3>Creative Technology &amp; Innovation</h3>
+        <p>AI workflow demonstrations, technology-assisted creative tools, and original digital concepts. Build the future with creative code.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5-STEP COHORT ARC -->
+<section class="arc s-pad" id="process">
+  <div class="wrap">
+    <div class="arc-header au">
+      <div class="section-label">The Creative Process</div>
+      <h2>From intake to <em>gallery wall</em></h2>
+      <p>Every cohort follows a structured 8-week arc — from creative orientation to public exhibition. Here's exactly what participants experience.</p>
+    </div>
+
+    <div class="arc-steps">
+      <div class="arc-step au d1">
+        <div class="step-num-wrap">
+          <div class="step-num s1">1</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-body">
+          <div class="step-week">Week 1</div>
+          <h3>Cohort Intake &amp; Artistic Orientation</h3>
+          <p>Identify your artistic discipline and creative goal. Meet your guest instructor and volunteer mentor. Confirm the venue for your Gallery Walk exhibition.</p>
+        </div>
+      </div>
+
+      <div class="arc-step au d2">
+        <div class="step-num-wrap">
+          <div class="step-num s2">2</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-body">
+          <div class="step-week">Weeks 2 &ndash; 3</div>
+          <h3>Creative Technology Training</h3>
+          <p>Hands-on training in the AI tools you'll use to create your artwork — tailored to your artistic discipline. One-on-one volunteer mentor support at every session.</p>
+          <ul>
+            <li>Digital storytellers: AI writing and narrative tools</li>
+            <li>Visual artists: AI image generation and design tools</li>
+            <li>Community media artists: AI content and publishing tools</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="arc-step au d3">
+        <div class="step-num-wrap">
+          <div class="step-num s3">3</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-body">
+          <div class="step-week">Weeks 4 &ndash; 6</div>
+          <h3>Artwork Development Workshop</h3>
+          <p>Create your individual artwork with structured guidance and peer input. Weekly mentor check-ins, mid-project cohort critique, and revision support until your work is gallery-ready.</p>
+        </div>
+      </div>
+
+      <div class="arc-step au d4">
+        <div class="step-num-wrap">
+          <div class="step-num s4">4</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-body">
+          <div class="step-week">Week 7</div>
+          <h3>Marketing, Presentation &amp; Exhibition Prep</h3>
+          <p>Learn to market, present, and sell your creative work. Write your artist statement. Practice pricing digital work, licensing AI-assisted art, and promoting your work on social media.</p>
+        </div>
+      </div>
+
+      <div class="arc-step au d5">
+        <div class="step-num-wrap">
+          <div class="step-num s5">5</div>
+        </div>
+        <div class="step-body">
+          <div class="step-week">Week 8</div>
+          <h3>Public Gallery Walk Exhibition</h3>
+          <p>Your finished work is displayed at an Austin cultural venue. You are present as the artist. The exhibition is open to the community and promoted through VisitAustin.</p>
+          <div class="highlight-box">
+            <p><strong>This is the moment.</strong> Not a classroom exercise — a real gallery exhibition, open to Austin residents and tourists. Your name. Your work. Your wall.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VENUES & COHORT CALENDAR -->
+<section class="venues s-pad" id="venues">
+  <div class="wrap">
+    <div class="venues-header au">
+      <div class="section-label">Partner Cultural Institutions</div>
+      <h2>Austin's premier <em>gallery venues</em></h2>
+      <p>Digital Pioneer Gallery exhibitions rotate through Austin's most respected cultural institutions — connecting 50+ artists with residents and tourists already engaged in Austin's arts scene.</p>
+    </div>
+
+    <div class="venues-grid au">
+      <div class="venue-card">
+        <div class="venue-icon">&#127979;</div>
+        <h3>Austin Public Library</h3>
+        <p>9 branches — established hosting partner. Cohort training hub and primary community outreach channel.</p>
+      </div>
+      <div class="venue-card">
+        <div class="venue-icon">&#127981;</div>
+        <h3>The Carver Museum</h3>
+        <p>Gallery exhibition partner. A historic Austin cultural anchor for community arts and creative programming.</p>
+      </div>
+      <div class="venue-card">
+        <div class="venue-icon">&#127895;</div>
+        <h3>Mexican American Cultural Center</h3>
+        <p>Gallery exhibition partner. Celebrating Austin's diverse creative communities through public exhibitions.</p>
+      </div>
+      <div class="venue-card">
+        <div class="venue-icon">&#127756;</div>
+        <h3>The Contemporary Austin</h3>
+        <p>Gallery exhibition partner. Contemporary art institution connecting 50+ digital artists to Austin's art world.</p>
+      </div>
+      <div class="venue-card">
+        <div class="venue-icon">&#128300;</div>
+        <h3>The Thinkery</h3>
+        <p>Educational exhibition partner. Where technology meets creativity for Austin's curious minds of all ages.</p>
+      </div>
+      <div class="venue-card">
+        <div class="venue-icon">&#127963;</div>
+        <h3>LBJ Presidential Library</h3>
+        <p>Exhibition and educational programming partner. Bringing digital pioneer art to a landmark Austin institution.</p>
+      </div>
+    </div>
+
+    <div class="data-table-wrap au">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Cohort</th>
+            <th>Track</th>
+            <th>Venue</th>
+            <th>Dates</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cohort 1</td>
+            <td><span class="badge badge-gold">Digital Storytelling</span></td>
+            <td>Austin Public Library &mdash; Central</td>
+            <td>Oct &ndash; Nov 2026</td>
+          </tr>
+          <tr>
+            <td>Cohort 2</td>
+            <td><span class="badge badge-teal">Digital Visual Art</span></td>
+            <td>The Carver Museum</td>
+            <td>Nov &ndash; Dec 2026</td>
+          </tr>
+          <tr>
+            <td>Cohort 3</td>
+            <td><span class="badge badge-purple">Community Media</span></td>
+            <td>Mexican American Cultural Center</td>
+            <td>Jan &ndash; Feb 2027</td>
+          </tr>
+          <tr>
+            <td>Cohort 4</td>
+            <td><span class="badge badge-orange">Creative Technology</span></td>
+            <td>The Contemporary Austin</td>
+            <td>Feb &ndash; Mar 2027</td>
+          </tr>
+          <tr>
+            <td>Cohort 5</td>
+            <td><span class="badge badge-gold">Digital Storytelling</span></td>
+            <td>Foundation Communities &mdash; Veterans</td>
+            <td>Mar &ndash; Apr 2027</td>
+          </tr>
+          <tr class="highlight-row">
+            <td>Cohort 6 &mdash; Grand Gallery Walk</td>
+            <td><span class="badge badge-white">All Disciplines</span></td>
+            <td>Austin Public Library &mdash; Grand Gallery Walk</td>
+            <td>May 2027</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT & TOURISM -->
+<section class="impact s-pad">
+  <div class="wrap">
+    <div class="impact-inner">
+      <div class="impact-text au">
+        <div class="section-label">Public Benefit &amp; Tourism Impact</div>
+        <h2>Austin's creative community<br><em>gets stronger.</em></h2>
+        <p>The Digital Pioneer Gallery directly supports Austin's cultural tourism economy. Every Gallery Walk is a free, public event at an Austin cultural institution — <strong>attracting visitors already engaged in Austin's arts scene.</strong></p>
+        <p>Exhibitions are submitted to <strong>VisitAustin</strong> after each Gallery Walk. Participant artwork and artist statements are archived for future exhibition.</p>
+        <p>Adults 50+ are prolific, experienced, and underserved as artists. <strong>50+TechBridge puts AI tools in their hands and puts their work on Austin's gallery walls.</strong></p>
+      </div>
+      <div class="proof-strip au">
+        <div class="proof-item">
+          <div class="proof-dot gold"></div>
+          <p><strong>6 Gallery Walk events per year</strong> — free, open to Austin residents and tourists</p>
+        </div>
+        <div class="proof-item">
+          <div class="proof-dot teal"></div>
+          <p><strong>36&ndash;48 participants</strong> completing and publicly exhibiting original AI-assisted artwork</p>
+        </div>
+        <div class="proof-item">
+          <div class="proof-dot orange"></div>
+          <p><strong>Marketing &amp; sales training</strong> adds participants to Austin's active creative economy</p>
+        </div>
+        <div class="proof-item">
+          <div class="proof-dot green"></div>
+          <p><strong>VisitAustin submissions</strong> filed after every exhibition to maximize tourism visibility</p>
+        </div>
+        <div class="proof-item">
+          <div class="proof-dot purple"></div>
+          <p><strong>Cultural tourism draw</strong> — exhibitions at Carver, MACC, Contemporary Austin, and LBJ Library</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team s-pad" id="team">
+  <div class="wrap">
+    <div class="team-header au">
+      <div class="section-label">The Team</div>
+      <h2>Community-supported,<br><em>professionally led.</em></h2>
+      <p>The Digital Pioneer Gallery is not a one-person operation — it's a full community-supported digital arts program with professional instruction, guest artists, volunteer mentors, and institutional partners at every stage.</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card lead au d1">
+        <div class="team-avatar">&#128104;&#8205;&#128187;</div>
+        <h3>Brian McKinney</h3>
+        <div class="team-role">Founder &amp; Lead Instructor</div>
+        <p>65-year-old solo CEO managing 30+ AI-powered workflows. Has trained 264+ adults across Central Texas. Living proof that age is no barrier to AI mastery.</p>
+        <div class="mbe-badge">&#10003; MBE Certified &nbsp;&middot;&nbsp; Prior ACME Nexus Recipient</div>
+      </div>
+      <div class="team-card advisor au d2">
+        <div class="team-avatar">&#127891;</div>
+        <h3>Robin Nelson, MBA</h3>
+        <div class="team-role">Strategy &amp; Program Advisor</div>
+        <p>Program strategy advisor with an MBA and extensive experience in arts and creative program development. Guides structure, grant strategy, and Austin cultural partnerships.</p>
+      </div>
+      <div class="team-card guest au d3">
+        <div class="team-avatar">&#127912;</div>
+        <h3>Guest Instructors</h3>
+        <div class="team-role">Rotating by Cohort Discipline</div>
+        <p>Working digital artists, storytellers, creative business professionals, and cultural institution educators — 1&ndash;2 per cohort, from Austin's creative community.</p>
+      </div>
+      <div class="team-card volunteer au d4">
+        <div class="team-avatar">&#129309;</div>
+        <h3>Volunteer Mentors</h3>
+        <div class="team-role">5&ndash;6 Per Cohort</div>
+        <p>Trained mentors providing one-on-one support during every session. Recruited through Austin Public Library, AARP volunteer networks, and 50+TechBridge alumni.</p>
+      </div>
+      <div class="team-card partner au d5">
+        <div class="team-avatar">&#127963;</div>
+        <h3>Cultural Institution Partners</h3>
+        <div class="team-role">Venue Partners</div>
+        <p>The Carver Museum, MACC, The Contemporary Austin, Austin Public Library (9 branches), The Thinkery, LBJ Presidential Library, Foundation Communities.</p>
+      </div>
+      <div class="team-card mbe au d6">
+        <div class="team-avatar">&#9733;</div>
+        <h3>Learn More Technologies</h3>
+        <div class="team-role">MBE &middot; WIOA-Eligible Organization</div>
+        <p>Certified Minority Business Enterprise operating at the intersection of creative technology, digital arts, and community access in Austin, Texas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRACK RECORD -->
+<section class="track-record s-pad">
+  <div class="wrap">
+    <div class="track-inner">
+      <div class="track-text au">
+        <div class="section-label">Track Record</div>
+        <h2>Proven model.<br><em>Ready to scale.</em></h2>
+        <div class="award-badge">
+          <div class="icon">&#127942;</div>
+          <div class="award-badge-text">
+            <div class="label">Prior ACME Award</div>
+            <div class="value">Nexus Grant &middot; FY24 &middot; $5,000</div>
+          </div>
+        </div>
+        <p>The Nexus Grant launched our library-based AI creative training series. Every ACME reporting requirement was completed on time — Initial Report, Final Report, VisitAustin post, and full financial documentation.</p>
+        <p>The Elevate Grant expands a proven model into a full public gallery program with more cohorts, more exhibitions, and more guest artists — all serving Austin's 50+ creative community.</p>
+      </div>
+      <div class="track-wins au">
+        <div class="track-win">
+          <div class="win-check">&#10003;</div>
+          <p><strong>9 Austin Public Library branches</strong> — group Technology Assisted Trainings delivered</p>
+        </div>
+        <div class="track-win">
+          <div class="win-check">&#10003;</div>
+          <p><strong>264+ adults trained</strong> across 13 Central Texas locations</p>
+        </div>
+        <div class="track-win">
+          <div class="win-check">&#10003;</div>
+          <p><strong>3 senior centers</strong> — cohort-based digital arts programming established</p>
+        </div>
+        <div class="track-win">
+          <div class="win-check">&#10003;</div>
+          <p><strong>40-person veterans cohort</strong> at Foundation Communities — completed</p>
+        </div>
+        <div class="track-win">
+          <div class="win-check">&#10003;</div>
+          <p><strong>Volunteer mentor infrastructure</strong> — 5&ndash;6 trained volunteers per cohort, operational</p>
+        </div>
+        <div class="track-win">
+          <div class="win-check">&#10003;</div>
+          <p><strong>All ACME reporting completed on time</strong> — full compliance, zero outstanding items</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPONSOR STRIP -->
+<section class="sponsor-strip">
+  <div class="wrap sponsor-inner">
+    <div class="sponsor-block">
+      <div class="sponsor-label">Program Partner</div>
+      <div class="sponsor-name">Learn More Technologies</div>
+      <div class="sponsor-detail">MBE Certified &middot; WIOA-Eligible &middot; Austin, TX</div>
+    </div>
+    <div class="sponsor-divider"></div>
+    <div class="sponsor-block">
+      <div class="sponsor-label">Delivered Through</div>
+      <div class="sponsor-name">50+TechBridge</div>
+      <div class="sponsor-detail">Cohort-Based Digital Arts &amp; AI Education for Adults 50+</div>
+    </div>
+    <div class="sponsor-divider"></div>
+    <div class="sponsor-block">
+      <div class="sponsor-label">Prior ACME Award</div>
+      <div class="sponsor-name">Nexus Grant &middot; FY24 &middot; $5,000</div>
+      <div class="sponsor-detail">Awarded to Learn More Technologies &middot; All reporting &amp; taxes filed by LMT</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section s-pad" id="join">
+  <div class="wrap">
+    <div class="au">
+      <div class="section-label">Join the Gallery</div>
+    </div>
+    <h2 class="au d1">Your art belongs<br><em>on Austin's walls.</em></h2>
+    <p class="au d2">Applications for Cohort 1 (Digital Storytelling) open Fall 2026 at Austin Public Library — Central Branch. No prior tech experience required. Just bring your story.</p>
+    <div class="cta-row au d3">
+      <a href="mailto:hello@learnmoretechnologies.com" class="btn btn-gold">Apply for the Next Cohort &rarr;</a>
+      <a href="mailto:hello@learnmoretechnologies.com?subject=Digital%20Pioneer%20Gallery%20Partnership" class="btn btn-outline">Partner With Us</a>
+    </div>
+
+    <div class="contact-strip au d4">
+      <div class="contact-item">
+        <span>&#9993;</span>
+        <span>Email: <a href="mailto:hello@learnmoretechnologies.com">hello@learnmoretechnologies.com</a></span>
+      </div>
+      <div class="contact-item">
+        <span>&#127760;</span>
+        <span>Web: <a href="https://learnmoretechnologies.com" target="_blank">learnmoretechnologies.com</a></span>
+      </div>
+      <div class="contact-item">
+        <span>&#128205;</span>
+        <span>Austin, Texas</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">50<span>+</span>TechBridge <span style="color:#7A92AC;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:400"> by Learn More Technologies</span></div>
+  <p>&copy; 2026 Learn More Technologies &middot; MBE Certified &middot; WIOA-Eligible &middot; Austin, TX</p>
+  <div class="footer-links">
+    <a href="mailto:hello@learnmoretechnologies.com">Contact</a>
+    <a href="#">Programs</a>
+    <a href="#">About</a>
+  </div>
+</footer>
+
+<!-- APPLY MODAL -->
+<div class="modal-overlay" id="applyModal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+      <h2>Apply for the <em>Next Cohort</em></h2>
+      <p>No prior tech experience required &middot; Adults 50+ &middot; Austin, TX &middot; Free Program</p>
+    </div>
+    <div class="modal-body">
+
+      <div id="formWrap">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleSubmit(event)">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name *</label>
+              <input type="text" name="first_name" placeholder="Your first name" required>
+            </div>
+            <div class="form-group">
+              <label>Last Name *</label>
+              <input type="text" name="last_name" placeholder="Your last name" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" name="email" placeholder="you@email.com" required>
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" name="phone" placeholder="(512) 000-0000">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Age Range *</label>
+              <select name="age_range" required>
+                <option value="" disabled selected>Select your age range</option>
+                <option>50 – 59</option>
+                <option>60 – 69</option>
+                <option>70 – 79</option>
+                <option>80+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Austin Neighborhood / Zip</label>
+              <input type="text" name="neighborhood" placeholder="East Austin, 78702...">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Discipline Interest *</label>
+              <select name="discipline" required>
+                <option value="" disabled selected>What would you like to create?</option>
+                <option>Digital Storytelling — Writing & Narrative</option>
+                <option>Digital Visual Art — Painting & Design</option>
+                <option>Community Media — Photography & Documentary</option>
+                <option>Creative Technology — Generative & Code Art</option>
+                <option>Not Sure Yet — Help Me Decide</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Your Experience Level</label>
+              <select name="experience">
+                <option value="" disabled selected>Where are you starting from?</option>
+                <option>Complete Beginner — Never used digital tools</option>
+                <option>Some Experience — Basics only</option>
+                <option>Experienced Artist — Looking to go digital</option>
+                <option>Working Professional — Need business skills</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row full">
+            <div class="form-group">
+              <label>What would you like to create or learn?</label>
+              <textarea name="goals" placeholder="Tell us a little about your story, your art, or what you hope to get from this program..."></textarea>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>How did you hear about us?</label>
+              <select name="source">
+                <option value="" disabled selected>Select one</option>
+                <option>Austin Public Library</option>
+                <option>The Carver Museum</option>
+                <option>Friend or Family</option>
+                <option>Social Media</option>
+                <option>Google Search</option>
+                <option>City of Austin / ACME</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Preferred Contact Method</label>
+              <select name="contact_pref">
+                <option value="" disabled selected>Email or Phone?</option>
+                <option>Email</option>
+                <option>Phone / Text</option>
+                <option>Either is fine</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-submit-row">
+            <button type="submit" class="btn btn-gold" style="padding:14px 36px;font-size:16px">Submit Application &rarr;</button>
+            <p>We'll reach out within 3 business days.<br>All skill levels welcome.</p>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="form-success" id="formSuccess">
+        <span class="success-icon">&#127775;</span>
+        <h3>Application Received!</h3>
+        <p>Thank you for applying to the Digital Pioneer Gallery.<br>We'll be in touch within 3 business days at the email you provided.<br><br><strong>You belong here.</strong></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal(){
+  document.getElementById('applyModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){
+  document.getElementById('applyModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.getElementById('applyModal').addEventListener('click',function(e){
+  if(e.target===this) closeModal();
+});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape') closeModal();
+});
+function handleSubmit(e){
+  e.preventDefault();
+  const form=e.target;
+  fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}})
+    .then(r=>{
+      if(r.ok){
+        document.getElementById('formWrap').style.display='none';
+        document.getElementById('formSuccess').style.display='block';
+      } else {
+        alert('Something went wrong. Please email us at hello@learnmoretechnologies.com');
+      }
+    })
+    .catch(()=>alert('Something went wrong. Please email us at hello@learnmoretechnologies.com'));
+}
+</script>
+
+</body>
+</html>

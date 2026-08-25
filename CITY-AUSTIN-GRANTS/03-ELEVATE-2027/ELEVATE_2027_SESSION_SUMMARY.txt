@@ -1,0 +1,169 @@
+================================================================================
+ACME ELEVATE GRANT 2027 — SESSION SUMMARY
+Learn More Technologies / 50+TechBridge | Brian McKinney
+Session Date: July 20, 2026
+================================================================================
+
+NOTE: This is the ELEVATE GRANT (not Nexus). Nexus was your prior FY24 award
+($5,000) — fully closed and confirmed. This application is for:
+
+  ACME Elevate Grant 2027
+  Award: $30,000
+  Application window: July 7 – August 18, 2026
+  Target submit date: August 12, 2026
+  Submitted via: AACME Submittable Portal
+
+================================================================================
+GRANT ELIGIBILITY — CONFIRMED
+================================================================================
+
+- FY24 Nexus Final Report: SUBMITTED AND CONFIRMED CLOSED
+- No Non-Compliant status: CLEAR
+- Brian McKinney: 18+, Austin MSA, not City employee
+- LMT: For-Profit Arts Group, 1+ year Austin history
+- Applicant type: For-Profit Arts Group / Individual Artist
+- Annual expenses tier: $30,000–$50,000 = $30,000 award amount
+
+================================================================================
+WHAT WAS COMPLETED THIS SESSION
+================================================================================
+
+1. APPLICANT INTRODUCTION STATEMENT — WRITTEN
+   File: ELEVATE_2027_INTRO_AND_OUTREACH.txt (Section A)
+   ~2,740 characters. Ready to paste into Submittable portal.
+
+2. VENUE PARTNER OUTREACH EMAILS — WRITTEN (4 emails)
+   File: ELEVATE_2027_INTRO_AND_OUTREACH.txt (Section B)
+   - The George Washington Carver Museum
+   - Mexican American Cultural Center (MACC)
+   - The Contemporary Austin
+   - Mexic-Arte Museum
+   Follow-up tracker table included at bottom of that file.
+
+3. ROBIN NELSON — CONFIRMED
+   Title: Strategy & Program Advisor
+   Role documented in application Section 4.
+
+================================================================================
+CHECKLIST — CURRENT STATUS
+================================================================================
+
+DONE:
+[X] Section 1 — Organization Overview
+[X] Section 2 — Project Description / Creative Narrative
+[X] Section 3 — Activities & Steps (5 cohorts, itemized)
+[X] Section 4 — Team & Capacity
+[X] Section 5 — Creative End Product & Tourism Impact
+[X] Section 6 — Budget Narrative ($30,000)
+[X] Section 7 — Prior ACME Award & Track Record
+[X] Section 8 — Eligibility Confirmation
+[X] Budget CSV files (elevate-2027-budget.csv, elevate-2027-budget-revised.csv)
+[X] Research files (market justification, program strategy)
+[X] Applicant Introduction Statement (~2,740 chars)
+[X] Venue outreach emails (4 venues) — READY TO SEND
+[X] Robin Nelson title confirmed
+
+STILL NEEDED:
+[ ] Send venue outreach emails — target response by August 10
+[ ] Name 1-2 guest instructors (even one named person helps significantly)
+[ ] Confirm volunteer names or affiliations (AARP, library volunteer program, etc.)
+[ ] 3 required attachments (located on secondary drive — Brian to download):
+      1. Prior Nexus FY24 Award Letter
+      2. LMT Org Budget (most recent P&L or annual budget)
+      3. MBE Certificate
+[ ] Enter full application into Submittable portal
+[ ] Apply bold formatting in portal on all ** phrases
+[ ] Check character limits per field in portal
+[ ] Final review — target August 12
+[ ] Submit — deadline August 18, 2026
+
+================================================================================
+3 REQUIRED ATTACHMENTS — DETAIL
+================================================================================
+
+1. NEXUS FY24 AWARD LETTER
+   What: Official City of Austin award notification for $5,000 Nexus grant
+   Where to find: Email inbox — from AACME Submittable portal or Maya's office,
+   received 2023 or 2024
+   Status: On secondary drive — Brian to download and add here
+
+2. LMT ORG BUDGET (most recent P&L or annual budget)
+   What: Most recently completed annual operating budget or profit & loss statement
+   Why: Verifies your annual expense tier ($30K–$50K = $30K award)
+   Format: Spreadsheet or PDF acceptable
+   Status: On secondary drive — Brian to download and add here
+
+3. MBE CERTIFICATE
+   What: Minority Business Enterprise certification document
+   Status: On secondary drive — Brian to download and add here
+
+================================================================================
+SCORING CRITERIA REMINDER (what reviewers score)
+================================================================================
+
+  Creative Work    — Up to 50 points
+  Capacity         — Up to 30 points
+  Public Connection — Up to 20 points
+
+  Tie Breakers (if needed):
+  1. Highest score on "proposed public event / people/places/cultures of Austin"
+  2. Applied in Elevate and never been awarded (THIS IS BRIAN — USE IT)
+  3. Producing work in Austin the longest
+  4. Artistic discipline least represented in pool
+
+  NOTE: Brian has NEVER been awarded Elevate before — this is a tie-breaker
+  advantage. Make sure the application reflects that clearly.
+
+================================================================================
+KEY CONTACTS
+================================================================================
+
+Maya Williams-Britton — City of Austin Grant Coordinator
+Maya.Williams-Britton@austintexas.gov | culturalarts@austintexas.gov
+Meeting notes: 04-MEETINGS/Notes meeting with Maya.txt
+
+Robin Nelson, MBA — Strategy & Program Advisor (confirmed 07/20/26)
+Strategy session report: 04-MEETINGS/Strategy_Session_Report_Brian_McKinney 07062026.docx
+
+Help line: 512-457-5161
+Email: applicationhelp@thelongcenter.org
+Virtual Office Hours: Every Tuesday 10:00am–12:00pm
+
+================================================================================
+FILE MAP — THIS GRANT FOLDER
+================================================================================
+
+03-ELEVATE-2027/
+  APPLICATION/
+    AACME Funding Programs Application Manager - Elevate Grant 2027.pdf
+    ELEVATE_2027_APPLICATION_DRAFT.txt         — full application draft
+    ELEVATE_2027_INTRO_AND_OUTREACH.txt        — intro statement + venue emails
+    ELEVATE_2027_SESSION_SUMMARY.txt           — THIS FILE
+  BUDGET/
+    elevate-2027-budget.csv
+    elevate-2027-budget-revised.csv
+    elevate-2027-budget-PRINT.html
+  RESEARCH/
+    creative-concerns-program-response.csv
+    grant-market-research-justification.md
+    program-strategy-creative-concerns.md
+    social-media-registration-guide.md
+    social-media-todo.csv
+    social-posts-dpg-5posts.md
+
+================================================================================
+GOOGLE DRIVE FOLDER TO CREATE (manually)
+================================================================================
+
+In Google Drive, create this folder structure:
+
+  LMT-GRANTS/
+    ELEVATE-2027/
+      APPLICATION/      <- upload application draft + intro + this summary
+      ATTACHMENTS/      <- upload the 3 required docs when downloaded
+      BUDGET/           <- upload budget CSVs
+      EMAILS-SENT/      <- paste venue outreach emails + track responses
+
+================================================================================
+END OF SESSION SUMMARY
+================================================================================

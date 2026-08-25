@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery Vision Mockup — Digital Pioneer Gallery at The Carver</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0a0f18;font-family:'DM Sans',sans-serif;color:#fff;overflow-x:hidden;padding:32px 24px 60px}
+
+/* ── PAGE HEADER ── */
+.page-header{max-width:1200px;margin:0 auto 24px;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.page-header h1{font-family:'Playfair Display',serif;font-size:clamp(20px,3vw,36px);font-weight:900;line-height:1.1}
+.page-header h1 em{font-style:italic;color:#C8942E}
+.page-header p{font-size:13px;color:#7a92ac;text-align:right;line-height:1.6}
+
+/* ── SCENE ── */
+.scene{
+  position:relative;
+  width:100%;max-width:1200px;
+  margin:0 auto;
+  aspect-ratio:21/9;
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(200,148,46,0.20) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 0%, rgba(200,148,46,0.10) 0%, transparent 40%),
+    radial-gradient(ellipse at 80% 0%, rgba(200,148,46,0.15) 0%, transparent 45%),
+    linear-gradient(180deg, #2e2010 0%, #3d2a14 25%, #4a3218 55%, #3a2810 100%);
+  border-radius:6px;
+  overflow:hidden;
+  box-shadow:0 40px 120px rgba(0,0,0,0.85);
+}
+
+/* ── STONE WALL ── */
+.stone-wall{
+  position:absolute;inset:0;
+  background-image:
+    repeating-linear-gradient(0deg,transparent,transparent 40px,rgba(0,0,0,0.15) 40px,rgba(0,0,0,0.15) 43px),
+    repeating-linear-gradient(90deg,transparent,transparent 70px,rgba(0,0,0,0.10) 70px,rgba(0,0,0,0.10) 73px);
+  opacity:0.55;
+}
+
+/* ── FLOOR ── */
+.floor{
+  position:absolute;bottom:0;left:0;right:0;height:20%;
+  background:linear-gradient(180deg,#5c3d1a 0%,#3d2808 100%);
+  border-top:2px solid rgba(200,148,46,0.25);
+}
+.floor::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(90deg,transparent,transparent 90px,rgba(255,255,255,0.03) 90px,rgba(255,255,255,0.03) 92px);
+}
+
+/* ── WALL RAIL ── */
+.wall-rail{
+  position:absolute;top:7%;left:0;right:0;
+  height:5px;
+  background:linear-gradient(90deg,#7a5a2a,#c8942e 30%,#e8b84b 50%,#c8942e 70%,#7a5a2a);
+  opacity:0.45;
+}
+
+/* ── SPOTLIGHTS ── */
+.spotlight{position:absolute;top:0}
+.spotlight::before{
+  content:'';position:absolute;
+  top:0;left:50%;transform:translateX(-50%);
+  width:0;height:0;
+  border-left:70px solid transparent;
+  border-right:70px solid transparent;
+  border-top:260px solid rgba(255,220,130,0.07);
+  filter:blur(12px);
+}
+.sp1{left:10%}.sp2{left:30%}.sp3{left:55%}.sp4{left:77%}
+
+/* ── PRINTS ── */
+.print{
+  position:absolute;
+  border-radius:2px;
+  box-shadow:0 15px 50px rgba(0,0,0,0.55),0 0 0 8px #b8922a,0 0 0 10px #8a6a20,0 0 30px rgba(200,148,46,0.3);
+}
+.print-label{
+  position:absolute;bottom:-26px;left:50%;transform:translateX(-50%);
+  background:rgba(255,255,255,0.88);color:#111;
+  font-size:clamp(5px,0.7vw,9px);font-weight:700;white-space:nowrap;
+  padding:3px 8px;border-radius:2px;letter-spacing:0.4px;
+}
+
+/* PRINT 1 — Digital Storytelling: warm portrait narrative */
+.p1{
+  width:13%;aspect-ratio:3/4;top:11%;left:5%;
+  background:
+    radial-gradient(ellipse at 50% 30%, #e8733a 0%, #c8402a 30%, transparent 60%),
+    radial-gradient(ellipse at 40% 70%, #E8B84B 0%, #a06020 40%, transparent 65%),
+    linear-gradient(160deg,#1a0808,#3a1010,#1a0a04);
+}
+/* PRINT 2 — Digital Visual Art: abstract bold color */
+.p2{
+  width:15%;aspect-ratio:3/4;top:9%;left:24%;
+  background:
+    radial-gradient(ellipse at 40% 35%, #E8B84B 0%, #C8942E 20%, transparent 50%),
+    radial-gradient(ellipse at 65% 60%, #00C9B1 0%, #006655 25%, transparent 55%),
+    radial-gradient(ellipse at 30% 75%, #9B6DFF 0%, #4a1a8a 30%, transparent 55%),
+    linear-gradient(155deg,#0a1628,#1a2a4a,#0e1c2f);
+  box-shadow:0 15px 50px rgba(0,0,0,0.55),0 0 0 8px #b8922a,0 0 0 10px #8a6a20,0 0 50px rgba(200,148,46,0.5);
+}
+/* PRINT 3 — Community Media: documentary grey/blue */
+.p3{
+  width:13%;aspect-ratio:4/3;top:13%;left:50%;
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(180,180,200,0.6) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 40%, rgba(100,150,200,0.4) 0%, transparent 50%),
+    linear-gradient(135deg,#1a2030,#2a3a50,#101820);
+}
+/* PRINT 4 — Creative Technology: geometric neon */
+.p4{
+  width:12%;aspect-ratio:1/1;top:12%;left:72%;
+  background:
+    repeating-linear-gradient(45deg,transparent,transparent 12px,rgba(0,201,177,0.2) 12px,rgba(0,201,177,0.2) 14px),
+    repeating-linear-gradient(-45deg,transparent,transparent 12px,rgba(155,109,255,0.2) 12px,rgba(155,109,255,0.2) 14px),
+    radial-gradient(ellipse at 50% 50%, rgba(0,201,177,0.3) 0%, rgba(155,109,255,0.3) 50%, transparent 70%),
+    linear-gradient(135deg,#050510,#0a0a20,#050515);
+}
+
+/* ── ARTIST FIGURES ── */
+.figure{position:absolute;bottom:19%}
+.fig-shadow{
+  position:absolute;bottom:-6px;left:5%;width:90%;height:10px;
+  background:radial-gradient(ellipse,rgba(0,0,0,0.45) 0%,transparent 70%);
+  border-radius:50%;
+}
+
+/* Figure positions */
+.f1{left:8%;width:7%}
+.f2{left:27%;width:8%}
+.f3{left:52%;width:7%}
+.f4{left:74%;width:6.5%}
+
+/* ── DISCIPLINE TAGS (floating above figures) ── */
+.disc-tag{
+  position:absolute;
+  bottom:calc(19% + 2px);
+  font-size:clamp(5px,0.65vw,8px);
+  font-weight:700;letter-spacing:1px;text-transform:uppercase;
+  padding:3px 8px;border-radius:3px;
+  white-space:nowrap;transform:translateX(-50%);
+}
+.dt1{left:11%;background:rgba(232,115,58,0.85);color:#fff}
+.dt2{left:31%;background:rgba(200,148,46,0.85);color:#0a0a0a}
+.dt3{left:55%;background:rgba(100,160,220,0.85);color:#fff}
+.dt4{left:77%;background:rgba(0,201,177,0.85);color:#0a0a0a}
+
+/* ── BACKGROUND VISITORS ── */
+.visitor{position:absolute;bottom:20%;opacity:0.2;filter:blur(3px)}
+.v1{right:10%;width:3.5%}
+.v2{right:14%;width:2.8%}
+.v3{left:44%;width:2.5%}
+
+/* ── CAPTION ── */
+.caption-bar{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:14px 24px;
+  background:linear-gradient(to top,rgba(0,0,0,0.88) 0%,transparent 100%);
+  display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:8px;
+}
+.caption-tag{
+  background:rgba(200,148,46,0.92);color:#0a0a0a;
+  font-size:clamp(7px,0.75vw,10px);font-weight:700;
+  letter-spacing:1.5px;text-transform:uppercase;
+  padding:4px 12px;border-radius:4px;
+}
+.caption-text{
+  font-size:clamp(7px,0.75vw,10px);color:rgba(255,255,255,0.55);
+  text-align:right;line-height:1.5;
+}
+
+/* ── DISCIPLINES LEGEND ── */
+.legend{
+  max-width:1200px;margin:20px auto 0;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:12px;
+}
+.legend-card{
+  background:#0e1c2f;border-radius:8px;padding:14px 16px;
+  border-left:3px solid;
+}
+.lc1{border-color:#E8733A}
+.lc2{border-color:#C8942E}
+.lc3{border-color:#60a8e0}
+.lc4{border-color:#00C9B1}
+.legend-card .disc{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:4px}
+.lc1 .disc{color:#E8733A}.lc2 .disc{color:#C8942E}.lc3 .disc{color:#60a8e0}.lc4 .disc{color:#00C9B1}
+.legend-card .artist{font-size:13px;font-weight:700;color:#fff;margin-bottom:2px}
+.legend-card .detail{font-size:11px;color:#7a92ac;line-height:1.5}
+
+/* ── PROMPT SECTION ── */
+.prompt-section{max-width:1200px;margin:28px auto 0}
+.prompt-section h2{
+  font-family:'Playfair Display',serif;font-size:22px;font-weight:900;
+  color:#fff;margin-bottom:4px;
+}
+.prompt-section h2 em{font-style:italic;color:#C8942E}
+.prompt-section .sub{font-size:13px;color:#7a92ac;margin-bottom:16px}
+
+.prompt-box{
+  background:#0e1c2f;border:1px solid rgba(255,255,255,0.08);
+  border-radius:10px;padding:20px 24px;margin-bottom:14px;
+}
+.prompt-box h3{
+  font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:#C8942E;margin-bottom:10px;
+}
+.prompt-box p{font-size:13px;color:#8a9fb8;line-height:1.8;font-style:italic}
+.prompt-box .note{font-style:normal;font-size:12px;color:#7a92ac;margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.06)}
+</style>
+</head>
+<body>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <h1>Digital Pioneer Gallery<br><em>Vision Mockup</em></h1>
+  <p>The Carver Museum · Austin, TX · 4 Artists · 4 Disciplines<br>50+TechBridge · ACME Elevate 2027</p>
+</div>
+
+<!-- SCENE -->
+<div class="scene">
+  <div class="stone-wall"></div>
+
+  <!-- Spotlights -->
+  <div class="spotlight sp1"></div>
+  <div class="spotlight sp2"></div>
+  <div class="spotlight sp3"></div>
+  <div class="spotlight sp4"></div>
+
+  <!-- Wall rail -->
+  <div class="wall-rail"></div>
+
+  <!-- Art prints -->
+  <div class="print p1"><div class="print-label">M. Johnson · Digital Storytelling</div></div>
+  <div class="print p2"><div class="print-label">D. Williams · Digital Visual Art</div></div>
+  <div class="print p3"><div class="print-label">R. Okafor · Community Media</div></div>
+  <div class="print p4"><div class="print-label">C. Rivera · Creative Technology</div></div>
+
+  <!-- Background visitors -->
+  <div class="visitor v1">
+    <svg viewBox="0 0 30 85" fill="rgba(210,190,160,0.7)"><ellipse cx="15" cy="11" rx="8" ry="9"/><rect x="8" y="21" width="14" height="36" rx="4"/><rect x="7" y="55" width="6" height="22" rx="3"/><rect x="17" y="55" width="6" height="22" rx="3"/></svg>
+  </div>
+  <div class="visitor v2">
+    <svg viewBox="0 0 30 85" fill="rgba(210,190,160,0.6)"><ellipse cx="15" cy="11" rx="7" ry="8"/><rect x="9" y="20" width="12" height="34" rx="4"/><rect x="8" y="52" width="5" height="20" rx="3"/><rect x="17" y="52" width="5" height="20" rx="3"/></svg>
+  </div>
+  <div class="visitor v3">
+    <svg viewBox="0 0 30 85" fill="rgba(210,190,160,0.5)"><ellipse cx="15" cy="11" rx="7" ry="8"/><rect x="9" y="20" width="12" height="34" rx="4"/><rect x="8" y="52" width="5" height="20" rx="3"/><rect x="17" y="52" width="5" height="20" rx="3"/></svg>
+  </div>
+
+  <!-- FIGURE 1 — Black woman, Digital Storytelling, orange dress -->
+  <div class="figure f1">
+    <svg viewBox="0 0 70 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="35" cy="20" rx="14" ry="16" fill="#5a2e1a"/>
+      <ellipse cx="35" cy="13" rx="16" ry="9" fill="#1a0800"/>
+      <rect x="19" y="9" width="32" height="7" rx="3.5" fill="#E8733A" opacity="0.9"/>
+      <rect x="31" y="35" width="10" height="9" rx="3" fill="#5a2e1a"/>
+      <path d="M16 46 Q10 52 10 88 L12 125 Q16 130 35 130 Q54 130 58 125 L60 88 Q60 52 54 46 Z" fill="#E8733A"/>
+      <path d="M54 54 Q62 46 66 34 Q68 28 64 25" stroke="#5a2e1a" stroke-width="9" stroke-linecap="round" fill="none"/>
+      <circle cx="64" cy="24" r="6" fill="#5a2e1a"/>
+      <path d="M16 56 Q8 72 10 92" stroke="#c85a20" stroke-width="8" stroke-linecap="round" fill="none"/>
+      <rect x="24" y="127" width="12" height="42" rx="4" fill="#1a0808"/>
+      <rect x="38" y="127" width="12" height="42" rx="4" fill="#1a0808"/>
+      <ellipse cx="30" cy="169" rx="9" ry="4" fill="#0a0404"/>
+      <ellipse cx="44" cy="169" rx="9" ry="4" fill="#0a0404"/>
+    </svg>
+    <div class="fig-shadow"></div>
+  </div>
+
+  <!-- FIGURE 2 — Black woman, Digital Visual Art, teal dress, head wrap -->
+  <div class="figure f2">
+    <svg viewBox="0 0 80 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="40" cy="22" rx="16" ry="18" fill="#6b3a2a"/>
+      <ellipse cx="40" cy="14" rx="18" ry="10" fill="#1a0a05"/>
+      <rect x="22" y="10" width="36" height="8" rx="4" fill="#C8942E" opacity="0.9"/>
+      <rect x="34" y="39" width="12" height="10" rx="3" fill="#6b3a2a"/>
+      <path d="M20 50 Q14 56 14 92 L16 132 Q20 137 40 137 Q60 137 64 132 L66 92 Q66 56 60 50 Z" fill="#1a4a5c"/>
+      <path d="M60 58 Q72 52 76 40 Q78 34 74 30" stroke="#6b3a2a" stroke-width="10" stroke-linecap="round" fill="none"/>
+      <circle cx="74" cy="29" r="7" fill="#6b3a2a"/>
+      <path d="M20 60 Q12 76 14 96" stroke="#1a4a5c" stroke-width="9" stroke-linecap="round" fill="none"/>
+      <rect x="27" y="134" width="13" height="45" rx="5" fill="#0e2a3a"/>
+      <rect x="42" y="134" width="13" height="45" rx="5" fill="#0e2a3a"/>
+      <ellipse cx="33" cy="179" rx="10" ry="5" fill="#1a0a05"/>
+      <ellipse cx="48" cy="179" rx="10" ry="5" fill="#1a0a05"/>
+    </svg>
+    <div class="fig-shadow"></div>
+  </div>
+
+  <!-- FIGURE 3 — Latino man, Community Media, button-down shirt -->
+  <div class="figure f3">
+    <svg viewBox="0 0 70 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="35" cy="20" rx="14" ry="16" fill="#8a5a38"/>
+      <ellipse cx="35" cy="10" rx="12" ry="7" fill="#3a2010"/>
+      <rect x="31" y="35" width="9" height="9" rx="3" fill="#8a5a38"/>
+      <path d="M14 46 Q10 52 10 86 L12 124 Q16 128 35 128 Q54 128 58 124 L60 86 Q60 52 56 46 Z" fill="#2a3a5a"/>
+      <!-- shirt buttons -->
+      <line x1="35" y1="50" x2="35" y2="120" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+      <circle cx="35" cy="60" r="2" fill="rgba(255,255,255,0.3)"/>
+      <circle cx="35" cy="75" r="2" fill="rgba(255,255,255,0.3)"/>
+      <circle cx="35" cy="90" r="2" fill="rgba(255,255,255,0.3)"/>
+      <!-- arms: one raised toward print, one behind back -->
+      <path d="M14 52 Q6 46 4 36 Q2 28 6 26" stroke="#8a5a38" stroke-width="9" stroke-linecap="round" fill="none"/>
+      <circle cx="5" cy="25" r="6" fill="#8a5a38"/>
+      <path d="M56 56 Q62 72 60 92" stroke="#2a3a5a" stroke-width="8" stroke-linecap="round" fill="none"/>
+      <rect x="24" y="125" width="11" height="42" rx="4" fill="#1a2030"/>
+      <rect x="37" y="125" width="11" height="42" rx="4" fill="#1a2030"/>
+      <ellipse cx="29" cy="167" rx="9" ry="4" fill="#0a0810"/>
+      <ellipse cx="42" cy="167" rx="9" ry="4" fill="#0a0810"/>
+    </svg>
+    <div class="fig-shadow"></div>
+  </div>
+
+  <!-- FIGURE 4 — Older white woman, Creative Technology, purple cardigan -->
+  <div class="figure f4">
+    <svg viewBox="0 0 65 185" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="32" cy="19" rx="13" ry="15" fill="#c4906a"/>
+      <ellipse cx="32" cy="11" rx="14" ry="7" fill="#d4d0c8"/>
+      <rect x="28" y="33" width="9" height="9" rx="3" fill="#c4906a"/>
+      <path d="M13 43 Q8 50 8 84 L10 120 Q14 125 32 125 Q50 125 54 120 L56 84 Q56 50 51 43 Z" fill="#6a4a8a"/>
+      <path d="M51 50 Q60 46 63 36 Q64 30 61 27" stroke="#c4906a" stroke-width="8" stroke-linecap="round" fill="none"/>
+      <circle cx="61" cy="26" r="5.5" fill="#c4906a"/>
+      <path d="M13 52 Q6 68 8 86" stroke="#5a3a7a" stroke-width="8" stroke-linecap="round" fill="none"/>
+      <rect x="22" y="122" width="11" height="40" rx="4" fill="#3a2850"/>
+      <rect x="35" y="122" width="11" height="40" rx="4" fill="#3a2850"/>
+      <ellipse cx="27" cy="162" rx="8" ry="4" fill="#1a1020"/>
+      <ellipse cx="40" cy="162" rx="8" ry="4" fill="#1a1020"/>
+    </svg>
+    <div class="fig-shadow"></div>
+  </div>
+
+  <!-- Discipline tags -->
+  <div class="disc-tag dt1">Digital Storytelling</div>
+  <div class="disc-tag dt2">Digital Visual Art</div>
+  <div class="disc-tag dt3">Community Media</div>
+  <div class="disc-tag dt4">Creative Technology</div>
+
+  <!-- Floor -->
+  <div class="floor"></div>
+
+  <!-- Caption -->
+  <div class="caption-bar">
+    <span class="caption-tag">Vision Mockup · The Carver Museum · Austin TX</span>
+    <span class="caption-text">50+TechBridge · Digital Pioneer Gallery · ACME Elevate 2027<br>4 Artists · 4 Disciplines · Grand Gallery Walk May 2027</span>
+  </div>
+</div>
+
+<!-- LEGEND -->
+<div class="legend">
+  <div class="legend-card lc1">
+    <div class="disc">Digital Storytelling</div>
+    <div class="artist">M. Johnson</div>
+    <div class="detail">Personal narrative told through<br>digital illustration & typography</div>
+  </div>
+  <div class="legend-card lc2">
+    <div class="disc">Digital Visual Art</div>
+    <div class="artist">D. Williams</div>
+    <div class="detail">Abstract digital painting —<br>gold, teal, and deep indigo</div>
+  </div>
+  <div class="legend-card lc3">
+    <div class="disc">Community Media</div>
+    <div class="artist">R. Okafor</div>
+    <div class="detail">Documentary photo essay —<br>neighborhood identity & memory</div>
+  </div>
+  <div class="legend-card lc4">
+    <div class="disc">Creative Technology</div>
+    <div class="artist">C. Rivera</div>
+    <div class="detail">Generative geometric art —<br>code-driven visual patterns</div>
+  </div>
+</div>
+
+<!-- GEMINI PROMPTS -->
+<div class="prompt-section">
+  <h2>Gemini Image <em>Prompts</em></h2>
+  <p class="sub">Paste these directly into Gemini · Generate 4 variations of each · Pick the best</p>
+
+  <div class="prompt-box">
+    <h3>Prompt 1 — Full Gallery Scene (All 4 Artists)</h3>
+    <p>
+      A wide cinematic gallery photograph inside the George Washington Carver Museum in Austin, Texas. Four older adult artists — a Black woman in her 60s in an orange dress, a Black woman in her late 60s in a teal outfit with a gold head wrap, a Latino man in his 70s in a blue button-down shirt, and a white woman in her late 60s in a purple cardigan — each standing proudly next to their own large framed artwork on a long gallery wall. The artworks are distinct: a warm narrative portrait illustration, a bold abstract digital painting in gold and teal, a black-and-white documentary photo essay, and a geometric generative art piece in electric teal and purple. The Carver Museum's distinctive split-face masonry stone walls are visible in the background. Gallery spotlights cast warm cones of light on each artwork. Small white name label cards are mounted beside each frame. A few visitors visible in the background, softly blurred. The mood is joyful, dignified, and triumphant — a community celebration inside a culturally significant Black institution. Photorealistic. Editorial photography style. Warm gallery lighting.
+    </p>
+    <p class="note">Best for: grant application hero image, program brochure cover, LinkedIn announcement</p>
+  </div>
+
+  <div class="prompt-box">
+    <h3>Prompt 2 — Intimate Two-Shot (Storytelling + Visual Art)</h3>
+    <p>
+      An intimate gallery photograph of two older Black women standing side by side inside the George Washington Carver Museum in Austin, Texas. One woman in her early 60s wears a warm orange dress and stands next to a large framed digital narrative illustration — bold, warm reds and oranges, a face emerging from brushstrokes. The other woman in her late 60s wears a teal outfit with a gold head wrap and stands beside a vibrant abstract digital painting in deep blues, golds, and teal. Both women are smiling at each other, sharing a private moment of pride. The Carver's stone masonry wall visible behind them. Recessed gallery spotlights above. Small artist name labels on each frame. Photorealistic. Warm editorial photography. Shallow depth of field.
+    </p>
+    <p class="note">Best for: social media posts, program testimonial page, community newsletter</p>
+  </div>
+
+  <div class="prompt-box">
+    <h3>Prompt 3 — Single Hero Artist (D. Williams · Digital Visual Art)</h3>
+    <p>
+      A proud older Black woman in her late 60s wearing a teal outfit and a gold head wrap, standing next to a large framed abstract digital painting on the wall of the George Washington Carver Museum in Austin, Texas. The painting is vivid — rich golds, deep navy, teal brushstrokes suggesting a human face. She stands with quiet dignity, one hand resting gently near the frame, turned slightly toward her artwork with a soft proud smile. The Carver's split-face masonry stone walls in the background. Recessed gallery spotlights shine down from above. A small white label card beside the frame shows her name. Other framed prints line the wall behind her, slightly out of focus. A few visitors visible in the mid-ground, blurred. Dignified, triumphant, deeply human. Photorealistic. Editorial photography style. Warm gallery light.
+    </p>
+    <p class="note">Best for: grant cover page, program landing page hero image</p>
+  </div>
+
+</div>
+
+</body>
+</html>

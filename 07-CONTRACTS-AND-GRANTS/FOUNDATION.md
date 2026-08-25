@@ -73,7 +73,7 @@ LearnMoreTechnologies.com operates 50+TechBridge — an Austin-based community d
 
 Our founder, Brian McKinney, has spent his career at the intersection of technology, community, and adult learning. After watching the rise of AI leave an entire generation behind — not for lack of intelligence, but for lack of access and invitation — he built 50+TechBridge to change that.
 
-Since launching in Austin, we have reached 264+ adults across 13 community locations, including 9 public libraries and 3 senior centers. Every session is free. Every door is open. Every Austinite 50+ is welcome.
+Since launching in Austin, we have delivered free programming across 9 in-person locations — including 6 Austin Public Library branches, AARP-affiliated senior centers, and a Foundation Communities veterans program. Every session is free. Every door is open. Every Austinite 50+ is welcome.
 
 ---
 
@@ -87,15 +87,29 @@ Our values are accessibility, authenticity, and dignity. We meet every person at
 ---
 
 ## 4. PROOF POINTS (Verified — Do Not Inflate)
-- 264+ adults reached
-- 13 community locations
-- 9 Austin Public Library branches
-- 3 senior centers (Gus Garcia, Onion Creek, Foundation Communities)
-- All programming is free to participants
-- SecureStart.app: free lifetime access for all participants
+**Last updated: August 11, 2026 — FIX-004 supersedes all prior headcounts**
 
-**Library branches served:**
-St. John, Rundberg, Southeast, Milwood, Manchaca Road, Pleasant Hill, North Village, Windsor Park, Old Quarry
+**Approved:**
+- 9 in-person locations
+- 6 Austin Public Library branches
+- AARP-affiliated senior centers
+- Foundation Communities veterans program
+- MBE-certified business
+- WIOA-eligible program
+- All programming is free to participants
+- $18K saved per untrained 50+ worker (cite: LSE & Protiviti)
+- $850B annual cost of ageism (cite: AARP & Oxford Economics)
+
+**Retired — do not use:**
+- 264+ adults (unverified headcount)
+- 347+ pioneers (inflated, includes bots)
+- 13 locations (overstated)
+- 3X completion rate (unverified)
+- 74% feel more confident (unverified)
+- 23 organizations (was a target list, not actuals)
+
+**Library branches served (6 verified):**
+St. John, Rundberg, Southeast, Milwood, Manchaca Road, Pleasant Hill
 
 ---
 
@@ -122,7 +136,11 @@ Each 50+TechBridge cohort is a six-week community experience built on three laye
 - DO use: cohort, community experience, gathering, mastermind, Digital Pioneer, creative facilitation
 - DO NOT use: training, course, curriculum, class
 - Always call participants "Digital Pioneers" — it signals identity, not just skill
-- Never inflate numbers — use only verified proof points from Section 4
+- Never inflate numbers — use only verified proof points from Section 4 (updated Aug 11, 2026)
+- No headcounts (264+, 347+, 200+ all retired)
+- No completion rate percentages (3X retired)
+- No confidence stats (74% retired)
+- Lead with: locations, named partners, certifications
 - SecureStart.app is always listed as an in-kind contribution in budgets, not a narrative feature
 - Always capitalize **Gallery** when referring to the Digital Pioneer Gallery
 - Austin Public Libraries are meet, greet, and train venues only — never described as premier or exhibition venues

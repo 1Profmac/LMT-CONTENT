@@ -1,0 +1,380 @@
+<!-- wp:html -->
+<!--
+=================================================
+  LMT HOMEPAGE — Advocacy, Education & Speaking
+  Template: Full Width Content — REQUIRED
+  Slug: / (homepage)
+  Owner: Brian, CEO
+  Last Updated: May 6, 2026
+
+  Stats Lock: 3X Completion · 74% Confident · $18K Saved · MBE Certified TX · WIOA Eligible
+  DO NOT USE BANNED STATS
+
+  Layout: Hero → Trust Bar → Three Service Cards w/ YouTube → CTA
+=================================================
+-->
+
+<style>
+
+/* ── BUDDYBOSS RESET (DO NOT REMOVE) ── */
+body,.site,#page,#content,.bb-grid,.container,
+#primary,#main,.site-content,.entry-content,
+.site-inner,.content-sidebar-wrap{background-color:#0E1C2F!important}
+.entry-title,.page-title,
+.page-template-blank .entry-title,
+body.page .entry-header,
+.buddypress-page .entry-header,
+#primary .entry-header,
+.site-content .entry-header{display:none!important}
+.entry-content{padding:0!important;margin:0!important;max-width:none!important}
+.bb-grid,.container,#content,#primary,#main,.site-main{
+  padding:0!important;margin:0!important;max-width:none!important;width:100%!important}
+.site-footer,.footer-widgets,#colophon{margin-top:0!important;padding-top:0!important}
+
+/* ── FONTS & RESET ── */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+/* ── ANIMATIONS ── */
+@keyframes t-fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes t-pulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.6);opacity:0}}
+@keyframes t-shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+
+/* ── PAGE SCOPE ── */
+.lmt-home{
+  --navy:#0E1C2F;--navy-mid:#162640;--navy-light:#1E3A5F;
+  --gold:#C8942E;--gold-light:#E8B84B;--gold-dim:rgba(200,148,46,.18);
+  --orange:#E8733A;--green:#109F35;
+  --white:#fff;--text-body:#C4CDD9;--text-muted:#A8B8CC;
+  --max:1180px;--radius:14px;
+  --transition:.25s cubic-bezier(.4,.2,.2,1);
+  font-family:'DM Sans',sans-serif!important;
+  color:#C4CDD9!important;font-size:20px;line-height:1.75;
+  -webkit-font-smoothing:antialiased;background:#0E1C2F;
+  display:block;width:100vw;position:relative;
+  left:50%;margin-left:-50vw;overflow-x:hidden
+}
+.lmt-home a{text-decoration:none;color:inherit}
+.lmt-home ul{list-style:none}
+.lmt-home .au{animation:t-fadeUp .7s ease both}
+.lmt-home .d1{animation-delay:.1s}
+.lmt-home .d2{animation-delay:.22s}
+.lmt-home .d3{animation-delay:.34s}
+.lmt-home .d4{animation-delay:.46s}
+
+/* ── SCAFFOLDING ── */
+.lmt-home section{position:relative}
+.lmt-home .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+.lmt-home .s-pad{padding-top:32px;padding-bottom:72px}
+
+.lmt-home .section-label{
+  display:inline-block;font-size:13px;font-weight:600;
+  letter-spacing:2px;text-transform:uppercase;color:#C8942E!important;margin-bottom:14px
+}
+.lmt-home h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(32px,4vw,52px);font-weight:900;line-height:1.08;letter-spacing:-.5px
+}
+.lmt-home h2 em{font-style:italic;color:#C8942E!important}
+.lmt-home h2.light{color:#fff}
+
+/* ── BUTTONS ── */
+.lmt-home .btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#C8942E;color:#0E1C2F!important;font-weight:700;
+  font-size:18px;padding:16px 36px;border-radius:10px;
+  transition:all var(--transition);min-height:44px;border:none;cursor:pointer
+}
+.lmt-home .btn-primary:hover{background:#E8B84B;transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,148,46,.35)}
+.lmt-home .btn-secondary{
+  display:inline-flex;align-items:center;gap:8px;
+  color:#C4CDD9!important;font-size:18px;font-weight:500;
+  padding:16px 28px;border:1px solid rgba(255,255,255,.2);
+  border-radius:10px;transition:all var(--transition);min-height:44px
+}
+.lmt-home .btn-secondary:hover{color:#fff;border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.05)}
+
+/* ── HERO ── */
+.lmt-home .hero{
+  background:linear-gradient(160deg,#0A1520 0%,#0E1C2F 100%);
+  padding:72px 24px 56px;overflow:hidden
+}
+.lmt-home .hero-bg{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 60% at 30% 50%,rgba(200,148,46,.07) 0%,transparent 60%);
+  pointer-events:none
+}
+.lmt-home .hero-inner{
+  position:relative;z-index:2;max-width:1180px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;
+  text-align:left
+}
+.lmt-home .hero-text{display:flex;flex-direction:column;align-items:flex-start}
+.lmt-home .hero-img-wrap{
+  position:relative;border-radius:20px;overflow:hidden;
+  box-shadow:0 24px 64px rgba(0,0,0,.45);
+  aspect-ratio:4/3
+}
+.lmt-home .hero-img-wrap img{
+  width:100%;height:100%;object-fit:cover;display:block
+}
+.lmt-home .hero-img-wrap::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(14,28,47,.35) 0%,rgba(200,148,46,.08) 100%);
+  border-radius:20px
+}
+.lmt-home .hero-img-wrap::before{
+  content:'';position:absolute;inset:-2px;
+  border-radius:22px;
+  background:linear-gradient(135deg,rgba(200,148,46,.4),transparent 60%);
+  z-index:-1
+}
+.lmt-home .eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  border:1px solid rgba(200,148,46,.35);background:rgba(200,148,46,.08);
+  border-radius:100px;padding:7px 18px;
+  font-size:13px;font-weight:600;letter-spacing:1.8px;
+  text-transform:uppercase;color:#C8942E!important;margin-bottom:18px
+}
+.lmt-home .eyebrow .dot{
+  width:7px;height:7px;background:#C8942E;border-radius:50%;position:relative
+}
+.lmt-home .eyebrow .dot::after{
+  content:'';position:absolute;inset:-4px;border-radius:50%;
+  border:1px solid #C8942E;animation:t-pulse 1.8s ease-out infinite
+}
+.lmt-home .hero h1,
+body .lmt-home .hero h1{
+  font-family:'Playfair Display',serif!important;
+  font-size:clamp(36px,4vw,58px)!important;font-weight:900!important;
+  line-height:1.08!important;color:#fff!important;letter-spacing:-.5px!important;
+  margin-bottom:16px!important;max-width:100%
+}
+.lmt-home .hero h1 em{font-style:italic!important;color:#C8942E!important}
+.lmt-home .hero-sub{
+  font-size:20px;line-height:1.72;color:#C4CDD9!important;
+  max-width:520px;margin:0 0 28px
+}
+.lmt-home .hero-sub strong{color:#fff!important;font-weight:600}
+.lmt-home .hero-btns{display:flex;gap:16px;flex-wrap:wrap;justify-content:flex-start}
+@media(max-width:860px){
+  .lmt-home .hero-inner{grid-template-columns:1fr;text-align:center}
+  .lmt-home .hero-text{align-items:center}
+  .lmt-home .hero-btns{justify-content:center}
+  .lmt-home .hero-sub{max-width:100%;margin:0 auto 28px}
+  .lmt-home .hero-img-wrap{max-width:520px;margin:0 auto;width:100%}
+}
+
+/* ── TRUST BAR ── */
+.lmt-home .trust-bar{
+  background:#162640;padding:20px 32px;
+  display:flex;justify-content:center;gap:48px;flex-wrap:wrap
+}
+.lmt-home .trust-item{font-size:16px;color:#A8B8CC!important;font-weight:500;letter-spacing:.02em}
+.lmt-home .trust-item span{color:#C8942E!important;font-weight:700;font-size:18px}
+
+/* ── SERVICE CARDS ── */
+.lmt-home .services-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:24px
+}
+.lmt-home .svc{
+  background:rgba(22,38,64,.55);border:1px solid rgba(200,148,46,.1);
+  border-radius:18px;padding:5px 24px 28px;
+  transition:all var(--transition);position:relative;overflow:hidden;
+  display:flex;flex-direction:column
+}
+.lmt-home .svc::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,#C8942E,transparent);opacity:0;
+  transition:opacity var(--transition)
+}
+.lmt-home .svc:hover{transform:translateY(-6px);border-color:rgba(200,148,46,.35);background:rgba(22,38,64,.9)}
+.lmt-home .svc:hover::before{opacity:1}
+.lmt-home .svc-video{
+  position:relative;width:100%;height:0;padding-bottom:60%;
+  border-radius:12px;margin-bottom:24px;overflow:hidden
+}
+.lmt-home .svc-video iframe{
+  position:absolute;top:0;left:0;width:100%;height:100%;border:0
+}
+.lmt-home .svc-video-link{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:15px;font-weight:600;color:#C8942E!important;
+  margin-bottom:14px;cursor:pointer;text-decoration:none
+}
+.lmt-home .svc-video-link:hover{color:#E8B84B!important}
+.lmt-home .svc h3{
+  font-family:'Playfair Display',serif;font-size:22px;font-weight:700;
+  color:#fff;margin-bottom:10px;line-height:1.25
+}
+.lmt-home .svc p{font-size:18px;color:#A8B8CC!important;line-height:1.65;margin-bottom:14px}
+.lmt-home .svc .check-list{margin-bottom:14px;display:flex;flex-direction:column;gap:7px;flex-grow:1}
+.lmt-home .svc .check-item{
+  font-size:17px;color:#C4CDD9!important;padding-left:20px;position:relative;line-height:1.45
+}
+.lmt-home .svc .check-item::before{
+  content:'✓';position:absolute;left:0;color:#C8942E!important;font-weight:700;font-size:13px
+}
+.lmt-home .svc .svc-tag{
+  font-size:16px;font-weight:600;color:#C8942E!important;
+  padding-top:14px;border-top:1px solid rgba(200,148,46,.1);margin-top:auto
+}
+
+/* ── CTA ── */
+.lmt-home .cta-section{
+  background:linear-gradient(135deg,#0A1520 0%,#1E3A5F 100%);
+  padding:80px 32px 72px;text-align:center;position:relative;overflow:hidden;
+  width:100vw;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;box-sizing:border-box
+}
+.lmt-home .cta-section::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 70% at 50% 50%,rgba(200,148,46,.09) 0%,transparent 70%);
+  pointer-events:none
+}
+.lmt-home .cta-section>*{position:relative;z-index:1}
+.lmt-home .cta-section h2{
+  font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,62px);
+  font-weight:900;color:#fff;line-height:1.08;margin-bottom:18px;letter-spacing:-.5px
+}
+.lmt-home .cta-section h2 em{font-style:italic;color:#C8942E!important}
+.lmt-home .cta-section p{font-size:19px;color:#A8B8CC!important;max-width:520px;margin:0 auto 36px;line-height:1.7}
+.lmt-home .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.lmt-home .cta-trust{font-size:13px;color:#A8B8CC!important;opacity:.8;margin-top:20px}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .lmt-home .services-grid{grid-template-columns:1fr}
+  .lmt-home .trust-bar{gap:24px}
+}
+@media(max-width:600px){
+  .lmt-home .hero{padding:52px 20px 40px}
+  .lmt-home .s-pad{padding-top:48px;padding-bottom:48px}
+  .lmt-home .wrap{padding:0 20px}
+  .lmt-home .hero-btns{flex-direction:column;align-items:center}
+  .lmt-home .cta-btns{flex-direction:column;align-items:center}
+}
+@media(prefers-reduced-motion:reduce){
+  .lmt-home .au,.lmt-home [class*="d"]{animation:none!important;opacity:1!important;transform:none!important}
+  .lmt-home *{animation-duration:.001ms!important;transition-duration:.001ms!important}
+}
+
+/* ── DIGITAL PIONEER GALLERY NAV BUTTON ── */
+li.menu-btn-gallery>a,
+.menu-item.menu-btn-gallery>a{
+  background:#7B2FBE!important;color:#fff!important;
+  padding:8px 18px!important;border-radius:6px!important;
+  font-weight:700!important;transition:background .2s!important;white-space:nowrap
+}
+li.menu-btn-gallery>a:hover,
+.menu-item.menu-btn-gallery>a:hover{background:#6A27A8!important}
+
+</style>
+
+<!-- ============ PAGE CONTENT ============ -->
+<div class="lmt-home" role="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="eyebrow au">
+          <span class="dot" aria-hidden="true"></span>
+          Learn More Technologies
+        </div>
+        <h1 class="au d1">Advocacy, Education <em>&amp; Speaking</em></h1>
+        <p class="hero-sub au d2">
+          <strong>Closing the digital divide for adults 50+.</strong>
+          We advocate for digital inclusion, deliver hands-on training, and speak to organizations ready to take action.
+        </p>
+        <div class="hero-btns au d3">
+          <a href="https://learnmoretechnologies.com/work-with-us/" class="btn-primary">Bring Us To Your Organization <span aria-hidden="true">&rarr;</span></a>
+          <a href="https://digitalpioneer.ai" class="btn-secondary" target="_blank">Digital Pioneer Gallery</a>
+        </div>
+      </div>
+      <div class="hero-img-wrap au d2">
+        <img src="https://50plustechbridge.com/wp-content/uploads/2026/02/50TechPeople-e1771094171546.webp"
+             alt="Diverse group of adults 50+ learning together at a 50+TechBridge workshop"
+             loading="eager" width="779" height="521">
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-item"><span>3X</span> Industry Completion Rate</div>
+    <div class="trust-item"><span>74%</span> Feel More Confident</div>
+    <div class="trust-item"><span>$18K</span> Saved per Untrained Worker</div>
+    <div class="trust-item"><span>MBE</span> Certified &middot; Texas</div>
+    <div class="trust-item"><span>WIOA</span> Eligible</div>
+  </div>
+
+  <!-- THREE SERVICES -->
+  <section class="s-pad">
+    <div class="wrap">
+      <h2 class="light au d1" style="margin-bottom:0">Three Pillars. <em>One Mission.</em></h2>
+
+      <div class="services-grid">
+
+        <!-- ADVOCACY -->
+        <div class="svc au d1">
+          <div class="svc-video">
+            <iframe src="https://www.youtube.com/embed/JQPtZDvhgs8?rel=0&modestbranding=1" title="The $850 Billion Cost of Ignoring Experienced Workers" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <a href="https://www.youtube.com/watch?v=JQPtZDvhgs8" target="_blank" class="svc-video-link">&#9655; Watch on YouTube</a>
+          <h3>Advocacy</h3>
+          <p>We fight ageism and champion digital inclusion for adults 50+. The system wasn't built for you &mdash; we're building something better.</p>
+          <div class="check-list">
+            <div class="check-item">Digital inclusion policy &amp; awareness</div>
+            <div class="check-item">The $76 Trillion case against ageism</div>
+            <div class="check-item">WIOA-eligible programming</div>
+            <div class="check-item">MBE Certified</div>
+          </div>
+          <div class="svc-tag"><em>Policy &middot; Awareness &middot; Action</em></div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="svc au d2">
+          <div class="svc-video">
+            <iframe src="https://www.youtube.com/embed/k3-TFUbT86o?rel=0&modestbranding=1" title="50+TechBridge Program Introduction" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <a href="https://www.youtube.com/watch?v=k3-TFUbT86o" target="_blank" class="svc-video-link">&#9655; Watch on YouTube</a>
+          <h3>Education</h3>
+          <p>Hands-on digital skills training customized to your organization. Free self-paced course. On-site partner training. No jargon, no fluff.</p>
+          <div class="check-list">
+            <div class="check-item">Customized to your members' needs</div>
+            <div class="check-item">In-person, hybrid, or online</div>
+            <div class="check-item">Free self-paced course available</div>
+            <div class="check-item">Libraries &middot; Senior Centers &middot; Workforce Boards</div>
+          </div>
+          <div class="svc-tag"><em>Training &middot; Curriculum &middot; Coaching</em></div>
+        </div>
+
+        <!-- SPEAKING -->
+        <div class="svc au d3">
+          <div class="svc-video">
+            <iframe src="https://www.youtube.com/embed/Svb6LtzS070?rel=0&modestbranding=1" title="50+TechBridge Sizzle Reel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <a href="https://www.youtube.com/watch?v=Svb6LtzS070" target="_blank" class="svc-video-link">&#9655; Watch on YouTube</a>
+          <h3>Speaking</h3>
+          <p>Keynotes and Lunch &amp; Learns that move audiences to action. Your people leave with new tools on their phones and a path to keep learning.</p>
+          <div class="check-list">
+            <div class="check-item">What Is Tech, AI &amp; Independent Living</div>
+            <div class="check-item">The Digital Divide: Why 50+ Are Left Behind</div>
+            <div class="check-item">AI Won't Replace You &mdash; But It Will Replace the Person Who Doesn't Learn</div>
+          </div>
+          <div class="svc-tag"><em>Keynotes &middot; Workshops &middot; Conferences</em></div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center;margin-top:40px;">
+        <a href="https://50plustechbridge.com/start-free-lesson/" class="btn-primary">Start Free Lesson <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+
+</div><!-- end .lmt-home -->
+
+<!-- /wp:html -->
