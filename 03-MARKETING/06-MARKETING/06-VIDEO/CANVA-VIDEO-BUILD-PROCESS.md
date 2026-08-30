@@ -25,16 +25,26 @@
 
 ---
 
-## STEP 2 — HEYGEN TALKING HEAD (inside Canva)
+## STEP 2 — HEYGEN TALKING HEAD (use HeyGen directly — NOT the Canva app)
 
-1. Open your Canva video project
-2. Click **Apps** on the left sidebar
-3. Search for **HeyGen AI Avatars** → click it
-4. Click **Use in existing design**
-5. Select your avatar (Brian McKinney)
-6. Paste the welcome script
-7. Generate — HeyGen renders and drops the video directly into your Canva project
-8. Resize and position in the corner (PIP — picture in picture) on slides 1 and 7
+**WARNING:** The HeyGen Canva app only generates a 2.5-second clip — not the full video. Always use HeyGen directly at app.heygen.com for full-length talking head generation.
+
+1. Go to **app.heygen.com**
+2. Click **Create Video** → **Scene by scene** → **Build it yourself**
+3. In the Script panel (left side): click the audio icon → upload your ElevenLabs MP3 (`Welcome-Voice-Over-FINAL.mp3`)
+4. On the right panel, select **Avatar: Brian McKinney** (Bright Horizon look)
+5. Set **Motion Engine: Avatar V** (moves like you, adapts to script)
+6. Under **Avatar Background** → click **Remove** (transparent background)
+7. Under **Layout** → select **Circle** for circular PIP style
+8. Click **Generate** (top right)
+9. When done, download the MP4
+10. Upload the MP4 to Canva via **Uploads**
+
+### To add talking head to Canva slides:
+- Drag the HeyGen MP4 onto slide 1 → position in bottom corner
+- Resize to PIP size (small, corner placement)
+- Copy (Ctrl+C) → paste (Ctrl+V) onto each slide you want Brian to appear on
+- Brian only needs to appear on slide 1 (open) and slide 7 (close) — slides 2–6 are content only
 
 ---
 
@@ -99,5 +109,9 @@ Click each slide's navy bar at the bottom of the timeline and drag the right edg
 
 - Canva does NOT auto-sync slide durations to voiceover — set each manually
 - Beat Sync only works with music, not voiceover
-- HeyGen Canva app drops the talking head directly into your project — no download needed
+- **Do NOT use HeyGen Canva app for talking head** — it only generates 2.5 seconds, not the full video
+- Always use HeyGen directly at app.heygen.com for full-length talking head
+- To set slide duration: click the dark navy bar at the bottom of the timeline → drag the RIGHT EDGE
+- To remove background on a video clip in Canva: click the clip → click BG Remover in toolbar
+- HeyGen Avatar Background → Remove = transparent background (no download workaround needed)
 - Always preview before downloading to catch sync issues
