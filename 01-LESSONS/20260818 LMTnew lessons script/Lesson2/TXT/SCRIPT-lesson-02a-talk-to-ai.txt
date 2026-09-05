@@ -1,0 +1,51 @@
+LESSON 2 VIDEO SCRIPT - Talk to AI
+50+TechBridge | HeyGen Avatar | Plain spoken words only
+Split: 2a / 2b / 2c - approx 4-5 min each, total 12-15 min
+================================================
+
+
+========================================
+LESSON 2a - What Is AI and How Do I Open It?
+Runtime: approx 4-5 minutes
+========================================
+
+Welcome back, Digital Pioneer.
+
+You finished Lesson 1. You made your screen easier to read. You showed up for Lesson 2. I want you to understand what that means. Most people who sign up for something like this never get past the first lesson. They get busy. They get nervous. They tell themselves they will come back later. You came back. That matters.
+
+Today is the lesson that changes things.
+
+Because today you are going to have a real conversation with artificial intelligence. Not watch a video about it. Not read an article about it. You are going to open it up, type something in, and get a real answer back. Today.
+
+And I want to tell you right now, before we do anything else, that you are ready for this. I have taught this to adults in their 50s, 60s, 70s, and 80s. All of them were nervous. All of them did it anyway. And every single one of them said the same thing afterward. They said, that was it? That was what I was afraid of?
+
+So let us talk about what AI actually is. Because I think most people have the wrong picture in their head.
+
+When most people hear the words artificial intelligence, they picture a robot. Or a supercomputer. Or something from a science fiction movie that is about to take over the world. I understand that. That is what movies have shown us for 50 years.
+
+Here is the reality. AI, the kind we are going to use today, is a conversation partner. That is the best way I know to describe it. You type something. It types back. You ask a question, it gives you an answer. You say you do not understand something, it explains it differently. That is the whole thing.
+
+Think about the smartest person you have ever known. A doctor. A professor. A friend who just seemed to know something about everything. Now imagine that person was available to you 24 hours a day, seven days a week, never got tired, never got impatient, and never made you feel bad for asking a question you already asked three times. That is what AI is.
+
+It does not judge you. It does not remember that you asked the same question last Tuesday. Every conversation starts fresh.
+
+Now I want to be honest with you about what AI is not. It is not perfect. Sometimes it gets things wrong. Sometimes it sounds very confident about something that turns out to be incorrect. We are going to talk about that in a moment. For now, the rule is simple. Use it to learn and explore. And stop if the answer is about medicine, a legal matter, or money decisions. Check with a real professional for those. For everything else, try it freely.
+
+Okay. Let us open it up.
+
+The tool we are using is called ChatGPT. It is made by a company called OpenAI. It is free. You do not need an account for your first session.
+
+Open your browser. On iPhone that is Safari. On Android it is usually Chrome. On a computer it might be Chrome, Edge, or Firefox. All of them work.
+
+Find the address bar at the very top of the screen. That long bar where web addresses go. Tap on it or click on it to make it active.
+
+Now type this. chatgpt.com. C-H-A-T-G-P-T dot com. Press Enter.
+
+You are going to land on a clean, simple page. Near the bottom you will see a bar that says Message ChatGPT. That is where you type.
+
+If you see a pop-up asking you to log in, look for an option to stay logged out or continue without an account. You can create a free account later. You do not need one right now.
+
+One more thing before we move on. If typing is difficult for you, look for a small microphone icon inside the message box. Tap it and speak your question out loud. ChatGPT understands spoken words just as well as typed ones. You have options.
+
+You are in. I will see you in Lesson 2b, where you are going to ask your very first question.
+

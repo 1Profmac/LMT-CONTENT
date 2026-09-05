@@ -1,0 +1,158 @@
+LESSON 2 VIDEO SCRIPT - Talk to AI
+50+TechBridge | HeyGen Avatar | Plain spoken words only
+Split: 2a / 2b / 2c - approx 4-5 min each, total 12-15 min
+================================================
+
+
+========================================
+LESSON 2a - What Is AI and How Do I Open It?
+Runtime: approx 4-5 minutes
+========================================
+
+Welcome back, Digital Pioneer.
+
+You finished Lesson 1. You made your screen easier to read. You showed up for Lesson 2. I want you to understand what that means. Most people who sign up for something like this never get past the first lesson. They get busy. They get nervous. They tell themselves they will come back later. You came back. That matters.
+
+Today is the lesson that changes things.
+
+Because today you are going to have a real conversation with artificial intelligence. Not watch a video about it. Not read an article about it. You are going to open it up, type something in, and get a real answer back. Today.
+
+And I want to tell you right now, before we do anything else, that you are ready for this. I have taught this to adults in their 50s, 60s, 70s, and 80s. All of them were nervous. All of them did it anyway. And every single one of them said the same thing afterward. They said, that was it? That was what I was afraid of?
+
+So let us talk about what AI actually is. Because I think most people have the wrong picture in their head.
+
+When most people hear the words artificial intelligence, they picture a robot. Or a supercomputer. Or something from a science fiction movie that is about to take over the world. I understand that. That is what movies have shown us for 50 years.
+
+Here is the reality. AI, the kind we are going to use today, is a conversation partner. That is the best way I know to describe it. You type something. It types back. You ask a question, it gives you an answer. You say you do not understand something, it explains it differently. That is the whole thing.
+
+Think about the smartest person you have ever known. A doctor. A professor. A friend who just seemed to know something about everything. Now imagine that person was available to you 24 hours a day, seven days a week, never got tired, never got impatient, and never made you feel bad for asking a question you already asked three times. That is what AI is.
+
+It does not judge you. It does not remember that you asked the same question last Tuesday. Every conversation starts fresh.
+
+Now I want to be honest with you about what AI is not. It is not perfect. Sometimes it gets things wrong. Sometimes it sounds very confident about something that turns out to be incorrect. We are going to talk about that in a moment. For now, the rule is simple. Use it to learn and explore. And stop if the answer is about medicine, a legal matter, or money decisions. Check with a real professional for those. For everything else, try it freely.
+
+Okay. Let us open it up.
+
+The tool we are using is called ChatGPT. It is made by a company called OpenAI. It is free. You do not need an account for your first session.
+
+Open your browser. On iPhone that is Safari. On Android it is usually Chrome. On a computer it might be Chrome, Edge, or Firefox. All of them work.
+
+Find the address bar at the very top of the screen. That long bar where web addresses go. Tap on it or click on it to make it active.
+
+Now type this. chatgpt.com. C-H-A-T-G-P-T dot com. Press Enter.
+
+You are going to land on a clean, simple page. Near the bottom you will see a bar that says Message ChatGPT. That is where you type.
+
+If you see a pop-up asking you to log in, look for an option to stay logged out or continue without an account. You can create a free account later. You do not need one right now.
+
+One more thing before we move on. If typing is difficult for you, look for a small microphone icon inside the message box. Tap it and speak your question out loud. ChatGPT understands spoken words just as well as typed ones. You have options.
+
+You are in. I will see you in Lesson 2b, where you are going to ask your very first question.
+
+
+========================================
+LESSON 2b - Ask Your First Real Question
+Runtime: approx 4-5 minutes
+========================================
+
+Welcome back.
+
+You have ChatGPT open in front of you. That message box is waiting. Now we are going to use it.
+
+I am going to give you a starter prompt. This is the exact wording I teach in every workshop. It works because it tells AI three things at once. It tells AI you are new. It tells AI your age. And it tells AI exactly how you want the answer formatted. Short steps. Plain language.
+
+Here it is. Type this into the message box.
+
+I am new to AI. I am over 50. Explain blank in 5 short steps. Use plain language.
+
+Where it says blank, fill in something you actually want to know about. Let me give you some examples.
+
+You could say, explain how to video call my grandchildren in 5 short steps.
+
+Or, explain what Medicare Part B covers in 5 short steps.
+
+Or, explain how to write a cover letter in 5 short steps.
+
+Or, explain how to start a vegetable garden in 5 short steps.
+
+Use one of those, or pick something that matters to you right now. There is no wrong answer.
+
+Press Enter or tap the arrow button. Then watch.
+
+Text is going to start appearing on the screen, word by word, like AI is writing its answer in real time. That is exactly what it is doing. It is not pulling up a saved article. It is writing a response specifically for you, right now, based on exactly what you asked.
+
+Read the whole answer. Take your time. Read it slowly. It might be a few paragraphs. That is fine.
+
+Now here is the important thing I want you to do as you read. Ask yourself one question. Is this useful? Not is it perfect. Not is it exactly right about everything. Just, is this useful? Is there something here I can actually use?
+
+If the answer is yes, great. If the answer is no, or if something seems off, that is okay too. Ask a follow-up. We are going to cover that in Lesson 2c.
+
+And remember the rule. If the answer touches on medicine, the law, or money, stop and check with a real professional. AI can be wrong. You are the one who decides what to do with the information.
+
+Here is something important about getting better answers. The more specific you are, the better the response.
+
+If you ask, how do I use AI, you will get a general answer. If you use the starter prompt and fill in exactly what you want to know, you will get something much more useful and specific.
+
+AI responds to context. Think of it like giving directions to someone who is trying to help you. The more detail you give, the closer they get you to exactly where you want to go.
+
+You are doing something that most people your age have never done. You are using one of the most powerful tools in the world, right now, for something that actually matters to you.
+
+That is what Digital Pioneers do.
+
+In Lesson 2c, I am going to show you the one technique that turns a beginner into a confident user. It is called the follow-up. And it changes everything.
+
+
+========================================
+LESSON 2c - The Follow-Up: Where the Real Power Is
+Runtime: approx 4-5 minutes
+========================================
+
+Welcome back.
+
+You asked your first question. You got your first answer. That is already more than most people ever do.
+
+Now I am going to teach you the single most important technique for using AI well. It is called the follow-up. And here is why it matters.
+
+Most beginners read the first answer and close the tab. They think the conversation is over. But the first answer is just the beginning. The real value of AI lives in what happens next.
+
+Think about the last time you had a great conversation with someone who really knew their subject. A good doctor. A good teacher. A good advisor. You did not just ask one question and leave. You said, wait, say more about that. You said, I did not understand that part. You said, can you give me an example. That back and forth is where you actually learned something.
+
+AI works exactly the same way. Except it never gets impatient. It never looks at the clock. It never makes you feel like your question was too basic.
+
+So after you read the first response, here is what I want you to do. Find one thing in the answer that you want to understand better. Just one thing. Then ask about it.
+
+You can say, can you explain that in simpler terms.
+
+You can say, what should I do first.
+
+You can say, can you give me a real example of how someone my age would use this.
+
+You can say, is this useful for someone in my situation.
+
+You can say, can you make that shorter.
+
+You can say, what are the most important points.
+
+Notice that you do not need to repeat yourself. AI remembers everything you said earlier in the conversation. You do not have to start over. Just keep going.
+
+And here is the fifth step in our framework that I want you to remember. Once you have an answer you can use, save it. Take a screenshot. Copy and paste it into a note. Or just write down the key point on paper. The goal is to walk away with something useful in your hands.
+
+Let me leave you with some ideas of what you can use ChatGPT for starting today.
+
+You can ask it to explain what your Medicare statement means in plain language. You can ask it to help you write a message to your landlord, your insurance company, or your grandchild. You can ask it to plan a road trip. You can ask it to suggest books based on ones you have already read. You can ask it to summarize a long article. You can ask it to explain what is happening in the news. You can ask it to help you practice a conversation you are nervous about having.
+
+It is available at two in the morning when you cannot sleep and you have a question and there is no one to call.
+
+I want to tell you a story. A woman came to one of our workshops at a library in Austin. She was 72 years old. She had been telling herself for five years that she was too old to learn this. She sat down. She typed her first question using the starter prompt. And three minutes later she looked up and said, I just asked it about my medication and it explained something my doctor never took the time to explain to me.
+
+That is what this is about. Not technology for its own sake. Technology that actually serves you.
+
+You are not behind. You have not missed your window. You are a Digital Pioneer, and today you proved it.
+
+Lesson 3 is next. We are going to talk about staying safe online. How to spot a scam before it costs you. How to protect your information. How to use technology with confidence instead of fear.
+
+But right now, stay in ChatGPT a little longer. Ask it something that matters to you. Something you have been curious about for a while.
+
+You earned it.
+
+I will see you in Lesson 3.

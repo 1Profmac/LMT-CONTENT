@@ -1,0 +1,457 @@
+<!--
+  50+TechBridge — Course Description Page (BRANDED v2)
+  Template: Porch & Podium design system (navy/gold, DM Sans + Playfair Display)
+  Paste into: LearnDash course description area (Code Editor / Custom Tab)
+  Verified stats only: 264+ adults · 13 locations · 9 libraries · 3 senior centers · 3X completion
+  Last updated: 2026-08-25
+-->
+
+<style>
+/* ── BUDDYBOSS RESET ── */
+body,.site,#page,#content,.bb-grid,.container,
+#primary,#main,.site-content,.entry-content,
+.site-inner,.content-sidebar-wrap{background-color:#0E1C2F!important}
+.entry-content{padding:0!important;margin:0!important;max-width:none!important}
+
+/* Sidebar CSS handled in Appearance > Customize > Additional CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+/* ── PAGE SCOPE ── */
+.lmt-cp{
+  --navy:#0E1C2F;--navy-mid:#162640;
+  --gold:#C8942E;--gold-light:#E8B84B;
+  --white:#fff;--text-body:#C4CDD9;--text-muted:#A8B8CC;
+  font-family:'DM Sans',sans-serif!important;
+  color:#C4CDD9!important;font-size:20px;line-height:1.8;
+  background:#0E1C2F;max-width:100%;margin:0;padding:24px 16px 48px;
+}
+
+/* ── BADGE ── */
+.lmt-cp .cp-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(200,148,46,.12);border:1px solid rgba(200,148,46,.3);
+  color:#C8942E;font-size:.72rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;padding:8px 16px;border-radius:100px;
+  margin-bottom:28px;
+}
+.lmt-cp .cp-badge span{width:6px;height:6px;background:#C8942E;border-radius:50%;}
+
+/* ── HEADLINE ── */
+.lmt-cp .cp-title{
+  font-family:'Playfair Display',serif!important;
+  font-size:clamp(30px,4vw,50px)!important;font-weight:700!important;
+  color:#fff!important;margin-bottom:20px;line-height:1.1;
+}
+.lmt-cp .cp-title em{color:#C8942E!important;font-style:italic;}
+
+/* ── LEAD TEXT ── */
+.lmt-cp .cp-lead{
+  font-size:1.15rem;line-height:1.85;color:#A8B8CC!important;
+  margin-bottom:20px;max-width:720px;
+}
+.lmt-cp .cp-lead strong{color:#fff!important;}
+
+/* ── DIVIDER ── */
+.lmt-cp .cp-divider{
+  height:2px;background:linear-gradient(90deg,#C8942E 0%,transparent 100%);
+  border:none;margin:44px 0;opacity:.3;
+}
+
+/* ── STAT CHECKLIST ── */
+.lmt-cp .cp-stats{list-style:none;padding:0;margin:0 0 44px;}
+.lmt-cp .cp-stats li{
+  display:flex;align-items:flex-start;gap:14px;
+  font-size:1.1rem;color:#C4CDD9!important;
+  padding:16px 0;border-bottom:1px solid rgba(200,148,46,.1);
+}
+.lmt-cp .cp-stats li:last-child{border-bottom:none;}
+.lmt-cp .cp-stats .cp-check{
+  flex-shrink:0;width:28px;height:28px;background:#C8942E;
+  border-radius:7px;display:flex;align-items:center;justify-content:center;
+  font-size:15px;color:#0E1C2F;font-weight:900;margin-top:2px;
+}
+.lmt-cp .cp-stats li strong{color:#C8942E!important;}
+
+/* ── SOCIAL PROOF BAND ── */
+.lmt-cp .cp-proof{
+  background:rgba(200,148,46,.06);border:1px solid rgba(200,148,46,.18);
+  border-radius:16px;padding:32px;margin-bottom:44px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center;
+}
+.lmt-cp .cp-proof-num{
+  font-family:'Playfair Display',serif!important;
+  font-size:clamp(30px,3.5vw,44px);font-weight:700;color:#C8942E!important;
+  line-height:1;margin-bottom:6px;
+}
+.lmt-cp .cp-proof-label{font-size:.82rem;color:#A8B8CC!important;line-height:1.5;}
+
+/* ── INSTRUCTOR CALLOUT ── */
+.lmt-cp .cp-instructors{
+  background:rgba(22,38,64,.55);border:2px solid rgba(200,148,46,.2);
+  border-radius:18px;padding:32px 28px;margin-bottom:44px;
+}
+.lmt-cp .cp-instructors h3{
+  font-family:'Playfair Display',serif!important;font-size:22px;font-weight:700;
+  color:#fff!important;margin-bottom:6px;
+}
+.lmt-cp .cp-instructors p{
+  font-size:.95rem;color:#A8B8CC!important;margin-bottom:24px;
+}
+.lmt-cp .cp-instructor-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+}
+.lmt-cp .cp-instructor{
+  text-align:center;padding:20px 12px;
+  background:rgba(14,28,47,.6);border-radius:12px;
+  border:1px solid rgba(200,148,46,.12);
+}
+.lmt-cp .cp-instructor .ci-icon{font-size:32px;margin-bottom:8px;}
+.lmt-cp .cp-instructor .ci-name{
+  font-weight:700;color:#fff!important;font-size:.95rem;margin-bottom:4px;
+}
+.lmt-cp .cp-instructor .ci-desc{font-size:.8rem;color:#A8B8CC!important;line-height:1.45;}
+
+
+/* ── COURSE CONTENT LIST ── */
+.lmt-cp .cp-outline{margin-bottom:44px;}
+.lmt-cp .cp-outline h2{
+  font-family:'Playfair Display',serif!important;
+  font-size:clamp(22px,3vw,32px);font-weight:700;color:#fff!important;margin-bottom:6px;
+}
+.lmt-cp .cp-outline .cp-outline-sub{font-size:.9rem;color:#A8B8CC!important;margin-bottom:24px;}
+.lmt-cp .cp-lesson{
+  background:rgba(22,38,64,.55);border:1px solid rgba(200,148,46,.12);
+  border-radius:12px;margin-bottom:10px;overflow:hidden;
+}
+.lmt-cp .cp-lesson-header{
+  display:flex;align-items:center;gap:14px;padding:18px 22px;cursor:pointer;
+}
+.lmt-cp .cp-lesson-num{
+  flex-shrink:0;width:34px;height:34px;border-radius:8px;
+  background:rgba(200,148,46,.15);border:1px solid rgba(200,148,46,.3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.8rem;font-weight:700;color:#C8942E!important;
+}
+.lmt-cp .cp-lesson-title{font-weight:600;color:#fff!important;font-size:1.1rem;flex:1;}
+.lmt-cp .cp-lesson-meta{font-size:.8rem;color:#A8B8CC!important;white-space:nowrap;}
+.lmt-cp .cp-lesson-body{
+  padding:0 22px 18px 70px;font-size:1rem;color:#A8B8CC!important;line-height:1.8;
+}
+.lmt-cp .cp-lesson-body ul{list-style:none;padding:0;margin:0;}
+.lmt-cp .cp-lesson-body ul li{padding:4px 0;display:flex;gap:8px;align-items:center;}
+.lmt-cp .cp-lesson-body ul li::before{content:'&#9656;';color:#C8942E;font-size:.75rem;}
+.lmt-cp .cp-quiz-row{
+  display:flex;align-items:center;gap:14px;padding:14px 22px;
+  border-top:1px solid rgba(200,148,46,.08);
+  font-size:.9rem;color:#A8B8CC!important;
+}
+.lmt-cp .cp-quiz-icon{
+  flex-shrink:0;width:34px;height:34px;border-radius:8px;
+  background:rgba(16,159,53,.1);border:1px solid rgba(16,159,53,.25);
+  display:flex;align-items:center;justify-content:center;font-size:.85rem;
+}
+.lmt-cp .cp-includes{
+  display:flex;gap:20px;flex-wrap:wrap;margin-top:20px;
+}
+.lmt-cp .cp-includes-item{
+  display:flex;align-items:center;gap:7px;font-size:.85rem;color:#A8B8CC!important;
+}
+.lmt-cp .cp-includes-item strong{color:#fff!important;}
+
+/* ── ENROLL BOX ── */
+.lmt-cp .cp-enroll{
+  background:rgba(22,38,64,.7);border:2px solid rgba(200,148,46,.35);
+  border-radius:18px;padding:32px 28px;margin-bottom:44px;text-align:center;
+}
+.lmt-cp .cp-enroll h3{
+  font-family:'Playfair Display',serif!important;font-size:24px;font-weight:700;
+  color:#fff!important;margin-bottom:8px;
+}
+.lmt-cp .cp-enroll p{font-size:.95rem;color:#A8B8CC!important;margin-bottom:24px;}
+.lmt-cp .cp-enroll-btn{
+  display:inline-block;background:#C8942E;color:#0E1C2F!important;
+  font-family:'DM Sans',sans-serif!important;font-size:1.05rem;font-weight:700;
+  padding:16px 48px;border-radius:10px;text-decoration:none;
+  transition:background .2s,transform .2s;margin-bottom:12px;
+}
+.lmt-cp .cp-enroll-btn:hover{background:#E8B84B;transform:translateY(-2px);}
+.lmt-cp .cp-enroll-free{font-size:.8rem;color:#A8B8CC!important;margin:0;}
+.lmt-cp .cp-enrolled-count{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:#C8942E!important;background:rgba(200,148,46,.1);
+  border:1px solid rgba(200,148,46,.25);border-radius:100px;
+  padding:6px 14px;margin-bottom:16px;
+}
+.lmt-cp .cp-enrolled-count span{width:6px;height:6px;background:#C8942E;border-radius:50%;}
+
+/* ── GUARANTEE ── */
+.lmt-cp .cp-guarantee{
+  text-align:center;padding:22px 28px;
+  border:1px solid rgba(200,148,46,.15);border-radius:12px;margin-bottom:8px;
+}
+.lmt-cp .cp-guarantee p{font-size:.9rem;color:#A8B8CC!important;margin:0;line-height:1.7;}
+.lmt-cp .cp-guarantee strong{color:#fff!important;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px){
+  .lmt-cp .cp-proof{grid-template-columns:1fr 1fr;}
+  .lmt-cp .cp-instructor-grid{grid-template-columns:1fr;}
+  .lmt-cp{padding:28px 16px 48px;}
+}
+
+/* ── FOOTER ── */
+.lmt-footer{background:#080F1A;border-top:1px solid rgba(200,148,46,.15);padding:56px 32px}
+.lmt-footer-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.lmt-footer-brand .footer-logo{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;text-decoration:none;display:inline-block;margin-bottom:12px}
+.lmt-footer-brand .footer-logo span{color:#C8942E}
+.lmt-footer-brand p{font-size:15px;color:#7A92AC;line-height:1.7;max-width:280px}
+.lmt-footer h4{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#C8942E;margin-bottom:16px}
+.lmt-footer ul{list-style:none;padding:0;margin:0}
+.lmt-footer ul li{margin-bottom:10px}
+.lmt-footer ul li a{font-size:15px;color:#A8B8CC;text-decoration:none;transition:color .2s}
+.lmt-footer ul li a:hover{color:#fff}
+.lmt-footer-social{display:flex;gap:14px;margin-top:20px}
+.lmt-footer-social a{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#A8B8CC;font-size:18px;text-decoration:none;transition:all .2s}
+.lmt-footer-social a:hover{background:rgba(200,148,46,.15);border-color:rgba(200,148,46,.4);color:#C8942E}
+.lmt-footer-bottom{max-width:1180px;margin:0 auto;padding-top:24px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.lmt-footer-bottom p{font-size:13px;color:#7A92AC}
+.lmt-footer-bottom .footer-badges{display:flex;gap:12px}
+.lmt-footer-bottom .badge{font-size:12px;color:#7A92AC;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:4px;padding:4px 10px}
+@media(max-width:900px){.lmt-footer-inner{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:600px){.lmt-footer-inner{grid-template-columns:1fr}.lmt-footer{padding:40px 20px 24px}.lmt-footer-bottom{flex-direction:column;align-items:flex-start}}
+</style>
+
+<!-- ============ COURSE PAGE ============ -->
+<div class="lmt-cp">
+
+  <!-- BADGE -->
+  <div class="cp-badge"><span></span> Free to Start &bull; Self-Paced &bull; Built for Adults 50+</div>
+
+  <!-- HEADLINE -->
+  <h1 class="cp-title">You spent decades building expertise.<br>It's time technology <em>worked for you.</em></h1>
+
+  <p class="cp-lead">
+    50+TechBridge is a free, self-paced AgeTech curriculum built for adults 50+ who are ready to use technology to protect their independence, strengthen their careers, and stay connected on their own terms. <strong>No tech background. No jargon. No judgment.</strong>
+  </p>
+
+  <p class="cp-lead">
+    Start in minutes. By the time you finish your first lesson, you will already be using your device in ways you didn't know were possible.
+  </p>
+
+  <hr class="cp-divider">
+
+  <!-- PROOF NUMBERS -->
+  <div class="cp-proof">
+    <div>
+      <div class="cp-proof-num">9</div>
+      <div class="cp-proof-label">In-person locations across Central Texas — libraries, senior centers &amp; more</div>
+    </div>
+    <div>
+      <div class="cp-proof-num">$18K</div>
+      <div class="cp-proof-label">Saved per untrained 50+ worker annually — LSE &amp; Protiviti</div>
+    </div>
+    <div>
+      <div class="cp-proof-num">$850B</div>
+      <div class="cp-proof-label">Annual cost of ageism to the U.S. economy — AARP &amp; Oxford Economics</div>
+    </div>
+  </div>
+
+  <!-- WHAT YOU GET -->
+  <ul class="cp-stats">
+    <li>
+      <div class="cp-check">&#10003;</div>
+      <span>Navigate your phone and computer <strong>with confidence</strong> — no guessing, no fear</span>
+    </li>
+    <li>
+      <div class="cp-check">&#10003;</div>
+      <span>Connect to healthcare, finances, and services <strong>on your own terms</strong></span>
+    </li>
+    <li>
+      <div class="cp-check">&#10003;</div>
+      <span>Protect yourself from scams and digital threats that <strong>target our community</strong></span>
+    </li>
+    <li>
+      <div class="cp-check">&#10003;</div>
+      <span>Learn in your style — <strong>three instructors, two languages,</strong> one lesson that actually fits you</span>
+    </li>
+    <li>
+      <div class="cp-check">&#10003;</div>
+      <span>Deployed across <strong>6 Austin Public Library branches</strong>, AARP-affiliated senior centers, and Foundation Communities</span>
+    </li>
+  </ul>
+
+  <hr class="cp-divider">
+
+  <!-- THREE INSTRUCTORS -->
+  <div class="cp-instructors">
+    <h3>Everyone Learns Differently. We Built For That.</h3>
+    <p>Pick your instructor. Pick your style. Same lesson — three ways to get there. No one gets left behind.</p>
+    <div class="cp-instructor-grid">
+      <div class="cp-instructor">
+        <div class="ci-icon">&#9749;</div>
+        <div class="ci-name">Barb</div>
+        <div class="ci-desc">Warm &amp; relaxed. Like learning from a neighbor over coffee.</div>
+      </div>
+      <div class="cp-instructor">
+        <div class="ci-icon">&#127911;</div>
+        <div class="ci-name">Dr. Maya</div>
+        <div class="ci-desc">Calm, professional audio. Perfect for listening on the go.</div>
+      </div>
+      <div class="cp-instructor">
+        <div class="ci-icon">&#127979;</div>
+        <div class="ci-name">Prof. McKinney</div>
+        <div class="ci-desc">Direct &amp; structured. Step by step, nothing skipped.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="cp-divider">
+
+  <!-- COURSE CONTENT LIST -->
+  <div class="cp-outline">
+    <h2>What's Inside the Course</h2>
+    <p class="cp-outline-sub">3 free lessons to start. Each lesson has two video styles and a short quiz.</p>
+
+    <!-- LESSON 1 -->
+    <div class="cp-lesson">
+      <div class="cp-lesson-header">
+        <div class="cp-lesson-num">01</div>
+        <div class="cp-lesson-title">Welcome</div>
+        <div class="cp-lesson-meta">5 min &bull; Free</div>
+      </div>
+      <div class="cp-lesson-body">
+        <ul>
+          <li>Meet your instructors and pick your learning style</li>
+          <li>Set up your device so it works for you</li>
+          <li>Make text bigger so you never squint at your screen again</li>
+        </ul>
+      </div>
+      <div class="cp-quiz-row">
+        <div class="cp-quiz-icon">&#10003;</div>
+        <span>Quiz — 4 questions &bull; Takes 2 minutes</span>
+      </div>
+    </div>
+
+    <!-- LESSON 2 -->
+    <div class="cp-lesson">
+      <div class="cp-lesson-header">
+        <div class="cp-lesson-num">02</div>
+        <div class="cp-lesson-title">Talk to AI</div>
+        <div class="cp-lesson-meta">5 min &bull; Free</div>
+      </div>
+      <div class="cp-lesson-body">
+        <ul>
+          <li>Have a real conversation with AI — no typing required</li>
+          <li>Ask questions, get answers, and save time every day</li>
+          <li>Use AI tools built for the way you actually live</li>
+        </ul>
+      </div>
+      <div class="cp-quiz-row">
+        <div class="cp-quiz-icon">&#10003;</div>
+        <span>Quiz — 4 questions &bull; Takes 2 minutes</span>
+      </div>
+    </div>
+
+    <!-- LESSON 3 -->
+    <div class="cp-lesson">
+      <div class="cp-lesson-header">
+        <div class="cp-lesson-num">03</div>
+        <div class="cp-lesson-title">Don't Get Scammed</div>
+        <div class="cp-lesson-meta">8 min &bull; Free</div>
+      </div>
+      <div class="cp-lesson-body">
+        <ul>
+          <li>The fridge rule — spot a scam before it costs you a cent</li>
+          <li>Create a family code word for phone emergencies</li>
+          <li>Turn on two-factor authentication in under 2 minutes</li>
+        </ul>
+      </div>
+      <div class="cp-quiz-row">
+        <div class="cp-quiz-icon">&#10003;</div>
+        <span>Quiz — 4 questions &bull; Takes 2 minutes</span>
+      </div>
+    </div>
+
+    <!-- COURSE INCLUDES -->
+    <div class="cp-includes">
+      <div class="cp-includes-item">&#127891; <strong>3 Lessons</strong></div>
+      <div class="cp-includes-item">&#10003; <strong>3 Quizzes</strong></div>
+      <div class="cp-includes-item">&#127911; <strong>3 Instructors</strong> — pick your style</div>
+      <div class="cp-includes-item">&#127760; <strong>English &amp; Spanish</strong></div>
+      <div class="cp-includes-item">&#127881; <strong>Completion Certificate</strong></div>
+    </div>
+  </div>
+
+  <!-- ENROLL BOX -->
+  <div class="cp-enroll">
+    <div class="cp-enrolled-count"><span></span> Pioneers already enrolled</div>
+    <h3>Ready to start?</h3>
+    <p>Create a free account and begin Lesson 1 in the next 5 minutes.</p>
+    <a class="cp-enroll-btn" href="#learndash-course-content">Login to Enroll &rarr;</a>
+    <p class="cp-enroll-free">Free to join &bull; No credit card &bull; No commitment</p>
+  </div>
+
+  <!-- GUARANTEE -->
+  <div class="cp-guarantee">
+    <p>
+      <strong>The Pioneer Promise:</strong> Start your first lesson. If you don't feel more confident and capable with your device, email us directly and we will personally help you get there — no questions asked.
+    </p>
+  </div>
+
+</div>
+
+<footer class="lmt-footer">
+  <div class="lmt-footer-inner">
+
+    <div class="lmt-footer-brand">
+      <a href="https://learnmoretechnologies.com/" class="footer-logo">Learn<span>More</span> Technologies</a>
+      <p>AgeTech for adults 50+. We help individuals, employers, and organizations fight ageism and capture the largest economic opportunity in American history.</p>
+      <div class="lmt-footer-social">
+        <a href="https://www.linkedin.com/company/learn-more-technologies-llc/" target="_blank" rel="noopener" aria-label="LinkedIn"><span aria-hidden="true">in</span></a>
+        <a href="https://www.youtube.com/@LearnMoreTechnologies" target="_blank" rel="noopener" aria-label="YouTube"><span aria-hidden="true">&#9654;</span></a>
+        <a href="https://www.instagram.com/50plustechbridge/" target="_blank" rel="noopener" aria-label="Instagram"><span aria-hidden="true">&#128248;</span></a>
+        <a href="https://www.facebook.com/learnmoretechnologies" target="_blank" rel="noopener" aria-label="Facebook"><span aria-hidden="true">f</span></a>
+        <a href="https://podcasters.spotify.com/pod/show/learnmoretechnologies" target="_blank" rel="noopener" aria-label="Podcast"><span aria-hidden="true">&#127897;</span></a>
+      </div>
+    </div>
+
+    <div>
+      <h4>Programs</h4>
+      <ul>
+        <li><a href="https://learnmoretechnologies.com/train/">50+TechBridge</a></li>
+        <li><a href="https://50plustechbridge.com/start-free-lesson/">Start Free Lesson</a></li>
+        <li><a href="https://digitalpioneer.ai">Digital Pioneer Gallery</a></li>
+        <li><a href="https://learnmoretechnologies.com/podcast/">Podcast</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Organizations</h4>
+      <ul>
+        <li><a href="https://learnmoretechnologies.com/services/">Services &amp; Pricing</a></li>
+        <li><a href="https://learnmoretechnologies.com/workforce/">Workforce Solutions</a></li>
+        <li><a href="https://learnmoretechnologies.com/speak/">Book Brian to Speak</a></li>
+        <li><a href="https://cal.com/brian-mckinney-mrtu8q" target="_blank" rel="noopener">Book a Call &rarr;</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="https://brianmckinney.com">About Brian</a></li>
+        <li><a href="https://learnmoretechnologies.com/blog/">Blog</a></li>
+        <li><a href="mailto:hello@learnmoretechnologies.com">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="lmt-footer-bottom">
+    <p>&copy; 2026 Learn More Technologies LLC &middot; All rights reserved.</p>
+    <div class="footer-badges">
+      <span class="badge">MBE Certified &middot; Texas</span>
+      <span class="badge">WIOA Eligible</span>
+    </div>
+  </div>
+</footer>
