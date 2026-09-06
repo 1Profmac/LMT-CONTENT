@@ -51,31 +51,12 @@
   }
   .lmt-btn-outline:hover { background: #C8942E; color: #0B1829; }
 
-  /* ── STATS BAR (4-column grid — never stacks) ── */
-  .lmt-stats-bar {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border-top: 1px solid rgba(200,148,46,0.3);
-    border-bottom: 1px solid rgba(200,148,46,0.3);
-    background: rgba(200,148,46,0.06);
-  }
-  .lmt-stat {
-    text-align: center; padding: 32px 20px;
-    border-right: 1px solid rgba(200,148,46,0.2);
-  }
-  .lmt-stat:last-child { border-right: none; }
+  /* ── STATS BAR ── */
   .lmt-stat-num {
     font-size: clamp(26px, 3.5vw, 44px); font-weight: 900;
     color: #C8942E; display: block; margin-bottom: 8px;
   }
   .lmt-stat-label { font-size: 13px; color: #AAAAAA; line-height: 1.5; }
-  @media (max-width: 600px) {
-    .lmt-stats-bar { grid-template-columns: repeat(2, 1fr); }
-    .lmt-stat:nth-child(2) { border-right: none; }
-    .lmt-stat:nth-child(1), .lmt-stat:nth-child(2) {
-      border-bottom: 1px solid rgba(200,148,46,0.2);
-    }
-  }
 
   /* ── SECTION LABEL ── */
   .lmt-section-label {
@@ -222,20 +203,20 @@
   </div>
 
   <!-- ── STATS BAR ── -->
-  <div class="lmt-stats-bar">
-    <div class="lmt-stat">
+  <div style="display:table; width:100%; border-top:1px solid rgba(200,148,46,0.3); border-bottom:1px solid rgba(200,148,46,0.3); background:rgba(200,148,46,0.06);">
+    <div style="display:table-cell; width:25%; text-align:center; padding:32px 20px; border-right:1px solid rgba(200,148,46,0.2); vertical-align:middle;">
       <span class="lmt-stat-num">$18K</span>
       <div class="lmt-stat-label">Saved per untrained 50+ worker annually &mdash; LSE &amp; Protiviti</div>
     </div>
-    <div class="lmt-stat">
+    <div style="display:table-cell; width:25%; text-align:center; padding:32px 20px; border-right:1px solid rgba(200,148,46,0.2); vertical-align:middle;">
       <span class="lmt-stat-num">9</span>
       <div class="lmt-stat-label">In-person locations across Central Texas</div>
     </div>
-    <div class="lmt-stat">
+    <div style="display:table-cell; width:25%; text-align:center; padding:32px 20px; border-right:1px solid rgba(200,148,46,0.2); vertical-align:middle;">
       <span class="lmt-stat-num">$850B</span>
       <div class="lmt-stat-label">Annual cost of ageism &mdash; AARP &amp; Oxford Economics</div>
     </div>
-    <div class="lmt-stat">
+    <div style="display:table-cell; width:25%; text-align:center; padding:32px 20px; vertical-align:middle;">
       <span class="lmt-stat-num">59+</span>
       <div class="lmt-stat-label">Documented participants, sign-in verified</div>
     </div>
