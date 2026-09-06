@@ -6,297 +6,255 @@
 
 <style>
   .lmt-page * { box-sizing: border-box; margin: 0; padding: 0; }
-  .lmt-page { font-family: 'Segoe UI', Arial, sans-serif; background: #0B1829; color: #FFFFFF; }
+  .lmt-page { font-family: 'Segoe UI', Arial, sans-serif; background: #0B1829; color: #FFFFFF; width: 100%; }
 
-  /* BADGE ROW */
+  /* ── NAVIGATION ── */
+  .lmt-nav {
+    background: #0B1829;
+    border-bottom: 1px solid rgba(200,148,46,0.2);
+    padding: 0 40px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky; top: 0; z-index: 100;
+  }
+  .lmt-nav-logo {
+    font-size: 18px; font-weight: 700;
+    color: #FFFFFF; text-decoration: none;
+    letter-spacing: 0.3px;
+  }
+  .lmt-nav-links {
+    display: flex; align-items: center; gap: 32px;
+    list-style: none;
+  }
+  .lmt-nav-links a {
+    color: #CCCCCC; text-decoration: none;
+    font-size: 14px; font-weight: 500;
+    transition: color 0.2s;
+  }
+  .lmt-nav-links a:hover { color: #C8942E; }
+  .lmt-nav-cta {
+    background: #C8942E; color: #0B1829 !important;
+    font-weight: 700 !important;
+    padding: 10px 22px; border-radius: 6px;
+    font-size: 13px !important;
+  }
+  .lmt-nav-cta:hover { background: #e0a832 !important; color: #0B1829 !important; }
+  @media (max-width: 680px) {
+    .lmt-nav-links li:not(:last-child) { display: none; }
+    .lmt-nav { padding: 0 20px; }
+  }
+
+  /* ── BADGE ROW ── */
   .lmt-badge-row {
     display: flex; flex-wrap: wrap; gap: 10px;
     justify-content: center; padding: 32px 24px 0;
   }
   .lmt-badge {
     background: rgba(200,148,46,0.15);
-    border: 1px solid #C8942E;
-    color: #C8942E;
+    border: 1px solid #C8942E; color: #C8942E;
     font-size: 11px; font-weight: 700;
     letter-spacing: 2px; text-transform: uppercase;
     padding: 6px 18px; border-radius: 50px;
   }
 
-  /* HERO */
+  /* ── HERO ── */
   .lmt-hero {
-    text-align: center;
-    padding: 48px 24px 56px;
+    text-align: center; padding: 48px 24px 56px;
     max-width: 860px; margin: 0 auto;
   }
   .lmt-hero h1 {
     font-size: clamp(36px, 6vw, 72px);
-    font-weight: 900; line-height: 1.1;
-    color: #FFFFFF; margin-bottom: 6px;
+    font-weight: 900; line-height: 1.1; color: #FFFFFF; margin-bottom: 6px;
   }
-  .lmt-hero h1 em {
-    font-style: italic; color: #C8942E;
-  }
+  .lmt-hero h1 em { font-style: italic; color: #C8942E; }
   .lmt-hero p {
-    font-size: clamp(15px, 2vw, 18px);
-    color: #BBBBBB; line-height: 1.7;
-    max-width: 680px; margin: 24px auto 32px;
+    font-size: clamp(15px, 2vw, 18px); color: #BBBBBB;
+    line-height: 1.7; max-width: 680px; margin: 24px auto 32px;
   }
-  .lmt-hero .lmt-sub {
-    font-size: 13px; color: #888;
-    margin-top: 14px; font-style: italic;
-  }
+  .lmt-hero .lmt-sub { font-size: 13px; color: #888; margin-top: 14px; font-style: italic; }
+
+  /* ── BUTTONS ── */
   .lmt-btn {
-    display: inline-block;
-    background: #C8942E; color: #0B1829;
-    font-weight: 700; font-size: 15px;
-    padding: 14px 36px; border-radius: 6px;
-    text-decoration: none; letter-spacing: 0.5px;
-    transition: background 0.2s;
+    display: inline-block; background: #C8942E; color: #0B1829;
+    font-weight: 700; font-size: 15px; padding: 14px 36px;
+    border-radius: 6px; text-decoration: none; letter-spacing: 0.5px;
   }
   .lmt-btn:hover { background: #e0a832; }
   .lmt-btn-outline {
-    display: inline-block;
-    border: 2px solid #C8942E; color: #C8942E;
-    font-weight: 700; font-size: 15px;
-    padding: 13px 36px; border-radius: 6px;
-    text-decoration: none; letter-spacing: 0.5px;
-    transition: all 0.2s;
+    display: inline-block; border: 2px solid #C8942E; color: #C8942E;
+    font-weight: 700; font-size: 15px; padding: 13px 36px;
+    border-radius: 6px; text-decoration: none; letter-spacing: 0.5px;
   }
   .lmt-btn-outline:hover { background: #C8942E; color: #0B1829; }
 
-  /* STATS BAR */
+  /* ── STATS BAR (4-column grid — never stacks) ── */
   .lmt-stats-bar {
-    display: flex; flex-wrap: wrap;
-    justify-content: center; gap: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     border-top: 1px solid rgba(200,148,46,0.3);
     border-bottom: 1px solid rgba(200,148,46,0.3);
-    padding: 0;
     background: rgba(200,148,46,0.06);
   }
   .lmt-stat {
-    flex: 1; min-width: 200px;
-    text-align: center;
-    padding: 32px 20px;
+    text-align: center; padding: 32px 20px;
     border-right: 1px solid rgba(200,148,46,0.2);
   }
   .lmt-stat:last-child { border-right: none; }
   .lmt-stat-num {
-    font-size: clamp(28px, 4vw, 44px);
-    font-weight: 900; color: #C8942E;
-    display: block; margin-bottom: 8px;
+    font-size: clamp(26px, 3.5vw, 44px); font-weight: 900;
+    color: #C8942E; display: block; margin-bottom: 8px;
   }
-  .lmt-stat-label {
-    font-size: 13px; color: #AAAAAA;
-    line-height: 1.5; max-width: 180px;
-    margin: 0 auto;
+  .lmt-stat-label { font-size: 13px; color: #AAAAAA; line-height: 1.5; }
+  @media (max-width: 600px) {
+    .lmt-stats-bar { grid-template-columns: repeat(2, 1fr); }
+    .lmt-stat:nth-child(2) { border-right: none; }
+    .lmt-stat:nth-child(1), .lmt-stat:nth-child(2) {
+      border-bottom: 1px solid rgba(200,148,46,0.2);
+    }
   }
 
-  /* GOLD DIVIDER */
+  /* ── SECTION LABEL ── */
   .lmt-section-label {
-    display: flex; align-items: center; gap: 12px;
-    padding: 0 40px; margin-bottom: 20px;
+    display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
   }
   .lmt-section-label span {
     font-size: 12px; font-weight: 700;
-    letter-spacing: 3px; text-transform: uppercase;
-    color: #C8942E;
+    letter-spacing: 3px; text-transform: uppercase; color: #C8942E;
   }
   .lmt-section-label::before {
-    content: ''; display: block;
-    width: 32px; height: 3px; background: #C8942E;
+    content: ''; display: block; width: 32px; height: 3px; background: #C8942E;
   }
 
-  /* PROBLEM SECTION */
-  .lmt-problem {
-    padding: 80px 40px;
-    max-width: 1100px; margin: 0 auto;
-  }
+  /* ── PROBLEM SECTION ── */
+  .lmt-problem { padding: 80px 40px; max-width: 1100px; margin: 0 auto; }
   .lmt-problem h2 {
-    font-size: clamp(28px, 4.5vw, 56px);
-    font-weight: 900; line-height: 1.1;
-    margin-bottom: 20px;
+    font-size: clamp(28px, 4.5vw, 56px); font-weight: 900;
+    line-height: 1.1; margin-bottom: 20px;
   }
   .lmt-problem h2 em { font-style: italic; color: #C8942E; }
   .lmt-problem > p {
-    font-size: 17px; color: #BBBBBB;
-    line-height: 1.7; max-width: 640px;
-    margin-bottom: 40px;
+    font-size: 17px; color: #BBBBBB; line-height: 1.7;
+    max-width: 640px; margin-bottom: 40px;
   }
-  .lmt-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
-  }
+  .lmt-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
   .lmt-card {
     background: rgba(255,255,255,0.04);
     border: 1px solid rgba(200,148,46,0.25);
     border-radius: 12px; padding: 36px;
   }
   .lmt-card-num {
-    font-size: 44px; font-weight: 900;
-    color: rgba(200,148,46,0.25);
-    line-height: 1; margin-bottom: 12px;
-    display: block;
+    font-size: 44px; font-weight: 900; color: rgba(200,148,46,0.25);
+    line-height: 1; margin-bottom: 12px; display: block;
   }
-  .lmt-card h3 {
-    font-size: 20px; font-weight: 700;
-    color: #FFFFFF; margin-bottom: 14px;
-    line-height: 1.3;
-  }
-  .lmt-card p {
-    font-size: 15px; color: #AAAAAA;
-    line-height: 1.7; margin-bottom: 20px;
-  }
+  .lmt-card h3 { font-size: 20px; font-weight: 700; color: #FFFFFF; margin-bottom: 14px; line-height: 1.3; }
+  .lmt-card p { font-size: 15px; color: #AAAAAA; line-height: 1.7; margin-bottom: 20px; }
   .lmt-card-stat {
-    background: rgba(200,148,46,0.10);
-    border-left: 4px solid #C8942E;
-    padding: 12px 16px;
-    font-size: 13px; color: #CCCCCC;
-    border-radius: 0 6px 6px 0;
-    line-height: 1.5;
+    background: rgba(200,148,46,0.10); border-left: 4px solid #C8942E;
+    padding: 12px 16px; font-size: 13px; color: #CCCCCC;
+    border-radius: 0 6px 6px 0; line-height: 1.5;
   }
 
-  /* DATA BAR */
-  .lmt-data-section {
-    background: #070F1C;
-    padding: 80px 40px;
-    text-align: center;
-  }
+  /* ── DATA BAR (4-column grid) ── */
+  .lmt-data-section { background: #070F1C; padding: 80px 40px; text-align: center; }
   .lmt-data-section h2 {
-    font-size: clamp(22px, 3.5vw, 38px);
-    font-weight: 700; margin-bottom: 48px;
-    color: #FFFFFF;
+    font-size: clamp(22px, 3.5vw, 38px); font-weight: 700; margin-bottom: 48px; color: #FFFFFF;
   }
   .lmt-data-section h2 em { font-style: italic; color: #C8942E; }
   .lmt-data-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 0;
+    display: grid; grid-template-columns: repeat(4, 1fr);
     max-width: 1000px; margin: 0 auto 20px;
-    border: 1px solid rgba(200,148,46,0.2);
-    border-radius: 12px; overflow: hidden;
+    border: 1px solid rgba(200,148,46,0.2); border-radius: 12px; overflow: hidden;
   }
   .lmt-data-item {
-    padding: 40px 24px;
-    border-right: 1px solid rgba(200,148,46,0.2);
+    padding: 40px 24px; border-right: 1px solid rgba(200,148,46,0.2);
     background: rgba(255,255,255,0.02);
   }
   .lmt-data-item:last-child { border-right: none; }
   .lmt-data-num {
-    font-size: clamp(32px, 4vw, 48px);
-    font-weight: 900; color: #C8942E;
+    font-size: clamp(28px, 3.5vw, 48px); font-weight: 900; color: #C8942E;
     display: block; margin-bottom: 12px;
   }
-  .lmt-data-label {
-    font-size: 13px; color: #AAAAAA;
-    line-height: 1.6; max-width: 160px;
-    margin: 0 auto;
-  }
-  .lmt-data-source {
-    font-size: 12px; color: #666;
-    margin-top: 16px; font-style: italic;
+  .lmt-data-label { font-size: 13px; color: #AAAAAA; line-height: 1.6; max-width: 160px; margin: 0 auto; }
+  .lmt-data-source { font-size: 12px; color: #666; margin-top: 16px; font-style: italic; }
+  @media (max-width: 600px) {
+    .lmt-data-grid { grid-template-columns: repeat(2, 1fr); }
+    .lmt-data-item:nth-child(2) { border-right: none; }
+    .lmt-data-item:nth-child(1), .lmt-data-item:nth-child(2) {
+      border-bottom: 1px solid rgba(200,148,46,0.2);
+    }
   }
 
-  /* SERVICES SECTION */
-  .lmt-services {
-    padding: 80px 40px;
-    max-width: 1100px; margin: 0 auto;
-  }
-  .lmt-services-header {
-    text-align: center; margin-bottom: 16px;
-  }
+  /* ── SERVICES ── */
+  .lmt-services { padding: 80px 40px; max-width: 1100px; margin: 0 auto; }
+  .lmt-services-header { text-align: center; margin-bottom: 16px; }
   .lmt-services-header h2 {
-    font-size: clamp(26px, 4vw, 48px);
-    font-weight: 900; color: #FFFFFF;
-    margin-bottom: 14px;
+    font-size: clamp(26px, 4vw, 48px); font-weight: 900; color: #FFFFFF; margin-bottom: 14px;
   }
   .lmt-services-header p {
-    font-size: 17px; color: #AAAAAA;
-    max-width: 560px; margin: 0 auto 48px;
-    line-height: 1.7;
+    font-size: 17px; color: #AAAAAA; max-width: 560px; margin: 0 auto 48px; line-height: 1.7;
   }
-  .lmt-service-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 28px;
-  }
+  .lmt-service-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
   .lmt-service-card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 12px; padding: 40px;
-    display: flex; flex-direction: column;
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px; padding: 40px; display: flex; flex-direction: column;
+    transition: border-color 0.25s, background 0.25s;
   }
-  .lmt-service-card:hover {
-    border-color: rgba(200,148,46,0.5);
-    background: rgba(200,148,46,0.05);
-    transition: all 0.25s;
-  }
+  .lmt-service-card:hover { border-color: rgba(200,148,46,0.5); background: rgba(200,148,46,0.05); }
   .lmt-service-tag {
-    font-size: 11px; font-weight: 700;
-    letter-spacing: 2px; text-transform: uppercase;
-    color: #C8942E; margin-bottom: 16px;
-    display: block;
+    font-size: 11px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: #C8942E; margin-bottom: 16px; display: block;
   }
-  .lmt-service-card h3 {
-    font-size: 22px; font-weight: 800;
-    color: #FFFFFF; line-height: 1.2;
-    margin-bottom: 16px;
-  }
-  .lmt-service-card p {
-    font-size: 15px; color: #AAAAAA;
-    line-height: 1.7; margin-bottom: 24px;
-  }
-  .lmt-service-bullets {
-    list-style: none; margin-bottom: 32px; flex: 1;
-  }
+  .lmt-service-card h3 { font-size: 22px; font-weight: 800; color: #FFFFFF; line-height: 1.2; margin-bottom: 16px; }
+  .lmt-service-card p { font-size: 15px; color: #AAAAAA; line-height: 1.7; margin-bottom: 24px; }
+  .lmt-service-bullets { list-style: none; margin-bottom: 32px; flex: 1; }
   .lmt-service-bullets li {
-    font-size: 14px; color: #CCCCCC;
-    padding: 8px 0;
+    font-size: 14px; color: #CCCCCC; padding: 8px 0 8px 20px;
     border-bottom: 1px solid rgba(255,255,255,0.06);
-    padding-left: 20px; position: relative;
-    line-height: 1.5;
+    position: relative; line-height: 1.5;
   }
-  .lmt-service-bullets li::before {
-    content: '→';
-    position: absolute; left: 0;
-    color: #C8942E;
-  }
+  .lmt-service-bullets li::before { content: '→'; position: absolute; left: 0; color: #C8942E; }
 
-  /* CLOSING CTA */
+  /* ── CLOSING CTA ── */
   .lmt-cta-section {
-    background: rgba(200,148,46,0.08);
-    border-top: 1px solid rgba(200,148,46,0.3);
-    text-align: center;
-    padding: 80px 40px;
+    background: rgba(200,148,46,0.08); border-top: 1px solid rgba(200,148,46,0.3);
+    text-align: center; padding: 80px 40px;
   }
   .lmt-cta-section h2 {
-    font-size: clamp(24px, 3.5vw, 42px);
-    font-weight: 900; color: #FFFFFF;
-    max-width: 700px; margin: 0 auto 16px;
-    line-height: 1.2;
+    font-size: clamp(24px, 3.5vw, 42px); font-weight: 900; color: #FFFFFF;
+    max-width: 700px; margin: 0 auto 16px; line-height: 1.2;
   }
   .lmt-cta-section p {
-    font-size: 17px; color: #AAAAAA;
-    max-width: 580px; margin: 0 auto 36px;
-    line-height: 1.7;
+    font-size: 17px; color: #AAAAAA; max-width: 580px;
+    margin: 0 auto 36px; line-height: 1.7;
   }
-  .lmt-cta-btns {
-    display: flex; flex-wrap: wrap;
-    gap: 16px; justify-content: center;
-  }
+  .lmt-cta-btns { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
 
-  @media (max-width: 600px) {
-    .lmt-problem, .lmt-services, .lmt-data-section { padding: 48px 20px; }
-    .lmt-stat { min-width: 140px; }
-    .lmt-data-item { border-right: none; border-bottom: 1px solid rgba(200,148,46,0.2); }
-    .lmt-data-item:last-child { border-bottom: none; }
-    .lmt-data-grid { grid-template-columns: 1fr 1fr; }
+  /* ── FOOTER ── */
+  .lmt-footer {
+    background: #070F1C; border-top: 1px solid rgba(200,148,46,0.15);
+    padding: 32px 40px; text-align: center;
+    font-size: 13px; color: #666; line-height: 1.8;
   }
+  .lmt-footer a { color: #C8942E; text-decoration: none; }
+  .lmt-footer a:hover { text-decoration: underline; }
 </style>
 
 <div class="lmt-page">
 
-  <!-- BADGE ROW -->
+  <!-- ── NAVIGATION ── -->
+  <nav class="lmt-nav">
+    <a href="https://learnmoretechnologies.com" class="lmt-nav-logo">Learn More Technologies</a>
+    <ul class="lmt-nav-links">
+      <li><a href="https://learnmoretechnologies.com/programs/">Programs</a></li>
+      <li><a href="https://learnmoretechnologies.com/50-blog/">50+ Blog</a></li>
+      <li><a href="https://learnmoretechnologies.com/partner-with-us/">Partner With Us</a></li>
+      <li><a href="https://learnmoretechnologies.com/start-free-lesson/" class="lmt-nav-cta">Start Free Lesson</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── BADGE ROW ── -->
   <div class="lmt-badge-row">
     <span class="lmt-badge">MBE Certified</span>
     <span class="lmt-badge">WIOA Eligible</span>
@@ -304,15 +262,15 @@
     <span class="lmt-badge">Available Nationwide</span>
   </div>
 
-  <!-- HERO -->
+  <!-- ── HERO ── -->
   <div class="lmt-hero">
     <h1>Three Services.<br>One Mission.<br><em>Measurable Results.</em></h1>
-    <p>Adults 50+ control $76 trillion and 70% of all disposable income — yet most brands ignore them, most employers underinvest in them, and most events don't know how to reach them. We fix that. Three services. One team. Real results.</p>
+    <p>Adults 50+ control $76 trillion and 70% of all disposable income &mdash; yet most brands ignore them, most employers underinvest in them, and most events don&rsquo;t know how to reach them. We fix that. Three services. One team. Real results.</p>
     <a href="#services" class="lmt-btn">See All Services &darr;</a>
     <p class="lmt-sub">All engagements are scoped to your goals, audience, and timeline.</p>
   </div>
 
-  <!-- STATS BAR -->
+  <!-- ── STATS BAR ── -->
   <div class="lmt-stats-bar">
     <div class="lmt-stat">
       <span class="lmt-stat-num">$18K</span>
@@ -332,7 +290,7 @@
     </div>
   </div>
 
-  <!-- PROBLEM SECTION -->
+  <!-- ── PROBLEM SECTION ── -->
   <div class="lmt-problem">
     <div class="lmt-section-label"><span>The Real Problem</span></div>
     <h2>The 50+ market controls <em>$76 trillion.</em><br>Most organizations are ignoring it.</h2>
@@ -353,7 +311,7 @@
     </div>
   </div>
 
-  <!-- DATA BAR -->
+  <!-- ── DATA BAR ── -->
   <div class="lmt-data-section">
     <h2>The numbers that change <em>every conversation.</em></h2>
     <div class="lmt-data-grid">
@@ -377,7 +335,7 @@
     <p class="lmt-data-source">Sources: LSE/Protiviti &middot; AARP/Oxford Economics &middot; U.S. Bureau of Labor Statistics</p>
   </div>
 
-  <!-- SERVICES SECTION -->
+  <!-- ── SERVICES ── -->
   <div class="lmt-services" id="services">
     <div class="lmt-section-label"><span>Three Ways We Work Together</span></div>
     <div class="lmt-services-header">
@@ -428,7 +386,7 @@
     </div>
   </div>
 
-  <!-- CLOSING CTA -->
+  <!-- ── CLOSING CTA ── -->
   <div class="lmt-cta-section">
     <h2>Ready to reach the audience everyone else is ignoring?</h2>
     <p>All engagements are proposal-based. Every project is scoped to your goals, your community, and your budget. No price list &mdash; because your situation isn&rsquo;t off-the-shelf.</p>
@@ -436,6 +394,14 @@
       <a href="https://calendly.com/brianmckinney/new-meeting" class="lmt-btn">Schedule a 30-Minute Call</a>
       <a href="mailto:hello@learnmoretechnologies.com" class="lmt-btn-outline">Send Us a Message</a>
     </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <div class="lmt-footer">
+    &copy; 2026 Learn More Technologies &nbsp;|&nbsp;
+    <a href="https://learnmoretechnologies.com">learnmoretechnologies.com</a> &nbsp;|&nbsp;
+    <a href="mailto:hello@learnmoretechnologies.com">hello@learnmoretechnologies.com</a><br>
+    MBE Certified &nbsp;&middot;&nbsp; WIOA Eligible &nbsp;&middot;&nbsp; Austin, TX &nbsp;&middot;&nbsp; Available Nationwide
   </div>
 
 </div>
