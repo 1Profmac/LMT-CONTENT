@@ -8,44 +8,6 @@
   .lmt-page * { box-sizing: border-box; margin: 0; padding: 0; }
   .lmt-page { font-family: 'Segoe UI', Arial, sans-serif; background: #0B1829; color: #FFFFFF; width: 100%; }
 
-  /* ── NAVIGATION ── */
-  .lmt-nav {
-    background: #0B1829;
-    border-bottom: 1px solid rgba(200,148,46,0.2);
-    padding: 0 40px;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky; top: 0; z-index: 100;
-  }
-  .lmt-nav-logo {
-    font-size: 18px; font-weight: 700;
-    color: #FFFFFF; text-decoration: none;
-    letter-spacing: 0.3px;
-  }
-  .lmt-nav-links {
-    display: flex; align-items: center; gap: 32px;
-    list-style: none;
-  }
-  .lmt-nav-links a {
-    color: #CCCCCC; text-decoration: none;
-    font-size: 14px; font-weight: 500;
-    transition: color 0.2s;
-  }
-  .lmt-nav-links a:hover { color: #C8942E; }
-  .lmt-nav-cta {
-    background: #C8942E; color: #0B1829 !important;
-    font-weight: 700 !important;
-    padding: 10px 22px; border-radius: 6px;
-    font-size: 13px !important;
-  }
-  .lmt-nav-cta:hover { background: #e0a832 !important; color: #0B1829 !important; }
-  @media (max-width: 680px) {
-    .lmt-nav-links li:not(:last-child) { display: none; }
-    .lmt-nav { padding: 0 20px; }
-  }
-
   /* ── BADGE ROW ── */
   .lmt-badge-row {
     display: flex; flex-wrap: wrap; gap: 10px;
@@ -242,17 +204,6 @@
 </style>
 
 <div class="lmt-page">
-
-  <!-- ── NAVIGATION ── -->
-  <nav class="lmt-nav">
-    <a href="https://learnmoretechnologies.com" class="lmt-nav-logo">Learn More Technologies</a>
-    <ul class="lmt-nav-links">
-      <li><a href="https://learnmoretechnologies.com/programs/">Programs</a></li>
-      <li><a href="https://learnmoretechnologies.com/50-blog/">50+ Blog</a></li>
-      <li><a href="https://learnmoretechnologies.com/partner-with-us/">Partner With Us</a></li>
-      <li><a href="https://learnmoretechnologies.com/start-free-lesson/" class="lmt-nav-cta">Start Free Lesson</a></li>
-    </ul>
-  </nav>
 
   <!-- ── BADGE ROW ── -->
   <div class="lmt-badge-row">
