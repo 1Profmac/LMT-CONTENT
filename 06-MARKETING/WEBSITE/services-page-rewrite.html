@@ -6,7 +6,34 @@
 
 <style>
   .lmt-page * { box-sizing: border-box; margin: 0; padding: 0; }
-  .lmt-page { font-family: 'Segoe UI', Arial, sans-serif; background: #0B1829; color: #FFFFFF; width: 100%; }
+
+  /* Break out of WordPress content column and center full-width */
+  .lmt-page {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0B1829;
+    color: #FFFFFF;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  /* Re-center inner content sections */
+  .lmt-hero,
+  .lmt-problem,
+  .lmt-services,
+  .lmt-data-section,
+  .lmt-cta-section,
+  .lmt-footer {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+  .lmt-hero,
+  .lmt-data-section,
+  .lmt-cta-section,
+  .lmt-footer { text-align: center; }
 
   /* ── BADGE ROW ── */
   .lmt-badge {
