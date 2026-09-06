@@ -1,329 +1,244 @@
-<!-- ============================================================
-     LEARN MORE TECHNOLOGIES — Services Page
-     WordPress: paste into Page > Code editor (block editor)
-     Nav is handled by the WordPress theme — no nav code here.
-     ============================================================ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Learn More Technologies</title>
+<meta name="description" content="Three services. One mission. Measurable results. AI training, audience intelligence, and expert speaking for the 50+ market.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 <style>
-/* Break out of WordPress content column — full width */
-.lmt-wrap {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  background: #0B1829;
-  color: #FFFFFF;
-  font-family: 'Segoe UI', Arial, sans-serif;
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0B1829;
+  --navy-mid:#162640;
+  --gold:#C8942E;
+  --gold-light:#E8B84B;
+  --white:#fff;
+  --body:#C4CDD9;
+  --muted:#A8B8CC;
 }
-.lmt-wrap *, .lmt-wrap *::before, .lmt-wrap *::after {
-  box-sizing: border-box;
-}
-/* Hide WP page title */
-.entry-title, h1.entry-title, .page-title { display: none !important; }
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--body);font-family:'DM Sans',sans-serif;font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 
-/* Centered inner container */
-.lmt-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 40px;
+/* ── NAV (matches LMT site) ── */
+nav{position:sticky;top:0;z-index:1000;background:rgba(11,24,41,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(200,148,46,.15)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 40px;height:68px;display:flex;align-items:center;gap:32px}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.nav-logo-mark{width:36px;height:36px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:17px;color:var(--navy)}
+.nav-logo-text{display:flex;flex-direction:column;line-height:1.15}
+.nav-logo-text .t1{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--gold)}
+.nav-logo-text .t2{font-size:11px;color:var(--muted);letter-spacing:.05em}
+.nav-links{display:flex;align-items:center;gap:28px;flex:1;margin-left:16px}
+.nav-links a{color:var(--muted);font-size:14px;font-weight:500;text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-links a.active{color:var(--white)}
+.nav-cta{margin-left:auto;flex-shrink:0}
+.btn-gold{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:14px;padding:10px 24px;border-radius:6px;text-decoration:none;transition:background .2s}
+.btn-gold:hover{background:var(--gold-light)}
+@media(max-width:680px){
+  .nav-links{display:none}
+  .nav-inner{padding:0 20px}
 }
+
+/* ── PAGE BODY ── */
+.page-wrap{max-width:100%;overflow:hidden}
+
+/* PILLS */
+.pills{text-align:center;padding:32px 20px 0;font-size:0;line-height:2.6}
+.pill{display:inline-block;background:rgba(200,148,46,.13);border:1px solid var(--gold);color:var(--gold);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:7px 18px;border-radius:50px;margin:4px 6px;white-space:nowrap;text-decoration:none}
 
 /* HERO */
-.lmt-hero {
-  text-align: center;
-  padding: 56px 40px 48px;
-  max-width: 860px;
-  margin: 0 auto;
-}
-.lmt-hero h1 {
-  font-size: clamp(36px, 5.5vw, 72px);
-  font-weight: 900;
-  line-height: 1.1;
-  color: #fff;
-  margin: 0 0 8px;
-}
-.lmt-hero h1 em { font-style: italic; color: #C8942E; }
-.lmt-hero p {
-  font-size: clamp(15px, 2vw, 18px);
-  color: #BBBBBB;
-  line-height: 1.7;
-  max-width: 660px;
-  margin: 20px auto 28px;
-}
-.lmt-hero .lmt-note {
-  font-size: 13px;
-  color: #888;
-  font-style: italic;
-  margin-top: 12px;
-}
+.hero{text-align:center;padding:60px 40px 52px;max-width:860px;margin:0 auto}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,5.5vw,70px);font-weight:700;line-height:1.1;color:var(--white);margin-bottom:8px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p{font-size:clamp(15px,2vw,18px);color:var(--muted);line-height:1.7;max-width:660px;margin:20px auto 28px}
+.hero-note{font-size:13px;color:#666;font-style:italic;margin-top:12px}
+.btn-cta{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:16px;padding:14px 38px;border-radius:8px;text-decoration:none;transition:background .2s}
+.btn-cta:hover{background:var(--gold-light)}
+.btn-outline{display:inline-block;border:2px solid var(--gold);color:var(--gold);font-weight:700;font-size:15px;padding:12px 36px;border-radius:8px;text-decoration:none;transition:all .2s}
+.btn-outline:hover{background:var(--gold);color:var(--navy)}
 
-/* BUTTONS */
-.lmt-btn {
-  display: inline-block;
-  background: #C8942E;
-  color: #0B1829;
-  font-weight: 700;
-  font-size: 15px;
-  padding: 14px 36px;
-  border-radius: 6px;
-  text-decoration: none;
-}
-.lmt-btn-outline {
-  display: inline-block;
-  border: 2px solid #C8942E;
-  color: #C8942E;
-  font-weight: 700;
-  font-size: 15px;
-  padding: 12px 36px;
-  border-radius: 6px;
-  text-decoration: none;
-}
+/* STATS BAR */
+.stats{display:flex;border-top:1px solid rgba(200,148,46,.3);border-bottom:1px solid rgba(200,148,46,.3);background:rgba(200,148,46,.06)}
+.stat{flex:1;text-align:center;padding:32px 16px;border-right:1px solid rgba(200,148,46,.18)}
+.stat:last-child{border-right:none}
+.stat-n{display:block;font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);font-weight:700;color:var(--gold);margin-bottom:8px}
+.stat-l{font-size:13px;color:var(--muted);line-height:1.5}
+@media(max-width:600px){.stats{flex-wrap:wrap}.stat{flex:1 1 50%;border-bottom:1px solid rgba(200,148,46,.18)}.stat:nth-child(2){border-right:none}.stat:nth-child(3),.stat:nth-child(4){border-bottom:none}}
 
 /* SECTION LABEL */
-.lmt-label {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #C8942E;
-  margin-bottom: 18px;
-  padding-left: 44px;
-  position: relative;
-}
-.lmt-label::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 50%;
-  transform: translateY(-50%);
-  width: 32px;
-  height: 3px;
-  background: #C8942E;
-}
+.section-label{font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;padding-left:44px;position:relative}
+.section-label::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:32px;height:3px;background:var(--gold)}
 
 /* PROBLEM */
-.lmt-problem {
-  padding: 72px 40px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.lmt-problem h2 {
-  font-size: clamp(28px, 4vw, 54px);
-  font-weight: 900;
-  line-height: 1.1;
-  margin: 0 0 18px;
-}
-.lmt-problem h2 em { font-style: italic; color: #C8942E; }
-.lmt-problem > p {
-  font-size: 17px;
-  color: #BBBBBB;
-  line-height: 1.7;
-  max-width: 640px;
-  margin-bottom: 36px;
-}
-.lmt-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-@media(max-width:700px){ .lmt-cards { grid-template-columns: 1fr; } }
-.lmt-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(200,148,46,0.25);
-  border-radius: 12px;
-  padding: 36px;
-}
-.lmt-card-n {
-  font-size: 44px;
-  font-weight: 900;
-  color: rgba(200,148,46,0.2);
-  display: block;
-  margin-bottom: 10px;
-  line-height: 1;
-}
-.lmt-card h3 {
-  font-size: 19px;
-  font-weight: 700;
-  color: #fff;
-  margin: 0 0 12px;
-  line-height: 1.3;
-}
-.lmt-card p { font-size: 15px; color: #AAAAAA; line-height: 1.7; margin-bottom: 18px; }
-.lmt-card-q {
-  background: rgba(200,148,46,0.10);
-  border-left: 4px solid #C8942E;
-  border-radius: 0 6px 6px 0;
-  padding: 10px 14px;
-  font-size: 13px;
-  color: #CCCCCC;
-  line-height: 1.5;
-}
+.problem{padding:80px 40px;max-width:1100px;margin:0 auto}
+.problem h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,52px);font-weight:700;line-height:1.15;margin-bottom:18px;color:var(--white)}
+.problem h2 em{font-style:italic;color:var(--gold)}
+.problem>p{font-size:17px;color:var(--muted);line-height:1.7;max-width:640px;margin-bottom:36px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:700px){.cards{grid-template-columns:1fr}}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(200,148,46,.22);border-radius:12px;padding:36px}
+.card-n{font-size:44px;font-weight:900;color:rgba(200,148,46,.2);display:block;margin-bottom:10px;line-height:1}
+.card h3{font-size:19px;font-weight:700;color:var(--white);margin:0 0 12px;line-height:1.3}
+.card p{font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:18px}
+.card-q{background:rgba(200,148,46,.1);border-left:4px solid var(--gold);border-radius:0 6px 6px 0;padding:10px 14px;font-size:13px;color:#CCC;line-height:1.5}
 
 /* DATA BAR */
-.lmt-data-section {
-  background: #070F1C;
-  padding: 72px 40px;
-  text-align: center;
-}
-.lmt-data-section h2 {
-  font-size: clamp(22px, 3vw, 38px);
-  font-weight: 700;
-  margin: 0 0 44px;
-  color: #fff;
-}
-.lmt-data-section h2 em { font-style: italic; color: #C8942E; }
-.lmt-data-source { font-size: 12px; color: #666; margin-top: 18px; font-style: italic; }
+.data-section{background:#070F1C;padding:80px 40px;text-align:center}
+.data-section h2{font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,38px);font-weight:700;margin:0 0 44px;color:var(--white)}
+.data-section h2 em{font-style:italic;color:var(--gold)}
+.data-grid{display:flex;max-width:1000px;margin:0 auto;border:1px solid rgba(200,148,46,.2);border-radius:12px;overflow:hidden}
+.data-item{flex:1;text-align:center;padding:36px 20px;border-right:1px solid rgba(200,148,46,.2);background:rgba(255,255,255,.02)}
+.data-item:last-child{border-right:none}
+.data-n{display:block;font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;color:var(--gold);margin-bottom:10px}
+.data-l{font-size:13px;color:var(--muted);line-height:1.6;max-width:150px;margin:0 auto}
+.data-src{font-size:12px;color:#555;margin-top:18px;font-style:italic}
+@media(max-width:600px){.data-grid{flex-wrap:wrap}.data-item{flex:1 1 50%;border-bottom:1px solid rgba(200,148,46,.2)}.data-item:nth-child(2){border-right:none}}
 
 /* SERVICES */
-.lmt-services { padding: 72px 40px; max-width: 1100px; margin: 0 auto; }
-.lmt-services-hd { text-align: center; margin-bottom: 44px; }
-.lmt-services-hd h2 { font-size: clamp(26px, 3.5vw, 46px); font-weight: 900; margin: 0 0 12px; color: #fff; }
-.lmt-services-hd p { font-size: 17px; color: #AAAAAA; max-width: 540px; margin: 0 auto; line-height: 1.7; }
-.lmt-service-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-@media(max-width:800px){ .lmt-service-cards { grid-template-columns: 1fr; } }
-.lmt-sc {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.09);
-  border-radius: 12px;
-  padding: 36px;
-  display: flex;
-  flex-direction: column;
-}
-.lmt-sc-tag {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #C8942E;
-  margin-bottom: 14px;
-}
-.lmt-sc h3 { font-size: 21px; font-weight: 800; color: #fff; margin: 0 0 12px; line-height: 1.2; }
-.lmt-sc p { font-size: 15px; color: #AAAAAA; line-height: 1.7; margin-bottom: 20px; }
-.lmt-sc ul { list-style: none; flex: 1; margin-bottom: 28px; }
-.lmt-sc ul li {
-  font-size: 14px;
-  color: #CCCCCC;
-  padding: 7px 0 7px 20px;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  position: relative;
-  line-height: 1.5;
-}
-.lmt-sc ul li::before { content: '→'; position: absolute; left: 0; color: #C8942E; }
+.services{padding:80px 40px;max-width:1100px;margin:0 auto}
+.services-hd{text-align:center;margin-bottom:44px}
+.services-hd h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,46px);font-weight:700;margin:0 0 12px;color:var(--white)}
+.services-hd p{font-size:17px;color:var(--muted);max-width:540px;margin:0 auto;line-height:1.7}
+.service-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:800px){.service-cards{grid-template-columns:1fr}}
+.sc{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:36px;display:flex;flex-direction:column;transition:border-color .25s,background .25s}
+.sc:hover{border-color:rgba(200,148,46,.5);background:rgba(200,148,46,.05)}
+.sc-tag{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:block}
+.sc h3{font-size:21px;font-weight:700;color:var(--white);margin:0 0 12px;line-height:1.2}
+.sc p{font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:20px}
+.sc ul{list-style:none;flex:1;margin-bottom:28px}
+.sc ul li{font-size:14px;color:#CCC;padding:7px 0 7px 20px;border-bottom:1px solid rgba(255,255,255,.06);position:relative;line-height:1.5}
+.sc ul li::before{content:'→';position:absolute;left:0;color:var(--gold)}
 
 /* CTA */
-.lmt-cta {
-  background: rgba(200,148,46,0.08);
-  border-top: 1px solid rgba(200,148,46,0.25);
-  text-align: center;
-  padding: 72px 40px;
-}
-.lmt-cta h2 { font-size: clamp(24px, 3vw, 40px); font-weight: 900; color: #fff; max-width: 680px; margin: 0 auto 14px; line-height: 1.2; }
-.lmt-cta p { font-size: 17px; color: #AAAAAA; max-width: 560px; margin: 0 auto 32px; line-height: 1.7; }
-.lmt-cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.cta-section{background:rgba(200,148,46,.07);border-top:1px solid rgba(200,148,46,.25);text-align:center;padding:80px 40px}
+.cta-section h2{font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,40px);font-weight:700;color:var(--white);max-width:680px;margin:0 auto 14px;line-height:1.2}
+.cta-section p{font-size:17px;color:var(--muted);max-width:560px;margin:0 auto 32px;line-height:1.7}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 
 /* FOOTER */
-.lmt-footer {
-  background: #070F1C;
-  border-top: 1px solid rgba(200,148,46,0.15);
-  text-align: center;
-  padding: 28px 40px;
-  font-size: 13px;
-  color: #666;
-  line-height: 1.9;
-}
-.lmt-footer a { color: #C8942E; text-decoration: none; }
+footer{background:#070F1C;border-top:1px solid rgba(200,148,46,.15);text-align:center;padding:28px 40px;font-size:13px;color:#555;line-height:2}
+footer a{color:var(--gold);text-decoration:none}
+footer a:hover{text-decoration:underline}
 </style>
+</head>
+<body>
 
-<div class="lmt-wrap">
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://learnmoretechnologies.com" class="nav-logo">
+      <div class="nav-logo-mark">L</div>
+      <div class="nav-logo-text">
+        <span class="t1">Learn More Technologies</span>
+        <span class="t2">AI Training for Adults 50+</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="https://learnmoretechnologies.com/programs/">Programs</a>
+      <a href="https://learnmoretechnologies.com/50-blog/">50+ Blog</a>
+      <a href="https://learnmoretechnologies.com/partner-with-us/">Partner With Us</a>
+      <a href="#" class="active">Services</a>
+    </div>
+    <div class="nav-cta">
+      <a href="https://learnmoretechnologies.com/start-free-lesson/" class="btn-gold">Start Free Lesson</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── PAGE ── -->
+<div class="page-wrap">
 
   <!-- PILLS -->
-  <div style="text-align:center; padding:28px 20px 0; font-size:0; line-height:2.4;">
-    <span style="display:inline-block;background:rgba(200,148,46,0.15);border:1px solid #C8942E;color:#C8942E;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 18px;border-radius:50px;margin:4px 6px;white-space:nowrap;">MBE Certified</span><span style="display:inline-block;background:rgba(200,148,46,0.15);border:1px solid #C8942E;color:#C8942E;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 18px;border-radius:50px;margin:4px 6px;white-space:nowrap;">WIOA Eligible</span><span style="display:inline-block;background:rgba(200,148,46,0.15);border:1px solid #C8942E;color:#C8942E;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 18px;border-radius:50px;margin:4px 6px;white-space:nowrap;">Austin, TX</span><span style="display:inline-block;background:rgba(200,148,46,0.15);border:1px solid #C8942E;color:#C8942E;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 18px;border-radius:50px;margin:4px 6px;white-space:nowrap;">Available Nationwide</span>
+  <div class="pills">
+    <span class="pill">MBE Certified</span><span class="pill">WIOA Eligible</span><span class="pill">Austin, TX</span><span class="pill">Available Nationwide</span>
   </div>
 
   <!-- HERO -->
-  <div class="lmt-hero">
+  <div class="hero">
     <h1>Three Services.<br>One Mission.<br><em>Measurable Results.</em></h1>
     <p>Adults 50+ control $76 trillion and 70% of all disposable income &mdash; yet most brands ignore them, most employers underinvest in them, and most events don&rsquo;t know how to reach them. We fix that.</p>
-    <a href="#lmt-services" class="lmt-btn">See All Services &darr;</a>
-    <p class="lmt-note">All engagements are scoped to your goals, audience, and timeline.</p>
+    <a href="#services" class="btn-cta">See All Services &darr;</a>
+    <p class="hero-note">All engagements are scoped to your goals, audience, and timeline.</p>
   </div>
 
   <!-- STATS BAR -->
-  <div style="border-top:1px solid rgba(200,148,46,0.3);border-bottom:1px solid rgba(200,148,46,0.3);background:rgba(200,148,46,0.06);display:table;width:100%;">
-    <div style="display:table-cell;width:25%;text-align:center;padding:32px 16px;border-right:1px solid rgba(200,148,46,0.2);vertical-align:middle;">
-      <span style="display:block;font-size:40px;font-weight:900;color:#C8942E;margin-bottom:8px;">$18K</span>
-      <span style="font-size:13px;color:#AAAAAA;line-height:1.5;">Saved per untrained 50+ worker annually &mdash; LSE &amp; Protiviti</span>
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-n">$18K</span>
+      <span class="stat-l">Saved per untrained 50+ worker annually &mdash; LSE &amp; Protiviti</span>
     </div>
-    <div style="display:table-cell;width:25%;text-align:center;padding:32px 16px;border-right:1px solid rgba(200,148,46,0.2);vertical-align:middle;">
-      <span style="display:block;font-size:40px;font-weight:900;color:#C8942E;margin-bottom:8px;">9</span>
-      <span style="font-size:13px;color:#AAAAAA;line-height:1.5;">In-person locations across Central Texas</span>
+    <div class="stat">
+      <span class="stat-n">9</span>
+      <span class="stat-l">In-person locations across Central Texas</span>
     </div>
-    <div style="display:table-cell;width:25%;text-align:center;padding:32px 16px;border-right:1px solid rgba(200,148,46,0.2);vertical-align:middle;">
-      <span style="display:block;font-size:40px;font-weight:900;color:#C8942E;margin-bottom:8px;">$850B</span>
-      <span style="font-size:13px;color:#AAAAAA;line-height:1.5;">Annual cost of ageism &mdash; AARP &amp; Oxford Economics</span>
+    <div class="stat">
+      <span class="stat-n">$850B</span>
+      <span class="stat-l">Annual cost of ageism &mdash; AARP &amp; Oxford Economics</span>
     </div>
-    <div style="display:table-cell;width:25%;text-align:center;padding:32px 16px;vertical-align:middle;">
-      <span style="display:block;font-size:40px;font-weight:900;color:#C8942E;margin-bottom:8px;">59+</span>
-      <span style="font-size:13px;color:#AAAAAA;line-height:1.5;">Documented participants, sign-in verified</span>
+    <div class="stat">
+      <span class="stat-n">59+</span>
+      <span class="stat-l">Documented participants, sign-in verified</span>
     </div>
   </div>
 
   <!-- PROBLEM -->
-  <div class="lmt-problem">
-    <div class="lmt-label">The Real Problem</div>
+  <div class="problem">
+    <div class="section-label">The Real Problem</div>
     <h2>The 50+ market controls <em>$76 trillion.</em><br>Most organizations are ignoring it.</h2>
     <p>This isn&rsquo;t opinion. It&rsquo;s what the research shows &mdash; and most brands, employers, and event organizers are leaving money, talent, and opportunity on the table.</p>
-    <div class="lmt-cards">
-      <div class="lmt-card">
-        <span class="lmt-card-n">01</span>
+    <div class="cards">
+      <div class="card">
+        <span class="card-n">01</span>
         <h3>Experienced Workers Are Being Written Off Prematurely</h3>
         <p>Adults 50+ bring decades of institutional knowledge and judgment that can&rsquo;t be replicated. The problem isn&rsquo;t capability &mdash; it&rsquo;s the training method.</p>
-        <div class="lmt-card-q">80% of adults 50+ feel invisible in their employers&rsquo; development programs.</div>
+        <div class="card-q">80% of adults 50+ feel invisible in their employers&rsquo; development programs.</div>
       </div>
-      <div class="lmt-card">
-        <span class="lmt-card-n">02</span>
+      <div class="card">
+        <span class="card-n">02</span>
         <h3>Brands Are Spending Billions Targeting the Wrong Generation</h3>
         <p>Adults 50+ control $76 trillion yet receive only 5% of ad spend. We fix the disconnect between where the money is and where attention goes.</p>
-        <div class="lmt-card-q">96% of adults 50+ say brand messaging doesn&rsquo;t speak to them.</div>
+        <div class="card-q">96% of adults 50+ say brand messaging doesn&rsquo;t speak to them.</div>
       </div>
     </div>
   </div>
 
   <!-- DATA BAR -->
-  <div class="lmt-data-section">
+  <div class="data-section">
     <h2>The numbers that change <em>every conversation.</em></h2>
-    <div style="display:table;width:100%;max-width:1000px;margin:0 auto;border:1px solid rgba(200,148,46,0.2);border-radius:12px;overflow:hidden;">
-      <div style="display:table-cell;width:25%;text-align:center;padding:36px 20px;border-right:1px solid rgba(200,148,46,0.2);background:rgba(255,255,255,0.02);vertical-align:middle;">
-        <span style="display:block;font-size:42px;font-weight:900;color:#C8942E;margin-bottom:10px;">$18K</span>
-        <span style="font-size:13px;color:#AAAAAA;line-height:1.6;">Productivity lost per untrained 50+ worker &mdash; LSE &amp; Protiviti</span>
+    <div class="data-grid">
+      <div class="data-item">
+        <span class="data-n">$18K</span>
+        <div class="data-l">Productivity lost per untrained 50+ worker &mdash; LSE &amp; Protiviti</div>
       </div>
-      <div style="display:table-cell;width:25%;text-align:center;padding:36px 20px;border-right:1px solid rgba(200,148,46,0.2);background:rgba(255,255,255,0.02);vertical-align:middle;">
-        <span style="display:block;font-size:42px;font-weight:900;color:#C8942E;margin-bottom:10px;">70%</span>
-        <span style="font-size:13px;color:#AAAAAA;line-height:1.6;">Of all U.S. disposable income controlled by adults 50+</span>
+      <div class="data-item">
+        <span class="data-n">70%</span>
+        <div class="data-l">Of all U.S. disposable income controlled by adults 50+</div>
       </div>
-      <div style="display:table-cell;width:25%;text-align:center;padding:36px 20px;border-right:1px solid rgba(200,148,46,0.2);background:rgba(255,255,255,0.02);vertical-align:middle;">
-        <span style="display:block;font-size:42px;font-weight:900;color:#C8942E;margin-bottom:10px;">$850B</span>
-        <span style="font-size:13px;color:#AAAAAA;line-height:1.6;">Annual cost of ageism &mdash; AARP &amp; Oxford Economics</span>
+      <div class="data-item">
+        <span class="data-n">$850B</span>
+        <div class="data-l">Annual cost of ageism &mdash; AARP &amp; Oxford Economics</div>
       </div>
-      <div style="display:table-cell;width:25%;text-align:center;padding:36px 20px;background:rgba(255,255,255,0.02);vertical-align:middle;">
-        <span style="display:block;font-size:42px;font-weight:900;color:#C8942E;margin-bottom:10px;">1 in 4</span>
-        <span style="font-size:13px;color:#AAAAAA;line-height:1.6;">U.S. workers will be 55+ by 2030 &mdash; Bureau of Labor Statistics</span>
+      <div class="data-item">
+        <span class="data-n">1 in 4</span>
+        <div class="data-l">U.S. workers will be 55+ by 2030 &mdash; Bureau of Labor Statistics</div>
       </div>
     </div>
-    <p class="lmt-data-source">Sources: LSE/Protiviti &middot; AARP/Oxford Economics &middot; U.S. Bureau of Labor Statistics</p>
+    <p class="data-src">Sources: LSE/Protiviti &middot; AARP/Oxford Economics &middot; U.S. Bureau of Labor Statistics</p>
   </div>
 
   <!-- SERVICES -->
-  <div class="lmt-services" id="lmt-services">
-    <div class="lmt-label">Three Ways We Work Together</div>
-    <div class="lmt-services-hd">
+  <div class="services" id="services">
+    <div class="section-label">Three Ways We Work Together</div>
+    <div class="services-hd">
       <h2>Choose Your Entry Point</h2>
       <p>Each service solves a specific problem. Most clients start with one and expand from there.</p>
     </div>
-    <div class="lmt-service-cards">
-      <div class="lmt-sc">
-        <div class="lmt-sc-tag">For Brands &amp; Agencies</div>
+    <div class="service-cards">
+      <div class="sc">
+        <span class="sc-tag">For Brands &amp; Agencies</span>
         <h3>50+ Audience Intelligence &amp; Advisory</h3>
         <p>Your messaging is missing the wealthiest generation in America. We fix that.</p>
         <ul>
@@ -332,10 +247,10 @@
           <li>Channel strategy aligned with how 50+ consumes content</li>
           <li>Ongoing advisory available monthly</li>
         </ul>
-        <a href="https://calendly.com/brianmckinney/new-meeting" class="lmt-btn-outline">Request a Proposal &rarr;</a>
+        <a href="https://calendly.com/brianmckinney/new-meeting" class="btn-outline">Request a Proposal &rarr;</a>
       </div>
-      <div class="lmt-sc">
-        <div class="lmt-sc-tag">For Employers &amp; Workforce Boards</div>
+      <div class="sc">
+        <span class="sc-tag">For Employers &amp; Workforce Boards</span>
         <h3>AI Workforce Training Built for 50+</h3>
         <p>WIOA-eligible. MBE-certified. Documented outcomes in 30 days.</p>
         <ul>
@@ -344,10 +259,10 @@
           <li>Documented outcomes for grant reporting and compliance</li>
           <li>Scales from one cohort to enterprise-wide deployment</li>
         </ul>
-        <a href="https://calendly.com/brianmckinney/new-meeting" class="lmt-btn-outline">Request a Proposal &rarr;</a>
+        <a href="https://calendly.com/brianmckinney/new-meeting" class="btn-outline">Request a Proposal &rarr;</a>
       </div>
-      <div class="lmt-sc">
-        <div class="lmt-sc-tag">For Events &amp; Conferences</div>
+      <div class="sc">
+        <span class="sc-tag">For Events &amp; Conferences</span>
         <h3>Expert Speaking &mdash; The 50+ Economy</h3>
         <p>Keynotes that change how rooms think about the most underestimated market in America.</p>
         <ul>
@@ -356,27 +271,29 @@
           <li>Customized for your industry and audience</li>
           <li>Available nationwide</li>
         </ul>
-        <a href="https://calendly.com/brianmckinney/new-meeting" class="lmt-btn-outline">Check Availability &rarr;</a>
+        <a href="https://calendly.com/brianmckinney/new-meeting" class="btn-outline">Check Availability &rarr;</a>
       </div>
     </div>
   </div>
 
   <!-- CTA -->
-  <div class="lmt-cta">
+  <div class="cta-section">
     <h2>Ready to reach the audience everyone else is ignoring?</h2>
     <p>All engagements are proposal-based. Scoped to your goals, your community, and your budget. No price list &mdash; because your situation isn&rsquo;t off-the-shelf.</p>
-    <div class="lmt-cta-btns">
-      <a href="https://calendly.com/brianmckinney/new-meeting" class="lmt-btn">Schedule a 30-Minute Call</a>
-      <a href="mailto:hello@learnmoretechnologies.com" class="lmt-btn-outline">Send Us a Message</a>
+    <div class="cta-btns">
+      <a href="https://calendly.com/brianmckinney/new-meeting" class="btn-cta">Schedule a 30-Minute Call</a>
+      <a href="mailto:hello@learnmoretechnologies.com" class="btn-outline">Send Us a Message</a>
     </div>
   </div>
 
   <!-- FOOTER -->
-  <div class="lmt-footer">
+  <footer>
     &copy; 2026 Learn More Technologies &nbsp;&middot;&nbsp;
     <a href="https://learnmoretechnologies.com">learnmoretechnologies.com</a> &nbsp;&middot;&nbsp;
     <a href="mailto:hello@learnmoretechnologies.com">hello@learnmoretechnologies.com</a><br>
     MBE Certified &nbsp;&middot;&nbsp; WIOA Eligible &nbsp;&middot;&nbsp; Austin, TX &nbsp;&middot;&nbsp; Available Nationwide
-  </div>
+  </footer>
 
 </div>
+</body>
+</html>
