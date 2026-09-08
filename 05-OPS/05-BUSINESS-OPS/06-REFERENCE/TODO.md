@@ -4,7 +4,7 @@ Last updated: 2026-08-26
 ---
 
 ## ONE THING TODAY
-- [ ] ___
+- [ ] Build Lesson 3 LinkedIn carousel in Canva (6 slides, navy/gold) → post to LinkedIn
 
 ---
 
@@ -12,10 +12,15 @@ Last updated: 2026-08-26
 
 ### Course & Lessons
 - [ ] Paste updated `course-page-50techbridge.html` into LearnDash course code block
-- [ ] Paste updated `CSS.txt` into WordPress → Appearance → Customize → Additional CSS
+- [x] Additional CSS — master file rebuilt as `Desktop/50tb-additional-css.txt`, pasted into Customizer (2026-09-08)
 - [ ] Lesson 1 Welcome — export PowerPoint as MP4 → upload to YouTube (Unlisted) → get video ID → update HTML → paste into LearnDash
 - [ ] Lesson 2 (Talk to AI) — video, content, SEO pending
-- [ ] Lesson 3 (Don't Get Scammed) — video, content, SEO pending
+- [x] Lesson 3 (Don't Get Scammed) — video live at https://youtu.be/YsSXhxo_fus, LearnDash page live (2026-09-08)
+- [ ] Lesson 3 — Build LinkedIn carousel in Canva (6 slides written, see SOP-17) → post to LinkedIn + Facebook
+- [ ] Lesson 3 — Publish blog article to WordPress (written, needs Yoast SEO fields pasted)
+- [ ] Lesson 3 — Record YouTube Short with HeyGen Dr. Maya → upload with metadata (all written, see SOP-17)
+- [ ] Lesson 1 Welcome — export PowerPoint as MP4 → upload to YouTube (Unlisted) → get video ID → update HTML → paste into LearnDash
+- [ ] Lesson 2 (Talk to AI) — video, content, SEO pending
 
 ### Grants
 - [ ] AACME Elevate Grant ($25,500) — partner letters, real testimonials, eligibility call

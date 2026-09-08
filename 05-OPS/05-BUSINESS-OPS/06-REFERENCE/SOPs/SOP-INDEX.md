@@ -20,6 +20,8 @@ Last updated: 2026-09-07
 | 14 | SOP-14-canva-video-assembly.md | Duplicate lesson → swap slides → add audio → export MP4 | Slides + voiceover + HeyGen MP4 all ready |
 | 15 | SOP-15-elevenlabs-scene-voiceovers.md | Split lesson script into 15 individual scene MP3s | HEYGEN-scenes file ready, need audio per scene |
 | 16 | SOP-16-wpcode-nav-injection.md | Override BuddyBoss nav with JS inline styles via WPCode | Any nav styling change needed |
+| 17 | SOP-17-lesson-launch-content.md | Full content package for new lesson: carousel, LinkedIn, Facebook, YT Short, blog, SEO | New lesson goes live |
+| 18 | SOP-18-wordpress-additional-css.md | Master CSS file management — one file, paste to override BuddyBoss site-wide | Any site-wide styling change |
 
 ---
 
