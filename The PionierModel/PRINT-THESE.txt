@@ -1,0 +1,14 @@
+PRINT THIS FOLDER
+=================
+Open each PDF from this extracted folder. Do not print from inside the zip window.
+
+Printer: Letter 8.5 x 11   Color   Actual size / 100%
+
+PRINT FIRST
+  wioa-nonprofit-credentials.pdf      6 pages   single-sided
+  funding-probability-analysis.pdf    4 pages   single-sided
+
+ALSO PRINT
+  lmt-brochure.pdf                    2 pages   duplex, flip on LONG edge
+  pioneer-model-one-pager.pdf         1 page    landscape
+  pioneer-model-full-map.pdf          asset map

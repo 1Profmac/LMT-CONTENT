@@ -29,3 +29,7 @@ Thumbs.db
 desktop.ini
 *.lnk
 05-BUSINESS-OPS/05-TECH/Hcapta keys 20260509.txt
+
+# Secrets (actual repo path)
+05-OPS/05-BUSINESS-OPS/05-TECH/Hcapta keys 20260509.txt
+*keys*.txt

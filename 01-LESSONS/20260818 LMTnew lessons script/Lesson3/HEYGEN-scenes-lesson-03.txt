@@ -1,0 +1,184 @@
+HEYGEN SCENE SCRIPT — Lesson 3: Don't Get Scammed
+Copy each scene into the matching HeyGen scene box.
+Each scene also needs its own ElevenLabs MP3 — generate one per scene.
+========================================
+
+SCENE 1 — slide01-opening
+----------------------------------------
+You already did the brave part. You asked a machine a real question and stayed in charge of the answer.
+
+This lesson is how you stay in charge when a stranger wants your fear.
+
+
+SCENE 2 — slide02-three-skills
+----------------------------------------
+I am not going to spend fifteen minutes trying to frighten you. Frightened people send money. Clear people hang up.
+
+Three skills. That is the whole class.
+
+If you walk out with those, you are already ahead of most of the country.
+
+
+SCENE 3 — slide03-not-the-punchline
+----------------------------------------
+You are not the punchline.
+
+The Federal Trade Commission told Congress that adults 60 and older reported 2.4 billion dollars lost to fraud in 2024. Those are real. They are ugly. They are not a verdict on your intelligence.
+
+Here is the line almost nobody reads out loud. About three in four older adults who reported a scam to the FTC lost no money. They spotted it. Three out of four. They saw it and they did not pay.
+
+We will not treat you like a child. We will treat you like someone who already has judgment — and who is being hunted by professionals.
+
+
+SCENE 4 — slide04-skill1-intro
+----------------------------------------
+Skill one. Spot a fake.
+
+A fake wants you to believe the costume.
+
+Look at the costume, not the logo.
+
+
+SCENE 5 — slide05-skill1-tells
+----------------------------------------
+The sender. Would Amazon really write from a domain called email-secure-alert dot com? Hover or tap and look. Do not click the link to check.
+
+The greeting. "Dear Customer" from a bank that knows your name is a tell.
+
+The ask. A link to verify. A phone number in the message. A QR code you did not ask for. A download. A request for a code that just arrived on your phone.
+
+The surprise. You did not start this conversation. That matters more than the grammar. Plenty of scams are now well written. AI made the spelling better. Do not use "no typos" as your safety test. That test is dead.
+
+
+SCENE 6 — slide06-skill1-verify
+----------------------------------------
+"Social Security will be suspended in 30 minutes. Call now."
+
+The real Social Security Administration does not suspend your number because you missed a text. The real IRS does not demand gift cards.
+
+If the costume is a bank, Medicare, Amazon, Microsoft, Apple, a sheriff, a grandchild, or tech support that called you — treat it as a costume until you started the call on a number you already had.
+
+Hang up. Look up the number on a statement, the back of the card, or the official website you type yourself. Call that number. Do not call the number in the text. That number is the costume's sleeve.
+
+
+SCENE 7 — slide07-skill2-intro
+----------------------------------------
+Skill two. Name the pressure.
+
+Fakes work because of feelings, not because you cannot read.
+
+Learn the four levers. Say them out loud if you are in a room.
+
+Hurry. Fear. Secrecy. Authority.
+
+
+SCENE 8 — slide08-skill2-levers
+----------------------------------------
+Hurry. Twenty minutes. A warrant. Your grandson is at the jail. The refund expires. Hurry is the product. If you are not allowed to think, you are not in a real official process.
+
+Fear. Arrest. Deportation. A virus on the computer. Fear makes smart people obedient.
+
+Secrecy. Don't tell your wife. She would worry. Don't tell the bank teller what it's for. Isolation is the scam. A real emergency can stand a second adult.
+
+Authority. A badge number. A case number. A familiar logo. Caller ID that says Austin Police or IRS. Caller ID is a costume. They can fake it.
+
+
+SCENE 9 — slide09-skill2-money
+----------------------------------------
+There is a fifth lever I want you to memorize. Never move money to protect it.
+
+Someone says your account is compromised. To keep the money safe, you must wire it, buy gold, feed a crypto ATM, or hand cash to a courier. That money is going to them.
+
+Payment methods that should make your hand stop: gift cards, wire transfers, crypto or a Bitcoin ATM, a courier at the door, remote access to your computer.
+
+No legitimate tax office, bank, or grandchild-in-trouble story needs a Walmart gift card. I will die on that sentence.
+
+
+SCENE 10 — slide10-new-costume
+----------------------------------------
+The new costume — a voice you love.
+
+Someone can call and sound like a grandchild. A few seconds of old video or voicemail can be enough. A familiar voice is no longer proof.
+
+So we use a 20th-century fix for a 21st-century trick.
+
+Pick a family code word. Known only to your people. Used when money or panic shows up. If they don't know it — hang up.
+
+Pick a word or short phrase you would never put on Facebook. Share it this week with the humans you would actually send money to. If a panicked voice asks for bail or a gift card and cannot give the word — you hang up. Then you call your person on the number in your phone.
+
+You are not cruel for checking. You are literate.
+
+
+SCENE 11 — slide11-skill3-passwords
+----------------------------------------
+Skill three. Passwords and the second lock.
+
+A password is a key. Most people have one key and twenty doors.
+
+Longer is better. Aim for 15 or more characters. A phrase beats a scrambled string of letters and symbols.
+
+A passphrase like maple-porch-radio-Thursday is stronger and kinder to your memory than a short jumble of characters.
+
+Unique matters. The password on email cannot be the password on the bank. Email is the skeleton key. If they get email, they can reset everything else.
+
+
+SCENE 12 — slide12-skill3-options
+----------------------------------------
+What if you cannot remember twenty phrases?
+
+Two honest options.
+
+One. A password manager — a vault app — if you have someone who can sit with you once to set it up.
+
+Two. A small notebook in a drawer or a lockbox at home. Not a sticky note on the monitor. Not a photo in an unlocked camera roll. This is not shameful. A hidden notebook beats one reused password on the internet.
+
+
+SCENE 13 — slide13-skill3-twofactor
+----------------------------------------
+Now the second lock.
+
+Two-factor authentication. Password plus something you have.
+
+After the password, the site sends a code to your phone. A thief with only the password should bounce.
+
+Turn it on this week. Email first. Then the bank or credit union.
+
+Where to find it: Settings, then Security, then look for Two-factor, 2-step verification, or Multifactor.
+
+Never read a code to anyone. The code that just arrived is a second key. Anyone who calls and asks you to read it to them is a scammer — even if they say they are the bank.
+
+You type the code into the site you opened. You never speak it to a stranger.
+
+
+SCENE 14 — slide14-already-happened
+----------------------------------------
+If it already happened.
+
+Some of you are not here for prevention. You are here because something already left the account.
+
+Listen to me. This is not a moral failure. Professionals ran a play on a human nervous system. You are allowed to still be a competent person.
+
+If money already moved: stop sending. Call the bank — the number on the card. Change your email password and turn on two-factor authentication. Report it at ReportFraud dot ftc dot gov and ic3 dot gov. Tell one trusted person.
+
+Speed matters. Silence is a guarantee of no chance.
+
+
+SCENE 15 — slide15-homework-closing
+----------------------------------------
+Your homework. Twenty minutes.
+
+One. Put the hang-up rule on the fridge. Unexpected plus hurry plus money or a code equals hang up and verify.
+
+Two. Send the family code word to the people who matter.
+
+Three. Turn on email two-factor authentication. Then the bank.
+
+Four. Set one unique long phrase for email.
+
+Five. If a scam already happened — file the two reports. Today.
+
+You now have the three-lesson arc we promised. You can spot a costume, name the pressure, and lock the door.
+
+Hang up. Look up. Call back.
+
+I'm Brian McKinney. 50+TechBridge. I'll see you in the room.

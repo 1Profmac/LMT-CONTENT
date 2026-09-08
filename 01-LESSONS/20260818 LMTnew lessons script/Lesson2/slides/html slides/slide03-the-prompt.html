@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1920px;
+    height: 1080px;
+    background: #0E1C2F;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+  .series-tag {
+    position: absolute;
+    top: 36px;
+    left: 80px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #C8942E;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .gold-bar-top {
+    position: absolute;
+    top: 70px;
+    left: 80px;
+    right: 80px;
+    height: 4px;
+    background: #C8942E;
+  }
+  .gold-bar-bottom {
+    position: absolute;
+    bottom: 70px;
+    left: 80px;
+    right: 80px;
+    height: 4px;
+    background: #C8942E;
+  }
+  .footer {
+    position: absolute;
+    bottom: 30px;
+    left: 80px;
+    right: 80px;
+    font-size: 20px;
+    color: #C8942E;
+    text-align: center;
+  }
+  .content {
+    position: absolute;
+    top: 100px;
+    bottom: 90px;
+    left: 80px;
+    right: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .instruction {
+    font-size: 34px;
+    color: #AAAAAA;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+  }
+  .prompt-box {
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 4px solid #C8942E;
+    padding: 50px 70px;
+    max-width: 1400px;
+    text-align: center;
+  }
+  .prompt-text {
+    font-size: 48px;
+    color: #0E1C2F;
+    line-height: 1.5;
+    font-weight: 600;
+  }
+  .prompt-text span {
+    color: #C8942E;
+    font-style: italic;
+  }
+  .hint {
+    font-size: 28px;
+    color: #888888;
+    margin-top: 36px;
+    text-align: center;
+  }
+
+</style>
+</head>
+<body>
+  <div class="series-tag">DIGITAL PIONEER &nbsp;|&nbsp; LESSON 2B</div>
+  <div class="gold-bar-top"></div>
+  <div class="gold-bar-bottom"></div>
+  <div class="footer">50+TechBridge &nbsp;|&nbsp; Brian McKinney &nbsp;|&nbsp; 50plustechbridge.com</div>
+  <div class="content">
+
+    <div class="instruction">Type this exactly</div>
+    <div class="prompt-box">
+      <div class="prompt-text">
+        I'm new to AI and I'm over 50.<br>
+        Please explain <span>[your topic]</span> in five simple steps,<br>
+        using clear language.
+      </div>
+    </div>
+    <div class="hint">Replace <em>[your topic]</em> with something you actually want to know about</div>
+
+  </div>
+</body>
+</html>

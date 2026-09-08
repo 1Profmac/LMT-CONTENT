@@ -1,19 +1,33 @@
-========================================
-LESSON 2b - Ask Your First Real Question
-Runtime: approx 4-5 minutes
+HEYGEN SCENE SCRIPT — Lesson 2b
+Copy each scene into the matching HeyGen scene box.
 ========================================
 
+SCENE 1 — slide01-title
+----------------------------------------
 Welcome back.
 
 You have ChatGPT open in front of you. That message box is waiting. Now we are going to use it.
 
-I am going to give you a starter prompt. This is the exact wording I teach in every workshop. It works because it tells AI three things at once. It tells AI you are new. It tells AI your age. And it tells AI exactly how you want the answer formatted. Short steps. Plain language.
 
+SCENE 2 — slide02-how-it-works
+----------------------------------------
+I am going to give you a starter prompt. This is the exact wording I teach in every workshop.
+
+It works because it tells AI three things at once. It tells AI you are new. It tells AI your age. And it tells AI exactly how you want the answer formatted. Short steps. Plain language.
+
+
+SCENE 3 — slide03-the-prompt
+----------------------------------------
 Here it is. Type this into the message box.
 
-I'm new to AI and I'm over 50. Please explain [your topic] in five simple steps, using clear language.
+I'm new to AI and I'm over 50. Please explain your topic in five simple steps, using clear language.
 
-Where it says your topic, fill in something you actually want to know about. Let me give you some examples.
+Where it says your topic, fill in something you actually want to know about.
+
+
+SCENE 4 — slide04-examples
+----------------------------------------
+Let me give you some examples.
 
 You could say, please explain how to video call my grandchildren in five simple steps.
 
@@ -23,24 +37,45 @@ Or, please explain how to start a vegetable garden in five simple steps.
 
 Use one of those, or pick something that matters to you right now. There is no wrong answer.
 
-Press Enter or tap the arrow button. Then watch.
 
-Text is going to start appearing on the screen, word by word, like AI is writing its answer in real time. That is exactly what it is doing. It is not pulling up a saved article. It is writing a response specifically for you, right now, based on exactly what you asked.
+SCENE 5 — slide05-send-it
+----------------------------------------
+Press Enter, or tap the arrow button.
+
+Then watch.
+
+
+SCENE 6 — slide06-watch-it-write
+----------------------------------------
+Text is going to start appearing on the screen, word by word, like AI is writing its answer in real time.
+
+That is exactly what it is doing. It is not pulling up a saved article. It is writing a response specifically for you, right now, based on exactly what you asked.
 
 Read the whole answer. Take your time. Read it slowly. It might be a few paragraphs. That is fine.
 
-Now here is the important thing I want you to do as you read. Ask yourself one question. Is this useful? Not is it perfect. Not is it exactly right about everything. Just, is this useful? Is there something here I can actually use?
+
+SCENE 7 — slide07-is-useful
+----------------------------------------
+Now here is the important thing I want you to do as you read.
+
+Ask yourself one question. Is this useful? Not is it perfect. Not is it exactly right about everything. Just, is this useful? Is there something here I can actually use?
 
 If the answer is yes, great. If the answer is no, or if something seems off, that is okay too. Ask a follow-up. We are going to cover that in Lesson 2c.
 
 And remember the rule. If the answer touches on medicine, the law, or money, stop and check with a real professional. AI can be wrong. You are the one who decides what to do with the information.
 
+
+SCENE 8 — slide07b-more-specific
+----------------------------------------
 Here is something important about getting better answers. The more specific you are, the better the response.
 
 If you ask, how do I use AI, you will get a general answer. If you use the starter prompt and fill in exactly what you want to know, you will get something much more useful and specific.
 
 AI responds to context. Think of it like giving directions to someone who is trying to help you. The more detail you give, the closer they get you to exactly where you want to go.
 
+
+SCENE 9 — slide08-closing
+----------------------------------------
 You are doing something that most people your age have never done. You are using one of the most powerful tools in the world, right now, for something that actually matters to you.
 
 That is what Digital Pioneers do.
