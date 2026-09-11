@@ -1,10 +1,10 @@
 # Brian's TODO
-Last updated: 2026-08-26
+Last updated: 2026-09-11
 
 ---
 
 ## ONE THING TODAY
-- [ ] Build Lesson 3 LinkedIn carousel in Canva (6 slides, navy/gold) → post to LinkedIn
+- [ ] Finish Cursor setup for claudecode-writer — find or create writing voice samples → populate context/writing-examples.md → run first test
 
 ---
 
@@ -16,7 +16,7 @@ Last updated: 2026-08-26
 - [ ] Lesson 1 Welcome — export PowerPoint as MP4 → upload to YouTube (Unlisted) → get video ID → update HTML → paste into LearnDash
 - [ ] Lesson 2 (Talk to AI) — video, content, SEO pending
 - [x] Lesson 3 (Don't Get Scammed) — video live at https://youtu.be/YsSXhxo_fus, LearnDash page live (2026-09-08)
-- [ ] Lesson 3 — Build LinkedIn carousel in Canva (6 slides written, see SOP-17) → post to LinkedIn + Facebook
+- [x] Lesson 3 — LinkedIn carousel built and posted (2026-09-11)
 - [ ] Lesson 3 — Publish blog article to WordPress (written, needs Yoast SEO fields pasted)
 - [ ] Lesson 3 — Record YouTube Short with HeyGen Dr. Maya → upload with metadata (all written, see SOP-17)
 - [ ] Lesson 1 Welcome — export PowerPoint as MP4 → upload to YouTube (Unlisted) → get video ID → update HTML → paste into LearnDash
@@ -28,6 +28,7 @@ Last updated: 2026-08-26
 - [ ] 501(c)(3) — application submitted July 2026, awaiting determination letter
 
 ### Operations
+- [ ] **Email protection (SOP-22)** — run Unroll.me, turn on Gmail tabs, create info@ address
 - [ ] Reorganize Google Drive into 6 folders (plan ready — execute manually)
 - [ ] Enable Google Drive offline mode on 5 critical folders for travel
 
@@ -62,6 +63,7 @@ Last updated: 2026-08-26
 - [ ] Agent Builder Learning Path — Phase 2
 
 ### Content
+- [ ] **claudecode-writer eval (SOP-21)** — populate `context/writing-examples.md` with 3-5 Brian voice samples → run one full test cycle → decide if adopting
 - [ ] What If Series — 20-episode series, one per week across YouTube/LinkedIn/Podcast/Newsletter
 - [ ] Agentic50 newsletter — weekly AI news for 50+ adults
 
