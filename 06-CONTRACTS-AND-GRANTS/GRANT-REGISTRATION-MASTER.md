@@ -19,6 +19,7 @@
 | **Contact** | Age Strong Commission, City of Boston |
 | **Email** | agestrong@boston.gov |
 | **Phone** | 617-635-4366 |
+| **Rolling Grant Contact** | Dolinda Douiga | 617-636-4266 ext. 3994 |
 
 #### Documents Required
 - [ ] Organization description (written — use file above)
