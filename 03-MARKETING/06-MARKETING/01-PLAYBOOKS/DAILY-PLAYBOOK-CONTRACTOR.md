@@ -1,7 +1,7 @@
 # Daily Playbook — Pipeline Contractor
 
 ## Who We Are
-50+TechBridge is the only program in America teaching AI skills specifically to adults 50+. We deliver free, hands-on AI training across 13 locations in Central Texas — libraries, senior centers, and workforce programs. Our founder, Brian McKinney, is a 65-year-old solo CEO who runs 30+ AI-powered workflows and is building the bridge between older adults and the AI economy. We are WIOA-eligible, MBE-certified, and actively closing workforce contracts, government grants, and institutional partnerships.
+Learn More Technologies is a Texas MBE that delivers AI and digital-skills work for agencies, libraries, and workforce partners. 50+TechBridge is the training brand: hands-on sessions for adults 50+ across 9 in-person locations in Central Texas — 6 Austin Public Library branches, AARP-affiliated senior centers, and a Foundation Communities veterans program. Founder Brian McKinney is a 65-year-old solo CEO who runs 30+ AI-powered workflows. We are WIOA-eligible and a City of Austin Nexus Grant recipient. Keep contractor language on invoices; do not mix grant or “always free” language into SOWs.
 
 ## Why You're Here
 Brian is a solo founder. When he stops, everything stops — pipeline, content, outreach, grants. That cannot happen again. You are the person who makes sure the business keeps moving every day, whether Brian is in the office, on the road, or unavailable. You own the daily rhythm. You are not an assistant — you are the pipeline.
@@ -115,7 +115,7 @@ If there's nothing to flag, write "No flags." Don't skip the report.
 1. **Never send a message Brian hasn't approved the tone of.** Use the templates above. If you need to go off-script, ask first — until Brian says you've earned freestyle.
 2. **Every post gets a CTA.** No exceptions.
 3. **Every contact goes in HubSpot.** No sticky notes, no "I'll remember."
-4. **Never inflate numbers.** If you reference stats, use only what's in the verified proof points doc. When in doubt, lead with locations: "Across 13 locations in Central Texas."
+4. **Never inflate numbers.** If you reference stats, use only what's in `06-CONTRACTS-AND-GRANTS/ELEVATE-2026/05-PROOF-POINTS.md`. When in doubt, lead with locations: "Across 9 in-person locations in Central Texas." Never use 264+, 347+, 13 locations, 3x completion, 74% confidence, or “only program in America.”
 5. **Ask before you act** on anything outside this playbook. Better to ask a dumb question than make a wrong move.
 
 ---
