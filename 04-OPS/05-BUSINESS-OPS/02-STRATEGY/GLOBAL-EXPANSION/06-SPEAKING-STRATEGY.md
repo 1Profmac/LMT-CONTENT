@@ -1,5 +1,8 @@
 # International Speaking Strategy
 
+**Operating plan (use this first):** `../INTL-TRAVEL-AND-SPEAKING.md`  
+Paid talks only. Do not fly unpaid. Do not use 264+, 13 locations, or $76T in pitches.
+
 ## Brian's Speaking Identity
 
 **Title:** Founder, 50+TechBridge | Digital Equity Advocate | AI-Powered Solo CEO
