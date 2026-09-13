@@ -28,8 +28,14 @@
 Thumbs.db
 desktop.ini
 *.lnk
-05-BUSINESS-OPS/05-TECH/Hcapta keys 20260509.txt
+*.gdoc
 
-# Secrets (actual repo path)
+# Nested / local-only (do not publish)
+04-OPS/05-BUSINESS-OPS/craig-hewitt-repos/
+04-OPS/05-BUSINESS-OPS/python-projects/
+
+# Secrets (legacy and current paths)
+05-BUSINESS-OPS/05-TECH/Hcapta keys 20260509.txt
 05-OPS/05-BUSINESS-OPS/05-TECH/Hcapta keys 20260509.txt
+04-OPS/05-BUSINESS-OPS/05-TECH/Hcapta keys 20260509.txt
 *keys*.txt

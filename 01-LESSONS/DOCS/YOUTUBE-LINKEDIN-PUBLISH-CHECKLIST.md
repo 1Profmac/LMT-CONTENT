@@ -87,5 +87,5 @@ Book a free session: https://cal.com/brian-mckinney-mrtu8q/speaking-inquiry
 ## ASSETS LOCATION
 
 - Videos: `Desktop/LMT-CONTENT/01-LESSONS/WELCOME-VIDEO/`
-- Thumbnails: save to `Desktop/LMT-CONTENT/06-ASSETS/THUMBNAILS/`
+- Thumbnails: save to `Desktop/LMT-CONTENT/05-ASSETS/THUMBNAILS/`
 - LinkedIn articles: `Desktop/LMT-CONTENT/10-MARKETING/`

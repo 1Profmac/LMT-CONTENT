@@ -185,7 +185,7 @@ Texas accepts:
 
 | Step | Action | Market | Blocker | Time |
 |---|---|---|---|---|
-| 1 | Submit Age Strong Rolling Grant | Boston | None — submit now | 1 hour |
+| 1 | Do not submit Age Strong as LLC | Boston | Need 501(c)(3) or fiscal sponsor; FY26 rolling closed 7 May 2026 | — |
 | 2 | Call Workforce Solutions Capital Area | Austin | None | 30 min |
 | 3 | Call MassHire Greater Lowell | Boston | None | 30 min |
 | 4 | Email MCOA registration | Boston | None | 30 min |
